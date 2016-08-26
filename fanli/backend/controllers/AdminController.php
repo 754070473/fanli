@@ -12,6 +12,10 @@ use yii\filters\VerbFilter;
  */
 class AdminController extends Controller
 {
+    /**
+     * 管理员管理
+     * @var bool
+     */
     public $layout=false;
     public $enableCsrfValidation = false;
     public function actionIndex()

@@ -12,6 +12,10 @@ use yii\filters\VerbFilter;
  */
 class ActivityController extends Controller
 {
+    /**
+     * 活动管理
+     * @var bool
+     */
     public $layout=false;
     public $enableCsrfValidation = false;
     public function actionIndex()

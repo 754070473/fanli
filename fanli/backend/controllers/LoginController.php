@@ -12,6 +12,10 @@ use yii\filters\VerbFilter;
  */
 class LoginController extends Controller
 {
+    /**
+     * 登录页面
+     * @var bool
+     */
     public $layout=false;
     public $enableCsrfValidation = false;
     public function actionIndex()

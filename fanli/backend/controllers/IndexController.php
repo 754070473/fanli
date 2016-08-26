@@ -12,6 +12,10 @@ use yii\filters\VerbFilter;
  */
 class IndexController extends Controller
 {
+    /**
+     * 后台主页
+     * @var bool
+     */
     public $layout=false;
     public $enableCsrfValidation = false;
     public function actionIndex()

@@ -12,6 +12,10 @@ use yii\filters\VerbFilter;
  */
 class BrandController extends Controller
 {
+    /**
+     * 品牌管理
+     * @var bool
+     */
     public $layout=false;
     public $enableCsrfValidation = false;
     public function actionIndex()
