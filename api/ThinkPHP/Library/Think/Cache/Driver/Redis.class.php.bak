@@ -1,0 +1,17 @@
+<?php
+
+	//如果未修改php.ini下面两行注释去掉
+	//ini_set('session.save_handler', 'redis');
+	//ini_set('session.save_path', 'tcp://127.0.0.1:6379?auth='redisauthkey'");
+	session_start();
+	$_SESSION['sessionid'] = 'this is session content!';
+	echo $_SESSION['sessionid'];
+	echo '<br/>';
+
+	$redis = new redis();
+	$redis->connect('127.0.0.1', 6379);
+	$redis->auth( ‘redisauthkey’ );
+
+	//redis用session_id作为key并且是以string的形式存储
+	echo $redis->get('PHPREDIS_SESSION:' . session_id());
+ ?>
