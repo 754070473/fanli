@@ -12,6 +12,10 @@ use yii\filters\VerbFilter;
  */
 class NavigateController extends Controller
 {
+    /**
+     * 导航管理
+     * @var bool
+     */
     public $layout=false;
     public $enableCsrfValidation = false;
     public function actionIndex()

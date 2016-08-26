@@ -12,6 +12,10 @@ use yii\filters\VerbFilter;
  */
 class SortController extends Controller
 {
+    /**
+     * 分类管理
+     * @var bool
+     */
     public $layout=false;
     public $enableCsrfValidation = false;
     public function actionIndex()
