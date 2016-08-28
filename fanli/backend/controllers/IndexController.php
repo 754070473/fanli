@@ -10,7 +10,7 @@ use yii\filters\VerbFilter;
 /**
  * Site controller
  */
-class IndexController extends Controller
+class IndexController extends CommonController
 {
     /**
      * 后台主页

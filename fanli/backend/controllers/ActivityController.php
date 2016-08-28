@@ -10,7 +10,7 @@ use yii\filters\VerbFilter;
 /**
  * Site controller
  */
-class ActivityController extends Controller
+class ActivityController extends CommonController
 {
     /**
      * 活动管理
