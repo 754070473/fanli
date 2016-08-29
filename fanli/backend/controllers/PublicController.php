@@ -10,7 +10,7 @@ use yii\filters\VerbFilter;
 /**
  * Site controller
  */
-class PublicController extends Controller
+class PublicController extends CommonController
 {
     public $layout=false;
     public function actionIndex()
