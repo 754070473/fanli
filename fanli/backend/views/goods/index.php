@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="public/Css/bootstrap-responsive.css" />
     <link rel="stylesheet" type="text/css" href="public/Css/style.css" />
     <script type="text/javascript" src="public/Js/jquery.js"></script>
+    <script type="text/javascript" src="public/Js/jquery.sorted.js"></script>
     <script type="text/javascript" src="public/Js/bootstrap.js"></script>
     <script type="text/javascript" src="public/Js/ckform.js"></script>
     <script type="text/javascript" src="public/Js/common.js"></script>
@@ -33,17 +34,18 @@
 </head>
 <body>
 <form class="form-inline definewidth m20" action="index.html" method="get">  
-    机构名称：
+    商品名称：
     <input type="text" name="rolename" id="rolename"class="abc input-default" placeholder="" value="">&nbsp;&nbsp;  
-    <button type="submit" class="btn btn-primary">查询</button>&nbsp;&nbsp; <button type="button" class="btn btn-success" id="addnew">新增机构</button>
+    <button type="submit" class="btn btn-primary">查询</button>&nbsp;&nbsp; <button type="button" class="btn btn-success" id="addnew">新增商品</button>
 </form>
 <table class="table table-bordered table-hover definewidth m10" >
     <thead>
     <tr>
-        <th>机构编号</th>
-        <th>机构名称</th>
-        <th>状态</th>
-        <th>管理操作</th>
+        <th>分类</th>
+        <th>名称</th>
+        <th>图片</th>
+        <th>预览</th>
+        <th>商品预览</th>
     </tr>
     </thead>
 	     <tr>
@@ -52,39 +54,25 @@
             <td>1</td>
             <td>
                   <a href="edit.html">编辑</a>
-                  
             </td>
         </tr></table>
 <div class="inline pull-right page">
-         10122 条记录 1/507 页  <a href='#'>下一页</a>     <span class='current'>1</span><a href='#'>2</a><a href='/chinapost/index.php?m=Label&a=index&p=3'>3</a><a href='#'>4</a><a href='#'>5</a>  <a href='#' >下5页</a> <a href='#' >最后一页</a>    </div>
+         10122 条记录 1/507 页
+</div>
 </body>
 </html>
 <script>
     $(function () {
-        
 		$('#addnew').click(function(){
-
 				window.location.href="add.html";
 		 });
-
-
     });
-
 	function del(id)
 	{
-		
-		
 		if(confirm("确定要删除吗？"))
 		{
-		
 			var url = "index.html";
-			
-			window.location.href=url;		
-		
+			window.location.href=url;
 		}
-	
-	
-	
-	
 	}
 </script>

@@ -18,8 +18,16 @@ class BrandController extends CommonController
      */
     public $layout=false;
     public $enableCsrfValidation = false;
+    //品牌列表
     public function actionIndex()
     {
         return $this->render('index.html');
     }
+
+    //品牌添加
+    public function actionAdd()
+    {
+        return $this->render('add.html');
+    }
+
 }
