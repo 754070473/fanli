@@ -7,6 +7,16 @@ use yii\web\Controller;
 use common\models\LoginForm;
 use yii\filters\VerbFilter;
 
+
+/*
+ * @author:dongmengtao
+ * @controller:管理员
+ * @time:2016/08/27
+ */
+
+
+
+
 /**
  * Site controller
  */
@@ -21,5 +31,10 @@ class AdminController extends Controller
     public function actionIndex()
     {
         return $this->render('index.html');
+    }
+
+    public function actionAdd()
+    {
+        return $this->render('add.html');
     }
 }
