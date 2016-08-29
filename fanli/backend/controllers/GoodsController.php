@@ -10,7 +10,7 @@ use yii\filters\VerbFilter;
 /**
  * Site controller
  */
-class GoodsController extends Controller
+class GoodsController extends CommonController
 {
     /**
      * 商品管理
@@ -20,6 +20,11 @@ class GoodsController extends Controller
     public $enableCsrfValidation = false;
     public function actionIndex()
     {
-        return $this->render('index.html');
+        return $this->render('index');
     }
+    public function actionAdd()
+    {
+        return $this->render('add.html');
+    }
+
 }

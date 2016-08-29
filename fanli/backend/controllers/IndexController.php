@@ -10,7 +10,7 @@ use yii\filters\VerbFilter;
 /**
  * Site controller
  */
-class IndexController extends Controller
+class IndexController extends CommonController
 {
     /**
      * 后台主页
@@ -20,6 +20,11 @@ class IndexController extends Controller
     public $enableCsrfValidation = false;
     public function actionIndex()
     {
-        return $this->render('index.html');
+        /*$url = $this -> apiUrl('Index','index');
+        $data = array('name' => '张三','id' => 1);
+        print_r($this -> CurlPost($url , $data));*/
+        $session = Yii::$app->session;
+        $account = $session['admin']['account'];
+        return $this->render('index.html' , array( 'account' => $account ));
     }
 }

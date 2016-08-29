@@ -10,7 +10,7 @@ use yii\filters\VerbFilter;
 /**
  * Site controller
  */
-class BrandController extends Controller
+class BrandController extends CommonController
 {
     /**
      * 品牌管理
@@ -18,8 +18,16 @@ class BrandController extends Controller
      */
     public $layout=false;
     public $enableCsrfValidation = false;
+    //品牌列表
     public function actionIndex()
     {
         return $this->render('index.html');
     }
+
+    //品牌添加
+    public function actionAdd()
+    {
+        return $this->render('add.html');
+    }
+
 }

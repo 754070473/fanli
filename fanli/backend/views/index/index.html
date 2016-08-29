@@ -16,7 +16,7 @@
         <!--<img src="/chinapost/Public/assets/img/top.png">-->
     </div>
 
-    <div class="dl-log">欢迎您，<span class="dl-log-user">root</span><a href="/chinapost/index.php?m=Public&a=logout" title="退出系统" class="dl-log-quit">[退出]</a>
+    <div class="dl-log">欢迎您，<span class="dl-log-user"><?php echo $account?></span><a href="index.php?r=login/index" title="退出系统" class="dl-log-quit">[退出]</a>
     </div>
 </div>
 <div class="content">
@@ -70,8 +70,8 @@
                         {
                             text:'品牌管理',items:
                                 [
-                                    {id:'11',text:'品牌列表',href:'index.php?r=goods/index'},
-                                    {id:'13',text:'品牌添加',href:'index.php?r=goods/add'}
+                                    {id:'11',text:'品牌列表',href:'index.php?r=brand/index'},
+                                    {id:'13',text:'品牌添加',href:'index.php?r=brand/add'}
                                 ]
                         },
                         {
