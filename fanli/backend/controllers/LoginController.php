@@ -10,7 +10,7 @@ use yii\filters\VerbFilter;
 /**
  * Site controller
  */
-class LoginController extends Controller
+class LoginController extends CommonController
 {
     /**
      * 登录页面
