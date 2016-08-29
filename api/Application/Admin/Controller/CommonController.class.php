@@ -18,7 +18,8 @@ class CommonController extends Controller
         unset($_GET);
         unset($_REQUEST);
 
-        $this->_data = html_encode ($all_data);
+        $_data = html_encode ($all_data);
+        $this -> _data = $_data;
 
 
         //接口的参数校验
@@ -34,7 +35,7 @@ class CommonController extends Controller
             $Format_Controller = 'Check'.$Controller;
 
             //反射格式化类
-            $ReflectionClass = new \ReflectionClass('Home\CheckParam\\'.$Format_Controller);
+            $ReflectionClass = new \ReflectionClass('Admin\CheckParam\\'.$Format_Controller);
 
             //获取格式化类的方法
             $ReflectionMethod = $ReflectionClass->getMethod($Action);
@@ -47,6 +48,17 @@ class CommonController extends Controller
         }*/
         //合并返回结果
 //		$arr = array_merge( $arr , (array) $othor_data );
+
+        $sign = $_data['sign'];
+        unset($_data['sign']);
+
+        //判断sign值是否正确
+        $_sign = $this -> setSign( $_data );
+        if( $sign != $_sign )
+        {
+            $this -> errorMessage( 1 , '非法请求' );
+            exit;
+        }
     }
 
 
@@ -123,5 +135,26 @@ class CommonController extends Controller
 
     }
 
+    //生成sign
+    private function setSign( $data )
+    {
+        $num = count( $data );
 
+        // 对数组的值按key排序
+        ksort($data);
+
+        // 生成url的形式
+        $params = http_build_query($data);
+
+        // 拼接密钥 且 md5
+        $signAll = md5($params);
+
+        // 计算截取长度
+        $len = $num%32+6;
+
+        // 得到数据签名
+        $sign = substr($signAll,0,$len);
+
+        return $sign;
+    }
 }
