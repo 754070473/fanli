@@ -32,7 +32,7 @@
     </style>
 </head>
 <body>
-<form action="index.html" method="post" class="definewidth m20">
+<form action="index.php?r=brand/brand_add" method="post" class="definewidth m20" enctype="multipart/form-data">
 <table class="table table-bordered table-hover m10">
     <tr>
         <td class="tableleft">品牌名称</td>
@@ -60,7 +60,7 @@
     <tr>
         <td class="tableleft"></td>
         <td>
-            <button type="submit" class="btn btn-primary" type="button">保存</button> &nbsp;&nbsp;<button type="button" class="btn btn-success" name="backid" id="backid">返回列表</button>
+            <button type="submit" class="btn btn-primary" >保存</button> &nbsp;&nbsp;<button type="button" class="btn btn-success" name="backid" id="backid">返回列表</button>
         </td>
     </tr>
 </table>
@@ -74,4 +74,7 @@
 		 });
 
     });
+
+    //添加数据
+    $()
 </script>

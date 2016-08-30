@@ -39,7 +39,6 @@ class CommonController extends Controller
 
         $sign = $_data['sign'];
         unset($_data['sign']);
-
         //判断sign值是否正确
         $_sign = $this -> setSign( $_data );
         if( $sign != $_sign )
