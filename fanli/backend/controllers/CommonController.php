@@ -10,6 +10,7 @@ use yii\filters\VerbFilter;
 /**
  * Site controller
  */
+header("content-type:text/html;charset=utf-8");
 class CommonController extends Controller
 {
     /**
@@ -24,7 +25,7 @@ class CommonController extends Controller
             $session = Yii::$app->session;
             if (!isset($session['admin']))
             {
-                echo "<script>alert('请先登录!');location.href='index.php?login/index'</script>";
+                echo "<script>alert('请先登录!');location.href='index.php?r=login/index'</script>";
                 exit;
             }
         }
