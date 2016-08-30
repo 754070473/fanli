@@ -22,11 +22,15 @@ class BrandController extends CommonController
     //品牌列表
     public function actionIndex()
     {
-        $table = fangli_brand;     //表名
-        $num = 5;                  //每页显示的条数
-        $where = "bra_status=0";   //条件
-        $this -> databasesSelect($table,$num,$where)
-        return $this->render('index.html');
+        $table = "fanli_brand";     //表名
+        $num = 2;                  //每页显示的条数
+        $where = "bra_status=1";   //条件
+        $page_url = "index.php?r=brand/index";
+        $data = $this -> databasesSelect($table,$num,$where,$field = '*',1,1,$page_url);
+        echo "<pre>";
+        print_r($data);die;
+        $data = $data['data'];
+        return $this->render('index.html',['data' => $data]);
     }
 
     //品牌添加页面
