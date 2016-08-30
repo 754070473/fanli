@@ -10,8 +10,26 @@ use yii\filters\VerbFilter;
 /**
  * Site controller
  */
+header("content-type:text/html;charset=utf-8");
 class CommonController extends Controller
 {
+    /**
+     * 防非法登录
+     */
+    public function init()
+    {
+        $url = \Yii::$app->requestedRoute;
+        $controller = substr( $url , 0 , strpos( $url , '/' ) );
+        if( !in_array( $controller , array('login') ) )
+        {
+            $session = Yii::$app->session;
+            if (!isset($session['admin']))
+            {
+                echo "<script>alert('请先登录!');location.href='index.php?r=login/index'</script>";
+                exit;
+            }
+        }
+    }
     /**
      * 引入function.php
      * @return \CommonFunction
@@ -36,14 +54,11 @@ class CommonController extends Controller
     }
 
     /**
-     * 设置token值
+     * 请求接口
+     * @param $url
+     * @param array $data
+     * @return mixed
      */
-    protected function setToken()
-    {
-        $token = $this -> commonFunction() -> getRandStr(20);
-        $token = md5($token);
-    }
-
     protected function CurlPost( $url , $data = array() )
     {
         if( empty( $data ) )
@@ -61,6 +76,15 @@ class CommonController extends Controller
                 $data = array( 'val' => $data );
                 $sign = $this -> setSign( $data );
             }
+
+            //添加token
+            $session = Yii::$app->session;
+            if (isset($session['admin']))
+            {
+                $token = $session['admin']['token'];
+                $data['token'] = $token;
+            }
+
             $data = array_merge( $data , array( 'sign' => $sign ) );
             $arr = $this -> commonFunction() -> CurlPost( $url , $data );
         }

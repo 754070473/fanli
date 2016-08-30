@@ -20,6 +20,42 @@ class LoginController extends CommonController
     public $enableCsrfValidation = false;
     public function actionIndex()
     {
-        return $this->render('index.html');
+        return $this->render('login.html');
+    }
+    
+    /**
+     * 登录
+     */
+    public function actionInfo()
+    {
+        //接收数据
+        $request = Yii::$app->request;
+        $username = $request -> post( 'username' , '' );
+        $password = $request -> post( 'password' , '' );
+
+        $url = $this->apiUrl( 'Login' , 'index' );
+        $data = array( 'account' => $username , 'password' => $password );
+        //调用接口
+        $arr_api = $this -> CurlPost( $url , $data );
+        if( $arr_api['status'] == 0 )
+        {
+            $session = Yii::$app->session;
+            $session->set('admin', $arr_api['data']);
+            $this->redirect(array('/index/index'));
+        }
+        else
+        {
+            echo "<script>alert('用户名或密码有误');location.href='index.php?r=login/index'</script>";
+        }
+    }
+
+    /**
+     * 退出
+     */
+    public function actionTakeout()
+    {
+        $session = Yii::$app->session;
+        $session->destroy();
+        $this->redirect(array('/login/index'));
     }
 }

@@ -24,12 +24,23 @@ class CommonController extends Controller
 
         //接口的参数校验
         //获取当前请求的控制器
-        /*$Controller = ucwords( str_replace( __MODULE__ . '/' , '' , __CONTROLLER__ ) );
+        $Controller = ucwords( str_replace( __MODULE__ . '/' , '' , __CONTROLLER__ ) );
 
         //当前请求的方法
-        $Action = ucwords( str_replace( __CONTROLLER__ . '/' , '' , __ACTION__ ) );
+        //$Action = ucwords( str_replace( __CONTROLLER__ . '/' , '' , __ACTION__ ) );
 
-        if( !in_array( $Controller , array( 'Base' , 'Common' ) ) ){
+        if( !in_array( $Controller , array( 'Login' , 'Common' ) ) )
+        {
+            $token = $_data['token'];
+            $adm_id = $_data['adm_id'];
+            if( $this -> testToken( $adm_id , $token ) == false )
+            {
+                $this -> errorMessage( 1 , '非法请求' );
+                exit;
+            }
+        }
+
+        /*if( !in_array( $Controller , array( 'Base' , 'Common' ) ) ){
 
             //拼装格式化类
             $Format_Controller = 'Check'.$Controller;
@@ -156,5 +167,20 @@ class CommonController extends Controller
         $sign = substr($signAll,0,$len);
 
         return $sign;
+    }
+
+    //检测token
+    private function testToken( $adm_id , $token )
+    {
+        $User = M("admin"); // 实例化User对象
+        $data = $User->where('adm_id = '.$adm_id )->find();
+        if ( $token == $data['token'] )
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }
