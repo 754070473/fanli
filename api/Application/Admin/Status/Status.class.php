@@ -22,4 +22,9 @@ class Status
     //未查询到数据
     const SELECT_DATA_ERROR = 1;
     const SELECT_DATA_ERROR_MSG = '未查询到数据!';
+
+
+    //管理员添加失败
+    const ADMIN_NAME_ERROR = 1;
+    const ADMIN_NAME_ERROR_MSG = '管理员添加失败';
 }

@@ -7068,3 +7068,280 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1472540157.7992
     'REQUEST_TIME' => 1472540157
 ]
+2016-08-30 16:38:08 [127.0.0.1][-][38p78j0v2raf6egn3khm4necg7][error][yii\base\ErrorException:32] exception 'yii\base\ErrorException' with message 'PHP Startup: ' in Unknown:0
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-08-30 16:38:07 [127.0.0.1][-][38p78j0v2raf6egn3khm4necg7][info][application] $_GET = [
+    'r' => 'index/index'
+]
+
+$_COOKIE = [
+    'pgv_pvi' => '6080688128'
+    'iweb_safecode' => '57de797446a7e20853MDQ4MjAyMDA3NGQxb2I3MDE1NzAxMmU0MzY1OWM1ODA6NWM0NDxiNT8xZmY3NWQ+OT9iNGU0OzY3PTc0ZjU3ZA'
+    'PHPSESSID' => '38p78j0v2raf6egn3khm4necg7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => '111'
+        'password' => '96e79218965eb72c92a549dd5a330112'
+        'adm_date' => null
+        'adm_status' => null
+        'token' => 'c97c0fba28980c225755f54bd5db187b'
+    ]
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Acer\\abFiles\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;F:\\server\\mysql\\bin;C:\\Program Files\\TortoiseSVN\\bin;F:\\server\\php5;D:\\phpstudy\\php54n;D:\\TortoiseGit-1.8.9.0-64bit\\bin;D:\\PHPstudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;F:\\mysql-5.6.24-win32\\bin;'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/PHPstudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '2344'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=index%2Findex'
+    'QUERY_STRING' => 'r=index%2Findex'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '50802'
+    'SCRIPT_FILENAME' => 'F:/www.taozi.com/fanli/fanli/backend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/www.taozi.com'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'F:/www.taozi.com'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.taozi.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => 'pgv_pvi=6080688128; iweb_safecode=57de797446a7e20853MDQ4MjAyMDA3NGQxb2I3MDE1NzAxMmU0MzY1OWM1ODA6NWM0NDxiNT8xZmY3NWQ%2BOT9iNGU0OzY3PTc0ZjU3ZA; PHPSESSID=38p78j0v2raf6egn3khm4necg7'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_HOST' => 'www.taozi.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472546287.3774
+    'REQUEST_TIME' => 1472546287
+]
+2016-08-30 18:34:32 [127.0.0.1][-][38p78j0v2raf6egn3khm4necg7][error][yii\base\ErrorException:32] exception 'yii\base\ErrorException' with message 'PHP Startup: ' in Unknown:0
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-08-30 18:34:32 [127.0.0.1][-][38p78j0v2raf6egn3khm4necg7][info][application] $_GET = [
+    'r' => 'index/index'
+]
+
+$_COOKIE = [
+    'pgv_pvi' => '6080688128'
+    'iweb_safecode' => '57de797446a7e20853MDQ4MjAyMDA3NGQxb2I3MDE1NzAxMmU0MzY1OWM1ODA6NWM0NDxiNT8xZmY3NWQ+OT9iNGU0OzY3PTc0ZjU3ZA'
+    'PHPSESSID' => '38p78j0v2raf6egn3khm4necg7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => '111'
+        'password' => '96e79218965eb72c92a549dd5a330112'
+        'adm_date' => null
+        'adm_status' => null
+        'token' => 'c97c0fba28980c225755f54bd5db187b'
+    ]
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Acer\\abFiles\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;F:\\server\\mysql\\bin;C:\\Program Files\\TortoiseSVN\\bin;F:\\server\\php5;D:\\phpstudy\\php54n;D:\\TortoiseGit-1.8.9.0-64bit\\bin;D:\\PHPstudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;F:\\mysql-5.6.24-win32\\bin;'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/PHPstudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '708'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=index%2Findex'
+    'QUERY_STRING' => 'r=index%2Findex'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '51694'
+    'SCRIPT_FILENAME' => 'F:/www.taozi.com/fanli/fanli/backend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/www.taozi.com'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'F:/www.taozi.com'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.taozi.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => 'pgv_pvi=6080688128; iweb_safecode=57de797446a7e20853MDQ4MjAyMDA3NGQxb2I3MDE1NzAxMmU0MzY1OWM1ODA6NWM0NDxiNT8xZmY3NWQ%2BOT9iNGU0OzY3PTc0ZjU3ZA; PHPSESSID=38p78j0v2raf6egn3khm4necg7'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_HOST' => 'www.taozi.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472553272.5943
+    'REQUEST_TIME' => 1472553272
+]
+2016-08-30 18:41:10 [127.0.0.1][-][38p78j0v2raf6egn3khm4necg7][error][yii\base\ErrorException:32] exception 'yii\base\ErrorException' with message 'PHP Startup: ' in Unknown:0
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-08-30 18:41:10 [127.0.0.1][-][38p78j0v2raf6egn3khm4necg7][info][application] $_GET = [
+    'r' => 'index/index'
+]
+
+$_COOKIE = [
+    'pgv_pvi' => '6080688128'
+    'iweb_safecode' => '57de797446a7e20853MDQ4MjAyMDA3NGQxb2I3MDE1NzAxMmU0MzY1OWM1ODA6NWM0NDxiNT8xZmY3NWQ+OT9iNGU0OzY3PTc0ZjU3ZA'
+    'PHPSESSID' => '38p78j0v2raf6egn3khm4necg7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => '111'
+        'password' => '96e79218965eb72c92a549dd5a330112'
+        'adm_date' => null
+        'adm_status' => null
+        'token' => 'c97c0fba28980c225755f54bd5db187b'
+    ]
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Acer\\abFiles\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;F:\\server\\mysql\\bin;C:\\Program Files\\TortoiseSVN\\bin;F:\\server\\php5;D:\\phpstudy\\php54n;D:\\TortoiseGit-1.8.9.0-64bit\\bin;D:\\PHPstudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;F:\\mysql-5.6.24-win32\\bin;'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/PHPstudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '2356'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=index%2Findex'
+    'QUERY_STRING' => 'r=index%2Findex'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '51738'
+    'SCRIPT_FILENAME' => 'F:/www.taozi.com/fanli/fanli/backend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/www.taozi.com'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'F:/www.taozi.com'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.taozi.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => 'pgv_pvi=6080688128; iweb_safecode=57de797446a7e20853MDQ4MjAyMDA3NGQxb2I3MDE1NzAxMmU0MzY1OWM1ODA6NWM0NDxiNT8xZmY3NWQ%2BOT9iNGU0OzY3PTc0ZjU3ZA; PHPSESSID=38p78j0v2raf6egn3khm4necg7'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_HOST' => 'www.taozi.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472553670.0988
+    'REQUEST_TIME' => 1472553670
+]
+2016-08-30 19:01:07 [127.0.0.1][-][38p78j0v2raf6egn3khm4necg7][error][yii\base\ErrorException:32] exception 'yii\base\ErrorException' with message 'PHP Startup: ' in Unknown:0
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-08-30 19:01:07 [127.0.0.1][-][38p78j0v2raf6egn3khm4necg7][info][application] $_GET = [
+    'r' => 'index/index'
+]
+
+$_COOKIE = [
+    'thinkphp_show_page_trace' => '0|0'
+    'pgv_pvi' => '6080688128'
+    'iweb_safecode' => '57de797446a7e20853MDQ4MjAyMDA3NGQxb2I3MDE1NzAxMmU0MzY1OWM1ODA6NWM0NDxiNT8xZmY3NWQ+OT9iNGU0OzY3PTc0ZjU3ZA'
+    'PHPSESSID' => '38p78j0v2raf6egn3khm4necg7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => '111'
+        'password' => '96e79218965eb72c92a549dd5a330112'
+        'adm_date' => null
+        'adm_status' => null
+        'token' => 'c97c0fba28980c225755f54bd5db187b'
+    ]
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Acer\\abFiles\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;F:\\server\\mysql\\bin;C:\\Program Files\\TortoiseSVN\\bin;F:\\server\\php5;D:\\phpstudy\\php54n;D:\\TortoiseGit-1.8.9.0-64bit\\bin;D:\\PHPstudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;F:\\mysql-5.6.24-win32\\bin;'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/PHPstudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '2336'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=index%2Findex'
+    'QUERY_STRING' => 'r=index%2Findex'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '51965'
+    'SCRIPT_FILENAME' => 'F:/www.taozi.com/fanli/fanli/backend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/www.taozi.com'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'F:/www.taozi.com'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.taozi.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => 'thinkphp_show_page_trace=0|0; pgv_pvi=6080688128; iweb_safecode=57de797446a7e20853MDQ4MjAyMDA3NGQxb2I3MDE1NzAxMmU0MzY1OWM1ODA6NWM0NDxiNT8xZmY3NWQ%2BOT9iNGU0OzY3PTc0ZjU3ZA; PHPSESSID=38p78j0v2raf6egn3khm4necg7'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_HOST' => 'www.taozi.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472554867.3465
+    'REQUEST_TIME' => 1472554867
+]
