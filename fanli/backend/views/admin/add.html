@@ -11,9 +11,6 @@
     <script type="text/javascript" src="public/Js/bootstrap.js"></script>
     <script type="text/javascript" src="public/Js/ckform.js"></script>
     <script type="text/javascript" src="public/Js/common.js"></script>
-
- 
-
     <style type="text/css">
         body {
             padding-bottom: 40px;
@@ -31,11 +28,10 @@
             }
         }
 
-
     </style>
 </head>
 <body>
-<form action="index.html" method="post" class="definewidth m20">
+<form action="index.php?r=admin/info" method="post" class="definewidth m20">
 <table class="table table-bordered table-hover definewidth m10">
     <tr>
         <td width="10%" class="tableleft">登录名</td>
@@ -46,14 +42,6 @@
         <td><input type="password" name="password"/></td>
     </tr>
     <tr>
-        <td class="tableleft">真实姓名</td>
-        <td><input type="text" name="realname"/></td>
-    </tr>
-    <tr>
-        <td class="tableleft">邮箱</td>
-        <td><input type="text" name="email"/></td>
-    </tr>
-    <tr>
         <td class="tableleft">状态</td>
         <td>
             <input type="radio" name="status" value="1" checked/> 启用
@@ -61,13 +49,10 @@
         </td>
     </tr>
     <tr>
-        <td class="tableleft">角色</td>
-        <td>{$role_checkbox}</td>
-    </tr>
-    <tr>
         <td class="tableleft"></td>
         <td>
-            <button type="submit" class="btn btn-primary" type="button">保存</button> &nbsp;&nbsp;<button type="button" class="btn btn-success" name="backid" id="backid">返回列表</button>
+            <button type="submit" class="btn btn-primary">保存</button><span id="hint"></span> &nbsp;&nbsp;
+            <button type="button" class="btn btn-success" name="backid" id="backid">返回列表</button>
         </td>
     </tr>
 </table>
@@ -75,10 +60,25 @@
 </body>
 </html>
 <script>
-    $(function () {       
-		$('#backid').click(function(){
-				window.location.href="index.html";
-		 });
-
+    $('form').submit(function()
+    {
+        var username = $('input:text').val();
+        var password = $('input:password').val();
+        if( username == '' || password == '')
+        {
+            $('#hint').html('<font color="red">请输入信息</font>');
+            return false;
+        }
+        else
+        {
+            return true;
+        }
     });
+
+//    $(function () {
+//		$('#backid').click(function(){
+//				window.location.href="index.html";
+//		 });
+//
+//    });
 </script>
