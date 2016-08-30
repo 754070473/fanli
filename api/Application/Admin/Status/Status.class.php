@@ -35,4 +35,9 @@ class Status
     //品牌名称不合法
     const BRAND_ADD_ERROR = 1;
     const BRAND_ADD_ERROR_MSG = '品牌添加失败';
+
+
+    //管理员添加失败
+    const ADMIN_NAME_ERROR = 1;
+    const ADMIN_NAME_ERROR_MSG = '管理员添加失败';
 }

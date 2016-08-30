@@ -33,17 +33,19 @@ class AdminController extends CommonController
         //密码
         $password = IsNaN( $this -> _data , 'password');
         if(empty($password)){
-            $this-> errorMessage(Param::ADMIN_PASSWORD_IS_NULL, Param::ADMIN_PASSWORD_IS_NULL_MSG);
+            $this-> errorMessage(Param::ADMIN_PASSWORD_IS_NULL, Param::ADMIN_PASSWORD_IS_NULL_MSG );
         }
 
+        $date = date( 'Y-m-d' , time() );
         //实例化对象
         $User = M('admin');
-        $arr_add = $User->add('account',$user_name);
-        var_dump($arr_add);die;
+        $data = array( 'account' => $user_name , 'password' => md5($password) ,'adm_date' => $date );
+        $arr_add = $User->add($data);
+      //  var_dump($arr_add);die;
         if($arr_add){
-
+            $this -> success( Success::ADMIN_ADD , Success::ADMIN_ADD_MSG , $arr_add);
         }else{
-
+            $this -> errorMessage( Status::ADMIN_NAME_ERROR , Status::ADMIN_NAME_ERROR_MSG );
         }
     }
 
