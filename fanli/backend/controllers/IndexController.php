@@ -20,8 +20,10 @@ class IndexController extends CommonController
     public $enableCsrfValidation = false;
     public function actionIndex()
     {
-        /*$table = 'admin';
-        $arr = $this -> databasesSelect($table);
+        /*$table = array(
+            'table1' => 'fanli_goods', 'table2' => 'fanli_navigate' , 'join' => 'nav_id'
+        );
+        $arr = $this -> databasesSelect($table , 5);
         print_r($arr);die;*/
         $session = Yii::$app->session;
         $account = $session['admin']['account'];

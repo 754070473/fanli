@@ -59,7 +59,7 @@ class BrandController extends CommonController
         // var_dump($arr_api);die;
         if ($arr_api['status']==0) 
         {
-           echo 1;
+           $this->redirect(array('/brand/index'));
         }
         else
         {
