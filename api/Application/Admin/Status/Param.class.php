@@ -24,5 +24,15 @@ class Param {
     //密码不能为空
     const LOGIN_PASSWORD_IS_NULL = 1;
     const LOGIN_PASSWORD_IS_NULL_MSG = '密码不能为空';
-    
+
+
+
+    //管理员添加用户名不能为空
+    const  ADMIN_NAME_IS_NULL = 1;
+    const  ADMIN_NAME_IS_NULL_MSG = '管理员用户名不能为空';
+
+    //管理员添加密码不能为空
+    const ADMIN_PASSWORD_IS_NULL = 1;
+    const ADMIN_PASSWORD_IS_NULL_MSG = '管理员密码不能为空';
+
 }

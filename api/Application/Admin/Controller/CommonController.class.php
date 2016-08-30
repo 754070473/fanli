@@ -26,9 +26,6 @@ class CommonController extends Controller
         //获取当前请求的控制器
         $Controller = ucwords( str_replace( __MODULE__ . '/' , '' , __CONTROLLER__ ) );
 
-        //当前请求的方法
-        //$Action = ucwords( str_replace( __CONTROLLER__ . '/' , '' , __ACTION__ ) );
-
         if( !in_array( $Controller , array( 'Login' , 'Common' ) ) )
         {
             $token = $_data['token'];
@@ -39,26 +36,6 @@ class CommonController extends Controller
                 exit;
             }
         }
-
-        /*if( !in_array( $Controller , array( 'Base' , 'Common' ) ) ){
-
-            //拼装格式化类
-            $Format_Controller = 'Check'.$Controller;
-
-            //反射格式化类
-            $ReflectionClass = new \ReflectionClass('Admin\CheckParam\\'.$Format_Controller);
-
-            //获取格式化类的方法
-            $ReflectionMethod = $ReflectionClass->getMethod($Action);
-
-            //实例化格式化类
-            $Instance = $ReflectionClass->newInstance();
-
-            //格式化数据类型
-			 $arr['data'] = $ReflectionMethod->invokeArgs( $Instance , array( $all_data ) );
-        }*/
-        //合并返回结果
-//		$arr = array_merge( $arr , (array) $othor_data );
 
         $sign = $_data['sign'];
         unset($_data['sign']);
