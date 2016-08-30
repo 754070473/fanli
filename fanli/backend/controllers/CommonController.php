@@ -82,8 +82,8 @@ class CommonController extends Controller
             if (isset($session['admin']))
             {
                 $token = $session['admin']['token'];
-                $data['token'] = $token;
-                $data['adm_id'] = $session['admin']['adm_id'];
+                $data['token']['token'] = $token;
+                $data['token']['adm_id'] = $session['admin']['adm_id'];
             }
 
             $data = array_merge( $data , array( 'sign' => $sign ) );
@@ -123,7 +123,7 @@ class CommonController extends Controller
      * @param int $p
      * @return mixed
      */
-    protected function databasesSelect( $table , $where = 1 , $num = 0 , $field = '*' , $order = 1 , $p = 1 )
+    protected function databasesSelect( $table , $num = 0 , $where = 1 , $field = '*' , $order = 1 , $p = 1 )
     {
         if( is_array( $table ) )
         {
@@ -138,9 +138,10 @@ class CommonController extends Controller
             $sql = $table;
         }
         $url = $this -> apiUrl( 'Public' , 'index' );
-        $data = array( 'table' => $sql , 'field' => $field , 'where' => $where , 'num' => $num , 'order' => $order , 'p' => $p );
+        $data = array( 'sql' => $sql , 'field' => $field , 'where' => $where , 'num' => $num , 'order' => $order , 'p' => $p );
         $api_data = $this -> CurlPost( $url , $data );
-        if( empty( $api_data['status'] ) )
+
+        if( empty( $api_data ) )
         {
             print_r($api_data);
         }
@@ -152,7 +153,7 @@ class CommonController extends Controller
                 {
                     $data['num'] = 0;
                     $api_data_all = $this -> CurlPost( $url , $data );
-                    if( empty( $api_data_all['status'] ) )
+                    if( empty( $api_data_all ) )
                     {
                         print_r($api_data_all);
                     }
@@ -163,7 +164,7 @@ class CommonController extends Controller
                             $count = count( $api_data_all['data'] );
                             $page_count = ceil( $count / $num ) ;
                             $page = $this -> ajaxPage( $count , $url , $page_count , $p );
-                            $api_data['data'] = array_merge( $api_data['data'] , $page );
+                            $api_data['data']['page'] = $page;
                         }
                     }
                 }
@@ -191,8 +192,8 @@ class CommonController extends Controller
                     <input class="button" type="button" onclick="ckPage('."'$url'".',1)"  value="搜索"/>
                 </div>';
             //分页样式
-            $str='<link rel="stylesheet" type="text/css" href="page/page.css"/>
-            <script src="page/page.js"></script>
+            $str='<link rel="stylesheet" type="text/css" href="public/page/page.css"/>
+            <script src="public/page/page.js"></script>
             ';
             $str.="<div class='pagin'><div class='message'>共<i class='blue'>$count</i>条记录，当前显示第<i class='blue'>$p</i>页</div><ul class='paginList'><li class='paginItem'><a href='javascript:;' onclick=ckPage('".$url."',1)><span class='pagepre'><<</span></a></li>";
             for($i=1;$i<=$page;$i++){
