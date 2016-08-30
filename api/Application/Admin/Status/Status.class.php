@@ -22,4 +22,17 @@ class Status
     //未查询到数据
     const SELECT_DATA_ERROR = 1;
     const SELECT_DATA_ERROR_MSG = '未查询到数据!';
+
+
+    //品牌名称已存在
+    const BRAND_NAME = 1;
+    const BRAND_NAME_MSG = '品牌已存在';
+
+    //品牌名称不合法
+    const BRAND_NAME_ERROR = 1;
+    const BRAND_NAME_ERROR_MSG = '纯汉字或者纯英文';
+
+    //品牌名称不合法
+    const BRAND_ADD_ERROR = 1;
+    const BRAND_ADD_ERROR_MSG = '品牌添加失败';
 }
