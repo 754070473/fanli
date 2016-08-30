@@ -59,7 +59,9 @@ class CommonController extends Controller
         }*/
         //合并返回结果
 //		$arr = array_merge( $arr , (array) $othor_data );
-
+        if(isset($_data['token'])) {
+            unset( $_data[ 'token' ] );
+        }
         $sign = $_data['sign'];
         unset($_data['sign']);
 
