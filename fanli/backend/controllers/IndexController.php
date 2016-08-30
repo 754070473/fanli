@@ -20,9 +20,13 @@ class IndexController extends CommonController
     public $enableCsrfValidation = false;
     public function actionIndex()
     {
-        /*$url = $this -> apiUrl('Index','index');
-        $data = array('name' => '张三','id' => 1);
-        print_r($this -> CurlPost($url , $data));*/
-        return $this->render('index.html');
+       /* $url = $this -> apiUrl('Index','index');
+        return $this->render('index.html');*/
+        /*$table = 'admin';
+        $arr = $this -> databasesSelect($table);
+        print_r($arr);die;*/
+        $session = Yii::$app->session;
+        $account = $session['admin']['account'];
+        return $this->render('index.html' , array( 'account' => $account ));
     }
 }

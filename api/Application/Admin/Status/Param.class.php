@@ -13,5 +13,28 @@ class Param {
     const PARAM_ERROR = 1;
     const PARAM_ERROR_MSG = '参数错误:%s!';
 
+    /**
+     * 查询
+     */
+
+    //表名不能为空
+    const SELECT_TABLE_NAME_IS_NULL = 1;
+    const SELECT_TABLE_NAME_IS_NULL_MSG = '表名不能为空';
+    
+    //查询字段不能为空
+    const SELECT_FIELD_NAME_IS_NULL = 1;
+    const SELECT_FIELD_NAME_IS_NULL_MSG = '查询字段不能为空';
+    
+    /**
+     * 登陆
+     */
+    
+    //用户名不能为空
+    const LOGIN_USER_NAME_IS_NULL = 1;
+    const LOGIN_USER_NAME_IS_NULL_MSG = '用户名不能为空';
+    
+    //密码不能为空
+    const LOGIN_PASSWORD_IS_NULL = 1;
+    const LOGIN_PASSWORD_IS_NULL_MSG = '密码不能为空';
 
 }
