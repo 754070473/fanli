@@ -22,6 +22,7 @@ class BrandController extends CommonController
     //品牌列表
     public function actionIndex()
     {
+
         return $this->render('index.html');
     }
 
@@ -31,7 +32,7 @@ class BrandController extends CommonController
         return $this->render('add.html');
     }
 
-    //添加数据
+    //品牌添加数据
     public function actionBrand_add()
     {
         $request = \Yii::$app->request;
@@ -47,6 +48,7 @@ class BrandController extends CommonController
 
         $data['bra_name'] = $brand['brand'];   //品牌名称
         $data['bra_logo'] = $img_path;       //品牌logo
+        $data['bra_connect'] = $brand['connect'];       //品牌简介
         $data['bra_remark'] = $brand['remark'];   //品牌备注
         $data['bra_status'] = $brand['status'];   //状态
         // print_r($data);die;
@@ -54,7 +56,18 @@ class BrandController extends CommonController
         // print_r($url);die;
         //调用接口
         $arr_api = $this -> CurlPost( $url , $data );
-        var_dump($arr_api);die;
+        // var_dump($arr_api);die;
+        if ($arr_api['status']==0) 
+        {
+           echo 1;
+        }
+        else
+        {
+            $msg = $arr_api['msg'];
+            echo "<script>alert('$msg');location.href='index.php?r=brand/add'</script>";
+        }
 
     }
+
+
 }

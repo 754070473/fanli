@@ -56,7 +56,7 @@ class LoginController extends CommonController
     public function actionTakeout()
     {
         $session = Yii::$app->session;
-        $session->destroy();
+        $session->remove('admin');
         $this->redirect(array('/login/index'));
     }
 }
