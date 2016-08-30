@@ -124,7 +124,7 @@ class CommonController extends Controller
      * @param int $p 当前页码
      * @return mixed
      */
-    protected function databasesSelect( $table , $num = 0 , $where = 1 , $field = '*' , $order = 1 , $p = 1 )
+    protected function databasesSelect( $table , $num = 0 , $where = 1 , $field = '*' , $order = 1 , $p = 1 , $page_url = '' )
     {
         if( is_array( $table ) )
         {
@@ -163,7 +163,11 @@ class CommonController extends Controller
                         {
                             $count = count( $api_data_all['data'] );
                             $page_count = ceil( $count / $num ) ;
-                            $page = $this -> ajaxPage( $count , $url , $page_count , $p );
+                            if($page_url == '')
+                            {
+                                $page_url = 'index.php?r='.\Yii::$app->requestedRoute;
+                            }
+                            $page = $this -> ajaxPage( $count , $page_url , $page_count , $p );
                             $api_data['data']['page'] = $page;
                         }
                     }
