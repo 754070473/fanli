@@ -45,7 +45,8 @@ class LoginController extends CommonController
         }
         else
         {
-            echo "<script>alert('用户名或密码有误');location.href='index.php?r=login/index'</script>";
+            $msg = $arr_api['msg'];
+            echo "<script>alert('$msg');location.href='index.php?r=login/index'</script>";
         }
     }
 

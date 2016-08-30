@@ -18,5 +18,11 @@ class Status {
     const USER_PASSWORD_ERROR = 1;
     const USER_PASSWORD_ERROR_MSG = '账号密码不匹配!';
 
+    //品牌名称已存在
+    const BRAND_NAME = 1;
+    const BRAND_NAME_MSG = '品牌已存在';
 
+    //品牌名称不合法
+    const BRAND_NAME_ERROR = 1;
+    const BRAND_NAME_ERROR_MSG = '纯汉字或者纯英文';
 }
