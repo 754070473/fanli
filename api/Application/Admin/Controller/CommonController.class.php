@@ -31,8 +31,8 @@ class CommonController extends Controller
 
         if( !in_array( $Controller , array( 'Login' , 'Common' ) ) )
         {
-            $token = $_data['token'];
-            $adm_id = $_data['adm_id'];
+            $token = $_data['token']['token'];
+            $adm_id = $_data['token']['adm_id'];
             if( $this -> testToken( $adm_id , $token ) == false )
             {
                 $this -> errorMessage( 1 , '非法请求' );
@@ -61,7 +61,6 @@ class CommonController extends Controller
 //		$arr = array_merge( $arr , (array) $othor_data );
         if(isset($_data['token'])) {
             unset( $_data[ 'token' ] );
-            unset( $_data['adm_id'] );
         }
         $sign = $_data['sign'];
         unset($_data['sign']);

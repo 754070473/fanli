@@ -7,10 +7,8 @@ use Admin\Status\Success;
 use Admin\Status\Param;
 
 /**
- * Class IndexController
+ * Class PublicController
  * @package Admin\Controller
- *
- * 考虑如何防止暴力破解密码
  *
  */
 class PublicController extends CommonController
@@ -19,13 +17,13 @@ class PublicController extends CommonController
 	{
 		//表名
 		$sql = IsNaN( $this -> _data , 'sql' );
-		if( empty( $table ) ){
+		if( empty( $sql ) ){
 			$this -> errorMessage( Param::SELECT_TABLE_NAME_IS_NULL , Param::SELECT_TABLE_NAME_IS_NULL_MSG );
 		}
 		//查询字段
 		$field = IsNaN( $this -> _data , 'field' );
 		if( empty( $field ) ){
-			$this -> errorMessage( Param::SELECT_TABLE_NAME_IS_NULL , Param::SELECT_TABLE_NAME_IS_NULL_MSG );
+			$this -> errorMessage( Param::SELECT_FIELD_NAME_IS_NULL , Param::SELECT_FIELD_NAME_IS_NULL_MSG );
 		}
 
 		//当前页码
