@@ -13,7 +13,7 @@ class Success {
     const SELECT_SUCCESS = 0;
     const SELECT_SUCCESS_MSG = '查询成功!';
 
-
+    
     //管理员添加
     const ADMIN_ADD = 0;
     const ADMIN_ADD_MSG = '添加成功';
@@ -21,5 +21,7 @@ class Success {
     //品牌添加成功
     const BRAND_ADD_SUCCESS = 0;
     const BRAND_ADD_SUCCESS_MSG = '品牌添加成功!';
+
+
 
 }
