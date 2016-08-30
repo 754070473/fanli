@@ -115,12 +115,13 @@ class CommonController extends Controller
     }
     
     /**
-     * @param $table
-     * @param int $where
-     * @param int $num
-     * @param string $field
-     * @param int $order
-     * @param int $p
+     * 接口查询
+     * @param $table 表名   若多表联查$table格式为 array( ['table1' => 表1 , 'table2' => 表2 , 'join' => 联查字段] , ......)
+     * @param int $num 每页显示数据条数 若$num = 0 则不分页  查询所有；若$num = 1 不分页 且查询1条数据；若$num > 1 则分页 且每页显示$num条数据
+     * @param int $where 查询条件
+     * @param string $field 查询字段
+     * @param int $order 排序
+     * @param int $p 当前页码
      * @return mixed
      */
     protected function databasesSelect( $table , $num = 0 , $where = 1 , $field = '*' , $order = 1 , $p = 1 )
@@ -140,7 +141,6 @@ class CommonController extends Controller
         $url = $this -> apiUrl( 'Public' , 'index' );
         $data = array( 'sql' => $sql , 'field' => $field , 'where' => $where , 'num' => $num , 'order' => $order , 'p' => $p );
         $api_data = $this -> CurlPost( $url , $data );
-
         if( empty( $api_data ) )
         {
             print_r($api_data);
