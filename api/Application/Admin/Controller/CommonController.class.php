@@ -31,8 +31,8 @@ class CommonController extends Controller
 
         if( !in_array( $Controller , array( 'Login' , 'Common' ) ) )
         {
-            $token = $_data['token'];
-            $adm_id = $_data['adm_id'];
+            $token = $_data['token']['token'];
+            $adm_id = $_data['token']['adm_id'];
             if( $this -> testToken( $adm_id , $token ) == false )
             {
                 $this -> errorMessage( 1 , '非法请求' );

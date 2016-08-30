@@ -82,7 +82,8 @@ class CommonController extends Controller
             if (isset($session['admin']))
             {
                 $token = $session['admin']['token'];
-                $data['token'] = $token;
+                $data['token']['token'] = $token;
+                $data['token']['adm_id'] = $session['admin']['adm_id'];
             }
 
             $data = array_merge( $data , array( 'sign' => $sign ) );

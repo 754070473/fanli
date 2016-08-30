@@ -50,7 +50,7 @@ class GoodsController extends CommonController
         $goods_stock   = IsNan( $this -> _data , 'goods_stock');
         $goods_rebate  = IsNan( $this -> _data , 'goods_rebate');
         $cla_id        = IsNan( $this -> _data , 'cla_id');
-        $fanli_goods   = IsNan( $this -> _data , 'goods_date');
+        $goods_date  = IsNan( $this -> _data , 'goods_date');
         $goods_url   = IsNan( $this -> _data , 'goods_url');
 
         $data['goods_photo']   =   $goods_photo   ;
@@ -59,9 +59,10 @@ class GoodsController extends CommonController
         $data['goods_stock']   =   $goods_stock;
         $data['goods_rebate']  =   $goods_rebate ;
         $data['cla_id']        =   $cla_id ;
-        $data['goods_date']    =   $fanli_goods ;
-        $data['goods_url']    =   $goods_url ;
-        $goods = M('fanli_goods');
+        $data['goods_date']    =   $goods_date ;
+        $data['goods_url']     =   $goods_url ;
+        $goods = M('goods');
+
         $bool =   $goods->add($data);
         if($bool){
             $this -> success(
@@ -84,7 +85,7 @@ class GoodsController extends CommonController
      * 查询出所有分类
      */
     function type(){
-        $goods = M('fanli_classify');
+        $goods = M('classify');
         $arr = $goods->select();
         $this ->success( $success_status = 0  , $success_msg = 'success' , $arr ,  $other_data = array());
     }

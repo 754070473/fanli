@@ -38,12 +38,20 @@ class GoodsController extends CommonController
      */
     public function actionAddshop(){
         $data = Yii::$app->request->post();
-//        print_r($data);die;
         $data['goods_date']=date('Y-m-d',time());
-        unset($data['bre_name']);
         $url = $this -> apiUrl('Goods','shopadd');
+        $data['goods_url'] = $this ->url($data['goods_url']);;
         $b= $this -> CurlPost($url , $data);
-        print_r($b);die;
+        if($b['status']=='0'){
+            echo '<script>alert("添加成功");location.href="index.php?r=goods/add"</script>';
+        }else{
+            echo '<script>alert("错误");location.href="index.php?r=goods/add"</script>';
+        }
+    }
+    function url($shopurl){
+        if(preg_match('#taobao.com#isU',$shopurl)){
+         return 'https://item.taobao.com/item.htm?id='.substr($shopurl,strrpos($shopurl,'=')+1);// strpos('i',$shopurl);//substr($shopurl,strrpos('id=',$shopurl));
+        }
     }
     /**
      *  商品添加返回淘宝ajax数据
@@ -201,7 +209,7 @@ class GoodsController extends CommonController
              $arr['imgUrl']  = empty($tb_img[1])?'':$tb_img[1];;//图片url
              $arr['price']   = empty($tb_arr[20])?'':$tb_arr[20]; ;//价格
              $arr['kucun']   = empty($tb_ku[1])?'':$tb_ku[1];;//库存
-             $arr['bre_name']   = empty($bra_name2[1])?'':$bra_name2[1];;//库存
+             $arr['bre_name']   = empty($bra_name2[1])?'':$bra_name2[1];;//
              return  $arr;
 
 
