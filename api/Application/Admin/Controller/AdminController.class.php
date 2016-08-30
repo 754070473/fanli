@@ -33,7 +33,7 @@ class AdminController extends CommonController
         //密码
         $password = IsNaN( $this -> _data , 'password');
         if(empty($password)){
-            $this-> errorMessage(Param::ADMIN_PASSWORD_IS_NULL, Param::ADMIN_PASSWORD_IS_NULL_MSG);
+            $this-> errorMessage(Param::ADMIN_PASSWORD_IS_NULL, Param::ADMIN_PASSWORD_IS_NULL_MSG );
         }
 
         $date = date( 'Y-m-d' , time() );

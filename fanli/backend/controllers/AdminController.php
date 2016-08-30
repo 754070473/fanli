@@ -29,7 +29,9 @@ class AdminController extends CommonController
     //管理员列表展示页面
     public function actionIndex()
     {
-        return $this->render('index.html');
+        $arr = Yii::$app->db->createCommand("select * from fanli_admin");
+        $sql = $arr->queryAll();
+        return $this->render('index.html' , array ( 'sql' => $sql ));
     }
 
     //管理员添加展示页面
