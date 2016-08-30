@@ -83,6 +83,7 @@ class CommonController extends Controller
             {
                 $token = $session['admin']['token'];
                 $data['token'] = $token;
+                $data['adm_id'] = $session['admin']['adm_id'];
             }
 
             $data = array_merge( $data , array( 'sign' => $sign ) );
@@ -138,7 +139,7 @@ class CommonController extends Controller
         }
         $url = $this -> apiUrl( 'Public' , 'index' );
         $data = array( 'table' => $sql , 'field' => $field , 'where' => $where , 'num' => $num , 'order' => $order , 'p' => $p );
-        $api_data = $this -> CurlPost( $url , $data);
+        $api_data = $this -> CurlPost( $url , $data );
         if( empty( $api_data['status'] ) )
         {
             print_r($api_data);

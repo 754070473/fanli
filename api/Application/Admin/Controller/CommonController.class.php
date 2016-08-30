@@ -61,10 +61,10 @@ class CommonController extends Controller
 //		$arr = array_merge( $arr , (array) $othor_data );
         if(isset($_data['token'])) {
             unset( $_data[ 'token' ] );
+            unset( $_data['adm_id'] );
         }
         $sign = $_data['sign'];
         unset($_data['sign']);
-
         //判断sign值是否正确
         $_sign = $this -> setSign( $_data );
         if( $sign != $_sign )
