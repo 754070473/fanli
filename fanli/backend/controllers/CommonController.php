@@ -168,7 +168,7 @@ class CommonController extends Controller
                                 $page_url = 'index.php?r='.\Yii::$app->requestedRoute;
                             }
                             $page = $this -> ajaxPage( $count , $page_url , $page_count , $p );
-                            $api_data['data']['page'] = $page;
+                            $api_data['page'] = $page;
                         }
                     }
                 }
