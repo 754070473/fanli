@@ -50,8 +50,8 @@ class GoodsController extends CommonController
         $goods_stock   = IsNan( $this -> _data , 'goods_stock');
         $goods_rebate  = IsNan( $this -> _data , 'goods_rebate');
         $cla_id        = IsNan( $this -> _data , 'cla_id');
-        $goods_date  = IsNan( $this -> _data , 'goods_date');
-        $goods_url   = IsNan( $this -> _data , 'goods_url');
+        $goods_date    = IsNan( $this -> _data , 'goods_date');
+        $goods_url     = IsNan( $this -> _data , 'goods_url');
 
         $data['goods_photo']   =   $goods_photo   ;
         $data['goods_name']    =   $goods_name   ;
@@ -61,8 +61,8 @@ class GoodsController extends CommonController
         $data['cla_id']        =   $cla_id ;
         $data['goods_date']    =   $goods_date ;
         $data['goods_url']     =   $goods_url ;
-        $goods = M('goods');
 
+        $goods = M('goods');
         $bool =   $goods->add($data);
         if($bool){
             $this -> success(
@@ -78,9 +78,7 @@ class GoodsController extends CommonController
                 $other_data = array()
             );
         }
-
     }
-
     /**
      * 查询出所有分类
      */
@@ -88,5 +86,22 @@ class GoodsController extends CommonController
         $goods = M('classify');
         $arr = $goods->select();
         $this ->success( $success_status = 0  , $success_msg = 'success' , $arr ,  $other_data = array());
+    }
+    /*
+     * 商品列表查询
+     */
+    function shopSelect(){
+
+        $page   = IsNan( $this -> _data , 'page');
+        $num   = IsNan( $this -> _data , 'num');
+        empty( $page )? $page = 1 : '';
+        empty( $num )? $num = 10 : '';
+        if( $page < 1 ) $page = 1;
+        $User = M('goods');
+        $list = $User
+//            ->join('fanli_classify','fanli_classify.cla_id=fanli_goods.cla_id')
+            ->page($page.','.$num)
+            ->select();
+        $this ->success( $success_status = 0  , $success_msg = 'success' , $list,  $other_data = array());
     }
 }

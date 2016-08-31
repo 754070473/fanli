@@ -95,6 +95,7 @@
         $('#url').click(function () {
            var turl = $('#turl').val();
             $.post('index.php?r=goods/curl',{url:turl}, function (msg) {
+                alert(msg)
                 if(msg!='error'&&msg!=''){
                     var obj = eval("("+msg+")");//转换为对象
                     $('#name1').html(obj['title'])
@@ -106,7 +107,6 @@
                     $('#mm').html("<input type='hidden' id='imgUrl' name='goods_photo'value='"+obj['imgUrl']+"'/>" +
                                   "<input type='hidden' name='goods_name' id='goods_name' value='"+obj['title']+"'/>")
                     $('#img').append('<input type="hidden" name="goods_url" value="'+turl+'">')
-
                 }
                 else
                 {

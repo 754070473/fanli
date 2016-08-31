@@ -64,102 +64,10 @@ class GoodsController extends CommonController
         }else{
             echo 'error';
         }
+
     }
 
-    /**
-     * 超级反数据
-     */
-    public function actionAdd11(){
 
-
-        $content = file_get_contents('http://m.api.fanli.com/app/v1/sf/productRecommends.htm?src=2&v=5.2.0.34&abtest=17454_a-30115_b-72_c-138_b-112_b-6_b-9874_a-2_a-326b&bid=921');
-        $content2= json_decode($content,true);
-        print_r($content2);die;
-       $content = file_get_contents('http://m.api.fanli.com/app/v3/sf/cats.htm?src=2&v=5.2.0.34&abtest=17454_a-32579_b-72_c-138_b-112_b-6_b-9874_a-2_a-326b');
-        $content2= json_decode($content,true);
-//        print_r($content2);die;
-        $arr =  $content2['data']['cats'];
-        $shop_new=[];
-        $sql = "insert into fanli_classify(cla_id,cla_name,cla_order,pid,cla_date,cla_status) VALUES ";
-        foreach($arr as $k=>$v){
-            if(empty($v['sort'])){
-                $sql.="(";
-                $sql.="'".$v['id']."',";
-                $sql.="'".$v['name']."',";
-                $sql.="'1',";
-                $sql.="'0',";
-                $sql.="'".time()."',";
-                $sql.="'1'),";
-            }else{
-                $sql.="(";
-                $sql.="'".$v['id']."',";
-                $sql.="'".$v['name']."',";
-                $sql.="'".$v['sort']."',";
-                $sql.="'".$v['parentId']."',";
-                $sql.="'".time()."',";
-                $sql.="'1'),";
-            }
-
-//            $shop_new[$k]['cla_id']=$v['id'];
-//            $shop_new[$k]['cla_name']=$v['name'];
-//            $shop_new[$k]['pid']=$content2['data']['totalCount'];
-//            $shop_new[$k]['cla_date']=time();
-//            $shop_new[$k]['cla_status']=1;
-//            if(!empty($v['id'])){
-//                $shop_new[]=json_decode($this->AndroidCurl('http://m.api.fanli.com/app/v1/sf/productRecommends.htm?src=2&v=5.2.0.34&abtest=17454_a-32579_b-72_c-138_b-112_b-6_b-9874_a-2_a-326b&bid='.$v['id']),true);
-//            if($k>=3)break;
-//            }
-        }
-   echo     substr($sql , 0 ,-1);
-
-//        foreach(){
-//
-//        }
-//        print_r($shop_new);
-    }
-
-    /**
-     * 商品/品牌
-     */
-    function cjType(){
-        $content = file_get_contents('http://m.api.fanli.com/app/v2/sf/todayNew.htm?src=2&v=5.2.0.34&abtest=17454_a-32579_b-72_c-138_b-112_b-6_b-9874_a-2_a-326b&pidx=5&psize=40');
-        $content2= json_decode($content,true);
-        $arr =  $content2['data']['dateGroup'][0]['brands'];
-        $shop_new=[];
-        $sql = "insert into fanli_classify(cla_id,cla_name,pid,cla_date,cla_status) VALUES ";
-        foreach($arr as $k=>$v){
-            $sql.="(";
-            $sql.="'".$v['id']."',";
-            $sql.="'".$v['name']."',";
-            $sql.="'".$content2['data']['totalCount']."',";
-            $sql.="'".time()."',";
-            $sql.="'1'),";
-        }
-        echo   substr($sql , 0 ,-1);
-    }
-//    public function actionAdd()
-//    {
-     //   http://super.fanli.com/h5/brand/?bid=6761&lc=super_women_brand&spm=super_woman.h5.pty-click%7Ebid-6761%7Eindex-3
-     //   http://fun.fanli.com/goshop/go?id=712&go=http%3A%2F%2Fm.api.51fanli.com%2Fapp%2Fitem.htm%3Fid%3D41929831091%26s%3Dtaobao.com&pid=41929831091&wp=1
-
-        //商品
-        //http://fun.fanli.com/mobileapi/v2/shop/getFanliRule?shopid=712&pid=536778999138&sellernick=&ci=super&gsn=8&abtest=17454_a-32579_b-72_c-138_b-112_b-6_b-9874_a-2_a-326b
-
-   //     https://detail.tmall.com/item.htm?id=41929831091
-
-   //     $shop = file_get_contents('http://m.api.fanli.com/app/v3/sf/cats.htm?src=2&v=5.2.0.34&abtest=17454_a-32579_b-72_c-138_b-112_b-6_b-9874_a-2_a-326b');
-   //     print_r(json_decode($shop,true));
-        //分类下商品
-    //    http://m.api.fanli.com/app/v1/sf/productRecommends.htm?src=2&v=5.2.0.34&abtest=17454_a-32579_b-72_c-138_b-112_b-6_b-9874_a-2_a-326b&bid=1205
-        //也可能感兴趣的
-      //  http://m.api.fanli.com/app/v3/sf/brandRecommends.htm?src=2&v=5.2.0.34&abtest=17454_a-32579_b-72_c-138_b-112_b-6_b-9874_a-2_a-326b&bid=1205
-      //  return $this->render('add.html');
-     //   echo       json_decode(json_encode('ifanli://m.51fanli.com/app/show/web?url=http%3A%2F%2Fsuper.fanli.com%2Fh5%2Fchannel%3Fid%3D17%26lc%3Dand_cats&nologin=1&lc=and_cats'),true);
-//        htmlentities() 转义
-
-
-//     echo   $this->_str('http%3A%2F%2Fsuper.fanli.com%2Fh5%2Fchannel%3Fid%3D17%26lc%3Dand_cats&nologin=1&lc=and_cats');
-//    }
 
     /**
      * 处理url
@@ -190,6 +98,12 @@ class GoodsController extends CommonController
         curl_close($ch);
        return $response;
     }
+
+    /**
+     * 商品ajax查询处理采集数据
+     * @param $url
+     * @return mixed
+     */
     function caiji($url){
        $co =  file_get_contents($url);
         if(preg_match('#taobao.com#isU',$url)){
@@ -202,8 +116,6 @@ class GoodsController extends CommonController
             preg_match($img,$co,$tb_img);
             $bra_name= "#sellerNick       : '(.*)',#isU";
             preg_match($bra_name,$co,$bra_name2);
-
-//            print_r($co);die;
              $arr['title']   = empty($tb_arr[6])?'':$tb_arr[6];;//标题
              $arr['img']     = empty($tb_img[0])?'':$tb_img[0];;//显示图片
              $arr['imgUrl']  = empty($tb_img[1])?'':$tb_img[1];;//图片url
@@ -211,8 +123,6 @@ class GoodsController extends CommonController
              $arr['kucun']   = empty($tb_ku[1])?'':$tb_ku[1];;//库存
              $arr['bre_name']   = empty($bra_name2[1])?'':$bra_name2[1];;//
              return  $arr;
-
-
         }
         else if(preg_match('#jd.com#isU',$url))
         {
@@ -220,6 +130,10 @@ class GoodsController extends CommonController
         }
     }
 
+    /**
+     * @param $url
+     * @return mixed
+     */
     function  curlGet($url){
         #初始化curl
         $ch=curl_init();
@@ -238,4 +152,18 @@ class GoodsController extends CommonController
         $content=curl_exec($ch);
         return $content;
     }
+
+    function actionShoplist(){
+        $page=Yii::$app->request->post('page');
+        $url = $this -> apiUrl('Goods','shopSelect');
+        $data['page'] =$page;
+        $data['num'] ='10';
+        $arr = $this -> CurlPost($url , $data);;
+        if(!empty($arr['data'])){
+            echo json_encode($arr['data']);
+        }else{
+            echo json_encode(array());
+        }
+    }
+
 }
