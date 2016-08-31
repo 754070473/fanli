@@ -26,4 +26,11 @@ class IndexController extends CommonController
     {
         return $this -> render('index.html');
     }
+
+    public function actionClassify()
+    {
+        $table = 'fanli_classify';
+        $arr = $this -> databasesSelect($table , 0 ,'pid = 0');
+        return $arr;
+    }
 }

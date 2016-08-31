@@ -445,18 +445,14 @@
 				$('#list li').eq(2).children('img').attr('src','public/img/images/未标题-2.jpg');
 				$('#list li').eq(3).children('img').attr('src','public/img/images/未标题-5.jpg');
 			}
-		})
-		
-		
-		
+		});
 		var index=0;
 		$('.list-lis li').on('tap',function(){
 			//alert(1)
 			index=$(this).index();
 			$('.syBanner img').hide().eq(index).show();
 			$(this).addClass('on').siblings().removeClass('on');
-		})
-		
+		});
 		setInterval(function(){
 			index++;
 			if(index>5){
@@ -464,10 +460,6 @@
 			}
 			$('.syBanner img').hide().eq(index).show();
 			$('.list-lis li').removeClass('on').eq(index).addClass('on');
-		},3000)
-		
-		
-		
-		
+		},3000);
 	</script>
 </html>
