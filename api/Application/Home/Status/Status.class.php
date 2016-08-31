@@ -17,6 +17,9 @@ class Status {
     //账号密码不匹配
     const USER_PASSWORD_ERROR = 1;
     const USER_PASSWORD_ERROR_MSG = '账号密码不匹配!';
-
+    
+    //未查询到数据
+    const SELECT_DATA_ERROR = 1;
+    const SELECT_DATA_ERROR_MSG = '未查询到数据!';
 
 }
