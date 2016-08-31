@@ -22,6 +22,9 @@ class Success {
     const BRAND_ADD_SUCCESS = 0;
     const BRAND_ADD_SUCCESS_MSG = '品牌添加成功!';
 
-
+    
+    //导航添加成功
+    const NAV_ADD_SUCCESS = 0;
+    const NAV_ADD_SUCCESS_MSG = '导航添加成功!';
 
 }
