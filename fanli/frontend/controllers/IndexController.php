@@ -18,10 +18,12 @@ use yii\filters\AccessControl;
 /**
  * Site controller
  */
-class IndexController extends Controller
+class IndexController extends CommonController
 {
+    public $layout=false;
+    public $enableCsrfValidation = false;
     public function actionIndex()
     {
-        echo "Hello Word!";
+        return $this -> render('index.html');
     }
 }
