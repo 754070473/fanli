@@ -3,14 +3,13 @@
 <head>
     <title></title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="../Css/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="../Css/bootstrap-responsive.css" />
-    <link rel="stylesheet" type="text/css" href="../Css/style.css" />
-    <script type="text/javascript" src="../Js/jquery.js"></script>
-    <script type="text/javascript" src="../Js/jquery.sorted.js"></script>
-    <script type="text/javascript" src="../Js/bootstrap.js"></script>
-    <script type="text/javascript" src="../Js/ckform.js"></script>
-    <script type="text/javascript" src="../Js/common.js"></script>
+    <link rel="stylesheet" type="text/css" href="public/Css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="public/Css/bootstrap-responsive.css" />
+    <link rel="stylesheet" type="text/css" href="public/Css/style.css" />
+    <script type="text/javascript" src="public/Js/jquery.js"></script>
+    <script type="text/javascript" src="public/Js/bootstrap.js"></script>
+    <script type="text/javascript" src="public/Js/ckform.js"></script>
+    <script type="text/javascript" src="public/Js/common.js"></script>
 
     <style type="text/css">
         body {
@@ -34,28 +33,41 @@
 </head>
 <body>
 <form class="form-inline definewidth m20" action="index.html" method="get">  
-    角色名称：
+    活动名称：
     <input type="text" name="rolename" id="rolename"class="abc input-default" placeholder="" value="">&nbsp;&nbsp;  
-    <button type="submit" class="btn btn-primary">查询</button>&nbsp;&nbsp; <button type="button" class="btn btn-success" id="addnew">新增角色</button>
+    <button type="submit" class="btn btn-primary">查询</button>&nbsp;&nbsp; <button type="button" class="btn btn-success" id="addnew">新增活动</button>
 </form>
-<table class="table table-bordered table-hover definewidth m10" >
+    <table class="table table-bordered table-hover definewidth m10" >
     <thead>
     <tr>
-        <th>角色id</th>
-        <th>角色名称</th>
-        <th>状态</th>
+        <th>活动id</th>
+        <th>活动名称</th>
+        <th>活动类型</th>
+        <th>开始时间</th>
+        <th>结束时间</th>
+        <th>添加时间</th>
+        <th>排序</th>
+        <th>活动介绍</th>
         <th>操作</th>
     </tr>
     </thead>
-	     <tr>
-            <td>5</td>
-            <td>管理员</td>
-            <td>1</td>
-            <td>
-                  <a href="edit.html">编辑</a>
-                  
-            </td>
-        </tr></table>
+    <?php foreach($result as $key=>$val){ ?>
+    <tr>
+        <td><?= $val['act_id']?></td>
+        <td><?= $val['act_name']?></td>
+        <td><?= $val['type_name']?></td>
+        <td><?= $val['start_time']?></td>
+        <td><?= $val['end_time']?></td>
+        <td><?= $val['act_date']?></td>
+        <td><?= $val['act_order']?></td>
+        <td><?= $val['act_desc']?></td>
+        <td>
+            <a href="?r=activity/edit&id=<?= $val['act_id']?>">修改</a> | 
+            <a href="?r=activity/edit&id=<?= $val['act_id']?>">删除</a>
+        </td>
+    </tr>
+    <?php }?>
+    </table>
 		</body>
 		</html>
 
@@ -64,16 +76,11 @@
         
 		$('#addnew').click(function(){
 
-				window.location.href="add.html";
+				window.location.href="?r=activity/add";
 		 });
-
-
     });
-
 	function del(id)
-	{
-		
-		
+	{	
 		if(confirm("确定要删除吗？"))
 		{
 		
@@ -81,10 +88,6 @@
 			
 			window.location.href=url;		
 		
-		}
-	
-	
-	
-	
+		}	
 	}
 </script>

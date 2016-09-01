@@ -32,9 +32,17 @@ class Status
     const BRAND_NAME_ERROR = 1;
     const BRAND_NAME_ERROR_MSG = '纯汉字或者纯英文';
 
-    //品牌名称不合法
+    //品牌添加失败
     const BRAND_ADD_ERROR = 1;
     const BRAND_ADD_ERROR_MSG = '品牌添加失败';
+
+    //品牌启用或禁用失败
+    const BRAND_LOCK_ERROR = 1;
+    const BRAND_LOCK_ERROR_MSG = '品牌启用或禁用失败';
+
+    //品牌删除失败
+    const BRAND_DEL_ERROR = 1;
+    const BRAND_DEL_ERROR_MSG = '品牌删除失败';
 
 
     //管理员添加失败
