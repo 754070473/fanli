@@ -23,14 +23,13 @@ class BrandController extends CommonController
     public function actionIndex()
     {
         $table = "fanli_brand";     //表名
-        $num = 2;                  //每页显示的条数
-        $where = "bra_status=1";   //条件
+        $num = 4;                  //每页显示的条数
+        // $where = "bra_status=1";   //条件
         $page_url = "index.php?r=brand/index";
-        $data = $this -> databasesSelect($table,$num,$where,$field = '*',1,1,$page_url);
-        echo "<pre>";
-        print_r($data);die;
-        $data = $data['data'];
-        return $this->render('index.html',['data' => $data]);
+        $data = $this -> databasesSelect($table,$num,1,$field = '*',1,1,$page_url);
+        // echo "<pre>";
+        // print_r($data);die; 
+        return $this->render('index.html',['data' => $data['data'],'page' => $data['page']]);
     }
 
     //品牌添加页面
@@ -76,5 +75,49 @@ class BrandController extends CommonController
 
     }
 
+    //品牌的禁用或启用
+    public function actionBrand_lock()
+    {
+        $request = \Yii::$app->request;
+        $data = $request->post();
+        // print_r($data);
+        $url = $this->apiUrl( 'Brand' , 'is_lock' );
+        // print_r($url);die;
+        //调用接口
+        $arr_api = $this -> CurlPost( $url , $data );
+        // print_r($arr_api);die;
+        if ($arr_api['status']==0) 
+        {
+            echo 1;
+           // $this->redirect(array('/brand/index'));
+        }
+        else
+        {
+            $msg = $arr_api['msg'];
+            echo "<script>alert('$msg');location.href='index.php?r=brand/index'</script>";
+        }
+    }
 
+    //品牌的删除
+    public function actionBrand_del()
+    {
+        $request = \Yii::$app->request;
+        $data = $request->post();
+        // print_r($data);
+        $url = $this->apiUrl( 'Brand' , 'del' );
+        // print_r($url);die;
+        //调用接口
+        $arr_api = $this -> CurlPost( $url , $data );
+        // print_r($arr_api);die;
+        if ($arr_api['status'] == 0) 
+        {
+            $lists = json_encode($arr_api['data'][0]);
+            echo $lists;
+        }
+        else
+        {
+             $msg = $arr_api['msg'];
+            echo "<script>alert('$msg');location.href='index.php?r=brand/index'</script>";
+        }
+    }
 }

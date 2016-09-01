@@ -49,17 +49,25 @@
     </tr>
     </thead>
 	   <?php foreach ($data as $key => $v) {?>
-          <tr>
+          <tr id="<?php echo $v['bra_id']?>">
             <td><?php echo $v['bra_id']?></td>
             <td><?php echo $v['bra_name']?></td>
-            <td><?php echo ?></td>
+            <td><img src="<?php echo $v['bra_logo']?>" alt="" hight='50' width='50'></td>
             <td><?php echo $v['bra_connect']?></td>
             <td><?php echo $v['bra_date']?></td>
-            <td><a href="edit.html">编辑</a></td>
+            <td>
+                <?php if ($v['bra_status']==0) {?>
+                    <a href="javascript:is_lock(<?php echo $v['bra_id']?>,1)">禁用</a>
+                <?php }else{?>
+                    <a href="javascript:is_lock(<?php echo $v['bra_id']?>,0)">启用</a>
+                <?php }?>
+                &nbsp;&nbsp;<a href="javascript:del(<?php echo $v['bra_id']?>)">删除</a>
+            </td>
           </tr>
        <?php }?>
         
         </table>
+        <?php echo $page['page']?>
 
 </body>
 </html>
@@ -75,4 +83,58 @@
 
     });
 	
+    //品牌的启用或禁用
+    function is_lock(bra_id,v)
+    {
+       $.ajax({
+           type: "post",
+           url: "?r=brand/brand_lock",
+           data: "bra_id="+bra_id+"&v="+v,
+           success: function(msg){
+             // alert(msg);
+             if (msg==1) 
+             {
+                window.location.href="index.php?r=brand/index"
+             }
+           }
+        });
+    }
+
+
+    //品牌的删除
+    function del(bra_id)
+    {
+        //获取当前页的最后一条id
+        var last_id=$("tr:last td:nth-child(1)").html();
+        // alert(last_id);
+        $.ajax({
+           type: "post",
+           url: "?r=brand/brand_del",
+           data: "bra_id="+bra_id+"&last_id="+last_id,
+           success: function(msg){
+             // alert(msg);
+             var data = eval('('+msg+')');
+             // alert(data);
+             var str="";
+                 str+="<tr id="+data['bra_id']+">";
+                 str+= "<td>"+data['bra_id']+"</td>";
+                 str+= "<td>"+data['bra_name']+"</td>";
+                 str+= "<td><img src='"+data['bra_logo']+"' alt='' hight='50' width='50'></td>"
+                 str+= "<td>"+data['bra_connect']+"</td>"
+                 str+= "<td>"+data['bra_date']+"</td>"
+                 str+= "<td>"
+                 if (data['bra_status']==0) {
+                 str+= "<a href='javascript:is_lock("+data['bra_id']+",1)'>禁用</a>"
+                 }else{
+                 str+= "<a href='javascript:is_lock("+data['bra_id']+",0)'>启用</a>"
+                  }
+                 str+= "&nbsp;&nbsp;<a href='javascript:del("+data['bra_id']+")'>删除</a>"
+                 str+= "</td>"
+                 str+= "</tr>"
+                 // console.log(str);
+                 $('table').append(str);
+                 $('#'+bra_id).remove();
+           }
+        });
+    }
 </script>
