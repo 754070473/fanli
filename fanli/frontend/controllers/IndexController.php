@@ -33,4 +33,26 @@ class IndexController extends CommonController
         $arr = $this -> databasesSelect($table , 0 ,'pid = 0');
         return $arr;
     }
+
+    //限量秒杀
+    public function actionSeckill(){
+        $table1 = "fanli_acttype";
+        $table2 = "fanli_activity";
+        $join = "type_id";
+        $table = array( ['table1' => $table1 , 'table2' => $table2 ,  'join' => $join]);
+        $arr = $this->databasesSelect($table , 0 , 'fanli_acttype.type_id = 1');
+        return $arr;
+    }
+
+    //精选活动
+    public function actionChoiceness(){
+        $table1 = "fanli_acttype";
+        $table2 = "fanli_activity";
+        $join = "type_id";
+        $table = array( ['table1' => $table1 , 'table2' => $table2 ,  'join' => $join]);
+        $arr = $this->databasesSelect($table , 0 , 'fanli_acttype.type_id = 2');
+        return $arr;
+    }
+
+
 }
