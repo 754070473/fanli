@@ -1946,3 +1946,106 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1472627489.437
     'REQUEST_TIME' => 1472627489
 ]
+2016-08-31 16:50:33 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "".' in F:\Larvel\fanli\fanli\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 F:\Larvel\fanli\fanli\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('', Array)
+#1 F:\Larvel\fanli\fanli\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 F:\Larvel\fanli\fanli\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in F:\Larvel\fanli\fanli\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 F:\Larvel\fanli\fanli\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 F:\Larvel\fanli\fanli\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2016-08-31 16:50:33 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'iweb_safecode' => '9cb1f1302e5aa48022NjAwOTc4MDAxMDI5NGptZmRgOjkxNDRjZjkwODA0NDcxMGA1MDhlNTE2Zm0wO2A+PjZkPWY2NzcwPDU9YzU1ZQ'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.lal.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.lal.com/fanli/fanli/backend/'
+    'HTTP_COOKIE' => 'iweb_safecode=9cb1f1302e5aa48022NjAwOTc4MDAxMDI5NGptZmRgOjkxNDRjZjkwODA0NDcxMGA1MDhlNTE2Zm0wO2A%2BPjZkPWY2NzcwPDU9YzU1ZQ'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;E:\\web\\Mysql\\bin;E:\\server\\mysql\\bin;C:\\Program Files\\TortoiseSVN\\bin;D:\\Program Files\\VisualSVN Server\\bin;D:\\server\\Mysqls\\bin;C:\\Program Files (x86)\\MySQL\\MySQL Server 5.5\\bin;D:\\phpStudy\\php55;E:\\git\\bin;D:\\phpStudy\\php55\\libeay32.dll;E:\\Python;D:\\mysql5-6\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.lal.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/Larvel'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/Larvel'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'F:/Larvel/fanli/fanli/backend/web/index.php'
+    'REMOTE_PORT' => '14237'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/fanli/fanli/backend/web/'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472633433.247
+    'REQUEST_TIME' => 1472633433
+]
+2016-09-01 08:10:36 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "".' in F:\Larvel\fanli\fanli\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 F:\Larvel\fanli\fanli\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('', Array)
+#1 F:\Larvel\fanli\fanli\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 F:\Larvel\fanli\fanli\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in F:\Larvel\fanli\fanli\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 F:\Larvel\fanli\fanli\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 F:\Larvel\fanli\fanli\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2016-09-01 08:10:35 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'HTTP_HOST' => 'www.lal.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://www.lal.com/fanli/fanli/backend/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;E:\\web\\Mysql\\bin;E:\\server\\mysql\\bin;C:\\Program Files\\TortoiseSVN\\bin;D:\\Program Files\\VisualSVN Server\\bin;D:\\server\\Mysqls\\bin;C:\\Program Files (x86)\\MySQL\\MySQL Server 5.5\\bin;D:\\phpStudy\\php55;E:\\git\\bin;D:\\phpStudy\\php55\\libeay32.dll;E:\\Python;D:\\mysql5-6\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.lal.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/Larvel'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/Larvel'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'F:/Larvel/fanli/fanli/backend/web/index.php'
+    'REMOTE_PORT' => '7399'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/fanli/fanli/backend/web/'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472688635.805
+    'REQUEST_TIME' => 1472688635
+]

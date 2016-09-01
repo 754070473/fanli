@@ -40,4 +40,8 @@ class Status
     //管理员添加失败
     const ADMIN_NAME_ERROR = 1;
     const ADMIN_NAME_ERROR_MSG = '管理员添加失败';
+
+     //导航名称不合法
+    const NAV_NAME_ERROR = 1;
+    const NAV_NAME_ERROR_MSG = '添加失败，请重试';
 }
