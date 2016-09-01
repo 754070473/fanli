@@ -18,10 +18,19 @@ use yii\filters\AccessControl;
 /**
  * Site controller
  */
-class IndexController extends Controller
+class IndexController extends CommonController
 {
+    public $layout=false;
+    public $enableCsrfValidation = false;
     public function actionIndex()
     {
-        echo "Hello Word!";
+        return $this -> render('index.html');
+    }
+
+    public function actionClassify()
+    {
+        $table = 'fanli_classify';
+        $arr = $this -> databasesSelect($table , 0 ,'pid = 0');
+        return $arr;
     }
 }

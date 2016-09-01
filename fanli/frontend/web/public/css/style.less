@@ -1,0 +1,412 @@
+@import url('m_reset.css');
+.box(@fx){
+   display: -webkit-box;
+    -webkit-box-orient: @fx; 
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+}
+html,body,.wrap{
+    width: 100%;
+    height: 100%;
+}
+.wrap{
+    .box(vertical);
+}
+header{
+    width: 100%;
+    height: 4rem;
+    background: #ffffff;
+    .box(horizontal);
+    .head-left{
+        img{
+            padding: 1rem;
+        }
+    }
+    .head-right{
+        img{
+            padding: 1rem;
+        }
+    }
+    .head-center{
+        -webkit-box-flex: 1;
+        box-sizing: border-box;
+        text-align: center;
+        img{
+            padding: 1rem ;
+        }
+    }
+}
+section{
+    -webkit-box-flex: 1;
+    overflow: hidden;
+    overflow-y: auto;
+    .box{
+        .box(horizontal);
+        position: relative;
+        left: 0;
+        width: 100%;
+        >div{
+            width: 100%;
+        }
+        .shouye{
+            .box(vertical);
+            
+            .syBanner{
+                width: 100%;
+                height: 9rem;
+                overflow: hidden;
+                position: relative;
+                img{
+                    width: 100%;
+                    height: 9rem;
+                }
+                ul{
+                    position: absolute;
+                    right: 0;
+                    bottom: 1rem;
+                    li{
+                        float: left;
+                        padding: 0.1rem 0.1rem;
+                        background: black;
+                        color: white;
+                        border-radius: 3rem;
+                        margin-right: 0.5rem;
+                    }
+                    .on{
+                        color: black;
+                        background: white;
+                    }
+                }
+            }
+            .syDl{
+                .box(horizontal);
+                dl{
+                    -webkit-box-flex: 1;
+                    text-align: center;
+                }
+            }
+            .syApp{
+               img{
+                   width: 100%;
+                   height: auto;
+               }
+            }
+            .syImg{
+                img{
+                    width: 100%;
+                    height: 15rem;
+                    display: block;
+                }
+            }
+            .syGoods{
+                width: 100%;
+                height: 26rem;
+                p{
+                    text-align: center;
+                    width: 100%;
+                    height: 2.6rem;
+                    line-height: 2.6rem;
+                }
+                .syGoodsDl{
+                   width: 100%;
+                   height: 23.4rem; 
+                   .box(vertical);
+                   .syGoodsDl_1{
+                        -webkit-box-flex: 1;
+                        .box(horizontal);
+                        border-top: 1px solid #CECECE;
+                        border-bottom: 1px solid #CECECE;
+                        .syGoodsDl_1_1{
+                          -webkit-box-flex: 1;  
+                          border-right:1px solid #cecece ;
+                        }
+                        .syGoodsDl_1_2{
+                          -webkit-box-flex: 1; 
+                           border-right:1px solid #cecece ; 
+                        }
+                        .syGoodsDl_1_3{
+                          -webkit-box-flex: 1;  
+                        }
+                   }
+                   .syGoodsDl_2{
+                        -webkit-box-flex: 1;
+                          .box(horizontal);
+                          
+                          border-bottom: 1px solid #CECECE;
+                          .syGoodsDl_1_1{
+                          -webkit-box-flex: 1;  
+                          border-right:1px solid #cecece ;
+                        }
+                        .syGoodsDl_1_2{
+                          -webkit-box-flex: 1; 
+                           border-right:1px solid #cecece ; 
+                        }
+                        .syGoodsDl_1_3{
+                          -webkit-box-flex: 1;  
+                        }
+                   }
+                   .syGoodsDl_3{
+                        -webkit-box-flex: 1;
+                          .box(horizontal);
+                          border-bottom: 1px solid #CECECE;
+                          .syGoodsDl_1_1{
+                          -webkit-box-flex: 1;  
+                          border-right:1px solid #cecece ;
+                        }
+                        .syGoodsDl_1_2{
+                          -webkit-box-flex: 1; 
+                           border-right:1px solid #cecece ; 
+                        }
+                        .syGoodsDl_1_3{
+                          -webkit-box-flex: 1;  
+                        }
+                   }
+                }
+            }
+        }
+    }
+    .miaosha{
+        background: #e6e6e6;
+        .box(vertical);
+        .msNav{
+            .box(horizontal);
+            margin-top: 1.2rem;
+            background: #FFFFFF;
+            height: 5.3rem;
+            dl{
+                -webkit-box-flex: 1;
+                text-align: center;
+                line-height: 5.3rem;
+                dt{
+                    span{
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+        }
+        .msTime{
+            .box(horizontal);
+            background: #fbfbfb;
+            height: 4rem;
+            line-height: 4rem;
+            p{
+                -webkit-box-flex: 1;
+                padding-left: 1rem;
+                b{
+                    margin-left: 0.3rem;margin-right: 0.3rem;
+                    padding: 0.2rem;
+                    background: black;
+                    color: white;
+                    border-radius: 0.4rem;
+                }
+            }
+            span{
+                padding-right: 2rem;
+            }
+            img{
+                padding-right: 2rem;
+                vertical-align: middle;
+            }
+        }
+        .msGoods{
+            background: white;
+            margin: 1rem;
+            margin-top: 1rem;
+            >dl{
+                .box(horizontal);
+                position: relative;
+                >dt{
+                    border-right: 0.1rem solid #E6E6E6;
+                }
+                >dd{
+                    margin-left: 2rem;
+                    h1{
+                        width: 55%;
+                        padding-top: 2rem;
+                        padding-bottom: 2rem;
+                    }
+                    .newPrice{
+                        font-size: 1.4rem;
+                    }
+                    .oldPrice{
+                        color: #919191; 
+                    }
+                    .msFan{
+                        i{
+                            padding: 0.1rem;
+                            background: red;
+                            color: white;
+                            border-radius: 0.3rem;
+                        }
+                        .fanPrice{
+                            color: red;
+                        }
+                    }
+                }
+                .msTm{
+                    position: absolute;
+                    top: 1rem;
+                    right: 1rem;
+                }
+                .msQiang{
+                    padding: 1rem 2rem;
+                    background: #fad0da;
+                    color: #e84d77;
+                    border-radius: 0.8rem;
+                    position: absolute;
+                    bottom: 1rem;
+                    right: 1rem;
+                }
+            }
+        }
+    }
+    .shouqing{
+        background: #e6e6e6;
+        .box(vertical);
+        .sqLogo{
+            width: 100%;
+            height: 8.5rem;
+            img{
+                width: 100%;
+                height: 8.5rem;
+            }
+        }
+        .sqGoods{
+            background: white;
+            margin: 1rem;
+            margin-top: 1rem;
+            >dl{
+                .box(horizontal);
+                position: relative;
+                >dt{
+                    border-right: 0.1rem solid #E6E6E6;
+                }
+                >dd{
+                    margin-left: 2rem;
+                    h1{
+                        padding-top: 2rem;
+                        padding-bottom: 2rem;
+                    }
+                    .sqPrice{
+                        font-size: 1.4rem;
+                    }
+                    .sqFan{
+                        i{
+                            padding: 0.1rem;
+                            background: red;
+                            color: white;
+                            border-radius: 0.3rem;
+                        }
+                        .fanPrice{
+                            color: red;
+                        }
+                    }
+                }
+                .sqTm{
+                    position: absolute;
+                    top: 1rem;
+                    right: 1rem;
+                }
+                .sqQiang{
+                    padding: 0.5rem 1rem;
+                    background: #fad0da;
+                    color: #e84d77;
+                    border-radius: 0.8rem;
+                    position: absolute;
+                    bottom: 1rem;
+                    right: 1rem;
+                }
+                .sqTime{
+                    position: absolute;
+                    left: 0rem;
+                    bottom: 0rem;
+                    padding: 0.1rem 3rem;
+                    background: #f7f7f7;
+                }
+            }
+        }
+    }
+    .select_one{
+        width: 100%;
+        height: 16rem;
+        border-bottom: 0.6rem solid #dfe8e3;
+        .box(horizontal);
+        .select_one_1{
+            width: 40%;
+            height: 100%;
+            border-right: 1px solid #cecece;
+            
+        }
+        .select_one_2{
+            -webkit-box-flex: 1;
+            .box(vertical);
+            .select_one_3{
+               -webkit-box-flex: 1; 
+               border-bottom: 1px solid #cecece;
+               .box(horizontal);
+               .select_one_5{
+                   -webkit-box-flex: 1;
+                   border-right:1px solid #cecece ;
+               }
+               .select_one_6{
+                   -webkit-box-flex: 1;
+               }
+            }
+            .select_one_4{
+               -webkit-box-flex: 1; 
+               .box(horizontal);
+               .select_one_7{
+                   -webkit-box-flex: 1;
+                   border-right:1px solid #cecece ;
+               }
+               .select_one_8{
+                   -webkit-box-flex: 1;
+               }
+            }
+        }
+    }
+    .shangxian{
+       background: #e6e6e6;
+       .box(vertical);
+       .sxTime{
+           height: 3rem;
+           width: 100%;
+           line-height: 3rem;
+           padding-left: 1rem;
+       }
+       .sxLogo{
+           background: white;
+           img{
+               width: 100%;
+           }
+           p{
+            color: red;
+               padding-left: 2rem;
+               b{
+                   padding: 0.1rem;
+                   background: red;
+                   color: white;
+               }
+               span{
+                   float: right;
+                   padding-right: 2rem;
+                   i{
+                       color: #d74e68;
+                   }
+               }
+           }
+       }
+    }
+}
+footer{
+    ul{
+        .box(horizontal);
+        li{
+            text-align: center;
+           -webkit-box-flex: 1; 
+        }
+    }
+}
