@@ -35,7 +35,7 @@ class CommonController extends Controller
             $adm_id = $_data['token']['adm_id'];
             if( $this -> testToken( $adm_id , $token ) == false )
             {
-                $this -> errorMessage( 1 , '非法请求' );
+                $this -> errorMessage( 1 , '非法请求1' );
                 exit;
             }
         }
@@ -68,7 +68,7 @@ class CommonController extends Controller
         $_sign = $this -> setSign( $_data );
         if( $sign != $_sign )
         {
-            $this -> errorMessage( 1 , '非法请求' );
+            $this -> errorMessage( 1 , '非法请求2' );
             exit;
         }
     }

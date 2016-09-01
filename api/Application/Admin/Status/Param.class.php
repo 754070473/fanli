@@ -53,4 +53,16 @@ class Param {
     const BRAND_IS_NULL = 1;
     const BRAND_IS_NULL_MSG = '请填写完整的信息';
 
+	 /*
+    *  导航
+    */
+    const NAV_NAME_NULL = 1;
+    const NAV_NAME_NULL_MSG = '导航名称不能为空';
+
+    /*
+    *  导航图标
+    */
+    const NAV_PHOTO_NULL = 1;
+    const NAV_PHOTO_NULL_MSG = '图标不能为空';
+
 }

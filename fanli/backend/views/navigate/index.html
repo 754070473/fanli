@@ -3,14 +3,14 @@
 <head>
     <title></title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="../Css/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="../Css/bootstrap-responsive.css" />
-    <link rel="stylesheet" type="text/css" href="../Css/style.css" />
-    <script type="text/javascript" src="../Js/jquery.js"></script>
-    <script type="text/javascript" src="../Js/jquery.sorted.js"></script>
-    <script type="text/javascript" src="../Js/bootstrap.js"></script>
-    <script type="text/javascript" src="../Js/ckform.js"></script>
-    <script type="text/javascript" src="../Js/common.js"></script>
+    <link rel="stylesheet" type="text/css" href="public/Css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="public/Css/bootstrap-responsive.css" />
+    <link rel="stylesheet" type="text/css" href="public/Css/style.css" />
+    <script type="text/javascript" src="public/Js/jquery.js"></script>
+    <script type="text/javascript" src="public/Js/jquery.sorted.js"></script>
+    <script type="text/javascript" src="public/Js/bootstrap.js"></script>
+    <script type="text/javascript" src="public/Js/ckform.js"></script>
+    <script type="text/javascript" src="public/Js/common.js"></script>
 
     <style type="text/css">
         body {
@@ -28,63 +28,150 @@
                 padding-right: 5px;
             }
         }
-
-
     </style>
 </head>
 <body>
-<form class="form-inline definewidth m20" action="index.html" method="get">  
-    角色名称：
-    <input type="text" name="rolename" id="rolename"class="abc input-default" placeholder="" value="">&nbsp;&nbsp;  
-    <button type="submit" class="btn btn-primary">查询</button>&nbsp;&nbsp; <button type="button" class="btn btn-success" id="addnew">新增角色</button>
+<?php date_default_timezone_set("Asia/Shanghai");//地区?>
+<form class="form-inline definewidth m20" action="index.html" method="get">
+    当前时间：<font color="red"><span id="nowTime" ></span></font>
+    &nbsp;&nbsp;&nbsp;&nbsp; <button type="button" class="btn btn-success" id="addnew">新增导航</button>
 </form>
 <table class="table table-bordered table-hover definewidth m10" >
     <thead>
     <tr>
-        <th>角色id</th>
-        <th>角色名称</th>
+        <th>ID</th>
+        <th>名称</th>
+        <th>图标</th>
         <th>状态</th>
         <th>操作</th>
     </tr>
     </thead>
-	     <tr>
-            <td>5</td>
-            <td>管理员</td>
-            <td>1</td>
-            <td>
-                  <a href="edit.html">编辑</a>
-                  
+        <?php
+            foreach($list as $k=>$v){
+        ?>
+	     <tr id="a<?php echo $v['nav_id']?>">
+            <td><?php echo $v['nav_id']?></td>
+            <td><?php echo $v['nav_name']?></td>
+             <td><img src="<?php echo $v['nav_photo']?>" alt="" width="40" height="40"/></td>
+            <td id="list<?php echo $v['nav_id']?>">
+                <?php if($v['nav_status']==1){?>
+                <a href="javascript:void(0)" onclick="up(<?php echo $v['nav_id']?>,0)">启用</a>
+                <?php }else{ ?>
+                <a href="javascript:void(0)" onclick="up(<?php echo $v['nav_id']?>,1)">未启用</a>
+                <?php }?>
             </td>
-        </tr></table>
+            <td>
+                  <a href="javascript:void(0)" onclick="del(<?php echo $v['nav_id']?>)">删除</a>
+            </td>
+        </tr>
+            <?php foreach($v['son'] as $key=>$val){ ?>
+            <tr id="a<?php echo $val['nav_id']?>">
+                <td><?php echo $val['nav_id']?></td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $val['nav_name']?></td>
+                <td><img src="<?php echo $val['nav_photo']?>" alt=""  width="40" height="40"/></td>
+                <td id="list<?php echo $val['nav_id']?>">
+                    <?php if($val['nav_status']==1){?>
+                    <a href="javascript:void(0)" onclick="up(<?php echo $val['nav_id']?>,0)">启用</a>
+                    <?php }else{ ?>
+                    <a href="javascript:void(0)" onclick="up(<?php echo $val['nav_id']?>,1)">未启用</a>
+                    <?php }?>
+                </td>
+                <td>
+                    <a href="javascript:void(0)" onclick="del(<?php echo $val['nav_id']?>)" >删除</a>
+                </td>
+            </tr>
+        <?php
+            }}
+        ?>
+</table>
 		</body>
 		</html>
 
 <script>
     $(function () {
-        
 		$('#addnew').click(function(){
-
-				window.location.href="add.html";
+			window.location.href="?r=navigate/add";
 		 });
-
-
     });
-
-	function del(id)
-	{
-		
-		
-		if(confirm("确定要删除吗？"))
-		{
-		
-			var url = "index.html";
-			
-			window.location.href=url;		
-		
-		}
-	
-	
-	
-	
-	}
+    function up(id,status){
+        $.ajax({
+            type: "GET",
+            url: "?r=navigate/dele",
+            data: "id=" + id + "&status="+status,
+            success: function (msg) {
+                if(status==1){
+                    var str = "<a href=\"javascript:void(0)\"   onclick=\"up("+id+",0)\" >启用</a>";
+                }else{
+                    var str = "<a href=\"javascript:void(0)\"  onclick=\"up("+id+",1)\" >未启用</a>";
+                }
+                if(msg==0){
+                    $("#list"+id).html(str)
+                }
+            }
+        })
+    }
+    function del(id){
+        $.ajax({
+            type: "GET",
+            url: "?r=navigate/del",
+            data: "nav_id="+id,
+            success: function(msg){
+                if(msg==0){
+                    alert('子类有东西,不能删除')
+                }else{
+                    $("#a"+id).remove();
+                }
+            }
+        });
+    }
+    window.onload = function () {
+        stime();
+    }
+    var c = 0;
+    var Y =<?php echo date('Y')?>, M =<?php echo date('n')?>, D =<?php echo date('j')?>;
+    function stime() {
+        c++
+        sec = <?php echo time() - strtotime(date("Y-m-d"))?>+c;
+        H = Math.floor(sec / 3600) % 24
+        I = Math.floor(sec / 60) % 60
+        S = sec % 60
+        if (S < 10) S = '0' + S;
+        if (I < 10) I = '0' + I;
+        if (H < 10) H = '0' + H;
+        if (H == '00' & I == '00' & S == '00') D = D + 1; //日进位
+        if (M == 2) { //判断是否为二月份******
+            if (Y % 4 == 0 && !Y % 100 == 0 || Y % 400 == 0) { //是闰年(二月有28天)
+                if (D == 30) {
+                    M += 1;
+                    D = 1;
+                } //月份进位
+            }
+            else { //非闰年(二月有29天)
+                if (D == 29) {
+                    M += 1;
+                    D = 1;
+                } //月份进位
+            }
+        }
+        else { //不是二月份的月份******
+            if (M == 4 || M == 6 || M == 9 || M == 11) { //小月(30天)
+                if (D == 31) {
+                    M += 1;
+                    D = 1;
+                } //月份进位
+            }
+            else { //大月(31天)
+                if (D == 32) {
+                    M += 1;
+                    D = 1;
+                } //月份进位
+            }
+        }
+        if (M == 13) {
+            Y += 1;
+            M = 1;
+        } //年份进位
+        setTimeout("stime()", 1000);
+        document.getElementById("nowTime").innerHTML = Y + '-' + M + '-' + D + ' ' + H + ':' + I + ':' + S
+    }
 </script>
