@@ -28,8 +28,8 @@
       <file leaf-file-name="IndexController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fanli/frontend/controllers/IndexController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45142856" vertical-offset="1779" max-vertical-offset="2448">
-              <caret line="52" column="80" selection-start-line="52" selection-start-column="80" selection-end-line="52" selection-end-column="80" />
+            <state vertical-scroll-proportion="0.598513" vertical-offset="2630" max-vertical-offset="3636">
+              <caret line="79" column="20" selection-start-line="79" selection-start-column="20" selection-end-line="79" selection-end-column="20" />
               <folding>
                 <element signature="e#39#47#0#PHP" expanded="true" />
               </folding>
@@ -50,13 +50,9 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fanli/frontend/views/index/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="10.4" vertical-offset="2952" max-vertical-offset="21888">
+            <state vertical-scroll-proportion="-8.0" vertical-offset="2124" max-vertical-offset="16344">
               <caret line="69" column="111" selection-start-line="69" selection-start-column="111" selection-end-line="69" selection-end-column="111" />
-              <folding>
-                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#1;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#2;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -64,13 +60,13 @@
       <file leaf-file-name="CommonController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fanli/frontend/controllers/CommonController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="14.511111" vertical-offset="4181" max-vertical-offset="8280">
+            <state vertical-scroll-proportion="10.511111" vertical-offset="4001" max-vertical-offset="7272">
               <caret line="102" column="32" selection-start-line="102" selection-start-column="32" selection-end-line="102" selection-end-column="32" />
               <folding>
-                <marker date="1472626345401" expanded="true" signature="4468:4498" placeholder="..." />
-                <marker date="1472626345401" expanded="true" signature="4499:4728" placeholder="..." />
-                <marker date="1472626345401" expanded="true" signature="5044:5074" placeholder="..." />
-                <marker date="1472626345401" expanded="true" signature="5075:5304" placeholder="..." />
+                <marker date="1472696169111" expanded="true" signature="4476:4506" placeholder="..." />
+                <marker date="1472696169111" expanded="true" signature="4507:4736" placeholder="..." />
+                <marker date="1472696169111" expanded="true" signature="5052:5082" placeholder="..." />
+                <marker date="1472696169111" expanded="true" signature="5083:5312" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -432,7 +428,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24886535" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.08850227" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -469,25 +465,21 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/fanli/frontend/views/index/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="10.4" vertical-offset="2952" max-vertical-offset="21888">
+        <state vertical-scroll-proportion="-8.0" vertical-offset="2124" max-vertical-offset="16344">
           <caret line="69" column="111" selection-start-line="69" selection-start-column="111" selection-end-line="69" selection-end-column="111" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#2;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fanli/frontend/controllers/CommonController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="14.511111" vertical-offset="4181" max-vertical-offset="8280">
+        <state vertical-scroll-proportion="10.511111" vertical-offset="4001" max-vertical-offset="7272">
           <caret line="102" column="32" selection-start-line="102" selection-start-column="32" selection-end-line="102" selection-end-column="32" />
           <folding>
-            <marker date="1472626345401" expanded="true" signature="4468:4498" placeholder="..." />
-            <marker date="1472626345401" expanded="true" signature="4499:4728" placeholder="..." />
-            <marker date="1472626345401" expanded="true" signature="5044:5074" placeholder="..." />
-            <marker date="1472626345401" expanded="true" signature="5075:5304" placeholder="..." />
+            <marker date="1472696169111" expanded="true" signature="4476:4506" placeholder="..." />
+            <marker date="1472696169111" expanded="true" signature="4507:4736" placeholder="..." />
+            <marker date="1472696169111" expanded="true" signature="5052:5082" placeholder="..." />
+            <marker date="1472696169111" expanded="true" signature="5083:5312" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -510,8 +502,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/fanli/frontend/controllers/IndexController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45142856" vertical-offset="1779" max-vertical-offset="2448">
-          <caret line="52" column="80" selection-start-line="52" selection-start-column="80" selection-end-line="52" selection-end-column="80" />
+        <state vertical-scroll-proportion="0.598513" vertical-offset="2630" max-vertical-offset="3636">
+          <caret line="79" column="20" selection-start-line="79" selection-start-column="20" selection-end-line="79" selection-end-column="20" />
           <folding>
             <element signature="e#39#47#0#PHP" expanded="true" />
           </folding>
