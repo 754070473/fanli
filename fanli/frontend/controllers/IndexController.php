@@ -25,7 +25,7 @@ class IndexController extends CommonController
     public function actionIndex()
     {
         $classify = $this -> actionClassify();
-        print_r($classify);die;
+        // print_r($classify);die;
         return $this -> render('index.html');
     }
 
