@@ -31,35 +31,63 @@
 
     </style>
 </head>
-<form action="" method="post" enctype="multipart/form-data" >
+
+<form action="index.php?r=goods/addshop" method="post" enctype="multipart/form-data" >
+    淘宝链接<input type="text" style="width: 300px;" id="turl"/><input type="button" value="查询" id="url"/><br/>
 <table class="table table-bordered table-hover definewidth m10">
-    <tr>
-        <td width="10%" class="tableleft">商品名称</td>
-        <td><input type="text" name="name"/></td>
-    </tr>
+<sapn id="mm"></sapn>
     <tr>
         <td class="tableleft">图片</td>
-        <td><input type="file" name="goodsPhoto"/></td>
+        <td id="img"></td>
     </tr>
     <tr>
-        <td class="tableleft">商品介绍</td>
-        <td><textarea name="presentation" id="" cols="30" rows="6"></textarea></td>
+        <td width="10%" class="tableleft" >商品介绍</td>
+        <td id="name1"><textarea name="goods_name" cols="30" rows="6" ></textarea></td>
     </tr>
     <tr>
-        <td class="tableleft">开始/结束 时间</td>
-        <td> <input type="text" value="" name="begintime"/> -- <input type="text" value="" name="endtime"/></td>
+        <td class="tableleft">价格</td>
+        <td><input type="text" id="goods_price" name="goods_price"/></td>
+    </tr>
+    <tr>
+        <td class="tableleft">库存</td>
+        <td  ><input type="text" id="goods_stock" name="goods_stock"/></td>
+    </tr>
+    <tr>
+        <td class="tableleft">返利</td>
+        <td><input type="text" name="goods_rebate" id="goods_rebate"/></td>
+    </tr>
+    <tr>
+        <td class="tableleft">商品分类</td>
+        <td><select name="cla_id" >
+            <?php foreach($type  as $k=>$v ){ ?>
+            <option value="<?= $v['cla_id']?>"><?= $v['cla_name']?></option>
+            <?php } ?>
+        </select>
+        </td>
+    </tr>
+    <tr>
+        <td class="tableleft">品牌</td>
+        <td>
+            <!--<input type="text" name="bre_name" id="bre_name"/>-->
+            <select name="bre_id" >
+                <?php foreach($brand  as $k=>$v ){ ?>
+                <option value="<?= $v['bra_id']?>"><?= $v['bra_name']?></option>
+                <?php } ?>
+            </select>
+
+        </td>
     </tr>
     <tr>
         <td class="tableleft">状态</td>
         <td>
-            <input type="radio" name="status" value="1" checked/> 启用
-            <input type="radio" name="status" value="0"/> 禁用
+            <input type="radio" name="goods_status" value="1" checked/> 启用
+            <input type="radio" name="goods_status" value="0"/> 禁用
         </td>
     </tr>
     <tr>
         <td class="tableleft"></td>
         <td>
-            <button type="submit" class="btn btn-primary" type="button">保存</button>&nbsp;&nbsp;<button type="button" class="btn btn-success" name="backid" id="backid">返回列表</button>
+            <button type="submit" class="btn btn-primary" type="button"disabled="disabled" id="sub">保存</button>&nbsp;&nbsp;<button type="button" class="btn btn-success" name="backid" id="backid">返回列表</button>
         </td>
     </tr>
 </table>
@@ -72,5 +100,41 @@
 				window.location.href="index.html";
 		 });
 
+        $('#url').click(function () {
+           var turl = $('#turl').val();
+            $.post('index.php?r=goods/curl',{url:turl}, function (msg) {
+//                alert(msg)
+                if(msg!='error'&&msg!=''){
+                    var obj = eval("("+msg+")");//转换为对象
+                    $('#name1').html(obj['title'])
+                    $('#img').html(obj['img'])
+                    $('#goods_price').val(obj['price'])
+                    $('#goods_stock').val(obj['kucun'])
+                    $('#bre_name').val(obj['bre_name'])
+                    $('#goods_rebate').val(parseInt(obj['price']) *0.1)
+                    $('#mm').html("<input type='hidden' id='imgUrl' name='goods_photo'value='"+obj['imgUrl']+"'/>" +
+                                  "<input type='hidden' name='goods_name' id='goods_name' value='"+obj['title']+"'/>")
+                    $('#img').append('<input type="hidden" name="goods_url" value="'+turl+'">')
+                }
+                else
+                {
+                    alert('本链接不支持快速查询')
+                }
+            })
+        })
+
+        $('#sub').mouseover(function(){
+           var goods_name = $('#goods_name').val()
+          var imgUrl=  $('#imgUrl').val()
+          var goods_price=  $('#goods_price').val()
+          var goods_stock=  $('#goods_stock').val()
+          var bre_name=  $('#bre_name').val()
+          var goods_rebate=  $('#goods_rebate').val()
+            if(goods_name!=''&&imgUrl!=''&&goods_price!=''&&goods_stock!=''&&bre_name!=''&&goods_rebate!=''){
+                $('#sub').attr("disabled",false);
+            }
+        })
     });
+
 </script>
+

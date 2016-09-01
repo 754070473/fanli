@@ -1,17 +1,13 @@
 <?php
 return array(
-	//'配置项'=>'配置值'
-
-    'SHOW_PAGE_TRACE' => true ,
-
-    #数据库配置
-    'DB_DEPLOY_TYPE'=> 0,            //是否启用分布式
-    'DB_RW_SEPARATE'=> false,     //是否启用智能读写分离
-    'DB_TYPE'   => 'mysqli',
-    'DB_HOST'   => '127.0.0.1',
-    'DB_NAME'   => 'test',
-    'DB_USER'   => 'root',
-    'DB_PWD'    => '123456',
-    'DB_PORT'   => '3306',
-    'DB_PREFIX' => '',
+//'配置项'=>'配置值'
+    //数据库配置信息
+    'DB_TYPE'   => 'mysql', // 数据库类型
+    'DB_HOST'   => '127.0.0.1', // 服务器地址
+    'DB_NAME'   => 'fanli', // 数据库名
+    'DB_USER'   => 'root', // 用户名
+    'DB_PWD'    => 'root', // 密码
+    'DB_PORT'   => 3306, // 端口
+    'DB_PREFIX' => 'fanli_', // 数据库表前缀
+    'DB_CHARSET'=> 'utf8', // 字符集
 );
