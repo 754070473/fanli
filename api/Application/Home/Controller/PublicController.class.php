@@ -53,17 +53,17 @@ class PublicController extends CommonController
 		$User = M( "" );
 		if( $data_size == 0 ){
 
-			$arr = $User -> field( "$field" ) -> table( "$sql" ) -> where( "$where" ) -> order( "$order" ) -> select();
+			$arr = $User -> field( $field ) -> table( $sql ) -> where( $where ) -> order( $order ) -> select();
 
 		}elseif ( $data_size == 1 ){
 
-			$arr = $User -> field( "$field" ) -> table( "$sql" ) -> where( "$where" ) -> order( "$order" ) -> find();
+			$arr = $User -> field( $field ) -> table( $sql ) -> where( $where ) -> order( $order ) -> find();
 
 		}else {
 			//计算偏移量
 			$n = ( $page - 1 ) * $data_size;
 
-			$arr = $User -> field( "$field" ) -> table( "$sql" ) -> where( "$where" ) -> order( "$order" ) -> limit( $n , $data_size ) -> select();
+			$arr = $User -> field( $field ) -> table( $sql ) -> where( $where ) -> order( $order ) -> limit( $n , $data_size ) -> select();
 		}
 		if( empty( $arr ) ){
 			$this -> errorMessage(
