@@ -24,17 +24,41 @@ class IndexController extends CommonController
     public $enableCsrfValidation = false;
     public function actionIndex()
     {
+        $classify = $this -> actionClassify();
+        print_r($classify);die;
         return $this -> render('index.html');
     }
 
+    public function actionDetails()
+    {
+        return $this -> render('details.html');
+    }
+
+    /**
+     * 查询一级分类
+     * @return mixed
+     */
     public function actionClassify()
     {
         $table = 'fanli_classify';
         $arr = $this -> databasesSelect($table , 0 ,'pid = 0');
         return $arr;
     }
+    /**
+     * 即将售罄 查询正在进行活动的商品中剩余库存低于总库存50%的商品（按库存百分比升序排列）
+     */
+    public function actionSellout()
+    {
+        $field = 'end_time,goods_stock,surplus_stock,goods_name,goods_url,goods_rebate';
+        $table = [['table1' => 'fanli_activity' , 'table2' => 'fanli_goods' , 'join' => 
+        'act_id']];
+        $where = "(surplus_stock / goods_stock) < 0.5";
+        $order = '(surplus_stock / goods_stock),goods_id';
+        $result = $this->databasesSelect( $table , $num = 0 , $where, $field, $order);
+        return $result;
+    }
 
-    //根据分类id查询该分类下所有正在进行促销活动的品牌
+	  //根据分类id查询该分类下所有正在进行促销活动的品牌
     public function actionClass_activity($cla_id = 1)
     {
     	$table = array(['table1'=>'fanli_goods','table2'=>'fanli_classify','join'=>'cla_id'],['table1'=>'fanli_goods','table2'=>'fanli_activity','join'=>'act_id']);
@@ -42,5 +66,4 @@ class IndexController extends CommonController
     	 // print_r($arr);die;
     	return $arr;
     }
-
 }
