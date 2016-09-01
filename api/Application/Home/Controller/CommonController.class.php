@@ -29,7 +29,7 @@ class CommonController extends Controller
         
         //当前请求的方法
         //$Action = ucwords( str_replace( __CONTROLLER__ . '/' , '' , __ACTION__ ) );
-        
+
         if( !empty( $_data ) )
         {
             $sign = $_data['sign'];
