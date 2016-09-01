@@ -24,9 +24,20 @@ class IndexController extends CommonController
     public $enableCsrfValidation = false;
     public function actionIndex()
     {
+        $classify = $this -> actionClassify();
+        print_r($classify);die;
         return $this -> render('index.html');
     }
 
+    public function actionDetails()
+    {
+        return $this -> render('details.html');
+    }
+
+    /**
+     * 查询一级分类
+     * @return mixed
+     */
     public function actionClassify()
     {
         $table = 'fanli_classify';

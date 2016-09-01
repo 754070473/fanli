@@ -27,4 +27,16 @@ class Success {
     const NAV_ADD_SUCCESS = 0;
     const NAV_ADD_SUCCESS_MSG = '导航添加成功!';
 
+ //品牌禁用或者启用
+    const BRAND_LOCK_SUCCESS = 0;
+    const BRAND_LOCK_SUCCESS_MSG = '启用或禁用成功';
+
+
+
+    //品牌删除成功
+    const BRAND_DEL_SUCCESS = 0;
+    const BRAND_DEL_SUCCESS_MSG = '品牌删除成功';
+
+
+
 }
