@@ -37,8 +37,8 @@
 <table class="table table-bordered table-hover definewidth m10">
 <sapn id="mm"></sapn>
     <tr>
-        <td class="tableleft">图片url</td>
-        <td id="img"><input type='text' style="width: 300px;"/></td>
+        <td class="tableleft">图片</td>
+        <td id="img"></td>
     </tr>
     <tr>
         <td width="10%" class="tableleft" >商品介绍</td>
@@ -67,7 +67,15 @@
     </tr>
     <tr>
         <td class="tableleft">品牌</td>
-        <td><input type="text" name="bre_name" id="bre_name"/></td>
+        <td>
+            <!--<input type="text" name="bre_name" id="bre_name"/>-->
+            <select name="bre_id" >
+                <?php foreach($brand  as $k=>$v ){ ?>
+                <option value="<?= $v['bra_id']?>"><?= $v['bra_name']?></option>
+                <?php } ?>
+            </select>
+
+        </td>
     </tr>
     <tr>
         <td class="tableleft">状态</td>
@@ -95,7 +103,7 @@
         $('#url').click(function () {
            var turl = $('#turl').val();
             $.post('index.php?r=goods/curl',{url:turl}, function (msg) {
-                alert(msg)
+//                alert(msg)
                 if(msg!='error'&&msg!=''){
                     var obj = eval("("+msg+")");//转换为对象
                     $('#name1').html(obj['title'])

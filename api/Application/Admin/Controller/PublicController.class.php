@@ -7,10 +7,8 @@ use Admin\Status\Success;
 use Admin\Status\Param;
 
 /**
- * Class IndexController
+ * Class PublicController
  * @package Admin\Controller
- *
- * 考虑如何防止暴力破解密码
  *
  */
 class PublicController extends CommonController
@@ -19,13 +17,13 @@ class PublicController extends CommonController
 	{
 		//表名
 		$sql = IsNaN( $this -> _data , 'sql' );
-		if( empty( $table ) ){
+		if( empty( $sql ) ){
 			$this -> errorMessage( Param::SELECT_TABLE_NAME_IS_NULL , Param::SELECT_TABLE_NAME_IS_NULL_MSG );
 		}
 		//查询字段
 		$field = IsNaN( $this -> _data , 'field' );
 		if( empty( $field ) ){
-			$this -> errorMessage( Param::SELECT_TABLE_NAME_IS_NULL , Param::SELECT_TABLE_NAME_IS_NULL_MSG );
+			$this -> errorMessage( Param::SELECT_FIELD_NAME_IS_NULL , Param::SELECT_FIELD_NAME_IS_NULL_MSG );
 		}
 
 		//当前页码
@@ -52,22 +50,21 @@ class PublicController extends CommonController
 			$where = 1;
 		}
 
-		$User = M( "$sql" );
+		$User = M( "" );
 		if( $data_size == 0 ){
 
-			$arr = $User -> field( "$field" ) -> where( "$where" ) -> order( "$order" ) -> select();
+			$arr = $User -> field( "$field" ) -> table( "$sql" ) -> where( "$where" ) -> order( "$order" ) -> select();
 
 		}elseif ( $data_size == 1 ){
 
-			$arr = $User -> field( "$field" ) -> where( "$where" ) -> order( "$order" ) -> find();
+			$arr = $User -> field( "$field" ) -> table( "$sql" ) -> where( "$where" ) -> order( "$order" ) -> find();
 
 		}else {
 			//计算偏移量
 			$n = ( $page - 1 ) * $data_size;
 
-			$arr = $User -> field( "$field" ) -> where( "$where" ) -> order( "$order" ) -> limit( $n , $data_size ) -> select();
+			$arr = $User -> field( "$field" ) -> table( "$sql" ) -> where( "$where" ) -> order( "$order" ) -> limit( $n , $data_size ) -> select();
 		}
-
 		if( empty( $arr ) ){
 			$this -> errorMessage(
 				Status::SELECT_DATA_ERROR ,

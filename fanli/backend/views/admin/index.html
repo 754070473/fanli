@@ -12,8 +12,6 @@
     <script type="text/javascript" src="public/Js/ckform.js"></script>
     <script type="text/javascript" src="public/Js/common.js"></script>
 
- 
-
     <style type="text/css">
         body {
             padding-bottom: 40px;
@@ -45,20 +43,20 @@
     <tr>
         <th>用户id</th>
         <th>用户名称</th>
-        <th>真实姓名</th>
         <th>最后登录时间</th>
         <th>操作</th>
     </tr>
     </thead>
-	     <tr>
-            <td>2</td>
-            <td>admin</td>
-            <td>管理员</td>
-            <td></td>
-            <td>
+    <?php foreach($sql as $key=>$val){?>
+       <tr>
+           <td><?php echo $val['adm_id']?></td>
+           <td><?php echo $val['account']?></td>
+           <td><?php echo $val['adm_date']?></td>
+           <td>
                 <a href="edit.html">编辑</a>                
             </td>
-        </tr>	
+        </tr>
+    <?php } ?>
 </table>
 </body>
 </html>

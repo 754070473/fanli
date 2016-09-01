@@ -1,0 +1,413 @@
+@import url('m_reset.css');
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+}
+html,
+body,
+.wrap {
+  width: 100%;
+  height: 100%;
+}
+.wrap {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+header {
+  width: 100%;
+  height: 4rem;
+  background: #ffffff;
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+}
+header .head-left img {
+  padding: 1rem;
+}
+header .head-right img {
+  padding: 1rem;
+}
+header .head-center {
+  -webkit-box-flex: 1;
+  box-sizing: border-box;
+  text-align: center;
+}
+header .head-center img {
+  padding: 1rem ;
+}
+section {
+  -webkit-box-flex: 1;
+  overflow: hidden;
+  overflow-y: auto;
+}
+section .box {
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  position: relative;
+  left: 0;
+  width: 100%;
+}
+section .box > div {
+  width: 100%;
+}
+section .box .shouye {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+section .box .shouye .syBanner {
+  width: 100%;
+  height: 9rem;
+  overflow: hidden;
+  position: relative;
+}
+section .box .shouye .syBanner img {
+  width: 100%;
+  height: 9rem;
+}
+section .box .shouye .syBanner ul {
+  position: absolute;
+  right: 0;
+  bottom: 1rem;
+}
+section .box .shouye .syBanner ul li {
+  float: left;
+  padding: 0.1rem 0.1rem;
+  background: black;
+  color: white;
+  border-radius: 3rem;
+  margin-right: 0.5rem;
+}
+section .box .shouye .syBanner ul .on {
+  color: black;
+  background: white;
+}
+section .box .shouye .syDl {
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+}
+section .box .shouye .syDl dl {
+  -webkit-box-flex: 1;
+  text-align: center;
+}
+section .box .shouye .syApp img {
+  width: 100%;
+  height: auto;
+}
+section .box .shouye .syImg img {
+  width: 100%;
+  height: 15rem;
+  display: block;
+}
+section .box .shouye .syGoods {
+  width: 100%;
+  height: 26rem;
+}
+section .box .shouye .syGoods p {
+  text-align: center;
+  width: 100%;
+  height: 2.6rem;
+  line-height: 2.6rem;
+}
+section .box .shouye .syGoods .syGoodsDl {
+  width: 100%;
+  height: 23.4rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+section .box .shouye .syGoods .syGoodsDl .syGoodsDl_1 {
+  -webkit-box-flex: 1;
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  border-top: 1px solid #CECECE;
+  border-bottom: 1px solid #CECECE;
+}
+section .box .shouye .syGoods .syGoodsDl .syGoodsDl_1 .syGoodsDl_1_1 {
+  -webkit-box-flex: 1;
+  border-right: 1px solid #cecece ;
+}
+section .box .shouye .syGoods .syGoodsDl .syGoodsDl_1 .syGoodsDl_1_2 {
+  -webkit-box-flex: 1;
+  border-right: 1px solid #cecece ;
+}
+section .box .shouye .syGoods .syGoodsDl .syGoodsDl_1 .syGoodsDl_1_3 {
+  -webkit-box-flex: 1;
+}
+section .box .shouye .syGoods .syGoodsDl .syGoodsDl_2 {
+  -webkit-box-flex: 1;
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  border-bottom: 1px solid #CECECE;
+}
+section .box .shouye .syGoods .syGoodsDl .syGoodsDl_2 .syGoodsDl_1_1 {
+  -webkit-box-flex: 1;
+  border-right: 1px solid #cecece ;
+}
+section .box .shouye .syGoods .syGoodsDl .syGoodsDl_2 .syGoodsDl_1_2 {
+  -webkit-box-flex: 1;
+  border-right: 1px solid #cecece ;
+}
+section .box .shouye .syGoods .syGoodsDl .syGoodsDl_2 .syGoodsDl_1_3 {
+  -webkit-box-flex: 1;
+}
+section .box .shouye .syGoods .syGoodsDl .syGoodsDl_3 {
+  -webkit-box-flex: 1;
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  border-bottom: 1px solid #CECECE;
+}
+section .box .shouye .syGoods .syGoodsDl .syGoodsDl_3 .syGoodsDl_1_1 {
+  -webkit-box-flex: 1;
+  border-right: 1px solid #cecece ;
+}
+section .box .shouye .syGoods .syGoodsDl .syGoodsDl_3 .syGoodsDl_1_2 {
+  -webkit-box-flex: 1;
+  border-right: 1px solid #cecece ;
+}
+section .box .shouye .syGoods .syGoodsDl .syGoodsDl_3 .syGoodsDl_1_3 {
+  -webkit-box-flex: 1;
+}
+section .miaosha {
+  background: #e6e6e6;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+section .miaosha .msNav {
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  margin-top: 1.2rem;
+  background: #FFFFFF;
+  height: 5.3rem;
+}
+section .miaosha .msNav dl {
+  -webkit-box-flex: 1;
+  text-align: center;
+  line-height: 5.3rem;
+}
+section .miaosha .msNav dl dt span {
+  font-size: 1.4rem;
+}
+section .miaosha .msTime {
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  background: #fbfbfb;
+  height: 4rem;
+  line-height: 4rem;
+}
+section .miaosha .msTime p {
+  -webkit-box-flex: 1;
+  padding-left: 1rem;
+}
+section .miaosha .msTime p b {
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+  padding: 0.2rem;
+  background: black;
+  color: white;
+  border-radius: 0.4rem;
+}
+section .miaosha .msTime span {
+  padding-right: 2rem;
+}
+section .miaosha .msTime img {
+  padding-right: 2rem;
+  vertical-align: middle;
+}
+section .miaosha .msGoods {
+  background: white;
+  margin: 1rem;
+  margin-top: 1rem;
+}
+section .miaosha .msGoods > dl {
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  position: relative;
+}
+section .miaosha .msGoods > dl > dt {
+  border-right: 0.1rem solid #E6E6E6;
+}
+section .miaosha .msGoods > dl > dd {
+  margin-left: 2rem;
+}
+section .miaosha .msGoods > dl > dd h1 {
+  width: 55%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+section .miaosha .msGoods > dl > dd .newPrice {
+  font-size: 1.4rem;
+}
+section .miaosha .msGoods > dl > dd .oldPrice {
+  color: #919191;
+}
+section .miaosha .msGoods > dl > dd .msFan i {
+  padding: 0.1rem;
+  background: red;
+  color: white;
+  border-radius: 0.3rem;
+}
+section .miaosha .msGoods > dl > dd .msFan .fanPrice {
+  color: red;
+}
+section .miaosha .msGoods > dl .msTm {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+section .miaosha .msGoods > dl .msQiang {
+  padding: 1rem 2rem;
+  background: #fad0da;
+  color: #e84d77;
+  border-radius: 0.8rem;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+section .shouqing {
+  background: #e6e6e6;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+section .shouqing .sqLogo {
+  width: 100%;
+  height: 8.5rem;
+}
+section .shouqing .sqLogo img {
+  width: 100%;
+  height: 8.5rem;
+}
+section .shouqing .sqGoods {
+  background: white;
+  margin: 1rem;
+  margin-top: 1rem;
+}
+section .shouqing .sqGoods > dl {
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  position: relative;
+}
+section .shouqing .sqGoods > dl > dt {
+  border-right: 0.1rem solid #E6E6E6;
+}
+section .shouqing .sqGoods > dl > dd {
+  margin-left: 2rem;
+}
+section .shouqing .sqGoods > dl > dd h1 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+section .shouqing .sqGoods > dl > dd .sqPrice {
+  font-size: 1.4rem;
+}
+section .shouqing .sqGoods > dl > dd .sqFan i {
+  padding: 0.1rem;
+  background: red;
+  color: white;
+  border-radius: 0.3rem;
+}
+section .shouqing .sqGoods > dl > dd .sqFan .fanPrice {
+  color: red;
+}
+section .shouqing .sqGoods > dl .sqTm {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+section .shouqing .sqGoods > dl .sqQiang {
+  padding: 0.5rem 1rem;
+  background: #fad0da;
+  color: #e84d77;
+  border-radius: 0.8rem;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+section .shouqing .sqGoods > dl .sqTime {
+  position: absolute;
+  left: 0rem;
+  bottom: 0rem;
+  padding: 0.1rem 3rem;
+  background: #f7f7f7;
+}
+section .select_one {
+  width: 100%;
+  height: 16rem;
+  border-bottom: 0.6rem solid #dfe8e3;
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+}
+section .select_one .select_one_1 {
+  width: 40%;
+  height: 100%;
+  border-right: 1px solid #cecece;
+}
+section .select_one .select_one_2 {
+  -webkit-box-flex: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+section .select_one .select_one_2 .select_one_3 {
+  -webkit-box-flex: 1;
+  border-bottom: 1px solid #cecece;
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+}
+section .select_one .select_one_2 .select_one_3 .select_one_5 {
+  -webkit-box-flex: 1;
+  border-right: 1px solid #cecece ;
+}
+section .select_one .select_one_2 .select_one_3 .select_one_6 {
+  -webkit-box-flex: 1;
+}
+section .select_one .select_one_2 .select_one_4 {
+  -webkit-box-flex: 1;
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+}
+section .select_one .select_one_2 .select_one_4 .select_one_7 {
+  -webkit-box-flex: 1;
+  border-right: 1px solid #cecece ;
+}
+section .select_one .select_one_2 .select_one_4 .select_one_8 {
+  -webkit-box-flex: 1;
+}
+section .shangxian {
+  background: #e6e6e6;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+section .shangxian .sxTime {
+  height: 3rem;
+  width: 100%;
+  line-height: 3rem;
+  padding-left: 1rem;
+}
+section .shangxian .sxLogo {
+  background: white;
+}
+section .shangxian .sxLogo img {
+  width: 100%;
+}
+section .shangxian .sxLogo p {
+  color: red;
+  padding-left: 2rem;
+}
+section .shangxian .sxLogo p b {
+  padding: 0.1rem;
+  background: red;
+  color: white;
+}
+section .shangxian .sxLogo p span {
+  float: right;
+  padding-right: 2rem;
+}
+section .shangxian .sxLogo p span i {
+  color: #d74e68;
+}
+footer ul {
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+}
+footer ul li {
+  text-align: center;
+  -webkit-box-flex: 1;
+}

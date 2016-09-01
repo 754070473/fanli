@@ -28,10 +28,16 @@ class GoodsController extends CommonController
      */
     public function actionAdd()
     {
+        //分类
         $url = $this -> apiUrl('Goods','type');
         $data = array('type' => 'return');
         $type = $this -> CurlPost($url , $data);
-        return $this->render('add.html',['type'=>$type['data']]);
+        //品牌
+        $url = $this -> apiUrl('Goods','brand');
+        $data = array('type' => 'return');
+        $brand = $this -> CurlPost($url , $data);
+     //   return $this->render('index.html',['data' => $data['data'],'page' => $data['page']]);
+        return $this->render('add.html',['type'=>$type['data'],'brand'=>$brand['data']]);
     }
     /**
      *  商品添加返回淘宝ajax数据
