@@ -25,13 +25,22 @@ class IndexController extends CommonController
     public function actionIndex()
     {
         $classify = $this -> actionClassify();
-        print_r($classify);die;
+        $data = array();
+        $data['classify'] = $classify['data'];
         return $this -> render('index.html');
     }
 
     public function actionDetails()
     {
         return $this -> render('details.html');
+    }
+    public function actionClass()
+    {
+        return $this -> render('classify.html');
+    }
+    public function actionSeckill()
+    {
+        return $this -> render('seckill.html');
     }
 
     /**
