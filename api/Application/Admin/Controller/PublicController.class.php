@@ -67,7 +67,7 @@ class PublicController extends CommonController
 		}
 		if( empty( $arr ) ){
 			$this -> errorMessage(
-				Status::SELECT_DATA_ERROR ,
+				Status::SELECT_DATA_ERROR,
 				Status::SELECT_DATA_ERROR_MSG
 			);
 			exit;
