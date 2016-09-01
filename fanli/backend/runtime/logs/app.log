@@ -1946,3 +1946,2840 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1472627489.437
     'REQUEST_TIME' => 1472627489
 ]
+2016-09-01 08:25:21 [::1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "".' in D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('', Array)
+#1 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\PhpStudy\WWW\fanli\fanli\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\PhpStudy\WWW\fanli\fanli\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2016-09-01 08:25:21 [::1][-][-][info][application] $_COOKIE = [
+    'iweb_safecode' => '897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ/YTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M+OTZiMWU0MjYyMTMyZjU0bA'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/fanli/fanli/backend/'
+    'HTTP_COOKIE' => 'iweb_safecode=897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ%2FYTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M%2BOTZiMWU0MjYyMTMyZjU0bA'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\PhpStudy\\php55;E:\\Program Files\\TortoiseGit\\bin;E:\\Program Files\\python;D:\\PhpStudy\\mysqlserve\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/PhpStudy/WWW/fanli/fanli/backend/web/index.php'
+    'REMOTE_PORT' => '53876'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/fanli/fanli/backend/web/'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472689520.859
+    'REQUEST_TIME' => 1472689520
+]
+2016-09-01 08:43:17 [::1][-][gnr5q1ihdql9d774f06esc9qg7][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: result' in D:\PhpStudy\WWW\fanli\fanli\backend\controllers\ActivityController.php:80
+Stack trace:
+#0 D:\PhpStudy\WWW\fanli\fanli\backend\controllers\ActivityController.php(80): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'D:\\PhpStudy\\WWW...', 80, Array)
+#1 [internal function]: backend\controllers\ActivityController->actionPage()
+#2 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('page', Array)
+#5 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('activity/page', Array)
+#6 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\PhpStudy\WWW\fanli\fanli\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2016-09-01 08:43:16 [::1][-][gnr5q1ihdql9d774f06esc9qg7][info][application] $_GET = [
+    'r' => 'activity/page'
+]
+
+$_COOKIE = [
+    'iweb_safecode' => '897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ/YTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M+OTZiMWU0MjYyMTMyZjU0bA'
+    'PHPSESSID' => 'gnr5q1ihdql9d774f06esc9qg7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => 'admin'
+        'password' => '21232f297a57a5a743894a0e4a801fc3'
+        'adm_date' => '2016-08-29'
+        'adm_status' => null
+        'token' => '46b31a83347f7f3281c814d700691f7c'
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://localhost/fanli/fanli/backend/web/index.php?r=activity/index'
+    'HTTP_COOKIE' => 'iweb_safecode=897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ%2FYTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M%2BOTZiMWU0MjYyMTMyZjU0bA; PHPSESSID=gnr5q1ihdql9d774f06esc9qg7'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '0'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\PhpStudy\\php55;E:\\Program Files\\TortoiseGit\\bin;E:\\Program Files\\python;D:\\PhpStudy\\mysqlserve\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/PhpStudy/WWW/fanli/fanli/backend/web/index.php'
+    'REMOTE_PORT' => '54031'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=activity/page'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=activity/page'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472690596.902
+    'REQUEST_TIME' => 1472690596
+]
+2016-09-01 08:43:17 [::1][-][gnr5q1ihdql9d774f06esc9qg7][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception 'Exception' with message 'Serialization of 'Closure' is not allowed' 
+
+in D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php:58
+
+Stack trace:
+#0 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php(58): serialize(Array)
+#1 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#2 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#3 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#4 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\ErrorHandler.php(111): yii\log\Logger->flush(true)
+#5 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\ErrorException))
+#6 {main}
+2016-09-01 08:43:16 [::1][-][gnr5q1ihdql9d774f06esc9qg7][info][application] $_GET = [
+    'r' => 'activity/page'
+]
+
+$_COOKIE = [
+    'iweb_safecode' => '897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ/YTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M+OTZiMWU0MjYyMTMyZjU0bA'
+    'PHPSESSID' => 'gnr5q1ihdql9d774f06esc9qg7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => 'admin'
+        'password' => '21232f297a57a5a743894a0e4a801fc3'
+        'adm_date' => '2016-08-29'
+        'adm_status' => null
+        'token' => '46b31a83347f7f3281c814d700691f7c'
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://localhost/fanli/fanli/backend/web/index.php?r=activity/index'
+    'HTTP_COOKIE' => 'iweb_safecode=897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ%2FYTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M%2BOTZiMWU0MjYyMTMyZjU0bA; PHPSESSID=gnr5q1ihdql9d774f06esc9qg7'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '0'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\PhpStudy\\php55;E:\\Program Files\\TortoiseGit\\bin;E:\\Program Files\\python;D:\\PhpStudy\\mysqlserve\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/PhpStudy/WWW/fanli/fanli/backend/web/index.php'
+    'REMOTE_PORT' => '54031'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=activity/page'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=activity/page'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472690596.902
+    'REQUEST_TIME' => 1472690596
+]
+2016-09-01 08:43:40 [::1][-][gnr5q1ihdql9d774f06esc9qg7][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: result' in D:\PhpStudy\WWW\fanli\fanli\backend\controllers\ActivityController.php:80
+Stack trace:
+#0 D:\PhpStudy\WWW\fanli\fanli\backend\controllers\ActivityController.php(80): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'D:\\PhpStudy\\WWW...', 80, Array)
+#1 [internal function]: backend\controllers\ActivityController->actionPage()
+#2 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('page', Array)
+#5 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('activity/page', Array)
+#6 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\PhpStudy\WWW\fanli\fanli\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2016-09-01 08:43:40 [::1][-][gnr5q1ihdql9d774f06esc9qg7][info][application] $_GET = [
+    'r' => 'activity/page'
+]
+
+$_COOKIE = [
+    'iweb_safecode' => '897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ/YTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M+OTZiMWU0MjYyMTMyZjU0bA'
+    'PHPSESSID' => 'gnr5q1ihdql9d774f06esc9qg7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => 'admin'
+        'password' => '21232f297a57a5a743894a0e4a801fc3'
+        'adm_date' => '2016-08-29'
+        'adm_status' => null
+        'token' => '46b31a83347f7f3281c814d700691f7c'
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://localhost/fanli/fanli/backend/web/index.php?r=activity/index'
+    'HTTP_COOKIE' => 'iweb_safecode=897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ%2FYTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M%2BOTZiMWU0MjYyMTMyZjU0bA; PHPSESSID=gnr5q1ihdql9d774f06esc9qg7'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '0'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\PhpStudy\\php55;E:\\Program Files\\TortoiseGit\\bin;E:\\Program Files\\python;D:\\PhpStudy\\mysqlserve\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/PhpStudy/WWW/fanli/fanli/backend/web/index.php'
+    'REMOTE_PORT' => '54041'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=activity/page'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=activity/page'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472690620.696
+    'REQUEST_TIME' => 1472690620
+]
+2016-09-01 08:43:40 [::1][-][gnr5q1ihdql9d774f06esc9qg7][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception 'Exception' with message 'Serialization of 'Closure' is not allowed' 
+
+in D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php:58
+
+Stack trace:
+#0 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php(58): serialize(Array)
+#1 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#2 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#3 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#4 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\ErrorHandler.php(111): yii\log\Logger->flush(true)
+#5 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\ErrorException))
+#6 {main}
+2016-09-01 08:43:40 [::1][-][gnr5q1ihdql9d774f06esc9qg7][info][application] $_GET = [
+    'r' => 'activity/page'
+]
+
+$_COOKIE = [
+    'iweb_safecode' => '897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ/YTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M+OTZiMWU0MjYyMTMyZjU0bA'
+    'PHPSESSID' => 'gnr5q1ihdql9d774f06esc9qg7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => 'admin'
+        'password' => '21232f297a57a5a743894a0e4a801fc3'
+        'adm_date' => '2016-08-29'
+        'adm_status' => null
+        'token' => '46b31a83347f7f3281c814d700691f7c'
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://localhost/fanli/fanli/backend/web/index.php?r=activity/index'
+    'HTTP_COOKIE' => 'iweb_safecode=897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ%2FYTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M%2BOTZiMWU0MjYyMTMyZjU0bA; PHPSESSID=gnr5q1ihdql9d774f06esc9qg7'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '0'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\PhpStudy\\php55;E:\\Program Files\\TortoiseGit\\bin;E:\\Program Files\\python;D:\\PhpStudy\\mysqlserve\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/PhpStudy/WWW/fanli/fanli/backend/web/index.php'
+    'REMOTE_PORT' => '54041'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=activity/page'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=activity/page'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472690620.696
+    'REQUEST_TIME' => 1472690620
+]
+2016-09-01 08:44:38 [::1][-][gnr5q1ihdql9d774f06esc9qg7][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: result' in D:\PhpStudy\WWW\fanli\fanli\backend\controllers\ActivityController.php:80
+Stack trace:
+#0 D:\PhpStudy\WWW\fanli\fanli\backend\controllers\ActivityController.php(80): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'D:\\PhpStudy\\WWW...', 80, Array)
+#1 [internal function]: backend\controllers\ActivityController->actionPage()
+#2 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('page', Array)
+#5 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('activity/page', Array)
+#6 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\PhpStudy\WWW\fanli\fanli\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2016-09-01 08:44:38 [::1][-][gnr5q1ihdql9d774f06esc9qg7][info][application] $_GET = [
+    'r' => 'activity/page'
+]
+
+$_COOKIE = [
+    'iweb_safecode' => '897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ/YTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M+OTZiMWU0MjYyMTMyZjU0bA'
+    'PHPSESSID' => 'gnr5q1ihdql9d774f06esc9qg7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => 'admin'
+        'password' => '21232f297a57a5a743894a0e4a801fc3'
+        'adm_date' => '2016-08-29'
+        'adm_status' => null
+        'token' => '46b31a83347f7f3281c814d700691f7c'
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://localhost/fanli/fanli/backend/web/index.php?r=activity/index'
+    'HTTP_COOKIE' => 'iweb_safecode=897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ%2FYTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M%2BOTZiMWU0MjYyMTMyZjU0bA; PHPSESSID=gnr5q1ihdql9d774f06esc9qg7'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '0'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\PhpStudy\\php55;E:\\Program Files\\TortoiseGit\\bin;E:\\Program Files\\python;D:\\PhpStudy\\mysqlserve\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/PhpStudy/WWW/fanli/fanli/backend/web/index.php'
+    'REMOTE_PORT' => '54048'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=activity/page'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=activity/page'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472690678.719
+    'REQUEST_TIME' => 1472690678
+]
+2016-09-01 08:44:38 [::1][-][gnr5q1ihdql9d774f06esc9qg7][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception 'Exception' with message 'Serialization of 'Closure' is not allowed' 
+
+in D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php:58
+
+Stack trace:
+#0 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php(58): serialize(Array)
+#1 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#2 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#3 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#4 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\ErrorHandler.php(111): yii\log\Logger->flush(true)
+#5 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\ErrorException))
+#6 {main}
+2016-09-01 08:44:38 [::1][-][gnr5q1ihdql9d774f06esc9qg7][info][application] $_GET = [
+    'r' => 'activity/page'
+]
+
+$_COOKIE = [
+    'iweb_safecode' => '897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ/YTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M+OTZiMWU0MjYyMTMyZjU0bA'
+    'PHPSESSID' => 'gnr5q1ihdql9d774f06esc9qg7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => 'admin'
+        'password' => '21232f297a57a5a743894a0e4a801fc3'
+        'adm_date' => '2016-08-29'
+        'adm_status' => null
+        'token' => '46b31a83347f7f3281c814d700691f7c'
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://localhost/fanli/fanli/backend/web/index.php?r=activity/index'
+    'HTTP_COOKIE' => 'iweb_safecode=897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ%2FYTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M%2BOTZiMWU0MjYyMTMyZjU0bA; PHPSESSID=gnr5q1ihdql9d774f06esc9qg7'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '0'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\PhpStudy\\php55;E:\\Program Files\\TortoiseGit\\bin;E:\\Program Files\\python;D:\\PhpStudy\\mysqlserve\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/PhpStudy/WWW/fanli/fanli/backend/web/index.php'
+    'REMOTE_PORT' => '54048'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=activity/page'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=activity/page'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472690678.719
+    'REQUEST_TIME' => 1472690678
+]
+2016-09-01 08:46:12 [::1][-][gnr5q1ihdql9d774f06esc9qg7][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: result' in D:\PhpStudy\WWW\fanli\fanli\backend\controllers\ActivityController.php:80
+Stack trace:
+#0 D:\PhpStudy\WWW\fanli\fanli\backend\controllers\ActivityController.php(80): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'D:\\PhpStudy\\WWW...', 80, Array)
+#1 [internal function]: backend\controllers\ActivityController->actionPage()
+#2 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('page', Array)
+#5 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('activity/page', Array)
+#6 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\PhpStudy\WWW\fanli\fanli\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2016-09-01 08:46:12 [::1][-][gnr5q1ihdql9d774f06esc9qg7][info][application] $_GET = [
+    'r' => 'activity/page'
+]
+
+$_COOKIE = [
+    'iweb_safecode' => '897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ/YTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M+OTZiMWU0MjYyMTMyZjU0bA'
+    'PHPSESSID' => 'gnr5q1ihdql9d774f06esc9qg7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => 'admin'
+        'password' => '21232f297a57a5a743894a0e4a801fc3'
+        'adm_date' => '2016-08-29'
+        'adm_status' => null
+        'token' => '46b31a83347f7f3281c814d700691f7c'
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://localhost/fanli/fanli/backend/web/index.php?r=activity/index'
+    'HTTP_COOKIE' => 'iweb_safecode=897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ%2FYTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M%2BOTZiMWU0MjYyMTMyZjU0bA; PHPSESSID=gnr5q1ihdql9d774f06esc9qg7'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '0'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\PhpStudy\\php55;E:\\Program Files\\TortoiseGit\\bin;E:\\Program Files\\python;D:\\PhpStudy\\mysqlserve\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/PhpStudy/WWW/fanli/fanli/backend/web/index.php'
+    'REMOTE_PORT' => '54067'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=activity/page'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=activity/page'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472690772.283
+    'REQUEST_TIME' => 1472690772
+]
+2016-09-01 08:46:12 [::1][-][gnr5q1ihdql9d774f06esc9qg7][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception 'Exception' with message 'Serialization of 'Closure' is not allowed' 
+
+in D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php:58
+
+Stack trace:
+#0 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php(58): serialize(Array)
+#1 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#2 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#3 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#4 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\ErrorHandler.php(111): yii\log\Logger->flush(true)
+#5 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\ErrorException))
+#6 {main}
+2016-09-01 08:46:12 [::1][-][gnr5q1ihdql9d774f06esc9qg7][info][application] $_GET = [
+    'r' => 'activity/page'
+]
+
+$_COOKIE = [
+    'iweb_safecode' => '897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ/YTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M+OTZiMWU0MjYyMTMyZjU0bA'
+    'PHPSESSID' => 'gnr5q1ihdql9d774f06esc9qg7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => 'admin'
+        'password' => '21232f297a57a5a743894a0e4a801fc3'
+        'adm_date' => '2016-08-29'
+        'adm_status' => null
+        'token' => '46b31a83347f7f3281c814d700691f7c'
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://localhost/fanli/fanli/backend/web/index.php?r=activity/index'
+    'HTTP_COOKIE' => 'iweb_safecode=897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ%2FYTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M%2BOTZiMWU0MjYyMTMyZjU0bA; PHPSESSID=gnr5q1ihdql9d774f06esc9qg7'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '0'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\PhpStudy\\php55;E:\\Program Files\\TortoiseGit\\bin;E:\\Program Files\\python;D:\\PhpStudy\\mysqlserve\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/PhpStudy/WWW/fanli/fanli/backend/web/index.php'
+    'REMOTE_PORT' => '54067'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=activity/page'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=activity/page'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472690772.283
+    'REQUEST_TIME' => 1472690772
+]
+2016-09-01 08:46:15 [::1][-][gnr5q1ihdql9d774f06esc9qg7][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: result' in D:\PhpStudy\WWW\fanli\fanli\backend\controllers\ActivityController.php:80
+Stack trace:
+#0 D:\PhpStudy\WWW\fanli\fanli\backend\controllers\ActivityController.php(80): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'D:\\PhpStudy\\WWW...', 80, Array)
+#1 [internal function]: backend\controllers\ActivityController->actionPage()
+#2 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('page', Array)
+#5 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('activity/page', Array)
+#6 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\PhpStudy\WWW\fanli\fanli\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2016-09-01 08:46:15 [::1][-][gnr5q1ihdql9d774f06esc9qg7][info][application] $_GET = [
+    'r' => 'activity/page'
+]
+
+$_COOKIE = [
+    'iweb_safecode' => '897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ/YTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M+OTZiMWU0MjYyMTMyZjU0bA'
+    'PHPSESSID' => 'gnr5q1ihdql9d774f06esc9qg7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => 'admin'
+        'password' => '21232f297a57a5a743894a0e4a801fc3'
+        'adm_date' => '2016-08-29'
+        'adm_status' => null
+        'token' => '46b31a83347f7f3281c814d700691f7c'
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://localhost/fanli/fanli/backend/web/index.php?r=activity/index'
+    'HTTP_COOKIE' => 'iweb_safecode=897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ%2FYTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M%2BOTZiMWU0MjYyMTMyZjU0bA; PHPSESSID=gnr5q1ihdql9d774f06esc9qg7'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '0'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\PhpStudy\\php55;E:\\Program Files\\TortoiseGit\\bin;E:\\Program Files\\python;D:\\PhpStudy\\mysqlserve\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/PhpStudy/WWW/fanli/fanli/backend/web/index.php'
+    'REMOTE_PORT' => '54072'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=activity/page'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=activity/page'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472690775.055
+    'REQUEST_TIME' => 1472690775
+]
+2016-09-01 08:46:15 [::1][-][gnr5q1ihdql9d774f06esc9qg7][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception 'Exception' with message 'Serialization of 'Closure' is not allowed' 
+
+in D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php:58
+
+Stack trace:
+#0 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php(58): serialize(Array)
+#1 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#2 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#3 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#4 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\ErrorHandler.php(111): yii\log\Logger->flush(true)
+#5 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\ErrorException))
+#6 {main}
+2016-09-01 08:46:15 [::1][-][gnr5q1ihdql9d774f06esc9qg7][info][application] $_GET = [
+    'r' => 'activity/page'
+]
+
+$_COOKIE = [
+    'iweb_safecode' => '897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ/YTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M+OTZiMWU0MjYyMTMyZjU0bA'
+    'PHPSESSID' => 'gnr5q1ihdql9d774f06esc9qg7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => 'admin'
+        'password' => '21232f297a57a5a743894a0e4a801fc3'
+        'adm_date' => '2016-08-29'
+        'adm_status' => null
+        'token' => '46b31a83347f7f3281c814d700691f7c'
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://localhost/fanli/fanli/backend/web/index.php?r=activity/index'
+    'HTTP_COOKIE' => 'iweb_safecode=897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ%2FYTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M%2BOTZiMWU0MjYyMTMyZjU0bA; PHPSESSID=gnr5q1ihdql9d774f06esc9qg7'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '0'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\PhpStudy\\php55;E:\\Program Files\\TortoiseGit\\bin;E:\\Program Files\\python;D:\\PhpStudy\\mysqlserve\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/PhpStudy/WWW/fanli/fanli/backend/web/index.php'
+    'REMOTE_PORT' => '54072'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=activity/page'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=activity/page'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472690775.055
+    'REQUEST_TIME' => 1472690775
+]
+2016-09-01 08:46:42 [::1][-][gnr5q1ihdql9d774f06esc9qg7][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: result' in D:\PhpStudy\WWW\fanli\fanli\backend\controllers\ActivityController.php:80
+Stack trace:
+#0 D:\PhpStudy\WWW\fanli\fanli\backend\controllers\ActivityController.php(80): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'D:\\PhpStudy\\WWW...', 80, Array)
+#1 [internal function]: backend\controllers\ActivityController->actionPage()
+#2 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('page', Array)
+#5 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('activity/page', Array)
+#6 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\PhpStudy\WWW\fanli\fanli\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2016-09-01 08:46:42 [::1][-][gnr5q1ihdql9d774f06esc9qg7][info][application] $_GET = [
+    'r' => 'activity/page'
+]
+
+$_COOKIE = [
+    'iweb_safecode' => '897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ/YTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M+OTZiMWU0MjYyMTMyZjU0bA'
+    'PHPSESSID' => 'gnr5q1ihdql9d774f06esc9qg7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => 'admin'
+        'password' => '21232f297a57a5a743894a0e4a801fc3'
+        'adm_date' => '2016-08-29'
+        'adm_status' => null
+        'token' => '46b31a83347f7f3281c814d700691f7c'
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://localhost/fanli/fanli/backend/web/index.php?r=activity/index'
+    'HTTP_COOKIE' => 'iweb_safecode=897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ%2FYTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M%2BOTZiMWU0MjYyMTMyZjU0bA; PHPSESSID=gnr5q1ihdql9d774f06esc9qg7'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '0'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\PhpStudy\\php55;E:\\Program Files\\TortoiseGit\\bin;E:\\Program Files\\python;D:\\PhpStudy\\mysqlserve\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/PhpStudy/WWW/fanli/fanli/backend/web/index.php'
+    'REMOTE_PORT' => '54083'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=activity/page'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=activity/page'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472690802.74
+    'REQUEST_TIME' => 1472690802
+]
+2016-09-01 08:46:42 [::1][-][gnr5q1ihdql9d774f06esc9qg7][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception 'Exception' with message 'Serialization of 'Closure' is not allowed' 
+
+in D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php:58
+
+Stack trace:
+#0 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php(58): serialize(Array)
+#1 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#2 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#3 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#4 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\ErrorHandler.php(111): yii\log\Logger->flush(true)
+#5 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\ErrorException))
+#6 {main}
+2016-09-01 08:46:42 [::1][-][gnr5q1ihdql9d774f06esc9qg7][info][application] $_GET = [
+    'r' => 'activity/page'
+]
+
+$_COOKIE = [
+    'iweb_safecode' => '897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ/YTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M+OTZiMWU0MjYyMTMyZjU0bA'
+    'PHPSESSID' => 'gnr5q1ihdql9d774f06esc9qg7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => 'admin'
+        'password' => '21232f297a57a5a743894a0e4a801fc3'
+        'adm_date' => '2016-08-29'
+        'adm_status' => null
+        'token' => '46b31a83347f7f3281c814d700691f7c'
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://localhost/fanli/fanli/backend/web/index.php?r=activity/index'
+    'HTTP_COOKIE' => 'iweb_safecode=897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ%2FYTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M%2BOTZiMWU0MjYyMTMyZjU0bA; PHPSESSID=gnr5q1ihdql9d774f06esc9qg7'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '0'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\PhpStudy\\php55;E:\\Program Files\\TortoiseGit\\bin;E:\\Program Files\\python;D:\\PhpStudy\\mysqlserve\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/PhpStudy/WWW/fanli/fanli/backend/web/index.php'
+    'REMOTE_PORT' => '54083'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=activity/page'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=activity/page'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472690802.74
+    'REQUEST_TIME' => 1472690802
+]
+2016-09-01 08:47:23 [::1][-][gnr5q1ihdql9d774f06esc9qg7][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: result' in D:\PhpStudy\WWW\fanli\fanli\backend\controllers\ActivityController.php:80
+Stack trace:
+#0 D:\PhpStudy\WWW\fanli\fanli\backend\controllers\ActivityController.php(80): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'D:\\PhpStudy\\WWW...', 80, Array)
+#1 [internal function]: backend\controllers\ActivityController->actionPage()
+#2 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('page', Array)
+#5 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('activity/page', Array)
+#6 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\PhpStudy\WWW\fanli\fanli\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2016-09-01 08:47:23 [::1][-][gnr5q1ihdql9d774f06esc9qg7][info][application] $_GET = [
+    'r' => 'activity/page'
+]
+
+$_COOKIE = [
+    'iweb_safecode' => '897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ/YTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M+OTZiMWU0MjYyMTMyZjU0bA'
+    'PHPSESSID' => 'gnr5q1ihdql9d774f06esc9qg7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => 'admin'
+        'password' => '21232f297a57a5a743894a0e4a801fc3'
+        'adm_date' => '2016-08-29'
+        'adm_status' => null
+        'token' => '46b31a83347f7f3281c814d700691f7c'
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://localhost/fanli/fanli/backend/web/index.php?r=activity/index'
+    'HTTP_COOKIE' => 'iweb_safecode=897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ%2FYTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M%2BOTZiMWU0MjYyMTMyZjU0bA; PHPSESSID=gnr5q1ihdql9d774f06esc9qg7'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '0'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\PhpStudy\\php55;E:\\Program Files\\TortoiseGit\\bin;E:\\Program Files\\python;D:\\PhpStudy\\mysqlserve\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/PhpStudy/WWW/fanli/fanli/backend/web/index.php'
+    'REMOTE_PORT' => '54093'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=activity/page'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=activity/page'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472690843.587
+    'REQUEST_TIME' => 1472690843
+]
+2016-09-01 08:47:23 [::1][-][gnr5q1ihdql9d774f06esc9qg7][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception 'Exception' with message 'Serialization of 'Closure' is not allowed' 
+
+in D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php:58
+
+Stack trace:
+#0 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php(58): serialize(Array)
+#1 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#2 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#3 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#4 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\ErrorHandler.php(111): yii\log\Logger->flush(true)
+#5 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\ErrorException))
+#6 {main}
+2016-09-01 08:47:23 [::1][-][gnr5q1ihdql9d774f06esc9qg7][info][application] $_GET = [
+    'r' => 'activity/page'
+]
+
+$_COOKIE = [
+    'iweb_safecode' => '897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ/YTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M+OTZiMWU0MjYyMTMyZjU0bA'
+    'PHPSESSID' => 'gnr5q1ihdql9d774f06esc9qg7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => 'admin'
+        'password' => '21232f297a57a5a743894a0e4a801fc3'
+        'adm_date' => '2016-08-29'
+        'adm_status' => null
+        'token' => '46b31a83347f7f3281c814d700691f7c'
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://localhost/fanli/fanli/backend/web/index.php?r=activity/index'
+    'HTTP_COOKIE' => 'iweb_safecode=897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ%2FYTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M%2BOTZiMWU0MjYyMTMyZjU0bA; PHPSESSID=gnr5q1ihdql9d774f06esc9qg7'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '0'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\PhpStudy\\php55;E:\\Program Files\\TortoiseGit\\bin;E:\\Program Files\\python;D:\\PhpStudy\\mysqlserve\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/PhpStudy/WWW/fanli/fanli/backend/web/index.php'
+    'REMOTE_PORT' => '54093'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=activity/page'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=activity/page'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472690843.587
+    'REQUEST_TIME' => 1472690843
+]
+2016-09-01 08:47:32 [::1][-][gnr5q1ihdql9d774f06esc9qg7][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: result' in D:\PhpStudy\WWW\fanli\fanli\backend\controllers\ActivityController.php:80
+Stack trace:
+#0 D:\PhpStudy\WWW\fanli\fanli\backend\controllers\ActivityController.php(80): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'D:\\PhpStudy\\WWW...', 80, Array)
+#1 [internal function]: backend\controllers\ActivityController->actionPage()
+#2 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('page', Array)
+#5 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('activity/page', Array)
+#6 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\PhpStudy\WWW\fanli\fanli\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2016-09-01 08:47:32 [::1][-][gnr5q1ihdql9d774f06esc9qg7][info][application] $_GET = [
+    'r' => 'activity/page'
+]
+
+$_COOKIE = [
+    'iweb_safecode' => '897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ/YTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M+OTZiMWU0MjYyMTMyZjU0bA'
+    'PHPSESSID' => 'gnr5q1ihdql9d774f06esc9qg7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => 'admin'
+        'password' => '21232f297a57a5a743894a0e4a801fc3'
+        'adm_date' => '2016-08-29'
+        'adm_status' => null
+        'token' => '46b31a83347f7f3281c814d700691f7c'
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://localhost/fanli/fanli/backend/web/index.php?r=activity/index'
+    'HTTP_COOKIE' => 'iweb_safecode=897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ%2FYTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M%2BOTZiMWU0MjYyMTMyZjU0bA; PHPSESSID=gnr5q1ihdql9d774f06esc9qg7'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '0'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\PhpStudy\\php55;E:\\Program Files\\TortoiseGit\\bin;E:\\Program Files\\python;D:\\PhpStudy\\mysqlserve\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/PhpStudy/WWW/fanli/fanli/backend/web/index.php'
+    'REMOTE_PORT' => '54099'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=activity/page'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=activity/page'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472690852.471
+    'REQUEST_TIME' => 1472690852
+]
+2016-09-01 08:47:32 [::1][-][gnr5q1ihdql9d774f06esc9qg7][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception 'Exception' with message 'Serialization of 'Closure' is not allowed' 
+
+in D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php:58
+
+Stack trace:
+#0 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php(58): serialize(Array)
+#1 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#2 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#3 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#4 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\ErrorHandler.php(111): yii\log\Logger->flush(true)
+#5 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\ErrorException))
+#6 {main}
+2016-09-01 08:47:32 [::1][-][gnr5q1ihdql9d774f06esc9qg7][info][application] $_GET = [
+    'r' => 'activity/page'
+]
+
+$_COOKIE = [
+    'iweb_safecode' => '897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ/YTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M+OTZiMWU0MjYyMTMyZjU0bA'
+    'PHPSESSID' => 'gnr5q1ihdql9d774f06esc9qg7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => 'admin'
+        'password' => '21232f297a57a5a743894a0e4a801fc3'
+        'adm_date' => '2016-08-29'
+        'adm_status' => null
+        'token' => '46b31a83347f7f3281c814d700691f7c'
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://localhost/fanli/fanli/backend/web/index.php?r=activity/index'
+    'HTTP_COOKIE' => 'iweb_safecode=897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ%2FYTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M%2BOTZiMWU0MjYyMTMyZjU0bA; PHPSESSID=gnr5q1ihdql9d774f06esc9qg7'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '0'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\PhpStudy\\php55;E:\\Program Files\\TortoiseGit\\bin;E:\\Program Files\\python;D:\\PhpStudy\\mysqlserve\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/PhpStudy/WWW/fanli/fanli/backend/web/index.php'
+    'REMOTE_PORT' => '54099'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=activity/page'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=activity/page'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472690852.471
+    'REQUEST_TIME' => 1472690852
+]
+2016-09-01 08:47:45 [::1][-][gnr5q1ihdql9d774f06esc9qg7][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: result' in D:\PhpStudy\WWW\fanli\fanli\backend\controllers\ActivityController.php:80
+Stack trace:
+#0 D:\PhpStudy\WWW\fanli\fanli\backend\controllers\ActivityController.php(80): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'D:\\PhpStudy\\WWW...', 80, Array)
+#1 [internal function]: backend\controllers\ActivityController->actionPage()
+#2 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('page', Array)
+#5 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('activity/page', Array)
+#6 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\PhpStudy\WWW\fanli\fanli\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2016-09-01 08:47:45 [::1][-][gnr5q1ihdql9d774f06esc9qg7][info][application] $_GET = [
+    'r' => 'activity/page'
+]
+
+$_COOKIE = [
+    'iweb_safecode' => '897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ/YTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M+OTZiMWU0MjYyMTMyZjU0bA'
+    'PHPSESSID' => 'gnr5q1ihdql9d774f06esc9qg7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => 'admin'
+        'password' => '21232f297a57a5a743894a0e4a801fc3'
+        'adm_date' => '2016-08-29'
+        'adm_status' => null
+        'token' => '46b31a83347f7f3281c814d700691f7c'
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://localhost/fanli/fanli/backend/web/index.php?r=activity/index'
+    'HTTP_COOKIE' => 'iweb_safecode=897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ%2FYTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M%2BOTZiMWU0MjYyMTMyZjU0bA; PHPSESSID=gnr5q1ihdql9d774f06esc9qg7'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '0'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\PhpStudy\\php55;E:\\Program Files\\TortoiseGit\\bin;E:\\Program Files\\python;D:\\PhpStudy\\mysqlserve\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/PhpStudy/WWW/fanli/fanli/backend/web/index.php'
+    'REMOTE_PORT' => '54105'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=activity/page'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=activity/page'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472690865.796
+    'REQUEST_TIME' => 1472690865
+]
+2016-09-01 08:47:45 [::1][-][gnr5q1ihdql9d774f06esc9qg7][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception 'Exception' with message 'Serialization of 'Closure' is not allowed' 
+
+in D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php:58
+
+Stack trace:
+#0 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php(58): serialize(Array)
+#1 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#2 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#3 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#4 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\ErrorHandler.php(111): yii\log\Logger->flush(true)
+#5 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\ErrorException))
+#6 {main}
+2016-09-01 08:47:45 [::1][-][gnr5q1ihdql9d774f06esc9qg7][info][application] $_GET = [
+    'r' => 'activity/page'
+]
+
+$_COOKIE = [
+    'iweb_safecode' => '897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ/YTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M+OTZiMWU0MjYyMTMyZjU0bA'
+    'PHPSESSID' => 'gnr5q1ihdql9d774f06esc9qg7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => 'admin'
+        'password' => '21232f297a57a5a743894a0e4a801fc3'
+        'adm_date' => '2016-08-29'
+        'adm_status' => null
+        'token' => '46b31a83347f7f3281c814d700691f7c'
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://localhost/fanli/fanli/backend/web/index.php?r=activity/index'
+    'HTTP_COOKIE' => 'iweb_safecode=897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ%2FYTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M%2BOTZiMWU0MjYyMTMyZjU0bA; PHPSESSID=gnr5q1ihdql9d774f06esc9qg7'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '0'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\PhpStudy\\php55;E:\\Program Files\\TortoiseGit\\bin;E:\\Program Files\\python;D:\\PhpStudy\\mysqlserve\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/PhpStudy/WWW/fanli/fanli/backend/web/index.php'
+    'REMOTE_PORT' => '54105'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=activity/page'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=activity/page'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472690865.796
+    'REQUEST_TIME' => 1472690865
+]
+2016-09-01 08:48:22 [::1][-][gnr5q1ihdql9d774f06esc9qg7][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: result' in D:\PhpStudy\WWW\fanli\fanli\backend\controllers\ActivityController.php:80
+Stack trace:
+#0 D:\PhpStudy\WWW\fanli\fanli\backend\controllers\ActivityController.php(80): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'D:\\PhpStudy\\WWW...', 80, Array)
+#1 [internal function]: backend\controllers\ActivityController->actionPage()
+#2 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('page', Array)
+#5 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('activity/page', Array)
+#6 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\PhpStudy\WWW\fanli\fanli\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2016-09-01 08:48:22 [::1][-][gnr5q1ihdql9d774f06esc9qg7][info][application] $_GET = [
+    'r' => 'activity/page'
+]
+
+$_COOKIE = [
+    'iweb_safecode' => '897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ/YTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M+OTZiMWU0MjYyMTMyZjU0bA'
+    'PHPSESSID' => 'gnr5q1ihdql9d774f06esc9qg7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => 'admin'
+        'password' => '21232f297a57a5a743894a0e4a801fc3'
+        'adm_date' => '2016-08-29'
+        'adm_status' => null
+        'token' => '46b31a83347f7f3281c814d700691f7c'
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://localhost/fanli/fanli/backend/web/index.php?r=activity/index'
+    'HTTP_COOKIE' => 'iweb_safecode=897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ%2FYTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M%2BOTZiMWU0MjYyMTMyZjU0bA; PHPSESSID=gnr5q1ihdql9d774f06esc9qg7'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '0'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\PhpStudy\\php55;E:\\Program Files\\TortoiseGit\\bin;E:\\Program Files\\python;D:\\PhpStudy\\mysqlserve\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/PhpStudy/WWW/fanli/fanli/backend/web/index.php'
+    'REMOTE_PORT' => '54112'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=activity/page'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=activity/page'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472690902.592
+    'REQUEST_TIME' => 1472690902
+]
+2016-09-01 08:48:22 [::1][-][gnr5q1ihdql9d774f06esc9qg7][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception 'Exception' with message 'Serialization of 'Closure' is not allowed' 
+
+in D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php:58
+
+Stack trace:
+#0 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php(58): serialize(Array)
+#1 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#2 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#3 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#4 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\ErrorHandler.php(111): yii\log\Logger->flush(true)
+#5 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\ErrorException))
+#6 {main}
+2016-09-01 08:48:22 [::1][-][gnr5q1ihdql9d774f06esc9qg7][info][application] $_GET = [
+    'r' => 'activity/page'
+]
+
+$_COOKIE = [
+    'iweb_safecode' => '897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ/YTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M+OTZiMWU0MjYyMTMyZjU0bA'
+    'PHPSESSID' => 'gnr5q1ihdql9d774f06esc9qg7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => 'admin'
+        'password' => '21232f297a57a5a743894a0e4a801fc3'
+        'adm_date' => '2016-08-29'
+        'adm_status' => null
+        'token' => '46b31a83347f7f3281c814d700691f7c'
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://localhost/fanli/fanli/backend/web/index.php?r=activity/index'
+    'HTTP_COOKIE' => 'iweb_safecode=897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ%2FYTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M%2BOTZiMWU0MjYyMTMyZjU0bA; PHPSESSID=gnr5q1ihdql9d774f06esc9qg7'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '0'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\PhpStudy\\php55;E:\\Program Files\\TortoiseGit\\bin;E:\\Program Files\\python;D:\\PhpStudy\\mysqlserve\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/PhpStudy/WWW/fanli/fanli/backend/web/index.php'
+    'REMOTE_PORT' => '54112'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=activity/page'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=activity/page'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472690902.592
+    'REQUEST_TIME' => 1472690902
+]
+2016-09-01 08:48:24 [::1][-][gnr5q1ihdql9d774f06esc9qg7][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: result' in D:\PhpStudy\WWW\fanli\fanli\backend\controllers\ActivityController.php:80
+Stack trace:
+#0 D:\PhpStudy\WWW\fanli\fanli\backend\controllers\ActivityController.php(80): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'D:\\PhpStudy\\WWW...', 80, Array)
+#1 [internal function]: backend\controllers\ActivityController->actionPage()
+#2 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('page', Array)
+#5 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('activity/page', Array)
+#6 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\PhpStudy\WWW\fanli\fanli\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2016-09-01 08:48:24 [::1][-][gnr5q1ihdql9d774f06esc9qg7][info][application] $_GET = [
+    'r' => 'activity/page'
+]
+
+$_POST = [
+    'p' => '2'
+]
+
+$_COOKIE = [
+    'iweb_safecode' => '897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ/YTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M+OTZiMWU0MjYyMTMyZjU0bA'
+    'PHPSESSID' => 'gnr5q1ihdql9d774f06esc9qg7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => 'admin'
+        'password' => '21232f297a57a5a743894a0e4a801fc3'
+        'adm_date' => '2016-08-29'
+        'adm_status' => null
+        'token' => '46b31a83347f7f3281c814d700691f7c'
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://localhost/fanli/fanli/backend/web/index.php?r=activity/index'
+    'CONTENT_LENGTH' => '3'
+    'HTTP_COOKIE' => 'iweb_safecode=897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ%2FYTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M%2BOTZiMWU0MjYyMTMyZjU0bA; PHPSESSID=gnr5q1ihdql9d774f06esc9qg7'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\PhpStudy\\php55;E:\\Program Files\\TortoiseGit\\bin;E:\\Program Files\\python;D:\\PhpStudy\\mysqlserve\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/PhpStudy/WWW/fanli/fanli/backend/web/index.php'
+    'REMOTE_PORT' => '54120'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=activity/page'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=activity/page'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472690904.488
+    'REQUEST_TIME' => 1472690904
+]
+2016-09-01 08:48:24 [::1][-][gnr5q1ihdql9d774f06esc9qg7][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception 'Exception' with message 'Serialization of 'Closure' is not allowed' 
+
+in D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php:58
+
+Stack trace:
+#0 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php(58): serialize(Array)
+#1 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#2 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#3 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#4 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\ErrorHandler.php(111): yii\log\Logger->flush(true)
+#5 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\ErrorException))
+#6 {main}
+2016-09-01 08:48:24 [::1][-][gnr5q1ihdql9d774f06esc9qg7][info][application] $_GET = [
+    'r' => 'activity/page'
+]
+
+$_POST = [
+    'p' => '2'
+]
+
+$_COOKIE = [
+    'iweb_safecode' => '897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ/YTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M+OTZiMWU0MjYyMTMyZjU0bA'
+    'PHPSESSID' => 'gnr5q1ihdql9d774f06esc9qg7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => 'admin'
+        'password' => '21232f297a57a5a743894a0e4a801fc3'
+        'adm_date' => '2016-08-29'
+        'adm_status' => null
+        'token' => '46b31a83347f7f3281c814d700691f7c'
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://localhost/fanli/fanli/backend/web/index.php?r=activity/index'
+    'CONTENT_LENGTH' => '3'
+    'HTTP_COOKIE' => 'iweb_safecode=897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ%2FYTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M%2BOTZiMWU0MjYyMTMyZjU0bA; PHPSESSID=gnr5q1ihdql9d774f06esc9qg7'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\PhpStudy\\php55;E:\\Program Files\\TortoiseGit\\bin;E:\\Program Files\\python;D:\\PhpStudy\\mysqlserve\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/PhpStudy/WWW/fanli/fanli/backend/web/index.php'
+    'REMOTE_PORT' => '54120'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=activity/page'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=activity/page'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472690904.488
+    'REQUEST_TIME' => 1472690904
+]
+2016-09-01 08:48:26 [::1][-][gnr5q1ihdql9d774f06esc9qg7][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: result' in D:\PhpStudy\WWW\fanli\fanli\backend\controllers\ActivityController.php:80
+Stack trace:
+#0 D:\PhpStudy\WWW\fanli\fanli\backend\controllers\ActivityController.php(80): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'D:\\PhpStudy\\WWW...', 80, Array)
+#1 [internal function]: backend\controllers\ActivityController->actionPage()
+#2 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('page', Array)
+#5 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('activity/page', Array)
+#6 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\PhpStudy\WWW\fanli\fanli\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2016-09-01 08:48:26 [::1][-][gnr5q1ihdql9d774f06esc9qg7][info][application] $_GET = [
+    'r' => 'activity/page'
+]
+
+$_POST = [
+    'p' => '2'
+]
+
+$_COOKIE = [
+    'iweb_safecode' => '897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ/YTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M+OTZiMWU0MjYyMTMyZjU0bA'
+    'PHPSESSID' => 'gnr5q1ihdql9d774f06esc9qg7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => 'admin'
+        'password' => '21232f297a57a5a743894a0e4a801fc3'
+        'adm_date' => '2016-08-29'
+        'adm_status' => null
+        'token' => '46b31a83347f7f3281c814d700691f7c'
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://localhost/fanli/fanli/backend/web/index.php?r=activity/index'
+    'CONTENT_LENGTH' => '3'
+    'HTTP_COOKIE' => 'iweb_safecode=897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ%2FYTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M%2BOTZiMWU0MjYyMTMyZjU0bA; PHPSESSID=gnr5q1ihdql9d774f06esc9qg7'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\PhpStudy\\php55;E:\\Program Files\\TortoiseGit\\bin;E:\\Program Files\\python;D:\\PhpStudy\\mysqlserve\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/PhpStudy/WWW/fanli/fanli/backend/web/index.php'
+    'REMOTE_PORT' => '54123'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=activity/page'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=activity/page'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472690906.198
+    'REQUEST_TIME' => 1472690906
+]
+2016-09-01 08:48:26 [::1][-][gnr5q1ihdql9d774f06esc9qg7][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception 'Exception' with message 'Serialization of 'Closure' is not allowed' 
+
+in D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php:58
+
+Stack trace:
+#0 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php(58): serialize(Array)
+#1 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#2 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#3 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#4 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\ErrorHandler.php(111): yii\log\Logger->flush(true)
+#5 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\ErrorException))
+#6 {main}
+2016-09-01 08:48:26 [::1][-][gnr5q1ihdql9d774f06esc9qg7][info][application] $_GET = [
+    'r' => 'activity/page'
+]
+
+$_POST = [
+    'p' => '2'
+]
+
+$_COOKIE = [
+    'iweb_safecode' => '897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ/YTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M+OTZiMWU0MjYyMTMyZjU0bA'
+    'PHPSESSID' => 'gnr5q1ihdql9d774f06esc9qg7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => 'admin'
+        'password' => '21232f297a57a5a743894a0e4a801fc3'
+        'adm_date' => '2016-08-29'
+        'adm_status' => null
+        'token' => '46b31a83347f7f3281c814d700691f7c'
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://localhost/fanli/fanli/backend/web/index.php?r=activity/index'
+    'CONTENT_LENGTH' => '3'
+    'HTTP_COOKIE' => 'iweb_safecode=897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ%2FYTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M%2BOTZiMWU0MjYyMTMyZjU0bA; PHPSESSID=gnr5q1ihdql9d774f06esc9qg7'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\PhpStudy\\php55;E:\\Program Files\\TortoiseGit\\bin;E:\\Program Files\\python;D:\\PhpStudy\\mysqlserve\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/PhpStudy/WWW/fanli/fanli/backend/web/index.php'
+    'REMOTE_PORT' => '54123'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=activity/page'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=activity/page'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472690906.198
+    'REQUEST_TIME' => 1472690906
+]
+2016-09-01 08:48:27 [::1][-][gnr5q1ihdql9d774f06esc9qg7][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: result' in D:\PhpStudy\WWW\fanli\fanli\backend\controllers\ActivityController.php:80
+Stack trace:
+#0 D:\PhpStudy\WWW\fanli\fanli\backend\controllers\ActivityController.php(80): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'D:\\PhpStudy\\WWW...', 80, Array)
+#1 [internal function]: backend\controllers\ActivityController->actionPage()
+#2 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('page', Array)
+#5 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('activity/page', Array)
+#6 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\PhpStudy\WWW\fanli\fanli\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2016-09-01 08:48:26 [::1][-][gnr5q1ihdql9d774f06esc9qg7][info][application] $_GET = [
+    'r' => 'activity/page'
+]
+
+$_POST = [
+    'p' => '2'
+]
+
+$_COOKIE = [
+    'iweb_safecode' => '897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ/YTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M+OTZiMWU0MjYyMTMyZjU0bA'
+    'PHPSESSID' => 'gnr5q1ihdql9d774f06esc9qg7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => 'admin'
+        'password' => '21232f297a57a5a743894a0e4a801fc3'
+        'adm_date' => '2016-08-29'
+        'adm_status' => null
+        'token' => '46b31a83347f7f3281c814d700691f7c'
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://localhost/fanli/fanli/backend/web/index.php?r=activity/index'
+    'CONTENT_LENGTH' => '3'
+    'HTTP_COOKIE' => 'iweb_safecode=897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ%2FYTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M%2BOTZiMWU0MjYyMTMyZjU0bA; PHPSESSID=gnr5q1ihdql9d774f06esc9qg7'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\PhpStudy\\php55;E:\\Program Files\\TortoiseGit\\bin;E:\\Program Files\\python;D:\\PhpStudy\\mysqlserve\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/PhpStudy/WWW/fanli/fanli/backend/web/index.php'
+    'REMOTE_PORT' => '54124'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=activity/page'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=activity/page'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472690906.888
+    'REQUEST_TIME' => 1472690906
+]
+2016-09-01 08:48:27 [::1][-][gnr5q1ihdql9d774f06esc9qg7][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception 'Exception' with message 'Serialization of 'Closure' is not allowed' 
+
+in D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php:58
+
+Stack trace:
+#0 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php(58): serialize(Array)
+#1 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#2 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#3 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#4 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\ErrorHandler.php(111): yii\log\Logger->flush(true)
+#5 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\ErrorException))
+#6 {main}
+2016-09-01 08:48:26 [::1][-][gnr5q1ihdql9d774f06esc9qg7][info][application] $_GET = [
+    'r' => 'activity/page'
+]
+
+$_POST = [
+    'p' => '2'
+]
+
+$_COOKIE = [
+    'iweb_safecode' => '897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ/YTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M+OTZiMWU0MjYyMTMyZjU0bA'
+    'PHPSESSID' => 'gnr5q1ihdql9d774f06esc9qg7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => 'admin'
+        'password' => '21232f297a57a5a743894a0e4a801fc3'
+        'adm_date' => '2016-08-29'
+        'adm_status' => null
+        'token' => '46b31a83347f7f3281c814d700691f7c'
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://localhost/fanli/fanli/backend/web/index.php?r=activity/index'
+    'CONTENT_LENGTH' => '3'
+    'HTTP_COOKIE' => 'iweb_safecode=897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ%2FYTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M%2BOTZiMWU0MjYyMTMyZjU0bA; PHPSESSID=gnr5q1ihdql9d774f06esc9qg7'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\PhpStudy\\php55;E:\\Program Files\\TortoiseGit\\bin;E:\\Program Files\\python;D:\\PhpStudy\\mysqlserve\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/PhpStudy/WWW/fanli/fanli/backend/web/index.php'
+    'REMOTE_PORT' => '54124'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=activity/page'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=activity/page'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472690906.888
+    'REQUEST_TIME' => 1472690906
+]
+2016-09-01 08:48:27 [::1][-][gnr5q1ihdql9d774f06esc9qg7][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: result' in D:\PhpStudy\WWW\fanli\fanli\backend\controllers\ActivityController.php:80
+Stack trace:
+#0 D:\PhpStudy\WWW\fanli\fanli\backend\controllers\ActivityController.php(80): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'D:\\PhpStudy\\WWW...', 80, Array)
+#1 [internal function]: backend\controllers\ActivityController->actionPage()
+#2 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('page', Array)
+#5 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('activity/page', Array)
+#6 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\PhpStudy\WWW\fanli\fanli\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2016-09-01 08:48:27 [::1][-][gnr5q1ihdql9d774f06esc9qg7][info][application] $_GET = [
+    'r' => 'activity/page'
+]
+
+$_POST = [
+    'p' => '2'
+]
+
+$_COOKIE = [
+    'iweb_safecode' => '897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ/YTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M+OTZiMWU0MjYyMTMyZjU0bA'
+    'PHPSESSID' => 'gnr5q1ihdql9d774f06esc9qg7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => 'admin'
+        'password' => '21232f297a57a5a743894a0e4a801fc3'
+        'adm_date' => '2016-08-29'
+        'adm_status' => null
+        'token' => '46b31a83347f7f3281c814d700691f7c'
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://localhost/fanli/fanli/backend/web/index.php?r=activity/index'
+    'CONTENT_LENGTH' => '3'
+    'HTTP_COOKIE' => 'iweb_safecode=897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ%2FYTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M%2BOTZiMWU0MjYyMTMyZjU0bA; PHPSESSID=gnr5q1ihdql9d774f06esc9qg7'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\PhpStudy\\php55;E:\\Program Files\\TortoiseGit\\bin;E:\\Program Files\\python;D:\\PhpStudy\\mysqlserve\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/PhpStudy/WWW/fanli/fanli/backend/web/index.php'
+    'REMOTE_PORT' => '54125'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=activity/page'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=activity/page'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472690907.054
+    'REQUEST_TIME' => 1472690907
+]
+2016-09-01 08:48:27 [::1][-][gnr5q1ihdql9d774f06esc9qg7][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception 'Exception' with message 'Serialization of 'Closure' is not allowed' 
+
+in D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php:58
+
+Stack trace:
+#0 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php(58): serialize(Array)
+#1 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#2 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#3 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#4 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\ErrorHandler.php(111): yii\log\Logger->flush(true)
+#5 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\ErrorException))
+#6 {main}
+2016-09-01 08:48:27 [::1][-][gnr5q1ihdql9d774f06esc9qg7][info][application] $_GET = [
+    'r' => 'activity/page'
+]
+
+$_POST = [
+    'p' => '2'
+]
+
+$_COOKIE = [
+    'iweb_safecode' => '897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ/YTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M+OTZiMWU0MjYyMTMyZjU0bA'
+    'PHPSESSID' => 'gnr5q1ihdql9d774f06esc9qg7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => 'admin'
+        'password' => '21232f297a57a5a743894a0e4a801fc3'
+        'adm_date' => '2016-08-29'
+        'adm_status' => null
+        'token' => '46b31a83347f7f3281c814d700691f7c'
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://localhost/fanli/fanli/backend/web/index.php?r=activity/index'
+    'CONTENT_LENGTH' => '3'
+    'HTTP_COOKIE' => 'iweb_safecode=897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ%2FYTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M%2BOTZiMWU0MjYyMTMyZjU0bA; PHPSESSID=gnr5q1ihdql9d774f06esc9qg7'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\PhpStudy\\php55;E:\\Program Files\\TortoiseGit\\bin;E:\\Program Files\\python;D:\\PhpStudy\\mysqlserve\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/PhpStudy/WWW/fanli/fanli/backend/web/index.php'
+    'REMOTE_PORT' => '54125'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=activity/page'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=activity/page'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472690907.054
+    'REQUEST_TIME' => 1472690907
+]
+2016-09-01 08:48:27 [::1][-][gnr5q1ihdql9d774f06esc9qg7][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: result' in D:\PhpStudy\WWW\fanli\fanli\backend\controllers\ActivityController.php:80
+Stack trace:
+#0 D:\PhpStudy\WWW\fanli\fanli\backend\controllers\ActivityController.php(80): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'D:\\PhpStudy\\WWW...', 80, Array)
+#1 [internal function]: backend\controllers\ActivityController->actionPage()
+#2 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('page', Array)
+#5 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('activity/page', Array)
+#6 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\PhpStudy\WWW\fanli\fanli\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2016-09-01 08:48:27 [::1][-][gnr5q1ihdql9d774f06esc9qg7][info][application] $_GET = [
+    'r' => 'activity/page'
+]
+
+$_POST = [
+    'p' => '2'
+]
+
+$_COOKIE = [
+    'iweb_safecode' => '897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ/YTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M+OTZiMWU0MjYyMTMyZjU0bA'
+    'PHPSESSID' => 'gnr5q1ihdql9d774f06esc9qg7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => 'admin'
+        'password' => '21232f297a57a5a743894a0e4a801fc3'
+        'adm_date' => '2016-08-29'
+        'adm_status' => null
+        'token' => '46b31a83347f7f3281c814d700691f7c'
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://localhost/fanli/fanli/backend/web/index.php?r=activity/index'
+    'CONTENT_LENGTH' => '3'
+    'HTTP_COOKIE' => 'iweb_safecode=897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ%2FYTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M%2BOTZiMWU0MjYyMTMyZjU0bA; PHPSESSID=gnr5q1ihdql9d774f06esc9qg7'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\PhpStudy\\php55;E:\\Program Files\\TortoiseGit\\bin;E:\\Program Files\\python;D:\\PhpStudy\\mysqlserve\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/PhpStudy/WWW/fanli/fanli/backend/web/index.php'
+    'REMOTE_PORT' => '54126'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=activity/page'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=activity/page'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472690907.217
+    'REQUEST_TIME' => 1472690907
+]
+2016-09-01 08:48:27 [::1][-][gnr5q1ihdql9d774f06esc9qg7][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception 'Exception' with message 'Serialization of 'Closure' is not allowed' 
+
+in D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php:58
+
+Stack trace:
+#0 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php(58): serialize(Array)
+#1 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#2 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#3 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#4 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\ErrorHandler.php(111): yii\log\Logger->flush(true)
+#5 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\ErrorException))
+#6 {main}
+2016-09-01 08:48:27 [::1][-][gnr5q1ihdql9d774f06esc9qg7][info][application] $_GET = [
+    'r' => 'activity/page'
+]
+
+$_POST = [
+    'p' => '2'
+]
+
+$_COOKIE = [
+    'iweb_safecode' => '897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ/YTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M+OTZiMWU0MjYyMTMyZjU0bA'
+    'PHPSESSID' => 'gnr5q1ihdql9d774f06esc9qg7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => 'admin'
+        'password' => '21232f297a57a5a743894a0e4a801fc3'
+        'adm_date' => '2016-08-29'
+        'adm_status' => null
+        'token' => '46b31a83347f7f3281c814d700691f7c'
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://localhost/fanli/fanli/backend/web/index.php?r=activity/index'
+    'CONTENT_LENGTH' => '3'
+    'HTTP_COOKIE' => 'iweb_safecode=897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ%2FYTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M%2BOTZiMWU0MjYyMTMyZjU0bA; PHPSESSID=gnr5q1ihdql9d774f06esc9qg7'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\PhpStudy\\php55;E:\\Program Files\\TortoiseGit\\bin;E:\\Program Files\\python;D:\\PhpStudy\\mysqlserve\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/PhpStudy/WWW/fanli/fanli/backend/web/index.php'
+    'REMOTE_PORT' => '54126'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=activity/page'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=activity/page'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472690907.217
+    'REQUEST_TIME' => 1472690907
+]
+2016-09-01 08:48:27 [::1][-][gnr5q1ihdql9d774f06esc9qg7][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: result' in D:\PhpStudy\WWW\fanli\fanli\backend\controllers\ActivityController.php:80
+Stack trace:
+#0 D:\PhpStudy\WWW\fanli\fanli\backend\controllers\ActivityController.php(80): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'D:\\PhpStudy\\WWW...', 80, Array)
+#1 [internal function]: backend\controllers\ActivityController->actionPage()
+#2 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('page', Array)
+#5 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('activity/page', Array)
+#6 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\PhpStudy\WWW\fanli\fanli\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2016-09-01 08:48:27 [::1][-][gnr5q1ihdql9d774f06esc9qg7][info][application] $_GET = [
+    'r' => 'activity/page'
+]
+
+$_POST = [
+    'p' => '2'
+]
+
+$_COOKIE = [
+    'iweb_safecode' => '897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ/YTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M+OTZiMWU0MjYyMTMyZjU0bA'
+    'PHPSESSID' => 'gnr5q1ihdql9d774f06esc9qg7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => 'admin'
+        'password' => '21232f297a57a5a743894a0e4a801fc3'
+        'adm_date' => '2016-08-29'
+        'adm_status' => null
+        'token' => '46b31a83347f7f3281c814d700691f7c'
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://localhost/fanli/fanli/backend/web/index.php?r=activity/index'
+    'CONTENT_LENGTH' => '3'
+    'HTTP_COOKIE' => 'iweb_safecode=897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ%2FYTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M%2BOTZiMWU0MjYyMTMyZjU0bA; PHPSESSID=gnr5q1ihdql9d774f06esc9qg7'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\PhpStudy\\php55;E:\\Program Files\\TortoiseGit\\bin;E:\\Program Files\\python;D:\\PhpStudy\\mysqlserve\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/PhpStudy/WWW/fanli/fanli/backend/web/index.php'
+    'REMOTE_PORT' => '54127'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=activity/page'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=activity/page'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472690907.393
+    'REQUEST_TIME' => 1472690907
+]
+2016-09-01 08:48:27 [::1][-][gnr5q1ihdql9d774f06esc9qg7][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception 'Exception' with message 'Serialization of 'Closure' is not allowed' 
+
+in D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php:58
+
+Stack trace:
+#0 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php(58): serialize(Array)
+#1 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#2 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#3 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#4 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\ErrorHandler.php(111): yii\log\Logger->flush(true)
+#5 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\ErrorException))
+#6 {main}
+2016-09-01 08:48:27 [::1][-][gnr5q1ihdql9d774f06esc9qg7][info][application] $_GET = [
+    'r' => 'activity/page'
+]
+
+$_POST = [
+    'p' => '2'
+]
+
+$_COOKIE = [
+    'iweb_safecode' => '897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ/YTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M+OTZiMWU0MjYyMTMyZjU0bA'
+    'PHPSESSID' => 'gnr5q1ihdql9d774f06esc9qg7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => 'admin'
+        'password' => '21232f297a57a5a743894a0e4a801fc3'
+        'adm_date' => '2016-08-29'
+        'adm_status' => null
+        'token' => '46b31a83347f7f3281c814d700691f7c'
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://localhost/fanli/fanli/backend/web/index.php?r=activity/index'
+    'CONTENT_LENGTH' => '3'
+    'HTTP_COOKIE' => 'iweb_safecode=897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ%2FYTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M%2BOTZiMWU0MjYyMTMyZjU0bA; PHPSESSID=gnr5q1ihdql9d774f06esc9qg7'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\PhpStudy\\php55;E:\\Program Files\\TortoiseGit\\bin;E:\\Program Files\\python;D:\\PhpStudy\\mysqlserve\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/PhpStudy/WWW/fanli/fanli/backend/web/index.php'
+    'REMOTE_PORT' => '54127'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=activity/page'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=activity/page'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472690907.393
+    'REQUEST_TIME' => 1472690907
+]
+2016-09-01 08:48:38 [::1][-][gnr5q1ihdql9d774f06esc9qg7][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: result' in D:\PhpStudy\WWW\fanli\fanli\backend\controllers\ActivityController.php:80
+Stack trace:
+#0 D:\PhpStudy\WWW\fanli\fanli\backend\controllers\ActivityController.php(80): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'D:\\PhpStudy\\WWW...', 80, Array)
+#1 [internal function]: backend\controllers\ActivityController->actionPage()
+#2 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('page', Array)
+#5 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('activity/page', Array)
+#6 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\PhpStudy\WWW\fanli\fanli\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2016-09-01 08:48:38 [::1][-][gnr5q1ihdql9d774f06esc9qg7][info][application] $_GET = [
+    'r' => 'activity/page'
+]
+
+$_POST = [
+    'p' => '2'
+]
+
+$_COOKIE = [
+    'iweb_safecode' => '897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ/YTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M+OTZiMWU0MjYyMTMyZjU0bA'
+    'PHPSESSID' => 'gnr5q1ihdql9d774f06esc9qg7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => 'admin'
+        'password' => '21232f297a57a5a743894a0e4a801fc3'
+        'adm_date' => '2016-08-29'
+        'adm_status' => null
+        'token' => '46b31a83347f7f3281c814d700691f7c'
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://localhost/fanli/fanli/backend/web/index.php?r=activity/index'
+    'CONTENT_LENGTH' => '3'
+    'HTTP_COOKIE' => 'iweb_safecode=897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ%2FYTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M%2BOTZiMWU0MjYyMTMyZjU0bA; PHPSESSID=gnr5q1ihdql9d774f06esc9qg7'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\PhpStudy\\php55;E:\\Program Files\\TortoiseGit\\bin;E:\\Program Files\\python;D:\\PhpStudy\\mysqlserve\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/PhpStudy/WWW/fanli/fanli/backend/web/index.php'
+    'REMOTE_PORT' => '54128'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=activity/page'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=activity/page'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472690918.778
+    'REQUEST_TIME' => 1472690918
+]
+2016-09-01 08:48:38 [::1][-][gnr5q1ihdql9d774f06esc9qg7][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception 'Exception' with message 'Serialization of 'Closure' is not allowed' 
+
+in D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php:58
+
+Stack trace:
+#0 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php(58): serialize(Array)
+#1 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#2 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#3 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#4 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\ErrorHandler.php(111): yii\log\Logger->flush(true)
+#5 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\ErrorException))
+#6 {main}
+2016-09-01 08:48:38 [::1][-][gnr5q1ihdql9d774f06esc9qg7][info][application] $_GET = [
+    'r' => 'activity/page'
+]
+
+$_POST = [
+    'p' => '2'
+]
+
+$_COOKIE = [
+    'iweb_safecode' => '897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ/YTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M+OTZiMWU0MjYyMTMyZjU0bA'
+    'PHPSESSID' => 'gnr5q1ihdql9d774f06esc9qg7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => 'admin'
+        'password' => '21232f297a57a5a743894a0e4a801fc3'
+        'adm_date' => '2016-08-29'
+        'adm_status' => null
+        'token' => '46b31a83347f7f3281c814d700691f7c'
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://localhost/fanli/fanli/backend/web/index.php?r=activity/index'
+    'CONTENT_LENGTH' => '3'
+    'HTTP_COOKIE' => 'iweb_safecode=897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ%2FYTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M%2BOTZiMWU0MjYyMTMyZjU0bA; PHPSESSID=gnr5q1ihdql9d774f06esc9qg7'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\PhpStudy\\php55;E:\\Program Files\\TortoiseGit\\bin;E:\\Program Files\\python;D:\\PhpStudy\\mysqlserve\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/PhpStudy/WWW/fanli/fanli/backend/web/index.php'
+    'REMOTE_PORT' => '54128'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=activity/page'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=activity/page'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472690918.778
+    'REQUEST_TIME' => 1472690918
+]
+2016-09-01 08:52:18 [::1][-][gnr5q1ihdql9d774f06esc9qg7][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: page' in D:\PhpStudy\WWW\fanli\fanli\backend\controllers\ActivityController.php:72
+Stack trace:
+#0 D:\PhpStudy\WWW\fanli\fanli\backend\controllers\ActivityController.php(72): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'D:\\PhpStudy\\WWW...', 72, Array)
+#1 [internal function]: backend\controllers\ActivityController->actionIndex()
+#2 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('index', Array)
+#5 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('activity/index', Array)
+#6 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\PhpStudy\WWW\fanli\fanli\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2016-09-01 08:52:17 [::1][-][gnr5q1ihdql9d774f06esc9qg7][info][application] $_GET = [
+    'r' => 'activity/index'
+]
+
+$_COOKIE = [
+    'iweb_safecode' => '897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ/YTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M+OTZiMWU0MjYyMTMyZjU0bA'
+    'PHPSESSID' => 'gnr5q1ihdql9d774f06esc9qg7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => 'admin'
+        'password' => '21232f297a57a5a743894a0e4a801fc3'
+        'adm_date' => '2016-08-29'
+        'adm_status' => null
+        'token' => '46b31a83347f7f3281c814d700691f7c'
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/fanli/fanli/backend/web/index.php?r=index%2Findex'
+    'HTTP_COOKIE' => 'iweb_safecode=897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ%2FYTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M%2BOTZiMWU0MjYyMTMyZjU0bA; PHPSESSID=gnr5q1ihdql9d774f06esc9qg7'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\PhpStudy\\php55;E:\\Program Files\\TortoiseGit\\bin;E:\\Program Files\\python;D:\\PhpStudy\\mysqlserve\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/PhpStudy/WWW/fanli/fanli/backend/web/index.php'
+    'REMOTE_PORT' => '54177'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=activity/index'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=activity/index'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472691137.821
+    'REQUEST_TIME' => 1472691137
+]
+2016-09-01 08:52:18 [::1][-][gnr5q1ihdql9d774f06esc9qg7][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception 'Exception' with message 'Serialization of 'Closure' is not allowed' 
+
+in D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php:58
+
+Stack trace:
+#0 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php(58): serialize(Array)
+#1 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#2 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#3 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#4 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\ErrorHandler.php(111): yii\log\Logger->flush(true)
+#5 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\ErrorException))
+#6 {main}
+2016-09-01 08:52:17 [::1][-][gnr5q1ihdql9d774f06esc9qg7][info][application] $_GET = [
+    'r' => 'activity/index'
+]
+
+$_COOKIE = [
+    'iweb_safecode' => '897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ/YTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M+OTZiMWU0MjYyMTMyZjU0bA'
+    'PHPSESSID' => 'gnr5q1ihdql9d774f06esc9qg7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => 'admin'
+        'password' => '21232f297a57a5a743894a0e4a801fc3'
+        'adm_date' => '2016-08-29'
+        'adm_status' => null
+        'token' => '46b31a83347f7f3281c814d700691f7c'
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/fanli/fanli/backend/web/index.php?r=index%2Findex'
+    'HTTP_COOKIE' => 'iweb_safecode=897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ%2FYTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M%2BOTZiMWU0MjYyMTMyZjU0bA; PHPSESSID=gnr5q1ihdql9d774f06esc9qg7'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\PhpStudy\\php55;E:\\Program Files\\TortoiseGit\\bin;E:\\Program Files\\python;D:\\PhpStudy\\mysqlserve\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/PhpStudy/WWW/fanli/fanli/backend/web/index.php'
+    'REMOTE_PORT' => '54177'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=activity/index'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=activity/index'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472691137.821
+    'REQUEST_TIME' => 1472691137
+]
+2016-09-01 08:52:29 [::1][-][gnr5q1ihdql9d774f06esc9qg7][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: page' in D:\PhpStudy\WWW\fanli\fanli\backend\controllers\ActivityController.php:72
+Stack trace:
+#0 D:\PhpStudy\WWW\fanli\fanli\backend\controllers\ActivityController.php(72): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'D:\\PhpStudy\\WWW...', 72, Array)
+#1 [internal function]: backend\controllers\ActivityController->actionIndex()
+#2 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('index', Array)
+#5 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('activity/index', Array)
+#6 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\PhpStudy\WWW\fanli\fanli\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2016-09-01 08:52:29 [::1][-][gnr5q1ihdql9d774f06esc9qg7][info][application] $_GET = [
+    'r' => 'activity/index'
+]
+
+$_COOKIE = [
+    'iweb_safecode' => '897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ/YTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M+OTZiMWU0MjYyMTMyZjU0bA'
+    'PHPSESSID' => 'gnr5q1ihdql9d774f06esc9qg7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => 'admin'
+        'password' => '21232f297a57a5a743894a0e4a801fc3'
+        'adm_date' => '2016-08-29'
+        'adm_status' => null
+        'token' => '46b31a83347f7f3281c814d700691f7c'
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/fanli/fanli/backend/web/index.php?r=index%2Findex'
+    'HTTP_COOKIE' => 'iweb_safecode=897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ%2FYTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M%2BOTZiMWU0MjYyMTMyZjU0bA; PHPSESSID=gnr5q1ihdql9d774f06esc9qg7'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\PhpStudy\\php55;E:\\Program Files\\TortoiseGit\\bin;E:\\Program Files\\python;D:\\PhpStudy\\mysqlserve\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/PhpStudy/WWW/fanli/fanli/backend/web/index.php'
+    'REMOTE_PORT' => '54181'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=activity/index'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=activity/index'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472691149.208
+    'REQUEST_TIME' => 1472691149
+]
+2016-09-01 08:52:29 [::1][-][gnr5q1ihdql9d774f06esc9qg7][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception 'Exception' with message 'Serialization of 'Closure' is not allowed' 
+
+in D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php:58
+
+Stack trace:
+#0 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php(58): serialize(Array)
+#1 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#2 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#3 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#4 D:\PhpStudy\WWW\fanli\fanli\vendor\yiisoft\yii2\base\ErrorHandler.php(111): yii\log\Logger->flush(true)
+#5 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\ErrorException))
+#6 {main}
+2016-09-01 08:52:29 [::1][-][gnr5q1ihdql9d774f06esc9qg7][info][application] $_GET = [
+    'r' => 'activity/index'
+]
+
+$_COOKIE = [
+    'iweb_safecode' => '897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ/YTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M+OTZiMWU0MjYyMTMyZjU0bA'
+    'PHPSESSID' => 'gnr5q1ihdql9d774f06esc9qg7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => 'admin'
+        'password' => '21232f297a57a5a743894a0e4a801fc3'
+        'adm_date' => '2016-08-29'
+        'adm_status' => null
+        'token' => '46b31a83347f7f3281c814d700691f7c'
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/fanli/fanli/backend/web/index.php?r=index%2Findex'
+    'HTTP_COOKIE' => 'iweb_safecode=897210626d6d5cc350MDIwMDc5MDIyNWNiOjhnPGQ8ZjQ%2FYTA7ZTYzO2VtN2M4MGc4NDBnNTg4bGIwO2M%2BOTZiMWU0MjYyMTMyZjU0bA; PHPSESSID=gnr5q1ihdql9d774f06esc9qg7'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\PhpStudy\\php55;E:\\Program Files\\TortoiseGit\\bin;E:\\Program Files\\python;D:\\PhpStudy\\mysqlserve\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/PhpStudy/WWW'
+    'SERVER_ADMIN' => 'webmaster@dummy-host2.example.com'
+    'SCRIPT_FILENAME' => 'D:/PhpStudy/WWW/fanli/fanli/backend/web/index.php'
+    'REMOTE_PORT' => '54181'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=activity/index'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=activity/index'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472691149.208
+    'REQUEST_TIME' => 1472691149
+]
