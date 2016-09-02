@@ -122,16 +122,71 @@ class IndexController extends CommonController
     {
         return $this -> render('details.html');
     }
+
+    /**
+     * 判断查询是否是二级分类
+     */
+    function infoType($cla_id){
+        $a =$this->actionShoptype($cla_id);
+        if( $a['data']['pid']==0){
+            $typeID=$this->actionType($cla_id);
+            if(!empty($typeID['data'])){
+                $str =null;
+                foreach($typeID['data'] as $k=>$v){
+                    $str .=$v['cla_id'].',';
+                }
+                $newstr = substr($str,0,-1);
+                $result = $this->databasesSelect( 'fanli_goods' , '*',"cla_id in ($newstr)" );
+                $result['type']=$typeID['data'];
+            }else{
+                echo "<script>alert('客官稍等......');history.go(-1)</script>";
+            }
+        }else{
+            $result = $this->databasesSelect( 'fanli_goods' , '*',"cla_id =".$a['data']['cla_id']."" );
+        }
+        return $result;
+//        print_r($result);die;
+    }
+    /**
+     * 二级分类下所有商品
+     * @return string
+     */
     public function actionClass()
     {
         $cla_id  = Yii::$app->request->get('cla_id');
-        $arr = $this->actionClass_activity($cla_id);
-        if(empty($arr['data'])){
-            echo "<script>alert('客官稍等......');history.go(-1)</script>";
+        if(!empty($cla_id)){
+            $a =$this->actionShoptype($cla_id);
+            if( $a['data']['pid']==0){
+                $typeID=$this->actionType($cla_id);
+                if(!empty($typeID['data'])){
+                    $str =null;
+                    foreach($typeID['data'] as $k=>$v){
+                        $str .=$v['cla_id'].',';
+                    }
+                    $newstr = substr($str,0,-1);
+                    $result = $this->databasesSelect( 'fanli_goods' , '*',"cla_id in ($newstr)" );
+                    $result['type']=$typeID['data'];
+                    if(!empty($result['data'])){
+                        return $this -> render('classify.html',['arr'=>$result]);
+                    }else{
+                        echo "<script>alert('商品飞到火星了......');history.go(-1)</script>";
+                    }
+                }else{
+                    echo "<script>alert('商品飞到火星了......');history.go(-1)</script>";
+                }
+            }else{
+                $result = $this->databasesSelect( 'fanli_goods' , '*',"cla_id =".$a['data']['cla_id']."" );
+                if(!empty($result['data'])){
+                    return $this -> render('details.html',['arr'=>$result]);
+                }else{
+                    echo "<script>alert('商品飞到火星了......');history.go(-1)</script>";
+                }
+            }
+        }else{
+            echo "<script>history.go(-1)</script>";
         }
-//        print_r($arr);die;
-        return $this -> render('classify.html',['arr'=>$arr]);
     }
+    
     public function actionSeckill()
     {
         return $this -> render('seckill.html');
@@ -211,10 +266,10 @@ class IndexController extends CommonController
      * @param string $pid
      * @return mixed
      */
-    function actionType( $pid = '' )
+    function actionType( $pid  )
     {
-        if ( !preg_match('/^[0-9]{1,}$/', $pid) ) {
-            $arr = $this->databasesSelect('fanli_classify', '*', "pid=$pid" );
+        if ( preg_match('/^[0-9]{1,}$/', $pid) ) {
+            $arr = $this->databasesSelect('fanli_classify', '5', "pid=$pid" );
         } else {
             $arr =[
                 'status' => 1,
@@ -222,6 +277,17 @@ class IndexController extends CommonController
                 'data'   => array()
             ];
        }
+        return $arr;
+    }
+
+    /**
+     * 根据id查询本条分类信息
+     * @param string $pid
+     * @return mixed
+     */
+    private function actionShoptype($bra_id)
+    {
+        $arr = $this->databasesSelect('fanli_classify', '1', "cla_id=".$bra_id );
         return $arr;
     }
      /**
@@ -344,5 +410,7 @@ class IndexController extends CommonController
         $res = array("day" => $days,"hour" => $hours,"min" => $mins,"sec" => $secs);
         return $res;
     }
+
+
 }
 
