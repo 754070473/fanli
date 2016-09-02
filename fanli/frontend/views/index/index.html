@@ -9,6 +9,7 @@
 		<link rel="stylesheet" type="text/css" href="public/css/swiper-3.3.1.min.css"/>
 	</head>
 	<body>
+	
 		 <div class="wrap">
 		 	<header>
 		 		<div class="head-left">
@@ -53,9 +54,42 @@
 		 					<div class="select_one_1" style="position: relative;">
 									<div class="msTime" style="position: absolute;top:20px;left:10px;">
 										<p style="font-size:16px;">限量秒杀</p>
-										<span style="background: #000000; color: white; border-radius:3px ;">01</span>:
-										<span style="background: #000000; color: white; border-radius:3px ;">19</span>:
-										<span style="background: #000000; color: white; border-radius:3px ;">00</span>
+										<span class="hour" style="background: #000000; color: white; border-radius:3px ;">
+                                        <?php
+                                        if( $kill_end_time['day']*24+$kill_end_time['hour'] < 10 )
+                                        {
+                                            echo '0'.$kill_end_time['day']*24+$kill_end_time['hour'];
+                                        }
+                                        else
+                                        {
+                                            echo $kill_end_time['day']*24+$kill_end_time['hour'];
+                                        }
+                                   ?>
+                                        </span>:
+										<span class="min" style="background: #000000; color: white; border-radius:3px ;">
+                                         <?php
+                                        if( $kill_end_time['min'] < 10 )
+                                        {
+                                            echo '0'.$kill_end_time['min'];
+                                        }
+                                        else
+                                        {
+                                            echo $kill_end_time['min'];
+                                        }
+                                    ?>
+                                        </span>:
+										<span class="sec" style="background: #000000; color: white; border-radius:3px ;">
+                                            <?php
+                                        if( $kill_end_time['sec'] < 10 )
+                                        {
+                                            echo '0'.$kill_end_time['sec'];
+                                        }
+                                        else
+                                        {
+                                            echo $kill_end_time['sec'];
+                                        }
+                                    ?>
+                                        </span>
 									</div>
                                 <a href="index.php?r=index/seckill&act_id=<?php echo $seckill[0]['act_id']?>">
                                     <img src="public/img/images/57c406dcb42f2.png" width="100%" height="100%"/>
@@ -64,24 +98,24 @@
 		 					<div class="select_one_2">
 		 						<div class="select_one_3">
 		 							<div class="select_one_5">
-                                        <a href="index.php?r=index/seckill&act_id=<?php echo $seckill[1]['act_id']?>">
+                                        <a href="index.php?r=index/seckill&act_id=<?php echo $seckill[0]['act_id']?>">
                                             <img src="public/img/images/57c4ea401a61a.png" width="100%" height="100%"/>
                                         </a>
 		 							</div>
 		 							<div class="select_one_6">
-                                        <a href="index.php?r=index/seckill&act_id=<?php echo $seckill[2]['act_id']?>">
+                                        <a href="index.php?r=index/seckill&act_id=<?php echo $seckill[0]['act_id']?>">
                                             <img src="public/img/images/57c02425b8f2e.png" width="100%" height="100%"/>
                                         </a>
 		 							</div>
 		 						</div>
 		 						<div class="select_one_4">
 		 							<div class="select_one_7">
-                                        <a href="index.php?r=index/seckill&act_id=<?php echo $seckill[3]['act_id']?>">
+                                        <a href="index.php?r=index/seckill&act_id=<?php echo $seckill[0]['act_id']?>">
                                             <img src="public/img/images/57c4ecb2167f1.png" width="100%" height="100%"/>
                                         </a>
 		 							</div>
 		 							<div class="select_one_8">
-                                        <a href="index.php?r=index/seckill&act_id=<?php echo $seckill[4]['act_id']?>">
+                                        <a href="index.php?r=index/seckill&act_id=<?php echo $seckill[0]['act_id']?>">
                                             <img src="public/img/images/57c4058e7e066.png" width="100%" height="100%"/>
                                         </a>
 		 							</div>
@@ -132,7 +166,44 @@
 		 					</dl>
 		 				</div>
 		 				<div class="msTime">
-		 					<p>距离本场结束<b>01</b>:<b>01</b>:<b>01</b></p>
+		 					<p>距离本场结束
+                                <b class="hour">
+                                    <?php
+                                    if( $kill_end_time['day']*24+$kill_end_time['hour'] < 10 )
+                                    {
+                                        echo '0'.$kill_end_time['day']*24+$kill_end_time['hour'];
+                                    }
+                                    else
+                                    {
+                                        echo $kill_end_time['day']*24+$kill_end_time['hour'];
+                                    }
+                                ?>
+                                </b>:
+                                <b class="min">
+                                    <?php
+                                    if( $kill_end_time['min'] < 10 )
+                                    {
+                                        echo '0'.$kill_end_time['min'];
+                                    }
+                                    else
+                                    {
+                                        echo $kill_end_time['min'];
+                                    }
+                                ?>
+                                </b>:
+                                <b class="sec">
+                                    <?php
+                                    if( $kill_end_time['sec'] < 10 )
+                                    {
+                                        echo '0'.$kill_end_time['sec'];
+                                    }
+                                    else
+                                    {
+                                        echo $kill_end_time['sec'];
+                                    }
+                                ?>
+                                </b>
+                            </p>
 		 					<span>筛选∨</span>
 		 					<img src="public/img/images/397E10609624C690284047B2C4F44144_03.gif"/>
 		 				</div>
@@ -167,12 +238,12 @@
                         <?php foreach( $sellout as $key => $val ){?>
 		 				<div class="sqGoods">
 		 					<dl>
-		 						<dt>
-                                    <a href="index.php?r=index/details?goods_id=<?php echo $val['goods_id']?>">
-                                        <img src="public/img/images/C611F840080DFDDF69F6E742723F4B56_05.gif"/>
+		 						<dt style="width: 40%;height: 100%;">
+                                    <a href="<?php echo $val['goods_url']?>">
+                                        <img src="<?php echo $val['goods_photo']?>" width="100%" height="100%"/>
                                     </a>
                                 </dt>
-		 						<dd>
+		 						<dd style="width:60%;height: 100%">
 		 							<h1><?php echo $val['goods_name']?></h1>
 		 							<p><span  class="sqPrice">￥<?php echo $val['goods_price']?></span></p>
 		 							<p class="sqFan"><i>返</i>￥<span class="fanPrice"><?php echo $val['goods_rebate']?></span></p>
@@ -182,8 +253,47 @@
 		 							</dl>
 		 						</dd>
 		 						<span class="sqTm">天猫</span>
-		 						<span class="sqQiang"><a href="index.php?r=index/details">立即抢</a></span>
-		 						<span class="sqTime">距结束 <span>05:11:11</span></span>
+		 						<span class="sqQiang"><a href="<?php echo $val['goods_url']?>">立即抢</a></span>
+		 						<span class="sqTime">距结束
+                                    <span class="countDown">
+                                        <span class="hour">
+                                            <?php
+                                        if( $val['end_time']['day']*24+$val['end_time']['hour'] < 10 )
+                                        {
+                                            echo '0'.$val['end_time']['day']*24+$val['end_time']['hour'];
+                                        }
+                                        else
+                                        {
+                                            echo $val['end_time']['day']*24+$val['end_time']['hour'];
+                                        }
+                                    ?>
+                                        </span>:
+                                        <span class="min">
+                                            <?php
+                                        if( $val['end_time']['min'] < 10 )
+                                        {
+                                            echo '0'.$val['end_time']['min'];
+                                        }
+                                        else
+                                        {
+                                            echo $val['end_time']['min'];
+                                        }
+                                    ?>
+                                        </span>:
+                                        <span class="sec">
+                                            <?php
+                                        if( $val['end_time']['sec'] < 10 )
+                                        {
+                                            echo '0'.$val['end_time']['sec'];
+                                        }
+                                        else
+                                        {
+                                            echo $val['end_time']['sec'];
+                                        }
+                                    ?>
+                                        </span>
+                                    </span>
+                                </span>
 		 					</dl>
 		 				</div>
                         <?php }?>
@@ -196,7 +306,7 @@
 		 				</div>
                         <?php foreach( $val as $kk => $vv ){?>
 		 				<div class="sxLogo">
-                            <a href="index.php?r=index/details?bra_id=<?php echo $vv['bra_id']?>">
+                            <a href="index.php?r=index/details?act_id=<?php echo $vv['act_id']?>">
                                 <img src="public/img/images/2D4726391780CA13B758B167457D831E_06.gif"/>
                             </a>
 		 				</div>
@@ -284,4 +394,65 @@
 			$('.list-lis li').removeClass('on').eq(index).addClass('on');
 		},3000);
 	</script>
+    <script>
+    $(document).ready(function(){
+        setInterval(function(){
+            var sec = $('.sec');
+            var len = sec.length;
+            for( var i = 0 ; i < len ; i++ )
+            {
+                if( sec.eq(i).html() == 0 )
+                {
+                    var hour = $('.hour').eq(i);
+                    var min = $('.min').eq(i);
+                    sec.eq(i).html(59);
+                    if( min.html() == 0 )
+                    {
+                        min.html(59);
+                        if( hour == 0 )
+                        {
+                            hour.html('00');
+                        }
+                        else
+                        {
+                            var hourr = hour.html()-1;
+                            if( hourr < 10 )
+                            {
+                                hour.html( '0'+hourr )
+                            }
+                            else
+                            {
+                                hour.html(hourr);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        var minn = min.html()-1;
+                        if( minn < 10 )
+                        {
+                            min.html('0'+minn);
+                        }
+                        else
+                        {
+                            min.html(minn);
+                        }
+                    }
+                }
+                else
+                {
+                    var secc = sec.eq(i).html()-1;
+                    if( secc < 10 )
+                    {
+                        sec.eq(i).html('0'+secc);
+                    }
+                    else
+                    {
+                        sec.eq(i).html(secc);
+                    }
+                }
+            }
+        },1000);
+    })
+    </script>
 </html>

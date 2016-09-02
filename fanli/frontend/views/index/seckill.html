@@ -24,97 +24,50 @@
 		 	</header>
 		 	<section>
 		 		<div class="box" id="box">
-		 			<div class="miaosha">
-		 				<div class="msNav">
-		 					<dl>
-		 						<dt><span>10:00</span>抢购中</dt>
-		 					</dl>
-		 					<dl>
-		 						<dt><span>20:00</span>即将开抢</dt>
-		 					</dl>
-		 					<dl>
-		 						<dt>下期预告</dt>
-		 					</dl>
-		 				</div>
-		 				<div class="msTime">
-		 					<p>距离本场结束<b>01</b>:<b>01</b>:<b>01</b></p>
-		 					<span>筛选∨</span>
-		 					<img src="public/img/images/397E10609624C690284047B2C4F44144_03.gif"/>
-		 				</div>
-
-                        <div class="msGoods">
+                    <div class="miaosha">
+                        <div class="msNav">
                             <dl>
-                                <dt><a href="index.php?r=index/details"><img src="public/img/images/397E10609624C690284047B2C4F44144_07.gif"/></a></dt>
-                                <dd>
-                                    <h1>【ACA北美电器】不锈钢面包机AB-2SN08</h1>
-                                    <p><span  class="newPrice">￥399</span><span class="oldPrice">￥1799</span></p>
-                                    <p class="msFan"><i>返</i><span class="fanPrice">144.22</span></p>
-                                </dd>
-                                <span class="msTm">天猫</span>
-                                <span class="msQiang"><a href="index.php?r=index/details">马上抢</a></span>
+                                <dt><span>10:00</span>抢购中</dt>
+                            </dl>
+                            <dl>
+                                <dt><span>20:00</span>即将开抢</dt>
+                            </dl>
+                            <dl>
+                                <dt>下期预告</dt>
                             </dl>
                         </div>
+                        <div class="msTime">
+                            <p>距离本场结束<b><?php echo $kill_end_time['day']*24+$kill_end_time['hour']?></b>:
+                                <b><?php echo $kill_end_time['min']?></b>:
+                                <b><?php echo $kill_end_time['sec']?></b>
+                            </p>
+                            <span>筛选∨</span>
+                            <img src="public/img/images/397E10609624C690284047B2C4F44144_03.gif"/>
+                        </div>
+                        <?php foreach( $kill as $key => $val ){?>
                         <div class="msGoods">
                             <dl>
-                                <dt><a href="index.php?r=index/details"><img src="public/img/images/397E10609624C690284047B2C4F44144_07.gif"/></a></dt>
+                                <dt>
+                                    <a href="index.php?r=index/details&goods_id=<?php echo $val['goods_id']?>">
+                                        <img src="public/img/images/397E10609624C690284047B2C4F44144_07.gif"/>
+                                    </a>
+                                </dt>
                                 <dd>
-                                    <h1>【ACA北美电器】不锈钢面包机AB-2SN08</h1>
-                                    <p><span  class="newPrice">￥399</span><span class="oldPrice">￥1799</span></p>
-                                    <p class="msFan"><i>返</i><span class="fanPrice">144.22</span></p>
+                                    <h1><?php echo $val['goods_name']?></h1>
+                                    <p>
+                                        <span  class="newPrice">￥<?php echo $val['goods_price']?></span>
+                                        <span class="oldPrice">￥<?php echo $val['goods_price']+300?></span>
+                                    </p>
+                                    <p class="msFan"><i>返</i><span class="fanPrice"><?php echo $val['goods_rebate']?></span></p>
                                 </dd>
-                                <span class="msTm">天猫</span>
-                                <span class="msQiang"><a href="index.php?r=index/details">马上抢</a></span>
+                                <span class="msTm">淘宝</span>
+                                <span class="msQiang">
+                                    <a href="index.php?r=index/details&goods_id=<?php echo $val['goods_id']?>">马上抢</a>
+                                </span>
                             </dl>
                         </div>
-                        <div class="msGoods">
-                            <dl>
-                                <dt><a href="index.php?r=index/details"><img src="public/img/images/397E10609624C690284047B2C4F44144_07.gif"/></a></dt>
-                                <dd>
-                                    <h1>【ACA北美电器】不锈钢面包机AB-2SN08</h1>
-                                    <p><span  class="newPrice">￥399</span><span class="oldPrice">￥1799</span></p>
-                                    <p class="msFan"><i>返</i><span class="fanPrice">144.22</span></p>
-                                </dd>
-                                <span class="msTm">天猫</span>
-                                <span class="msQiang"><a href="index.php?r=index/details">马上抢</a></span>
-                            </dl>
-                        </div>
-                        <div class="msGoods">
-                            <dl>
-                                <dt><a href="index.php?r=index/details"><img src="public/img/images/397E10609624C690284047B2C4F44144_07.gif"/></a></dt>
-                                <dd>
-                                    <h1>【ACA北美电器】不锈钢面包机AB-2SN08</h1>
-                                    <p><span  class="newPrice">￥399</span><span class="oldPrice">￥1799</span></p>
-                                    <p class="msFan"><i>返</i><span class="fanPrice">144.22</span></p>
-                                </dd>
-                                <span class="msTm">天猫</span>
-                                <span class="msQiang"><a href="index.php?r=index/details">马上抢</a></span>
-                            </dl>
-                        </div>
-                        <div class="msGoods">
-                            <dl>
-                                <dt><a href="index.php?r=index/details"><img src="public/img/images/397E10609624C690284047B2C4F44144_07.gif"/></a></dt>
-                                <dd>
-                                    <h1>【ACA北美电器】不锈钢面包机AB-2SN08</h1>
-                                    <p><span  class="newPrice">￥399</span><span class="oldPrice">￥1799</span></p>
-                                    <p class="msFan"><i>返</i><span class="fanPrice">144.22</span></p>
-                                </dd>
-                                <span class="msTm">天猫</span>
-                                <span class="msQiang"><a href="index.php?r=index/details">马上抢</a></span>
-                            </dl>
-                        </div>
-                        <div class="msGoods">
-                            <dl>
-                                <dt><a href="index.php?r=index/details"><img src="public/img/images/397E10609624C690284047B2C4F44144_07.gif"/></a></dt>
-                                <dd>
-                                    <h1>【ACA北美电器】不锈钢面包机AB-2SN08</h1>
-                                    <p><span  class="newPrice">￥399</span><span class="oldPrice">￥1799</span></p>
-                                    <p class="msFan"><i>返</i><span class="fanPrice">144.22</span></p>
-                                </dd>
-                                <span class="msTm">天猫</span>
-                                <span class="msQiang"><a href="index.php?r=index/details">马上抢</a></span>
-                            </dl>
-                        </div>
-		 			</div>
+                        <?php }?>
+                    </div>
 		 		</div>
 		 	</section>
 		 </div>
