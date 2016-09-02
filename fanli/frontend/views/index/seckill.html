@@ -12,7 +12,7 @@
 		 <div class="wrap">
 		 	<header>
 		 		<div class="head-left">
-		 			<img src="public/img/images/7A87EDAF7A960CD732ED93A92639CEE9_03.gif"/>
+                    <a href="index.php?r=index/index"><img src="public/img/images/7A87EDAF7A960CD732ED93A92639CEE9_03.gif"/></a>
 		 		</div>
 		 		<div class="head-center">
 		 			<img src="public/img/images/7A87EDAF7A960CD732ED93A92639CEE9_05.gif"/>
@@ -37,9 +37,43 @@
                             </dl>
                         </div>
                         <div class="msTime">
-                            <p>距离本场结束<b><?php echo $kill_end_time['day']*24+$kill_end_time['hour']?></b>:
-                                <b><?php echo $kill_end_time['min']?></b>:
-                                <b><?php echo $kill_end_time['sec']?></b>
+                            <p>距离本场结束
+                                <b class="hour">
+                                    <?php
+                                    if( $kill_end_time['day']*24+$kill_end_time['hour'] < 10 )
+                                    {
+                                        echo '0'.$kill_end_time['day']*24+$kill_end_time['hour'];
+                                    }
+                                    else
+                                    {
+                                        echo $kill_end_time['day']*24+$kill_end_time['hour'];
+                                    }
+                                ?>
+                                </b>:
+                                <b class="min">
+                                    <?php
+                                    if( $kill_end_time['min'] < 10 )
+                                    {
+                                        echo '0'.$kill_end_time['min'];
+                                    }
+                                    else
+                                    {
+                                        echo $kill_end_time['min'];
+                                    }
+                                ?>
+                                </b>:
+                                <b class="sec">
+                                    <?php
+                                    if( $kill_end_time['sec'] < 10 )
+                                    {
+                                        echo '0'.$kill_end_time['sec'];
+                                    }
+                                    else
+                                    {
+                                        echo $kill_end_time['sec'];
+                                    }
+                                ?>
+                                </b>
                             </p>
                             <span>筛选∨</span>
                             <img src="public/img/images/397E10609624C690284047B2C4F44144_03.gif"/>
@@ -74,4 +108,65 @@
 	</body>
 	<script src="public/js/zepto.min.js"></script>
 	<script src="public/js/jquery-1.8.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            setInterval(function(){
+                var sec = $('.sec');
+                var len = sec.length;
+                for( var i = 0 ; i < len ; i++ )
+                {
+                    if( sec.eq(i).html() == 0 )
+                    {
+                        var hour = $('.hour').eq(i);
+                        var min = $('.min').eq(i);
+                        sec.eq(i).html(59);
+                        if( min.html() == 0 )
+                        {
+                            min.html(59);
+                            if( hour == 0 )
+                            {
+                                hour.html('00');
+                            }
+                            else
+                            {
+                                var hourr = hour.html()-1;
+                                if( hourr < 10 )
+                                {
+                                    hour.html( '0'+hourr )
+                                }
+                                else
+                                {
+                                    hour.html(hourr);
+                                }
+                            }
+                        }
+                        else
+                        {
+                            var minn = min.html()-1;
+                            if( minn < 10 )
+                            {
+                                min.html('0'+minn);
+                            }
+                            else
+                            {
+                                min.html(minn);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        var secc = sec.eq(i).html()-1;
+                        if( secc < 10 )
+                        {
+                            sec.eq(i).html('0'+secc);
+                        }
+                        else
+                        {
+                            sec.eq(i).html(secc);
+                        }
+                    }
+                }
+            },1000);
+        })
+    </script>
 </html>

@@ -149,7 +149,7 @@ class IndexController extends CommonController
             $data['kill'] = array();
             $data['kill_end_time'] = array( 'day'=>0,'hour'=>00,'min'=>00,'sec'=>00 );
         }
-        return $this -> render('seckill.html');
+        return $this -> render('seckill.html' , $data);
     }
 
     /**
@@ -313,6 +313,7 @@ class IndexController extends CommonController
             )
             {
                 if( $val['start_time'] < date( 'Y-m-d H:i:s' , time() ) && $val['end_time'] > date( 'Y-m-d H:i:s' , time() ) ){
+                    $val[ 'goods_rebate' ] = $val[ 'goods_price' ] * ( $val[ 'goods_rebate' ] / 100 );
                     $arr[] = $val;
                 }
             }
@@ -338,6 +339,29 @@ class IndexController extends CommonController
             }
         }
         return $arr;
+    }
+
+    public function actionReduce()
+    {
+        $goods_id  = Yii::$app->request->get('goods_id');
+        $url = $this -> apiUrl( 'Public' ,'reduce' );
+        $data = array( 'goods_id' => $goods_id );
+        $arr = $this -> CurlPost( $url , $data );
+        if( is_array( $arr ) )
+        {
+            if( $arr['status'] == 0 )
+            {
+                echo $arr['data'];
+            }
+            else
+            {
+                echo 0;
+            }
+        }
+        else
+        {
+            echo 0;
+        }
     }
 
     //功能：计算两个时间戳之间相差的日时分秒

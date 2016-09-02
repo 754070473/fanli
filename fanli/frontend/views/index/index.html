@@ -1,172 +1,59 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title></title>
-		<link rel="stylesheet" type="text/css" href="public/css/style.css"/>
-		<link rel="stylesheet" type="text/css" href="public/css/swiper-3.3.1.min.css"/>
-	</head>
-	<body>
-		 <div class="wrap">
-		 	<header>
-		 		<div class="head-left">
-		 			<img src="public/img/images/7A87EDAF7A960CD732ED93A92639CEE9_03.gif"/>
-		 		</div>
-		 		<div class="head-center">
-		 			<img src="public/img/images/7A87EDAF7A960CD732ED93A92639CEE9_05.gif"/>
-		 		</div>
-		 		<div class="head-right">
-		 			<img src="public/img/images/7A87EDAF7A960CD732ED93A92639CEE9_07.gif"/>
-		 			<img src="public/img/images/7A87EDAF7A960CD732ED93A92639CEE9_09.gif"/>
-		 		</div>
-		 	</header>
-		 	<section>
-		 		<div class="box" id="box">
-		 			<div class="shouye">
-		 				<div class="syBanner">
-		 					<img src="public/img/images/7A87EDAF7A960CD732ED93A92639CEE9_15.gif"/>
-		 					<img src="public/img/images/fajsdlkf2.jpg"/>
-		 					<img src="public/img/images/fjasldkjf3.jpg"/>
-		 					<img src="public/img/images/fasdjkfj4.jpg"/>
-		 					<img src="public/img/images/fjaksdjfas5.jpg"/>
-		 					<img src="public/img/images/ffewafe6.jpg"/>
-		 				</div>
-		 				<div class="syApp">
-		 					<img src="public/img/images/7A87EDAF7A960CD732ED93A92639CEE9_16.gif"/>
-		 				</div>
-		 				<div class="syDl">
-                            <?php foreach( $classify as $key => $val ){?>
-		 					<dl>
-		 						<dt>
-                                    <a href="index.php?r=index/class&cla_id=<?php echo $val['cla_id']?>"><img src="public/img/images/7A87EDAF7A960CD732ED93A92639CEE9_19.gif"/></a>
-                                </dt>
-		 						<dd><?php echo $val['cla_name']?></dd>
-		 					</dl>
-                            <?php }?>
-		 				</div>
-		 				<div class="syImg">
-		 					<img src="public/img/images/57b66c9bcb169.jpg"/>
-		 				</div>
-		 				<div class="select_one">
-		 					<div class="select_one_1" style="position: relative;">
-									<div class="msTime" style="position: absolute;top:20px;left:10px;">
-										<p style="font-size:16px;">限量秒杀</p>
-										<span class="hour" style="background: #000000; color: white; border-radius:3px ;">
-                                        <?php
-                                        if( $kill_end_time['day']*24+$kill_end_time['hour'] < 10 )
-                                        {
-                                            echo '0'.$kill_end_time['day']*24+$kill_end_time['hour'];
-                                        }
-                                        else
-                                        {
-                                            echo $kill_end_time['day']*24+$kill_end_time['hour'];
-                                        }
-                                   ?>
-                                        </span>:
-										<span class="min" style="background: #000000; color: white; border-radius:3px ;">
-                                         <?php
-                                        if( $kill_end_time['min'] < 10 )
-                                        {
-                                            echo '0'.$kill_end_time['min'];
-                                        }
-                                        else
-                                        {
-                                            echo $kill_end_time['min'];
-                                        }
-                                    ?>
-                                        </span>:
-										<span class="sec" style="background: #000000; color: white; border-radius:3px ;">
-                                            <?php
-                                        if( $kill_end_time['sec'] < 10 )
-                                        {
-                                            echo '0'.$kill_end_time['sec'];
-                                        }
-                                        else
-                                        {
-                                            echo $kill_end_time['sec'];
-                                        }
-                                    ?>
-                                        </span>
-									</div>
-                                <a href="index.php?r=index/seckill&act_id=<?php echo $seckill[0]['act_id']?>">
-                                    <img src="public/img/images/57c406dcb42f2.png" width="100%" height="100%"/>
-                                </a>
-		 					</div>
-		 					<div class="select_one_2">
-		 						<div class="select_one_3">
-		 							<div class="select_one_5">
-                                        <a href="index.php?r=index/seckill&act_id=<?php echo $seckill[1]['act_id']?>">
-                                            <img src="public/img/images/57c4ea401a61a.png" width="100%" height="100%"/>
-                                        </a>
-		 							</div>
-		 							<div class="select_one_6">
-                                        <a href="index.php?r=index/seckill&act_id=<?php echo $seckill[2]['act_id']?>">
-                                            <img src="public/img/images/57c02425b8f2e.png" width="100%" height="100%"/>
-                                        </a>
-		 							</div>
-		 						</div>
-		 						<div class="select_one_4">
-		 							<div class="select_one_7">
-                                        <a href="index.php?r=index/seckill&act_id=<?php echo $seckill[3]['act_id']?>">
-                                            <img src="public/img/images/57c4ecb2167f1.png" width="100%" height="100%"/>
-                                        </a>
-		 							</div>
-		 							<div class="select_one_8">
-                                        <a href="index.php?r=index/seckill&act_id=<?php echo $seckill[4]['act_id']?>">
-                                            <img src="public/img/images/57c4058e7e066.png" width="100%" height="100%"/>
-                                        </a>
-		 							</div>
-		 						</div>
-		 					</div>
-		 				</div>
-		 				<div class="syGoods">
-		 					<p><img src="public/img/images/D709B3238E106D9620EC77683FCF8157_03.gif"/></p>
-		 					<div class="syGoodsDl">
-                                <?php for( $i = 0 ; $i < ceil(count($choiceness) / 3) ; $i++ ){?>
-		 						<div class="syGoodsDl_<?php echo $i+1?>">
-                                    <?php foreach( $choiceness as $key => $val ){?>
-                                    <?php if( $i * 3 <= $key && $key < ( $i + 1 ) * 3 ){?>
-		 							<div class="syGoodsDl_<?php echo $i+1?>_<?php echo $key+1?>">
-                                        <a href="index.php?r=index/details&act_id=<?php echo $val['act_id']?>">
-                                            <img src="public/img/images/57c408a427de4.png" width="100%" height="100%"/>
-                                        </a>
-									</div>
-                                    <?php }}?>
-		 						</div>
-                                <?php }?>
-		 					</div>
-		 				</div>
-						<div class="shangxian">
-                            <p><img src="public/img/images/pinpaitemai.jpg" width="100%" height="100%"/></p>
-                            <?php foreach($brand as $key => $val){?>
-                            <div class="sxLogo" style="position: relative;">
-                                <div style="position: absolute;width:15%;height:7%">
-                                    <img src="public/img/images/todaynew_left_icon.png"/>
-                                </div>
-                                <a href="index.php?r=index/details&act_id=<?php echo $val['act_id']?>">
-                                    <img src="public/img/images/57ba945f6fbd7.jpg"/>
-                                </a>
-                            </div>
-                            <?php }?>
-		 			    </div>
-		 			</div>
-		 			<div class="miaosha">
-		 				<div class="msNav">
-		 					<dl>
-		 						<dt><span>10:00</span>抢购中</dt>
-		 					</dl>
-		 					<dl>
-		 						<dt><span>20:00</span>即将开抢</dt>
-		 					</dl>
-		 					<dl>
-		 						<dt>下期预告</dt>
-		 					</dl>
-		 				</div>
-		 				<div class="msTime">
-		 					<p>距离本场结束
-                                <b class="hour">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="public/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="public/css/swiper-3.3.1.min.css"/>
+</head>
+<body>
+     <div class="wrap">
+        <header>
+            <div class="head-left">
+                <img src="public/img/images/7A87EDAF7A960CD732ED93A92639CEE9_03.gif"/>
+            </div>
+            <div class="head-center">
+                <img src="public/img/images/7A87EDAF7A960CD732ED93A92639CEE9_05.gif"/>
+            </div>
+            <div class="head-right">
+                <img src="public/img/images/7A87EDAF7A960CD732ED93A92639CEE9_07.gif"/>
+                <img src="public/img/images/7A87EDAF7A960CD732ED93A92639CEE9_09.gif"/>
+            </div>
+        </header>
+        <section>
+            <div class="box" id="box">
+                <div class="shouye">
+                    <div class="syBanner">
+                        <img src="public/img/images/7A87EDAF7A960CD732ED93A92639CEE9_15.gif"/>
+                        <img src="public/img/images/fajsdlkf2.jpg"/>
+                        <img src="public/img/images/fjasldkjf3.jpg"/>
+                        <img src="public/img/images/fasdjkfj4.jpg"/>
+                        <img src="public/img/images/fjaksdjfas5.jpg"/>
+                        <img src="public/img/images/ffewafe6.jpg"/>
+                    </div>
+                    <div class="syApp">
+                        <img src="public/img/images/7A87EDAF7A960CD732ED93A92639CEE9_16.gif"/>
+                    </div>
+                    <div class="syDl">
+                        <?php foreach( $classify as $key => $val ){?>
+                        <dl>
+                            <dt>
+                                <a href="index.php?r=index/class&cla_id=<?php echo $val['cla_id']?>"><img src="public/img/images/7A87EDAF7A960CD732ED93A92639CEE9_19.gif"/></a>
+                            </dt>
+                            <dd><?php echo $val['cla_name']?></dd>
+                        </dl>
+                        <?php }?>
+                    </div>
+                    <div class="syImg">
+                        <img src="public/img/images/57b66c9bcb169.jpg"/>
+                    </div>
+                    <div class="select_one">
+                        <div class="select_one_1" style="position: relative;">
+                                <div class="msTime" style="position: absolute;top:20px;left:10px;">
+                                    <p style="font-size:16px;">限量秒杀</p>
+                                    <span class="hour" style="background: #000000; color: white; border-radius:3px ;">
                                     <?php
                                     if( $kill_end_time['day']*24+$kill_end_time['hour'] < 10 )
                                     {
@@ -176,10 +63,10 @@
                                     {
                                         echo $kill_end_time['day']*24+$kill_end_time['hour'];
                                     }
-                                ?>
-                                </b>:
-                                <b class="min">
-                                    <?php
+                               ?>
+                                    </span>:
+                                    <span class="min" style="background: #000000; color: white; border-radius:3px ;">
+                                     <?php
                                     if( $kill_end_time['min'] < 10 )
                                     {
                                         echo '0'.$kill_end_time['min'];
@@ -189,9 +76,9 @@
                                         echo $kill_end_time['min'];
                                     }
                                 ?>
-                                </b>:
-                                <b class="sec">
-                                    <?php
+                                    </span>:
+                                    <span class="sec" style="background: #000000; color: white; border-radius:3px ;">
+                                        <?php
                                     if( $kill_end_time['sec'] < 10 )
                                     {
                                         echo '0'.$kill_end_time['sec'];
@@ -201,257 +88,388 @@
                                         echo $kill_end_time['sec'];
                                     }
                                 ?>
-                                </b>
-                            </p>
-		 					<span>筛选∨</span>
-		 					<img src="public/img/images/397E10609624C690284047B2C4F44144_03.gif"/>
-		 				</div>
-                        <?php foreach( $kill as $key => $val ){?>
-                        <div class="msGoods">
-                            <dl>
-                                <dt>
-                                    <a href="index.php?r=index/details&goods_id=<?php echo $val['goods_id']?>">
-                                        <img src="public/img/images/397E10609624C690284047B2C4F44144_07.gif"/>
+                                    </span>
+                                </div>
+                            <a href="index.php?r=index/seckill">
+                                <img src="public/img/images/57c406dcb42f2.png" width="100%" height="100%"/>
+                            </a>
+                        </div>
+                        <div class="select_one_2">
+                            <div class="select_one_3">
+                                <div class="select_one_5">
+                                    <a href="index.php?r=index/seckill">
+                                        <img src="public/img/images/57c4ea401a61a.png" width="100%" height="100%"/>
                                     </a>
-                                </dt>
-                                <dd>
-                                    <h1><?php echo $val['goods_name']?></h1>
-                                    <p>
-                                        <span  class="newPrice">￥<?php echo $val['goods_price']?></span>
-                                        <span class="oldPrice">￥<?php echo $val['goods_price']+300?></span>
-                                    </p>
-                                    <p class="msFan"><i>返</i><span class="fanPrice"><?php echo $val['goods_rebate']?></span></p>
-                                </dd>
-                                <span class="msTm">淘宝</span>
-                                <span class="msQiang">
-                                    <a href="index.php?r=index/details&goods_id=<?php echo $val['goods_id']?>">马上抢</a>
-                                </span>
-                            </dl>
+                                </div>
+                                <div class="select_one_6">
+                                    <a href="index.php?r=index/seckill">
+                                        <img src="public/img/images/57c02425b8f2e.png" width="100%" height="100%"/>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="select_one_4">
+                                <div class="select_one_7">
+                                    <a href="index.php?r=index/seckill">
+                                        <img src="public/img/images/57c4ecb2167f1.png" width="100%" height="100%"/>
+                                    </a>
+                                </div>
+                                <div class="select_one_8">
+                                    <a href="index.php?r=index/seckill">
+                                        <img src="public/img/images/57c4058e7e066.png" width="100%" height="100%"/>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="syGoods">
+                        <p><img src="public/img/images/D709B3238E106D9620EC77683FCF8157_03.gif"/></p>
+                        <div class="syGoodsDl">
+                            <?php for( $i = 0 ; $i < ceil(count($choiceness) / 3) ; $i++ ){?>
+                            <div class="syGoodsDl_<?php echo $i+1?>">
+                                <?php foreach( $choiceness as $key => $val ){?>
+                                <?php if( $i * 3 <= $key && $key < ( $i + 1 ) * 3 ){?>
+                                <div class="syGoodsDl_<?php echo $i+1?>_<?php echo $key+1?>">
+                                    <a href="index.php?r=index/details&act_id=<?php echo $val['act_id']?>">
+                                        <img src="public/img/images/57c408a427de4.png" width="100%" height="100%"/>
+                                    </a>
+                                </div>
+                                <?php }}?>
+                            </div>
+                            <?php }?>
+                        </div>
+                    </div>
+                    <div class="shangxian">
+                        <p><img src="public/img/images/pinpaitemai.jpg" width="100%" height="100%"/></p>
+                        <?php foreach($brand as $key => $val){?>
+                        <div class="sxLogo" style="position: relative;">
+                            <div style="position: absolute;width:15%;height:7%">
+                                <img src="public/img/images/todaynew_left_icon.png"/>
+                            </div>
+                            <a href="index.php?r=index/details&act_id=<?php echo $val['act_id']?>">
+                                <img src="public/img/images/57ba945f6fbd7.jpg"/>
+                            </a>
                         </div>
                         <?php }?>
-		 			</div>
-		 			<div class="shouqing">
-		 				<div class="sqLogo">
-		 					<img src="public/img/images/C611F840080DFDDF69F6E742723F4B56_02.gif"/>
-		 				</div>
-                        <?php foreach( $sellout as $key => $val ){?>
-		 				<div class="sqGoods">
-		 					<dl>
-		 						<dt style="width: 40%;height: 100%;">
-                                    <a href="<?php echo $val['goods_url']?>">
-                                        <img src="<?php echo $val['goods_photo']?>" width="100%" height="100%"/>
-                                    </a>
-                                </dt>
-		 						<dd style="width:60%;height: 100%">
-		 							<h1><?php echo $val['goods_name']?></h1>
-		 							<p><span  class="sqPrice">￥<?php echo $val['goods_price']?></span></p>
-		 							<p class="sqFan"><i>返</i>￥<span class="fanPrice"><?php echo $val['goods_rebate']?></span></p>
-		 							<dl>
-		 								<dt><span><?php echo ( $val['goods_stock'] - $val['surplus_stock'] ) ?></span>人已买</dt>
-		 								仅剩<?php echo ( round( $val['surplus_stock'] / $val['goods_stock'] , 2 ) )*100?>%
-		 							</dl>
-		 						</dd>
-		 						<span class="sqTm">天猫</span>
-		 						<span class="sqQiang"><a href="<?php echo $val['goods_url']?>">立即抢</a></span>
-		 						<span class="sqTime">距结束
-                                    <span class="countDown">
-                                        <span class="hour">
-                                            <?php
-                                        if( $val['end_time']['day']*24+$val['end_time']['hour'] < 10 )
-                                        {
-                                            echo '0'.$val['end_time']['day']*24+$val['end_time']['hour'];
-                                        }
-                                        else
-                                        {
-                                            echo $val['end_time']['day']*24+$val['end_time']['hour'];
-                                        }
-                                    ?>
-                                        </span>:
-                                        <span class="min">
-                                            <?php
-                                        if( $val['end_time']['min'] < 10 )
-                                        {
-                                            echo '0'.$val['end_time']['min'];
-                                        }
-                                        else
-                                        {
-                                            echo $val['end_time']['min'];
-                                        }
-                                    ?>
-                                        </span>:
-                                        <span class="sec">
-                                            <?php
-                                        if( $val['end_time']['sec'] < 10 )
-                                        {
-                                            echo '0'.$val['end_time']['sec'];
-                                        }
-                                        else
-                                        {
-                                            echo $val['end_time']['sec'];
-                                        }
-                                    ?>
-                                        </span>
+                    </div>
+                </div>
+                <div class="miaosha">
+                    <div class="msNav">
+                        <dl>
+                            <dt><span>10:00</span>抢购中</dt>
+                        </dl>
+                        <dl>
+                            <dt><span>20:00</span>即将开抢</dt>
+                        </dl>
+                        <dl>
+                            <dt>下期预告</dt>
+                        </dl>
+                    </div>
+                    <div class="msTime">
+                        <p>距离本场结束
+                            <b class="hour">
+                                <?php
+                                if( $kill_end_time['day']*24+$kill_end_time['hour'] < 10 )
+                                {
+                                    echo '0'.$kill_end_time['day']*24+$kill_end_time['hour'];
+                                }
+                                else
+                                {
+                                    echo $kill_end_time['day']*24+$kill_end_time['hour'];
+                                }
+                            ?>
+                            </b>:
+                            <b class="min">
+                                <?php
+                                if( $kill_end_time['min'] < 10 )
+                                {
+                                    echo '0'.$kill_end_time['min'];
+                                }
+                                else
+                                {
+                                    echo $kill_end_time['min'];
+                                }
+                            ?>
+                            </b>:
+                            <b class="sec">
+                                <?php
+                                if( $kill_end_time['sec'] < 10 )
+                                {
+                                    echo '0'.$kill_end_time['sec'];
+                                }
+                                else
+                                {
+                                    echo $kill_end_time['sec'];
+                                }
+                            ?>
+                            </b>
+                        </p>
+                        <span>筛选∨</span>
+                        <img src="public/img/images/397E10609624C690284047B2C4F44144_03.gif"/>
+                    </div>
+                    <?php foreach( $kill as $key => $val ){?>
+                    <div class="msGoods">
+                        <dl>
+                            <dt>
+                                <a href="index.php?r=index/details&goods_id=<?php echo $val['goods_id']?>">
+                                    <img src="public/img/images/397E10609624C690284047B2C4F44144_07.gif"/>
+                                </a>
+                            </dt>
+                            <dd>
+                                <h1><?php echo $val['goods_name']?></h1>
+                                <p>
+                                    <span  class="newPrice">￥<?php echo $val['goods_price']?></span>
+                                    <span class="oldPrice">￥<?php echo $val['goods_price']+300?></span>
+                                </p>
+                                <p class="msFan"><i>返</i><span class="fanPrice"><?php echo $val['goods_rebate']?></span></p>
+                            </dd>
+                            <span class="msTm">淘宝</span>
+                            <span class="msQiang">
+                                <a href="index.php?r=index/details&goods_id=<?php echo $val['goods_id']?>">马上抢</a>
+                            </span>
+                        </dl>
+                    </div>
+                    <?php }?>
+                </div>
+                <div class="shouqing">
+                    <div class="sqLogo">
+                        <img src="public/img/images/C611F840080DFDDF69F6E742723F4B56_02.gif"/>
+                    </div>
+                    <?php foreach( $sellout as $key => $val ){?>
+                    <div class="sqGoods">
+                        <dl>
+                            <dt style="width: 40%;height: 100%;">
+                                <a href="javascript:void(0)" onclick="reduce(<?= $val['goods_id']?>)">
+                                    <img src="<?php echo $val['goods_photo']?>" width="100%" height="100%"/>
+                                </a>
+                            </dt>
+                            <dd style="width:60%;height: 100%">
+                                <h1><?php echo $val['goods_name']?></h1>
+                                <p><span  class="sqPrice">￥<?php echo $val['goods_price']?></span></p>
+                                <p class="sqFan"><i>返</i>￥<span class="fanPrice"><?php echo $val['goods_rebate']?></span></p>
+                                <dl>
+                                    <dt><span><?php echo ( $val['goods_stock'] - $val['surplus_stock'] ) ?></span>人已买</dt>
+                                    仅剩<?php echo ( round( $val['surplus_stock'] / $val['goods_stock'] , 2 ) )*100?>%
+                                </dl>
+                            </dd>
+                            <span class="sqTm">天猫</span>
+                            <span class="sqQiang"><a href="javascript:void(0)" onclick="reduce(<?= $val['goods_id']?>)">立即抢</a></span>
+                            <span class="sqTime">距结束
+                                <span class="countDown">
+                                    <span class="hour">
+                                        <?php
+                                    if( $val['end_time']['day']*24+$val['end_time']['hour'] < 10 )
+                                    {
+                                        echo '0'.$val['end_time']['day']*24+$val['end_time']['hour'];
+                                    }
+                                    else
+                                    {
+                                        echo $val['end_time']['day']*24+$val['end_time']['hour'];
+                                    }
+                                ?>
+                                    </span>:
+                                    <span class="min">
+                                        <?php
+                                    if( $val['end_time']['min'] < 10 )
+                                    {
+                                        echo '0'.$val['end_time']['min'];
+                                    }
+                                    else
+                                    {
+                                        echo $val['end_time']['min'];
+                                    }
+                                ?>
+                                    </span>:
+                                    <span class="sec">
+                                        <?php
+                                    if( $val['end_time']['sec'] < 10 )
+                                    {
+                                        echo '0'.$val['end_time']['sec'];
+                                    }
+                                    else
+                                    {
+                                        echo $val['end_time']['sec'];
+                                    }
+                                ?>
                                     </span>
                                 </span>
-		 					</dl>
-		 				</div>
-                        <?php }?>
-		 			</div>
-		 			<div class="shangxian">
-                        <?php foreach( $online as $key => $val ){?>
-		 				<div class="sxTime">
-		 					<img src="public/img/images/2D4726391780CA13B758B167457D831E_03.gif"/>
-		 					<?php echo $key?>
-		 				</div>
-                        <?php foreach( $val as $kk => $vv ){?>
-		 				<div class="sxLogo">
-                            <a href="index.php?r=index/details?act_id=<?php echo $vv['act_id']?>">
-                                <img src="public/img/images/2D4726391780CA13B758B167457D831E_06.gif"/>
-                            </a>
-		 				</div>
-                        <?php }}?>
-		 			</div>
-		 		</div>
-		 	</section>
-		 	<footer>
-		 		<ul class="list" id="list">
-		 			<li>
-		 				<img src="public/img/images/未标题-8.jpg" width="30" height="30"/>
-		 				<p>品牌特卖</p>
-		 			</li>
-		 			<li>
-		 				<img src="public/img/images/未标题-3.jpg" width="30" height="30"/>
-		 				<p>限量秒杀</p>
-		 			</li>
-		 			<li>
-		 				<img src="public/img/images/未标题-2.jpg" width="30" height="30"/>
-		 				<p>即将售罄</p>
-		 			</li>
-		 			<li>
-		 				<img src="public/img/images/未标题-5.jpg" width="30" height="30"/>
-		 				<p>即将上线</p>
-		 			</li>
-		 		</ul>
-		 	</footer>
-		 </div>
-	</body>
-	<script src="public/js/zepto.min.js"></script>
-	<script src="public/js/jquery-1.8.0.min.js"></script>
-	<script>
-		$('#list li').on('click',function(){
-			//alert(1)
-			var index=$(this).index();
-			//$(this).css('color','#19d5fd').siblings().css('color','#a5adb7');
-			//alert(index);
-			$('#box').css({
-				'-webkit-transition':'left.3s ease-in',
-				'left':-index*100+'%'
-			});
-			var src = $(this).children('img').attr('src');
-			if(src == 'public/img/images/未标题-3.jpg')
-			{
-				$('#list li').eq(0).children('img').attr('src','public/img/images/未标题-4.jpg');
-				$('#list li').eq(1).children('img').attr('src','public/img/images/未标题-7.jpg');
-				$('#list li').eq(2).children('img').attr('src','public/img/images/未标题-2.jpg');
-				$('#list li').eq(3).children('img').attr('src','public/img/images/未标题-5.jpg');
-			}
-			else if(src == 'public/img/images/未标题-2.jpg')
-			{
-				$('#list li').eq(0).children('img').attr('src','public/img/images/未标题-4.jpg');
-				$('#list li').eq(1).children('img').attr('src','public/img/images/未标题-3.jpg');
-				$('#list li').eq(2).children('img').attr('src','public/img/images/未标题-6.jpg');
-				$('#list li').eq(3).children('img').attr('src','public/img/images/未标题-5.jpg');
-			}
-			else if(src == 'public/img/images/未标题-5.jpg')
-			{
-				$('#list li').eq(0).children('img').attr('src','public/img/images/未标题-4.jpg');
-				$('#list li').eq(1).children('img').attr('src','public/img/images/未标题-3.jpg');
-				$('#list li').eq(2).children('img').attr('src','public/img/images/未标题-2.jpg');
-				$('#list li').eq(3).children('img').attr('src','public/img/images/未标题-1.jpg');
-			}
-			else if(src == 'public/img/images/未标题-4.jpg')
-			{
-				$('#list li').eq(0).children('img').attr('src','public/img/images/未标题-8.jpg');
-				$('#list li').eq(1).children('img').attr('src','public/img/images/未标题-3.jpg');
-				$('#list li').eq(2).children('img').attr('src','public/img/images/未标题-2.jpg');
-				$('#list li').eq(3).children('img').attr('src','public/img/images/未标题-5.jpg');
-			}
-		});
-		var index=0;
-		$('.list-lis li').on('tap',function(){
-			//alert(1)
-			index=$(this).index();
-			$('.syBanner img').hide().eq(index).show();
-			$(this).addClass('on').siblings().removeClass('on');
-		});
-		setInterval(function(){
-			index++;
-			if(index>5){
-				index=0;
-			}
-			$('.syBanner img').hide().eq(index).show();
-			$('.list-lis li').removeClass('on').eq(index).addClass('on');
-		},3000);
-	</script>
-    <script>
-    $(document).ready(function(){
-        setInterval(function(){
-            var sec = $('.sec');
-            var len = sec.length;
-            for( var i = 0 ; i < len ; i++ )
+                            </span>
+                        </dl>
+                    </div>
+                    <?php }?>
+                </div>
+                <div class="shangxian">
+                    <?php foreach( $online as $key => $val ){?>
+                    <div class="sxTime">
+                        <img src="public/img/images/2D4726391780CA13B758B167457D831E_03.gif"/>
+                        <?php echo $key?>
+                    </div>
+                    <?php foreach( $val as $kk => $vv ){?>
+                    <div class="sxLogo">
+                        <a href="index.php?r=index/details?act_id=<?php echo $vv['act_id']?>">
+                            <img src="public/img/images/2D4726391780CA13B758B167457D831E_06.gif"/>
+                        </a>
+                    </div>
+                    <?php }}?>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <ul class="list" id="list">
+                <li>
+                    <img src="public/img/images/未标题-8.jpg" width="30" height="30"/>
+                    <p>品牌特卖</p>
+                </li>
+                <li>
+                    <img src="public/img/images/未标题-3.jpg" width="30" height="30"/>
+                    <p>限量秒杀</p>
+                </li>
+                <li>
+                    <img src="public/img/images/未标题-2.jpg" width="30" height="30"/>
+                    <p>即将售罄</p>
+                </li>
+                <li>
+                    <img src="public/img/images/未标题-5.jpg" width="30" height="30"/>
+                    <p>即将上线</p>
+                </li>
+            </ul>
+        </footer>
+     </div>
+</body>
+<script src="public/js/zepto.min.js"></script>
+<script src="public/js/jquery-1.8.0.min.js"></script>
+<script>
+    $('#list li').on('click',function(){
+        //alert(1)
+        var index=$(this).index();
+        //$(this).css('color','#19d5fd').siblings().css('color','#a5adb7');
+        //alert(index);
+        $('#box').css({
+            '-webkit-transition':'left.3s ease-in',
+            'left':-index*100+'%'
+        });
+        var src = $(this).children('img').attr('src');
+        if(src == 'public/img/images/未标题-3.jpg')
+        {
+            $('#list li').eq(0).children('img').attr('src','public/img/images/未标题-4.jpg');
+            $('#list li').eq(1).children('img').attr('src','public/img/images/未标题-7.jpg');
+            $('#list li').eq(2).children('img').attr('src','public/img/images/未标题-2.jpg');
+            $('#list li').eq(3).children('img').attr('src','public/img/images/未标题-5.jpg');
+        }
+        else if(src == 'public/img/images/未标题-2.jpg')
+        {
+            $('#list li').eq(0).children('img').attr('src','public/img/images/未标题-4.jpg');
+            $('#list li').eq(1).children('img').attr('src','public/img/images/未标题-3.jpg');
+            $('#list li').eq(2).children('img').attr('src','public/img/images/未标题-6.jpg');
+            $('#list li').eq(3).children('img').attr('src','public/img/images/未标题-5.jpg');
+        }
+        else if(src == 'public/img/images/未标题-5.jpg')
+        {
+            $('#list li').eq(0).children('img').attr('src','public/img/images/未标题-4.jpg');
+            $('#list li').eq(1).children('img').attr('src','public/img/images/未标题-3.jpg');
+            $('#list li').eq(2).children('img').attr('src','public/img/images/未标题-2.jpg');
+            $('#list li').eq(3).children('img').attr('src','public/img/images/未标题-1.jpg');
+        }
+        else if(src == 'public/img/images/未标题-4.jpg')
+        {
+            $('#list li').eq(0).children('img').attr('src','public/img/images/未标题-8.jpg');
+            $('#list li').eq(1).children('img').attr('src','public/img/images/未标题-3.jpg');
+            $('#list li').eq(2).children('img').attr('src','public/img/images/未标题-2.jpg');
+            $('#list li').eq(3).children('img').attr('src','public/img/images/未标题-5.jpg');
+        }
+    });
+    var index=0;
+    $('.list-lis li').on('tap',function(){
+        //alert(1)
+        index=$(this).index();
+        $('.syBanner img').hide().eq(index).show();
+        $(this).addClass('on').siblings().removeClass('on');
+    });
+    setInterval(function(){
+        index++;
+        if(index>5){
+            index=0;
+        }
+        $('.syBanner img').hide().eq(index).show();
+        $('.list-lis li').removeClass('on').eq(index).addClass('on');
+    },3000);
+</script>
+<script>
+$(document).ready(function(){
+    setInterval(function(){
+        var sec = $('.sec');
+        var len = sec.length;
+        for( var i = 0 ; i < len ; i++ )
+        {
+            if( sec.eq(i).html() == 0 )
             {
-                if( sec.eq(i).html() == 0 )
+                var hour = $('.hour').eq(i);
+                var min = $('.min').eq(i);
+                sec.eq(i).html(59);
+                if( min.html() == 0 )
                 {
-                    var hour = $('.hour').eq(i);
-                    var min = $('.min').eq(i);
-                    sec.eq(i).html(59);
-                    if( min.html() == 0 )
+                    min.html(59);
+                    if( hour == 0 )
                     {
-                        min.html(59);
-                        if( hour == 0 )
-                        {
-                            hour.html('00');
-                        }
-                        else
-                        {
-                            var hourr = hour.html()-1;
-                            if( hourr < 10 )
-                            {
-                                hour.html( '0'+hourr )
-                            }
-                            else
-                            {
-                                hour.html(hourr);
-                            }
-                        }
+                        hour.html('00');
                     }
                     else
                     {
-                        var minn = min.html()-1;
-                        if( minn < 10 )
+                        var hourr = hour.html()-1;
+                        if( hourr < 10 )
                         {
-                            min.html('0'+minn);
+                            hour.html( '0'+hourr )
                         }
                         else
                         {
-                            min.html(minn);
+                            hour.html(hourr);
                         }
                     }
                 }
                 else
                 {
-                    var secc = sec.eq(i).html()-1;
-                    if( secc < 10 )
+                    var minn = min.html()-1;
+                    if( minn < 10 )
                     {
-                        sec.eq(i).html('0'+secc);
+                        min.html('0'+minn);
                     }
                     else
                     {
-                        sec.eq(i).html(secc);
+                        min.html(minn);
                     }
                 }
             }
-        },1000);
+            else
+            {
+                var secc = sec.eq(i).html()-1;
+                if( secc < 10 )
+                {
+                    sec.eq(i).html('0'+secc);
+                }
+                else
+                {
+                    sec.eq(i).html(secc);
+                }
+            }
+        }
+    },1000);
+});
+function reduce( goods_id )
+{
+    $.ajax({
+        type : 'GET',
+        url  : 'index.php?r=index/reduce',
+        data : 'goods_id='+goods_id ,
+        success : function( msg ){
+            if( msg )
+            {
+                location.href = msg;
+            }
+            else
+            {
+                alert('该商品已售完');
+            }
+        }
     })
-    </script>
+}
+</script>
 </html>
