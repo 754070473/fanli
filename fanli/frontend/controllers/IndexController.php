@@ -124,7 +124,13 @@ class IndexController extends CommonController
     }
     public function actionClass()
     {
-        return $this -> render('classify.html');
+        $cla_id  = Yii::$app->request->get('cla_id');
+        $arr = $this->actionClass_activity($cla_id);
+        if(empty($arr['data'])){
+            echo "<script>alert('客官稍等......');history.go(-1)</script>";
+        }
+//        print_r($arr);die;
+        return $this -> render('classify.html',['arr'=>$arr]);
     }
     public function actionSeckill()
     {

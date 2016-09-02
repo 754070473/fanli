@@ -16,7 +16,7 @@ class GoodsController extends CommonController
         $this ->success( $success_status = 0  , $success_msg = 'success' , $arr ,  $other_data = array());
     }
     public function Add(){
-        $array = $this->actionSall();
+    //    $array = $this->Sall();
 
         $goods_photo   = IsNan( $this -> _data , 'arr');
         $goods = M('brand');
