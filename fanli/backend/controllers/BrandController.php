@@ -23,7 +23,7 @@ class BrandController extends CommonController
     public function actionIndex()
     {
         $table = "fanli_brand";     //表名
-        $num = 4;                  //每页显示的条数
+        $num = 10;                  //每页显示的条数
         // $where = "bra_status=1";   //条件
         $page_url = "index.php?r=brand/index";
         $data = $this -> databasesSelect($table,$num,1,$field = '*',1,1,$page_url);

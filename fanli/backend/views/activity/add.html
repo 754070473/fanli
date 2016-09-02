@@ -30,7 +30,7 @@
 
     </style>
 </head>
-<form action="?r=activity/add" method="post"  >
+<form action="?r=activity/add" method="post"  enctype="multipart/form-data">
 <table class="table table-bordered table-hover definewidth m10">
     <tr>
         <td width="10%" class="tableleft">活动名称</td>
@@ -47,6 +47,13 @@
             </select>
         </td>
     </tr>
+    <tr>
+        <td class="tableleft">活动logo</td>
+        <td>
+            <input type="file" name="act_logo">
+        </td>
+    </tr>
+
     <tr>
         <td class="tableleft">开始/结束 时间</td>
         <td> <input type="text" value="" name="start_time"/> -- <input type="text" value="" name="end_time"/></td>

@@ -15,9 +15,9 @@ class ActivityController extends CommonController
     public $rule = [
         'act_name' => [
             'name' => '活动名称',
-            'type' => 'ZN',
-            'msg' => '权限名称只能为2-10位汉字',
-            'is_html' =>'1',
+            // 'type' => 'ZN',
+            // 'msg' => '权限名称只能为2-10位汉字',
+            // 'is_html' =>'1',
         ],
         'type_id' => [
             'name' => '活动类型',
@@ -63,12 +63,14 @@ class ActivityController extends CommonController
     public $enableCsrfValidation = false;
     public function actionIndex()
     {
-        $field = 'fanli_acttype.type_id,type_name,act_id,act_name,start_time,end_time,act_date,act_order,act_desc';
+        $field = 'fanli_acttype.type_id,act_img,type_name,act_id,act_name,start_time,end_time,act_date,act_order,act_desc';
         $table = [['table1' => 'fanli_activity' , 'table2' => 'fanli_acttype' , 'join' => 
         'type_id']];
-        $p = Yii::$app->request->post('p')?:1;
+        $p = 1;
+        $where = Yii::$app->request->post('act_name')?"act_name like '%".Yii::$app->request->post('act_name')."%'":1;
         $order = 'act_id';
-        $result = $this->databasesSelect( $table , $num = 0 , $where = 1 , $field, $order,$p);
+        $result = $this->databasesSelect( $table , $num = 0 , $where, $field, $order,$p);
+        // print_r($result);
         return $this->render('index.html',['result'=>$result['data']]);
     }
     /**
@@ -76,7 +78,7 @@ class ActivityController extends CommonController
      */
     public function actionAdd()
     {
-        if(Yii::$app->request->post()){//活动添加
+        if(Yii::$app->request->isPost){//活动添加
             // 接收数据
             $post = Yii::$app->request->post();
             $error = $this->checkParam($post,$this->rule);
@@ -84,6 +86,16 @@ class ActivityController extends CommonController
                 $this->msg($error['msg'],'?r=activity/add');
                 die();
             }
+           // $_FILES['act_logo']
+    
+           if(!empty($_FILES['act_logo'])){
+                is_dir('images') or mkdir('images');
+                 $img_name = 'images/'.rand(100000000,9999999999).'.jpg';
+                 move_uploaded_file($_FILES['act_logo']['tmp_name'], $img_name);
+             }else{
+                 $img_name = '3';//图片路径名字
+             }
+            $post['act_img']= $img_name;
             $post['act_date'] = date('Y-m-d',time());
             // 获取路由
             $url = $this->apiUrl('Activity','add');
@@ -109,6 +121,22 @@ class ActivityController extends CommonController
     public function actionEdit()
     {
         return $this->render('edit.html');
+    }
+     /**
+     * 活动删除
+     */
+    public function actionDel()
+    {
+         $act_id = Yii::$app->request->get('act_id');
+         $url = $this->apiUrl('Activity','del');
+         $result = $this->CurlPost($url,['act_id'=>$act_id]);
+         // print_r($result);die;
+         if($result['status']==0){
+            echo '1';
+         }else{
+            echo '2';
+         }
+        
     }
     /**
      * 提示信息
