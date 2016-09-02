@@ -32,9 +32,9 @@
     </style>
 </head>
 <body>
-<form class="form-inline definewidth m20" action="index.html" method="get">  
+<form class="form-inline definewidth m20" action="?r=activity/index" method="post">  
     活动名称：
-    <input type="text" name="rolename" id="rolename"class="abc input-default" placeholder="" value="">&nbsp;&nbsp;  
+    <input type="text" name="act_name" id="rolename"class="abc input-default" placeholder="" value="">&nbsp;&nbsp;  
     <button type="submit" class="btn btn-primary">查询</button>&nbsp;&nbsp; <button type="button" class="btn btn-success" id="addnew">新增活动</button>
 </form>
     <table class="table table-bordered table-hover definewidth m10" >
@@ -43,6 +43,7 @@
         <th>活动id</th>
         <th>活动名称</th>
         <th>活动类型</th>
+        <th>活动logo</th>
         <th>开始时间</th>
         <th>结束时间</th>
         <th>添加时间</th>
@@ -52,10 +53,11 @@
     </tr>
     </thead>
     <?php foreach($result as $key=>$val){ ?>
-    <tr>
+    <tr id="<?= $val['act_id']?>">
         <td><?= $val['act_id']?></td>
         <td><?= $val['act_name']?></td>
         <td><?= $val['type_name']?></td>
+        <td><img src="<?= $val['act_img']?>"height="100px" width='100px'></td>
         <td><?= $val['start_time']?></td>
         <td><?= $val['end_time']?></td>
         <td><?= $val['act_date']?></td>
@@ -63,7 +65,7 @@
         <td><?= $val['act_desc']?></td>
         <td>
             <a href="?r=activity/edit&id=<?= $val['act_id']?>">修改</a> | 
-            <a href="?r=activity/edit&id=<?= $val['act_id']?>">删除</a>
+            <a href="javascript:void(0)" class="del">删除</a>
         </td>
     </tr>
     <?php }?>
@@ -79,15 +81,23 @@
 				window.location.href="?r=activity/add";
 		 });
     });
+    $(".del").click(function() {
+        var id = $(this).parent().parent().attr('id');
+        del(id);
+    })
 	function del(id)
 	{	
 		if(confirm("确定要删除吗？"))
 		{
-		
-			var url = "index.html";
-			
-			window.location.href=url;		
+			$.get('?r=activity/del',{act_id:id},function(msg){
+                if(msg=='1'){
+                    $('#'+id).remove()
+                }else{
+                    alert('失败');
+                }
+            })
 		
 		}	
 	}
+
 </script>
