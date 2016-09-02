@@ -117,13 +117,67 @@ class IndexController extends CommonController
         {
             $data['online'] = array();
         }
-        
+        // print_r($data);die;
         return $this -> render('index.html' , $data);
     }
 
     public function actionDetails()
     {
-        return $this -> render('details.html');
+        $common = yii::$app->request;
+        $data['act_id'] = $common->get('act_id')?:"";
+        $data['bra_id'] = $common->get('bra_id')?:"";
+        $data['goods_id'] = $common->get('goods_id')?:"";
+        // echo $data['bra_id'];die;
+        if($data['act_id'] != ""){
+            $result = $this->actionActget($data['act_id']);
+        }else if($data['bra_id']  != ""){
+            $result = $this->actionBrashop($data['bra_id']);
+        }else if($data['goods_id'] != ""){
+            $result = $this->actionGoodsget($data['goods_id']);
+        }
+        if($result['status'] == 0){
+            return $this -> render('details.html',['result'=>$result['data']]);
+        }else{
+            echo "<script>alert('请刷新页面');window.history.go(-1)</script>";
+        }
+    }
+    /**
+     * 根据act_id活动id返回商品
+     * @param  string $act_id [活动id]
+     * @return array $arr [返回数据]
+     */
+    public function actionActget($act_id = '')
+    {
+        if ( preg_match('/^[0-9]{1,}$/', $act_id) ) {
+            $arr = $this->databasesSelect('fanli_goods', '*', "act_id=$act_id" );
+        } else {
+            $arr =[
+                'status' => 1,
+                'msg'    => 'act_id参数错误!',
+                'data'   => array()
+            ];
+       }
+        return $arr;
+    }
+    /**
+     * 根据商品id获取该品牌下的商品
+     * @param  string $goods_id [description]
+     * @return array $arr           [description]
+     */
+    public function actionGoodsget($goods_id='')
+    {
+        if ( preg_match('/^[0-9]{1,}$/', $goods_id) ) {
+            $goods_info = $this->databasesSelect('fanli_goods', 0,"goods_id=$goods_id" , 'bra_id');
+            $bra_id = $goods_info['data'][0]['bra_id'];
+            $arr = $this->databasesSelect('fanli_goods', 0,"bra_id=$bra_id");
+        } else {
+            $arr =[
+                'status' => 1,
+                'msg'    => 'goods_id参数错误!',
+                'data'   => array()
+            ];
+       }
+        return $arr;
     }
     public function actionClass()
     {
@@ -229,7 +283,7 @@ class IndexController extends CommonController
      */
     function actionType( $pid = '' )
     {
-        if ( !preg_match('/^[0-9]{1,}$/', $pid) ) {
+        if ( preg_match('/^[0-9]{1,}$/', $pid) ) {
             $arr = $this->databasesSelect('fanli_classify', '*', "pid=$pid" );
         } else {
             $arr =[
@@ -247,7 +301,8 @@ class IndexController extends CommonController
      */
     function actionBrashop( $bra_id = '' )
     {
-        if ( !preg_match('/^[0-9]{1,}$/' , $bra_id ) )
+        // echo $bra_id;
+        if ( preg_match('/^[0-9]{1,}$/' , $bra_id ) )
         {
             $arr = $this->databasesSelect('fanli_goods', '*', "bra_id=$bra_id" );
         } else {

@@ -49,7 +49,7 @@ class BrandController extends CommonController
         $img=$_FILES['brand_log']; //获取上传文件参数
         // print_r($img);
         $upload->tempName=$img['tmp_name']; //设置上传的文件的临时名称
-        $img_path='uploads/'.$name; //设置上传文件的路径名称(这里的数据进行入库)
+        $img_path='uploads/brandLogo/'.rand(100000000,9999999999).'.jpg'; //设置上传文件的路径名称(这里的数据进行入库)
         $arr=$upload->saveAs($img_path); //保存文件
 
         $data['bra_name'] = $brand['brand'];   //品牌名称
@@ -120,4 +120,5 @@ class BrandController extends CommonController
             echo "<script>alert('$msg');location.href='index.php?r=brand/index'</script>";
         }
     }
+
 }
