@@ -25,50 +25,19 @@
     <section>
         <div class="box" id="box">
             <div class="shouqing">
+            <?php foreach($result as $key=>$val){?>
                 <div class="sqGoods">
                     <dl>
-                        <dt><img src="public/img/images/C611F840080DFDDF69F6E742723F4B56_05.gif"/></dt>
+                        <dt><img width="161" height="138" src="http://<?= $val['goods_photo']?>"/></dt>
                         <dd>
-                            <h1>儿童防滑软底学步鞋</h1>
-                            <p><span  class="sqPrice">￥39.9</span></p>
-                            <p class="sqFan"><i>返</i><span class="fanPrice">144.22</span></p>
+                            <h1><?= $val['goods_name']?></h1>
+                            <p><span  class="sqPrice">￥<?= $val['goods_price']?></span></p>
+                            <p class="sqFan"><i>返</i><span class="fanPrice"><?= $val['goods_stock']?></span></p>
                         </dd>
                         <span class="sqQiang">立即抢</span>
                     </dl>
                 </div>
-                <div class="sqGoods">
-                    <dl>
-                        <dt><img src="public/img/images/C611F840080DFDDF69F6E742723F4B56_05.gif"/></dt>
-                        <dd>
-                            <h1>儿童防滑软底学步鞋</h1>
-                            <p><span  class="sqPrice">￥39.9</span></p>
-                            <p class="sqFan"><i>返</i><span class="fanPrice">144.22</span></p>
-                        </dd>
-                        <span class="sqQiang">立即抢</span>
-                    </dl>
-                </div>
-                <div class="sqGoods">
-                    <dl>
-                        <dt><img src="public/img/images/C611F840080DFDDF69F6E742723F4B56_05.gif"/></dt>
-                        <dd>
-                            <h1>儿童防滑软底学步鞋</h1>
-                            <p><span  class="sqPrice">￥39.9</span></p>
-                            <p class="sqFan"><i>返</i><span class="fanPrice">144.22</span></p>
-                        </dd>
-                        <span class="sqQiang">立即抢</span>
-                    </dl>
-                </div>
-                <div class="sqGoods">
-                    <dl>
-                        <dt><img src="public/img/images/C611F840080DFDDF69F6E742723F4B56_05.gif"/></dt>
-                        <dd>
-                            <h1>儿童防滑软底学步鞋</h1>
-                            <p><span  class="sqPrice">￥39.9</span></p>
-                            <p class="sqFan"><i>返</i><span class="fanPrice">144.22</span></p>
-                        </dd>
-                        <span class="sqQiang">立即抢</span>
-                    </dl>
-                </div>
+            <?php }?>
             </div>
         </div>
     </section>

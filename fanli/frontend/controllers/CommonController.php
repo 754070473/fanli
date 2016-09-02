@@ -151,7 +151,8 @@ class CommonController extends Controller
         }
     }
 
-    private function ajaxPage( $count , $url , $page , $p){
+    private function ajaxPage( $count , $url , $page , $p)
+    {
         if($count == 0){
             //搜索样式
             $sel='<div class="cfD" style="float: right;margin-top: 42px;">

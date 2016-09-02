@@ -9,6 +9,7 @@
 		<link rel="stylesheet" type="text/css" href="public/css/swiper-3.3.1.min.css"/>
 	</head>
 	<body>
+	
 		 <div class="wrap">
 		 	<header>
 		 		<div class="head-left">
@@ -37,26 +38,14 @@
 		 					<img src="public/img/images/7A87EDAF7A960CD732ED93A92639CEE9_16.gif"/>
 		 				</div>
 		 				<div class="syDl">
+                            <?php foreach( $classify as $key => $val ){?>
 		 					<dl>
-		 						<dt><a href="index.php?r=index/details"><img src="public/img/images/7A87EDAF7A960CD732ED93A92639CEE9_19.gif"/></a></dt>
-		 						<dd>女装</dd>
+		 						<dt>
+                                    <a href="index.php?r=index/class&cla_id=<?php echo $val['cla_id']?>"><img src="public/img/images/7A87EDAF7A960CD732ED93A92639CEE9_19.gif"/></a>
+                                </dt>
+		 						<dd><?php echo $val['cla_name']?></dd>
 		 					</dl>
-		 					<dl>
-		 						<dt><a href="index.php?r=index/details"><img src="public/img/images/7A87EDAF7A960CD732ED93A92639CEE9_19.gif"/></a></dt>
-		 						<dd>女装</dd>
-		 					</dl>
-		 					<dl>
-		 						<dt><a href="index.php?r=index/details"><img src="public/img/images/7A87EDAF7A960CD732ED93A92639CEE9_19.gif"/></a></dt>
-		 						<dd>女装</dd>
-		 					</dl>
-		 					<dl>
-		 						<dt><a href="index.php?r=index/details"><img src="public/img/images/7A87EDAF7A960CD732ED93A92639CEE9_19.gif"/></a></dt>
-		 						<dd>女装</dd>
-		 					</dl>
-		 					<dl>
-		 						<dt><a href="index.php?r=index/details"><img src="public/img/images/7A87EDAF7A960CD732ED93A92639CEE9_19.gif"/></a></dt>
-		 						<dd>女装</dd>
-		 					</dl>
+                            <?php }?>
 		 				</div>
 		 				<div class="syImg">
 		 					<img src="public/img/images/57b66c9bcb169.jpg"/>
@@ -69,23 +58,33 @@
 										<span style="background: #000000; color: white; border-radius:3px ;">19</span>:
 										<span style="background: #000000; color: white; border-radius:3px ;">00</span>
 									</div>
-                                <a href="index.php?r=index/details"><img src="public/img/images/57c406dcb42f2.png" width="100%" height="100%"/></a>
+                                <a href="index.php?r=index/seckill&act_id=<?php echo $seckill[0]['act_id']?>">
+                                    <img src="public/img/images/57c406dcb42f2.png" width="100%" height="100%"/>
+                                </a>
 		 					</div>
 		 					<div class="select_one_2">
 		 						<div class="select_one_3">
 		 							<div class="select_one_5">
-                                        <a href="index.php?r=index/details"><img src="public/img/images/57c4ea401a61a.png" width="100%" height="100%"/></a>
+                                        <a href="index.php?r=index/seckill&act_id=<?php echo $seckill[0]['act_id']?>">
+                                            <img src="public/img/images/57c4ea401a61a.png" width="100%" height="100%"/>
+                                        </a>
 		 							</div>
 		 							<div class="select_one_6">
-                                        <a href="index.php?r=index/details"><img src="public/img/images/57c02425b8f2e.png" width="100%" height="100%"/></a>
+                                        <a href="index.php?r=index/seckill&act_id=<?php echo $seckill[0]['act_id']?>">
+                                            <img src="public/img/images/57c02425b8f2e.png" width="100%" height="100%"/>
+                                        </a>
 		 							</div>
 		 						</div>
 		 						<div class="select_one_4">
 		 							<div class="select_one_7">
-                                        <a href="index.php?r=index/details"><img src="public/img/images/57c4ecb2167f1.png" width="100%" height="100%"/></a>
+                                        <a href="index.php?r=index/seckill&act_id=<?php echo $seckill[0]['act_id']?>">
+                                            <img src="public/img/images/57c4ecb2167f1.png" width="100%" height="100%"/>
+                                        </a>
 		 							</div>
 		 							<div class="select_one_8">
-                                        <a href="index.php?r=index/details"><img src="public/img/images/57c4058e7e066.png" width="100%" height="100%"/></a>
+                                        <a href="index.php?r=index/seckill&act_id=<?php echo $seckill[0]['act_id']?>">
+                                            <img src="public/img/images/57c4058e7e066.png" width="100%" height="100%"/>
+                                        </a>
 		 							</div>
 		 						</div>
 		 					</div>
@@ -93,78 +92,33 @@
 		 				<div class="syGoods">
 		 					<p><img src="public/img/images/D709B3238E106D9620EC77683FCF8157_03.gif"/></p>
 		 					<div class="syGoodsDl">
-		 						<div class="syGoodsDl_1">
-		 							<div class="syGoodsDl_1_1">
-                                        <a href="index.php?r=index/details"><img src="public/img/images/57c408a427de4.png" width="100%" height="100%"/></a>
+                                <?php for( $i = 0 ; $i < ceil(count($choiceness) / 3) ; $i++ ){?>
+		 						<div class="syGoodsDl_<?php echo $i+1?>">
+                                    <?php foreach( $choiceness as $key => $val ){?>
+                                    <?php if( $i * 3 <= $key && $key < ( $i + 1 ) * 3 ){?>
+		 							<div class="syGoodsDl_<?php echo $i+1?>_<?php echo $key+1?>">
+                                        <a href="index.php?r=index/details&act_id=<?php echo $val['act_id']?>">
+                                            <img src="public/img/images/57c408a427de4.png" width="100%" height="100%"/>
+                                        </a>
 									</div>
-		 							<div class="syGoodsDl_1_2">
-                                        <a href="index.php?r=index/details"><img src="public/img/images/57c408dbdfb6e.png" width="100%" height="100%"/></a>
-									</div>
-		 							<div class="syGoodsDl_1_3">
-                                        <a href="index.php?r=index/details"><img src="public/img/images/57c40917e39bb.png" width="100%" height="100%"/></a>
-									</div>
+                                    <?php }}?>
 		 						</div>
-		 						<div class="syGoodsDl_2">
-		 							<div class="syGoodsDl_1_1">
-                                        <a href="index.php?r=index/details"><img src="public/img/images/57c408a427de4.png" width="100%" height="100%"/></a>
-									</div>
-		 							<div class="syGoodsDl_1_2">
-                                        <a href="index.php?r=index/details"><img src="public/img/images/57c408a427de4.png" width="100%" height="100%"/></a>
-									</div>
-		 							<div class="syGoodsDl_1_3">
-                                        <a href="index.php?r=index/details"><img src="public/img/images/57c408a427de4.png" width="100%" height="100%"/></a>
-									</div>
-		 						</div>
-		 						<div class="syGoodsDl_3">
-		 							<div class="syGoodsDl_1_1">
-                                        <a href="index.php?r=index/details"><img src="public/img/images/57c408a427de4.png" width="100%" height="100%"/></a>
-									</div>
-		 							<div class="syGoodsDl_1_2">
-                                        <a href="index.php?r=index/details"><img src="public/img/images/57c408a427de4.png" width="100%" height="100%"/></a>
-									</div>
-		 							<div class="syGoodsDl_1_3">
-                                        <a href="index.php?r=index/details"><img src="public/img/images/57c408a427de4.png" width="100%" height="100%"/></a>
-									</div>
-		 						</div>
+                                <?php }?>
 		 					</div>
 		 				</div>
 						<div class="shangxian">
-						<p><img src="public/img/images/pinpaitemai.jpg" width="100%" height="100%"/></p>
-		 				<div class="sxLogo" style="position: relative;">
-							<div style="position: absolute;width:15%;height:7%">
-								<img src="public/img/images/todaynew_left_icon.png"/>
-							</div>
-                            <a href="index.php?r=index/details"><img src="public/img/images/57ba945f6fbd7.jpg"/></a>
-		 					<p><span><i>243</i>人抢购中</span><b>返</b>31%~35%</p>
-		 				</div>
-		 				<div class="sxLogo" style="position: relative;">
-							<div style="position: absolute;width:15%;height:7%">
-								<img src="public/img/images/todaynew_left_icon.png"/>
-							</div>
-                            <a href="index.php?r=index/details"><img src="public/img/images/57a4357894940.jpg"/></a>
-		 					<p><span><i>243</i>人抢购中</span><b>返</b>31%~35%</p>
-		 				</div>
-		 				<div class="sxLogo">
-                            <a href="index.php?r=index/details"><img src="public/img/images/57c53b668564c.jpg"/></a>
-		 				</div>
-		 				<div class="sxLogo" style="position: relative;">
-							<div style="position: absolute;width:15%;height:7%">
-								<img src="public/img/images/todaynew_left_icon.png"/>
-							</div>
-                            <a href="index.php?r=index/details"><img src="public/img/images/577ccfcc64406.jpg"/></a>
-		 					<p><span><i>243</i>人抢购中</span><b>返</b>31%~35%</p>
-		 				</div>
-		 				<div class="sxLogo" style="position: relative;">
-							<div style="position: absolute;width:15%;height:7%">
-								<img src="public/img/images/todaynew_left_icon.png"/>
-							</div>
-                            <a href="index.php?r=index/details"><img src="public/img/images/2D4726391780CA13B758B167457D831E_06.gif"/></a>
-		 					<p><span><i>243</i>人抢购中</span><b>返</b>31%~35%</p>
-		 				</div>
-		 				<div class="sxLogo">
-                            <a href="index.php?r=index/details"><img src="public/img/images/57c53b668564c.jpg"/></a>
-		 				</div>
-		 			</div>
+                            <p><img src="public/img/images/pinpaitemai.jpg" width="100%" height="100%"/></p>
+                            <?php foreach($brand as $key => $val){?>
+                            <div class="sxLogo" style="position: relative;">
+                                <div style="position: absolute;width:15%;height:7%">
+                                    <img src="public/img/images/todaynew_left_icon.png"/>
+                                </div>
+                                <a href="index.php?r=index/details&act_id=<?php echo $val['act_id']?>">
+                                    <img src="public/img/images/57ba945f6fbd7.jpg"/>
+                                </a>
+                            </div>
+                            <?php }?>
+		 			    </div>
 		 			</div>
 		 			<div class="miaosha">
 		 				<div class="msNav">
@@ -183,185 +137,71 @@
 		 					<span>筛选∨</span>
 		 					<img src="public/img/images/397E10609624C690284047B2C4F44144_03.gif"/>
 		 				</div>
-		 				<div class="msGoods">
-		 					<dl>
-		 						<dt><a href="index.php?r=index/details"><img src="public/img/images/397E10609624C690284047B2C4F44144_07.gif"/></a></dt>
-		 						<dd>
-		 							<h1>【ACA北美电器】不锈钢面包机AB-2SN08</h1>
-		 							<p><span  class="newPrice">￥399</span><span class="oldPrice">￥1799</span></p>
-		 							<p class="msFan"><i>返</i><span class="fanPrice">144.22</span></p>
-		 							<dl>
-		 								<dt>已抢98件</dt>
-		 								<dd><img src="public/img/images/397E10609624C690284047B2C4F44144_10.gif"/></dd>
-		 							</dl>
-		 						</dd>
-		 						<span class="msTm">天猫</span>
-		 						<span class="msQiang"><a href="index.php?r=index/details">马上抢</a></span>
-		 					</dl>
-		 				</div>
-		 				<div class="msGoods">
-		 					<dl>
-		 						<dt><a href="index.php?r=index/details"><img src="public/img/images/397E10609624C690284047B2C4F44144_07.gif"/></a></dt>
-		 						<dd>
-		 							<h1>【ACA北美电器】不锈钢面包机AB-2SN08</h1>
-		 							<p><span  class="newPrice">￥399</span><span class="oldPrice">￥1799</span></p>
-		 							<p class="msFan"><i>返</i><span class="fanPrice">144.22</span></p>
-		 							<dl>
-		 								<dt>已抢98件</dt>
-		 								<dd><img src="public/img/images/397E10609624C690284047B2C4F44144_10.gif"/></dd>
-		 							</dl>
-		 						</dd>
-		 						<span class="msTm">天猫</span>
-		 						<span class="msQiang"><a href="index.php?r=index/details">马上抢</a></span>
-		 					</dl>
-		 				</div>
-		 				<div class="msGoods">
-		 					<dl>
-		 						<dt><a href="index.php?r=index/details"><img src="public/img/images/397E10609624C690284047B2C4F44144_07.gif"/></a></dt>
-		 						<dd>
-		 							<h1>【ACA北美电器】不锈钢面包机AB-2SN08</h1>
-		 							<p><span  class="newPrice">￥399</span><span class="oldPrice">￥1799</span></p>
-		 							<p class="msFan"><i>返</i><span class="fanPrice">144.22</span></p>
-		 							<dl>
-		 								<dt>已抢98件</dt>
-		 								<dd><img src="public/img/images/397E10609624C690284047B2C4F44144_10.gif"/></dd>
-		 							</dl>
-		 						</dd>
-		 						<span class="msTm">天猫</span>
-		 						<span class="msQiang"><a href="index.php?r=index/details">马上抢</a></span>
-		 					</dl>
-		 				</div>
-		 				<div class="msGoods">
-		 					<dl>
-		 						<dt><a href="index.php?r=index/details"><img src="public/img/images/397E10609624C690284047B2C4F44144_07.gif"/></a></dt>
-		 						<dd>
-		 							<h1>【ACA北美电器】不锈钢面包机AB-2SN08</h1>
-		 							<p><span  class="newPrice">￥399</span><span class="oldPrice">￥1799</span></p>
-		 							<p class="msFan"><i>返</i><span class="fanPrice">144.22</span></p>
-		 							<dl>
-		 								<dt>已抢98件</dt>
-		 								<dd><img src="public/img/images/397E10609624C690284047B2C4F44144_10.gif"/></dd>
-		 							</dl>
-		 						</dd>
-		 						<span class="msTm">天猫</span>
-		 						<span class="msQiang"><a href="index.php?r=index/details">马上抢</a></span>
-		 					</dl>
-		 				</div>
-		 				<div class="msGoods">
-		 					<dl>
-		 						<dt><a href="index.php?r=index/details"><img src="public/img/images/397E10609624C690284047B2C4F44144_07.gif"/></a></dt>
-		 						<dd>
-		 							<h1>【ACA北美电器】不锈钢面包机AB-2SN08</h1>
-		 							<p><span  class="newPrice">￥399</span><span class="oldPrice">￥1799</span></p>
-		 							<p class="msFan"><i>返</i><span class="fanPrice">144.22</span></p>
-		 							<dl>
-		 								<dt>已抢98件</dt>
-		 								<dd><img src="public/img/images/397E10609624C690284047B2C4F44144_10.gif"/></dd>
-		 							</dl>
-		 						</dd>
-		 						<span class="msTm">天猫</span>
-		 						<span class="msQiang"><a href="index.php?r=index/details">马上抢</a></span>
-		 					</dl>
-		 				</div>
+                        <?php foreach( $kill as $key => $val ){?>
+                        <div class="msGoods">
+                            <dl>
+                                <dt>
+                                    <a href="index.php?r=index/details&goods_id=<?php echo $val['goods_id']?>">
+                                        <img src="public/img/images/397E10609624C690284047B2C4F44144_07.gif"/>
+                                    </a>
+                                </dt>
+                                <dd>
+                                    <h1><?php echo $val['goods_name']?></h1>
+                                    <p>
+                                        <span  class="newPrice">￥<?php echo $val['goods_price']?></span>
+                                        <span class="oldPrice">￥<?php echo $val['goods_price']+300?></span>
+                                    </p>
+                                    <p class="msFan"><i>返</i><span class="fanPrice"><?php echo $val['goods_rebate']?></span></p>
+                                </dd>
+                                <span class="msTm">淘宝</span>
+                                <span class="msQiang">
+                                    <a href="index.php?r=index/details&goods_id=<?php echo $val['goods_id']?>">马上抢</a>
+                                </span>
+                            </dl>
+                        </div>
+                        <?php }?>
 		 			</div>
 		 			<div class="shouqing">
 		 				<div class="sqLogo">
 		 					<img src="public/img/images/C611F840080DFDDF69F6E742723F4B56_02.gif"/>
 		 				</div>
+                        <?php foreach( $sellout as $key => $val ){?>
 		 				<div class="sqGoods">
 		 					<dl>
-		 						<dt><a href="index.php?r=index/details"><img src="public/img/images/C611F840080DFDDF69F6E742723F4B56_05.gif"/></a></dt>
+		 						<dt>
+                                    <a href="index.php?r=index/details?goods_id=<?php echo $val['goods_id']?>">
+                                        <img src="public/img/images/C611F840080DFDDF69F6E742723F4B56_05.gif"/>
+                                    </a>
+                                </dt>
 		 						<dd>
-		 							<h1>儿童防滑软底学步鞋</h1>
-		 							<p><span  class="sqPrice">￥39.9</span></p>
-		 							<p class="sqFan"><i>返</i><span class="fanPrice">144.22</span></p>
+		 							<h1><?php echo $val['goods_name']?></h1>
+		 							<p><span  class="sqPrice">￥<?php echo $val['goods_price']?></span></p>
+		 							<p class="sqFan"><i>返</i>￥<span class="fanPrice"><?php echo $val['goods_rebate']?></span></p>
 		 							<dl>
-		 								<dt><span>737</span>人已买</dt>
-		 								<dd><img src="public/img/images/C611F840080DFDDF69F6E742723F4B56_08.gif"/></dd>
+		 								<dt><span><?php echo ( $val['goods_stock'] - $val['surplus_stock'] ) ?></span>人已买</dt>
+		 								仅剩<?php echo ( round( $val['surplus_stock'] / $val['goods_stock'] , 2 ) )*100?>%
 		 							</dl>
 		 						</dd>
 		 						<span class="sqTm">天猫</span>
 		 						<span class="sqQiang"><a href="index.php?r=index/details">立即抢</a></span>
-		 						<span class="sqTime">距结束 05:11:11</span>
+		 						<span class="sqTime">距结束 <span>05:11:11</span></span>
 		 					</dl>
 		 				</div>
-                        <div class="sqGoods">
-                            <dl>
-                                <dt><a href="index.php?r=index/details"><img src="public/img/images/C611F840080DFDDF69F6E742723F4B56_05.gif"/></a></dt>
-                                <dd>
-                                    <h1>儿童防滑软底学步鞋</h1>
-                                    <p><span  class="sqPrice">￥39.9</span></p>
-                                    <p class="sqFan"><i>返</i><span class="fanPrice">144.22</span></p>
-                                    <dl>
-                                        <dt><span>737</span>人已买</dt>
-                                        <dd><img src="public/img/images/C611F840080DFDDF69F6E742723F4B56_08.gif"/></dd>
-                                    </dl>
-                                </dd>
-                                <span class="sqTm">天猫</span>
-                                <span class="sqQiang"><a href="index.php?r=index/details">立即抢</a></span>
-                                <span class="sqTime">距结束 05:11:11</span>
-                            </dl>
-                        </div>
-                        <div class="sqGoods">
-                            <dl>
-                                <dt><a href="index.php?r=index/details"><img src="public/img/images/C611F840080DFDDF69F6E742723F4B56_05.gif"/></a></dt>
-                                <dd>
-                                    <h1>儿童防滑软底学步鞋</h1>
-                                    <p><span  class="sqPrice">￥39.9</span></p>
-                                    <p class="sqFan"><i>返</i><span class="fanPrice">144.22</span></p>
-                                    <dl>
-                                        <dt><span>737</span>人已买</dt>
-                                        <dd><img src="public/img/images/C611F840080DFDDF69F6E742723F4B56_08.gif"/></dd>
-                                    </dl>
-                                </dd>
-                                <span class="sqTm">天猫</span>
-                                <span class="sqQiang"><a href="index.php?r=index/details">立即抢</a></span>
-                                <span class="sqTime">距结束 05:11:11</span>
-                            </dl>
-                        </div>
-                        <div class="sqGoods">
-                            <dl>
-                                <dt><a href="index.php?r=index/details"><img src="public/img/images/C611F840080DFDDF69F6E742723F4B56_05.gif"/></a></dt>
-                                <dd>
-                                    <h1>儿童防滑软底学步鞋</h1>
-                                    <p><span  class="sqPrice">￥39.9</span></p>
-                                    <p class="sqFan"><i>返</i><span class="fanPrice">144.22</span></p>
-                                    <dl>
-                                        <dt><span>737</span>人已买</dt>
-                                        <dd><img src="public/img/images/C611F840080DFDDF69F6E742723F4B56_08.gif"/></dd>
-                                    </dl>
-                                </dd>
-                                <span class="sqTm">天猫</span>
-                                <span class="sqQiang"><a href="index.php?r=index/details">立即抢</a></span>
-                                <span class="sqTime">距结束 05:11:11</span>
-                            </dl>
-                        </div>
+                        <?php }?>
 		 			</div>
 		 			<div class="shangxian">
+                        <?php foreach( $online as $key => $val ){?>
 		 				<div class="sxTime">
 		 					<img src="public/img/images/2D4726391780CA13B758B167457D831E_03.gif"/>
-		 					08月27日/星期六
+		 					<?php echo $key?>
 		 				</div>
+                        <?php foreach( $val as $kk => $vv ){?>
 		 				<div class="sxLogo">
-                            <a href="index.php?r=index/details"><img src="public/img/images/2D4726391780CA13B758B167457D831E_06.gif"/></a>
-		 					<p><span><i>243</i>人关注</span><b>返</b>31%~35%</p>
+                            <a href="index.php?r=index/details?bra_id=<?php echo $vv['bra_id']?>">
+                                <img src="public/img/images/2D4726391780CA13B758B167457D831E_06.gif"/>
+                            </a>
 		 				</div>
-		 				<div class="sxLogo">
-                            <a href="index.php?r=index/details"><img src="public/img/images/2D4726391780CA13B758B167457D831E_06.gif"/></a>
-		 					<p><span><i>243</i>人关注</span><b>返</b>31%~35%</p>
-		 				</div>
-		 				<div class="sxTime">
-		 					<img src="public/img/images/2D4726391780CA13B758B167457D831E_03.gif"/>
-		 					08月28日/星期日
-		 				</div>
-                        <div class="sxLogo">
-                            <a href="index.php?r=index/details"><img src="public/img/images/2D4726391780CA13B758B167457D831E_06.gif"/></a>
-                            <p><span><i>243</i>人关注</span><b>返</b>31%~35%</p>
-                        </div>
-                        <div class="sxLogo">
-                            <a href="index.php?r=index/details"><img src="public/img/images/2D4726391780CA13B758B167457D831E_06.gif"/></a>
-                            <p><span><i>243</i>人关注</span><b>返</b>31%~35%</p>
-                        </div>
+                        <?php }}?>
 		 			</div>
 		 		</div>
 		 	</section>
