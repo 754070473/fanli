@@ -89,8 +89,8 @@ class ActivityController extends CommonController
            // $_FILES['act_logo']
     
            if(!empty($_FILES['act_logo'])){
-                is_dir('images') or mkdir('images');
-                 $img_name = 'images/'.rand(100000000,9999999999).'.jpg';
+                is_dir('uploads/actLogo') or mkdir('uploads/actLogo');
+                 $img_name = 'uploads/actLogo/'.rand(100000000,9999999999).'.jpg';
                  move_uploaded_file($_FILES['act_logo']['tmp_name'], $img_name);
              }else{
                  $img_name = '3';//图片路径名字

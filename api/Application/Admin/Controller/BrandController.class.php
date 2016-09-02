@@ -104,5 +104,4 @@ class BrandController extends CommonController
 	 	}
 	}
 
-
 }
