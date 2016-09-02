@@ -75,7 +75,6 @@ class CommonController extends Controller
 
         // 生成url的形式
         $params = http_build_query($data);
-
         // 拼接密钥 且 md5
         $signAll = md5($params);
 
@@ -114,6 +113,7 @@ class CommonController extends Controller
         }
         $url = $this -> apiUrl( 'Public' , 'index' );
         $data = array( 'sql' => $sql , 'field' => $field , 'where' => $where , 'num' => $num , 'order' => $order , 'p' => $p );
+//        print_r($data);die;
         $api_data = $this -> CurlPost( $url , $data );
         if( !is_array( $api_data ) )
         {

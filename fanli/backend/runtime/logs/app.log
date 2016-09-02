@@ -1,0 +1,1867 @@
+2016-08-30 20:01:46 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "".' in F:\www.taozi.com\fanli\fanli\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 F:\www.taozi.com\fanli\fanli\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('', Array)
+#1 F:\www.taozi.com\fanli\fanli\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 F:\www.taozi.com\fanli\fanli\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in F:\www.taozi.com\fanli\fanli\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 F:\www.taozi.com\fanli\fanli\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 F:\www.taozi.com\fanli\fanli\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2016-08-30 20:01:46 [127.0.0.1][-][-][error][yii\base\ErrorException:32] exception 'yii\base\ErrorException' with message 'PHP Startup: ' in Unknown:0
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-08-30 20:01:45 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'thinkphp_show_page_trace' => '0|0'
+    'pgv_pvi' => '6080688128'
+    'iweb_safecode' => '57de797446a7e20853MDQ4MjAyMDA3NGQxb2I3MDE1NzAxMmU0MzY1OWM1ODA6NWM0NDxiNT8xZmY3NWQ+OT9iNGU0OzY3PTc0ZjU3ZA'
+    'PHPSESSID' => '38p78j0v2raf6egn3khm4necg7'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Acer\\abFiles\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;F:\\server\\mysql\\bin;C:\\Program Files\\TortoiseSVN\\bin;F:\\server\\php5;D:\\phpstudy\\php54n;D:\\TortoiseGit-1.8.9.0-64bit\\bin;D:\\PHPstudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;F:\\mysql-5.6.24-win32\\bin;'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/PHPstudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '2232'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '55721'
+    'SCRIPT_FILENAME' => 'F:/www.taozi.com/fanli/fanli/backend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/www.taozi.com'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'F:/www.taozi.com'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.taozi.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => 'thinkphp_show_page_trace=0|0; pgv_pvi=6080688128; iweb_safecode=57de797446a7e20853MDQ4MjAyMDA3NGQxb2I3MDE1NzAxMmU0MzY1OWM1ODA6NWM0NDxiNT8xZmY3NWQ%2BOT9iNGU0OzY3PTc0ZjU3ZA; PHPSESSID=38p78j0v2raf6egn3khm4necg7'
+    'HTTP_REFERER' => 'http://www.taozi.com/fanli/fanli/backend/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_HOST' => 'www.taozi.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472558505.4872
+    'REQUEST_TIME' => 1472558505
+]
+2016-08-30 20:01:47 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "".' in F:\www.taozi.com\fanli\fanli\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 F:\www.taozi.com\fanli\fanli\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('', Array)
+#1 F:\www.taozi.com\fanli\fanli\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 F:\www.taozi.com\fanli\fanli\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in F:\www.taozi.com\fanli\fanli\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 F:\www.taozi.com\fanli\fanli\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 F:\www.taozi.com\fanli\fanli\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2016-08-30 20:01:47 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'thinkphp_show_page_trace' => '0|0'
+    'pgv_pvi' => '6080688128'
+    'iweb_safecode' => '57de797446a7e20853MDQ4MjAyMDA3NGQxb2I3MDE1NzAxMmU0MzY1OWM1ODA6NWM0NDxiNT8xZmY3NWQ+OT9iNGU0OzY3PTc0ZjU3ZA'
+    'PHPSESSID' => '38p78j0v2raf6egn3khm4necg7'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Acer\\abFiles\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;F:\\server\\mysql\\bin;C:\\Program Files\\TortoiseSVN\\bin;F:\\server\\php5;D:\\phpstudy\\php54n;D:\\TortoiseGit-1.8.9.0-64bit\\bin;D:\\PHPstudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;F:\\mysql-5.6.24-win32\\bin;'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/PHPstudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '2232'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '55723'
+    'SCRIPT_FILENAME' => 'F:/www.taozi.com/fanli/fanli/backend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/www.taozi.com'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'F:/www.taozi.com'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.taozi.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => 'thinkphp_show_page_trace=0|0; pgv_pvi=6080688128; iweb_safecode=57de797446a7e20853MDQ4MjAyMDA3NGQxb2I3MDE1NzAxMmU0MzY1OWM1ODA6NWM0NDxiNT8xZmY3NWQ%2BOT9iNGU0OzY3PTc0ZjU3ZA; PHPSESSID=38p78j0v2raf6egn3khm4necg7'
+    'HTTP_REFERER' => 'http://www.taozi.com/fanli/fanli/backend/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_HOST' => 'www.taozi.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472558507.1842
+    'REQUEST_TIME' => 1472558507
+]
+2016-08-30 20:15:05 [127.0.0.1][-][38p78j0v2raf6egn3khm4necg7][error][yii\base\ErrorException:32] exception 'yii\base\ErrorException' with message 'PHP Startup: ' in Unknown:0
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-08-30 20:15:05 [127.0.0.1][-][38p78j0v2raf6egn3khm4necg7][info][application] $_GET = [
+    'r' => 'index/index'
+]
+
+$_COOKIE = [
+    'thinkphp_show_page_trace' => '0|0'
+    'pgv_pvi' => '6080688128'
+    'iweb_safecode' => '57de797446a7e20853MDQ4MjAyMDA3NGQxb2I3MDE1NzAxMmU0MzY1OWM1ODA6NWM0NDxiNT8xZmY3NWQ+OT9iNGU0OzY3PTc0ZjU3ZA'
+    'PHPSESSID' => '38p78j0v2raf6egn3khm4necg7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => '111'
+        'password' => '96e79218965eb72c92a549dd5a330112'
+        'adm_date' => null
+        'adm_status' => null
+        'token' => '06845b605c21baf6320db4878f39da43'
+    ]
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Acer\\abFiles\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;F:\\server\\mysql\\bin;C:\\Program Files\\TortoiseSVN\\bin;F:\\server\\php5;D:\\phpstudy\\php54n;D:\\TortoiseGit-1.8.9.0-64bit\\bin;D:\\PHPstudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;F:\\mysql-5.6.24-win32\\bin;'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/PHPstudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '2444'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=index%2Findex'
+    'QUERY_STRING' => 'r=index%2Findex'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '55862'
+    'SCRIPT_FILENAME' => 'F:/www.taozi.com/fanli/fanli/backend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/www.taozi.com'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'F:/www.taozi.com'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.taozi.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => 'thinkphp_show_page_trace=0|0; pgv_pvi=6080688128; iweb_safecode=57de797446a7e20853MDQ4MjAyMDA3NGQxb2I3MDE1NzAxMmU0MzY1OWM1ODA6NWM0NDxiNT8xZmY3NWQ%2BOT9iNGU0OzY3PTc0ZjU3ZA; PHPSESSID=38p78j0v2raf6egn3khm4necg7'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_HOST' => 'www.taozi.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472559305.2666
+    'REQUEST_TIME' => 1472559305
+]
+2016-08-30 20:15:10 [127.0.0.1][-][38p78j0v2raf6egn3khm4necg7][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in F:\www.taozi.com\fanli\fanli\vendor\yiisoft\yii2\db\Connection.php:579
+Stack trace:
+#0 F:\www.taozi.com\fanli\fanli\vendor\yiisoft\yii2\db\Connection.php(579): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 F:\www.taozi.com\fanli\fanli\vendor\yiisoft\yii2\db\Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 F:\www.taozi.com\fanli\fanli\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#3 F:\www.taozi.com\fanli\fanli\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 F:\www.taozi.com\fanli\fanli\vendor\yiisoft\yii2\db\Command.php(216): yii\db\Connection->getSlavePdo()
+#5 F:\www.taozi.com\fanli\fanli\vendor\yiisoft\yii2\db\Command.php(831): yii\db\Command->prepare('<span class="ke...')
+#6 F:\www.taozi.com\fanli\fanli\vendor\yiisoft\yii2\db\Command.php(359): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#7 F:\www.taozi.com\fanli\fanli\backend\controllers\AdminController.php(33): yii\db\Command->queryAll()
+#8 [internal function]: backend\controllers\AdminController->actionIndex()
+#9 F:\www.taozi.com\fanli\fanli\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#10 F:\www.taozi.com\fanli\fanli\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams('[<span class="s...')
+#11 F:\www.taozi.com\fanli\fanli\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#12 F:\www.taozi.com\fanli\fanli\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#13 F:\www.taozi.com\fanli\fanli\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 F:\www.taozi.com\fanli\fanli\backend\web\index.php(18): yii\base\Application->run()
+#15 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in F:\www.taozi.com\fanli\fanli\vendor\yiisoft\yii2\db\Connection.php:534
+Stack trace:
+#0 F:\www.taozi.com\fanli\fanli\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#1 F:\www.taozi.com\fanli\fanli\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 F:\www.taozi.com\fanli\fanli\vendor\yiisoft\yii2\db\Command.php(216): yii\db\Connection->getSlavePdo()
+#3 F:\www.taozi.com\fanli\fanli\vendor\yiisoft\yii2\db\Command.php(831): yii\db\Command->prepare('<span class="ke...')
+#4 F:\www.taozi.com\fanli\fanli\vendor\yiisoft\yii2\db\Command.php(359): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#5 F:\www.taozi.com\fanli\fanli\backend\controllers\AdminController.php(33): yii\db\Command->queryAll()
+#6 [internal function]: backend\controllers\AdminController->actionIndex()
+#7 F:\www.taozi.com\fanli\fanli\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#8 F:\www.taozi.com\fanli\fanli\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams('[<span class="s...')
+#9 F:\www.taozi.com\fanli\fanli\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#10 F:\www.taozi.com\fanli\fanli\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#11 F:\www.taozi.com\fanli\fanli\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 F:\www.taozi.com\fanli\fanli\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+Additional Information:
+
+2016-08-30 20:15:08 [127.0.0.1][-][38p78j0v2raf6egn3khm4necg7][info][application] $_GET = [
+    'r' => 'admin/index'
+]
+
+$_COOKIE = [
+    'thinkphp_show_page_trace' => '0|0'
+    'pgv_pvi' => '6080688128'
+    'iweb_safecode' => '57de797446a7e20853MDQ4MjAyMDA3NGQxb2I3MDE1NzAxMmU0MzY1OWM1ODA6NWM0NDxiNT8xZmY3NWQ+OT9iNGU0OzY3PTc0ZjU3ZA'
+    'PHPSESSID' => '38p78j0v2raf6egn3khm4necg7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => '111'
+        'password' => '96e79218965eb72c92a549dd5a330112'
+        'adm_date' => null
+        'adm_status' => null
+        'token' => '06845b605c21baf6320db4878f39da43'
+    ]
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Acer\\abFiles\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;F:\\server\\mysql\\bin;C:\\Program Files\\TortoiseSVN\\bin;F:\\server\\php5;D:\\phpstudy\\php54n;D:\\TortoiseGit-1.8.9.0-64bit\\bin;D:\\PHPstudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;F:\\mysql-5.6.24-win32\\bin;'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/PHPstudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '2444'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=admin/index'
+    'QUERY_STRING' => 'r=admin/index'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '55862'
+    'SCRIPT_FILENAME' => 'F:/www.taozi.com/fanli/fanli/backend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/www.taozi.com'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'F:/www.taozi.com'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.taozi.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => 'thinkphp_show_page_trace=0|0; pgv_pvi=6080688128; iweb_safecode=57de797446a7e20853MDQ4MjAyMDA3NGQxb2I3MDE1NzAxMmU0MzY1OWM1ODA6NWM0NDxiNT8xZmY3NWQ%2BOT9iNGU0OzY3PTc0ZjU3ZA; PHPSESSID=38p78j0v2raf6egn3khm4necg7'
+    'HTTP_REFERER' => 'http://www.taozi.com/fanli/fanli/backend/web/index.php?r=index%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_HOST' => 'www.taozi.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472559308.9823
+    'REQUEST_TIME' => 1472559308
+]
+2016-08-30 20:15:37 [127.0.0.1][-][38p78j0v2raf6egn3khm4necg7][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in F:\www.taozi.com\fanli\fanli\vendor\yiisoft\yii2\db\Connection.php:579
+Stack trace:
+#0 F:\www.taozi.com\fanli\fanli\vendor\yiisoft\yii2\db\Connection.php(579): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 F:\www.taozi.com\fanli\fanli\vendor\yiisoft\yii2\db\Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 F:\www.taozi.com\fanli\fanli\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#3 F:\www.taozi.com\fanli\fanli\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 F:\www.taozi.com\fanli\fanli\vendor\yiisoft\yii2\db\Command.php(216): yii\db\Connection->getSlavePdo()
+#5 F:\www.taozi.com\fanli\fanli\vendor\yiisoft\yii2\db\Command.php(831): yii\db\Command->prepare('<span class="ke...')
+#6 F:\www.taozi.com\fanli\fanli\vendor\yiisoft\yii2\db\Command.php(359): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#7 F:\www.taozi.com\fanli\fanli\backend\controllers\AdminController.php(33): yii\db\Command->queryAll()
+#8 [internal function]: backend\controllers\AdminController->actionIndex()
+#9 F:\www.taozi.com\fanli\fanli\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#10 F:\www.taozi.com\fanli\fanli\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams('[<span class="s...')
+#11 F:\www.taozi.com\fanli\fanli\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#12 F:\www.taozi.com\fanli\fanli\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#13 F:\www.taozi.com\fanli\fanli\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 F:\www.taozi.com\fanli\fanli\backend\web\index.php(18): yii\base\Application->run()
+#15 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in F:\www.taozi.com\fanli\fanli\vendor\yiisoft\yii2\db\Connection.php:534
+Stack trace:
+#0 F:\www.taozi.com\fanli\fanli\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#1 F:\www.taozi.com\fanli\fanli\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 F:\www.taozi.com\fanli\fanli\vendor\yiisoft\yii2\db\Command.php(216): yii\db\Connection->getSlavePdo()
+#3 F:\www.taozi.com\fanli\fanli\vendor\yiisoft\yii2\db\Command.php(831): yii\db\Command->prepare('<span class="ke...')
+#4 F:\www.taozi.com\fanli\fanli\vendor\yiisoft\yii2\db\Command.php(359): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#5 F:\www.taozi.com\fanli\fanli\backend\controllers\AdminController.php(33): yii\db\Command->queryAll()
+#6 [internal function]: backend\controllers\AdminController->actionIndex()
+#7 F:\www.taozi.com\fanli\fanli\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#8 F:\www.taozi.com\fanli\fanli\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams('[<span class="s...')
+#9 F:\www.taozi.com\fanli\fanli\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#10 F:\www.taozi.com\fanli\fanli\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#11 F:\www.taozi.com\fanli\fanli\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 F:\www.taozi.com\fanli\fanli\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+Additional Information:
+
+2016-08-30 20:15:36 [127.0.0.1][-][38p78j0v2raf6egn3khm4necg7][info][application] $_GET = [
+    'r' => 'admin/index'
+]
+
+$_COOKIE = [
+    'thinkphp_show_page_trace' => '0|0'
+    'pgv_pvi' => '6080688128'
+    'iweb_safecode' => '57de797446a7e20853MDQ4MjAyMDA3NGQxb2I3MDE1NzAxMmU0MzY1OWM1ODA6NWM0NDxiNT8xZmY3NWQ+OT9iNGU0OzY3PTc0ZjU3ZA'
+    'PHPSESSID' => '38p78j0v2raf6egn3khm4necg7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => '111'
+        'password' => '96e79218965eb72c92a549dd5a330112'
+        'adm_date' => null
+        'adm_status' => null
+        'token' => '06845b605c21baf6320db4878f39da43'
+    ]
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Acer\\abFiles\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;F:\\server\\mysql\\bin;C:\\Program Files\\TortoiseSVN\\bin;F:\\server\\php5;D:\\phpstudy\\php54n;D:\\TortoiseGit-1.8.9.0-64bit\\bin;D:\\PHPstudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;F:\\mysql-5.6.24-win32\\bin;'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/PHPstudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '2444'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=admin/index'
+    'QUERY_STRING' => 'r=admin/index'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '55874'
+    'SCRIPT_FILENAME' => 'F:/www.taozi.com/fanli/fanli/backend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/www.taozi.com'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'F:/www.taozi.com'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.taozi.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => 'thinkphp_show_page_trace=0|0; pgv_pvi=6080688128; iweb_safecode=57de797446a7e20853MDQ4MjAyMDA3NGQxb2I3MDE1NzAxMmU0MzY1OWM1ODA6NWM0NDxiNT8xZmY3NWQ%2BOT9iNGU0OzY3PTc0ZjU3ZA; PHPSESSID=38p78j0v2raf6egn3khm4necg7'
+    'HTTP_REFERER' => 'http://www.taozi.com/fanli/fanli/backend/web/index.php?r=index%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_HOST' => 'www.taozi.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472559336.2743
+    'REQUEST_TIME' => 1472559336
+]
+2016-08-30 20:16:36 [127.0.0.1][-][38p78j0v2raf6egn3khm4necg7][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected 'echo' (T_ECHO)' in F:\www.taozi.com\fanli\fanli\backend\views\admin\index.html:52
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-08-30 20:16:35 [127.0.0.1][-][38p78j0v2raf6egn3khm4necg7][info][application] $_GET = [
+    'r' => 'admin/index'
+]
+
+$_COOKIE = [
+    'thinkphp_show_page_trace' => '0|0'
+    'pgv_pvi' => '6080688128'
+    'iweb_safecode' => '57de797446a7e20853MDQ4MjAyMDA3NGQxb2I3MDE1NzAxMmU0MzY1OWM1ODA6NWM0NDxiNT8xZmY3NWQ+OT9iNGU0OzY3PTc0ZjU3ZA'
+    'PHPSESSID' => '38p78j0v2raf6egn3khm4necg7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => '111'
+        'password' => '96e79218965eb72c92a549dd5a330112'
+        'adm_date' => null
+        'adm_status' => null
+        'token' => '06845b605c21baf6320db4878f39da43'
+    ]
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Acer\\abFiles\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;F:\\server\\mysql\\bin;C:\\Program Files\\TortoiseSVN\\bin;F:\\server\\php5;D:\\phpstudy\\php54n;D:\\TortoiseGit-1.8.9.0-64bit\\bin;D:\\PHPstudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;F:\\mysql-5.6.24-win32\\bin;'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/PHPstudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '2444'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=admin/index'
+    'QUERY_STRING' => 'r=admin/index'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '55891'
+    'SCRIPT_FILENAME' => 'F:/www.taozi.com/fanli/fanli/backend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/www.taozi.com'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'F:/www.taozi.com'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.taozi.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => 'thinkphp_show_page_trace=0|0; pgv_pvi=6080688128; iweb_safecode=57de797446a7e20853MDQ4MjAyMDA3NGQxb2I3MDE1NzAxMmU0MzY1OWM1ODA6NWM0NDxiNT8xZmY3NWQ%2BOT9iNGU0OzY3PTc0ZjU3ZA; PHPSESSID=38p78j0v2raf6egn3khm4necg7'
+    'HTTP_REFERER' => 'http://www.taozi.com/fanli/fanli/backend/web/index.php?r=index%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_HOST' => 'www.taozi.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472559395.1537
+    'REQUEST_TIME' => 1472559395
+]
+2016-08-30 20:16:39 [127.0.0.1][-][38p78j0v2raf6egn3khm4necg7][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected 'echo' (T_ECHO)' in F:\www.taozi.com\fanli\fanli\backend\views\admin\index.html:52
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-08-30 20:16:38 [127.0.0.1][-][38p78j0v2raf6egn3khm4necg7][info][application] $_GET = [
+    'r' => 'admin/index'
+]
+
+$_COOKIE = [
+    'thinkphp_show_page_trace' => '0|0'
+    'pgv_pvi' => '6080688128'
+    'iweb_safecode' => '57de797446a7e20853MDQ4MjAyMDA3NGQxb2I3MDE1NzAxMmU0MzY1OWM1ODA6NWM0NDxiNT8xZmY3NWQ+OT9iNGU0OzY3PTc0ZjU3ZA'
+    'PHPSESSID' => '38p78j0v2raf6egn3khm4necg7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => '111'
+        'password' => '96e79218965eb72c92a549dd5a330112'
+        'adm_date' => null
+        'adm_status' => null
+        'token' => '06845b605c21baf6320db4878f39da43'
+    ]
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Acer\\abFiles\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;F:\\server\\mysql\\bin;C:\\Program Files\\TortoiseSVN\\bin;F:\\server\\php5;D:\\phpstudy\\php54n;D:\\TortoiseGit-1.8.9.0-64bit\\bin;D:\\PHPstudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;F:\\mysql-5.6.24-win32\\bin;'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/PHPstudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '2444'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=admin/index'
+    'QUERY_STRING' => 'r=admin/index'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '55894'
+    'SCRIPT_FILENAME' => 'F:/www.taozi.com/fanli/fanli/backend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/www.taozi.com'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'F:/www.taozi.com'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.taozi.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => 'thinkphp_show_page_trace=0|0; pgv_pvi=6080688128; iweb_safecode=57de797446a7e20853MDQ4MjAyMDA3NGQxb2I3MDE1NzAxMmU0MzY1OWM1ODA6NWM0NDxiNT8xZmY3NWQ%2BOT9iNGU0OzY3PTc0ZjU3ZA; PHPSESSID=38p78j0v2raf6egn3khm4necg7'
+    'HTTP_REFERER' => 'http://www.taozi.com/fanli/fanli/backend/web/index.php?r=index%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_HOST' => 'www.taozi.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472559398.8183
+    'REQUEST_TIME' => 1472559398
+]
+2016-08-30 20:29:19 [127.0.0.1][-][38p78j0v2raf6egn3khm4necg7][error][yii\base\ErrorException:32] exception 'yii\base\ErrorException' with message 'PHP Startup: ' in Unknown:0
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-08-30 20:29:19 [127.0.0.1][-][38p78j0v2raf6egn3khm4necg7][info][application] $_GET = [
+    'r' => 'index/index'
+]
+
+$_COOKIE = [
+    'thinkphp_show_page_trace' => '0|0'
+    'pgv_pvi' => '6080688128'
+    'iweb_safecode' => '57de797446a7e20853MDQ4MjAyMDA3NGQxb2I3MDE1NzAxMmU0MzY1OWM1ODA6NWM0NDxiNT8xZmY3NWQ+OT9iNGU0OzY3PTc0ZjU3ZA'
+    'PHPSESSID' => '38p78j0v2raf6egn3khm4necg7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => '111'
+        'password' => '96e79218965eb72c92a549dd5a330112'
+        'adm_date' => null
+        'adm_status' => null
+        'token' => '06845b605c21baf6320db4878f39da43'
+    ]
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Acer\\abFiles\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;F:\\server\\mysql\\bin;C:\\Program Files\\TortoiseSVN\\bin;F:\\server\\php5;D:\\phpstudy\\php54n;D:\\TortoiseGit-1.8.9.0-64bit\\bin;D:\\PHPstudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;F:\\mysql-5.6.24-win32\\bin;'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/PHPstudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '2232'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=index%2Findex'
+    'QUERY_STRING' => 'r=index%2Findex'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '56074'
+    'SCRIPT_FILENAME' => 'F:/www.taozi.com/fanli/fanli/backend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/www.taozi.com'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'F:/www.taozi.com'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.taozi.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => 'thinkphp_show_page_trace=0|0; pgv_pvi=6080688128; iweb_safecode=57de797446a7e20853MDQ4MjAyMDA3NGQxb2I3MDE1NzAxMmU0MzY1OWM1ODA6NWM0NDxiNT8xZmY3NWQ%2BOT9iNGU0OzY3PTc0ZjU3ZA; PHPSESSID=38p78j0v2raf6egn3khm4necg7'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_HOST' => 'www.taozi.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472560159.8873
+    'REQUEST_TIME' => 1472560159
+]
+2016-08-31 15:58:16 [192.168.1.203][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "".' in F:\app\fanli\fanli\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 F:\app\fanli\fanli\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('', Array)
+#1 F:\app\fanli\fanli\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 F:\app\fanli\fanli\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in F:\app\fanli\fanli\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 F:\app\fanli\fanli\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 F:\app\fanli\fanli\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2016-08-31 15:58:16 [192.168.1.203][-][-][info][application] $_COOKIE = [
+    'CNZZDATA1253026255' => '223297607-1472117496-|1472117496'
+    '_ga' => 'GA1.1.2143793089.1472121850'
+    'Hm_lvt_545c20cb01a15219bfeb0d1f103f99c1' => '1472449749,1472515250,1472602023'
+    'l' => 'ArS05vIShIksqFCUU2Ana1yMhHwmTNh3'
+    'isg' => 'AuHh3CTHEnTBl74AnlJqtf-N8a2ToVWAs71U8UO2HOhHqgJ8i94wUFeiemfJ'
+    'Hm_lpvt_545c20cb01a15219bfeb0d1f103f99c1' => '1472602023'
+    'PHPSESSID' => 'rf05aee671kfk01pmdojfakep5'
+    '_csrf' => '5fbad8df345ccb78d31607f13a658b540f20eda30e4885ab10576334a8aa2baca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"n0RkOqq4Dofn3FjY_Zv_7ZAHukzDveOM\";}'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\phpStudy\\php55n;D:\\phpStudy\\Apache\\bin;D:\\software\\python;D:\\mysql-5.6.24\\bin;C:\\Program Files\\TortoiseGit\\bin;F:\\huanjing\\redis'
+    'SYSTEMROOT' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '2028'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '62968'
+    'SCRIPT_FILENAME' => 'F:/app/fanli/fanli/backend/web/index.php'
+    'SERVER_ADMIN' => 'x@acme.com'
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/app'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'F:/app'
+    'REMOTE_ADDR' => '192.168.1.203'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.1.203'
+    'SERVER_NAME' => '192.168.1.203'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\windows'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => 'CNZZDATA1253026255=223297607-1472117496-%7C1472117496; _ga=GA1.1.2143793089.1472121850; Hm_lvt_545c20cb01a15219bfeb0d1f103f99c1=1472449749,1472515250,1472602023; l=ArS05vIShIksqFCUU2Ana1yMhHwmTNh3; isg=AuHh3CTHEnTBl74AnlJqtf-N8a2ToVWAs71U8UO2HOhHqgJ8i94wUFeiemfJ; Hm_lpvt_545c20cb01a15219bfeb0d1f103f99c1=1472602023; PHPSESSID=rf05aee671kfk01pmdojfakep5; _csrf=5fbad8df345ccb78d31607f13a658b540f20eda30e4885ab10576334a8aa2baca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22n0RkOqq4Dofn3FjY_Zv_7ZAHukzDveOM%22%3B%7D'
+    'HTTP_REFERER' => 'http://192.168.1.203/fanli/fanli/backend/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_HOST' => '192.168.1.203'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472630296.1204
+    'REQUEST_TIME' => 1472630296
+]
+2016-08-31 15:58:18 [192.168.1.203][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "".' in F:\app\fanli\fanli\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 F:\app\fanli\fanli\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('', Array)
+#1 F:\app\fanli\fanli\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 F:\app\fanli\fanli\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in F:\app\fanli\fanli\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 F:\app\fanli\fanli\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 F:\app\fanli\fanli\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2016-08-31 15:58:18 [192.168.1.203][-][-][info][application] $_COOKIE = [
+    'CNZZDATA1253026255' => '223297607-1472117496-|1472117496'
+    '_ga' => 'GA1.1.2143793089.1472121850'
+    'Hm_lvt_545c20cb01a15219bfeb0d1f103f99c1' => '1472449749,1472515250,1472602023'
+    'l' => 'ArS05vIShIksqFCUU2Ana1yMhHwmTNh3'
+    'isg' => 'AuHh3CTHEnTBl74AnlJqtf-N8a2ToVWAs71U8UO2HOhHqgJ8i94wUFeiemfJ'
+    'Hm_lpvt_545c20cb01a15219bfeb0d1f103f99c1' => '1472602023'
+    'PHPSESSID' => 'rf05aee671kfk01pmdojfakep5'
+    '_csrf' => '5fbad8df345ccb78d31607f13a658b540f20eda30e4885ab10576334a8aa2baca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"n0RkOqq4Dofn3FjY_Zv_7ZAHukzDveOM\";}'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\phpStudy\\php55n;D:\\phpStudy\\Apache\\bin;D:\\software\\python;D:\\mysql-5.6.24\\bin;C:\\Program Files\\TortoiseGit\\bin;F:\\huanjing\\redis'
+    'SYSTEMROOT' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '2028'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '62978'
+    'SCRIPT_FILENAME' => 'F:/app/fanli/fanli/backend/web/index.php'
+    'SERVER_ADMIN' => 'x@acme.com'
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/app'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'F:/app'
+    'REMOTE_ADDR' => '192.168.1.203'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.1.203'
+    'SERVER_NAME' => '192.168.1.203'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\windows'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => 'CNZZDATA1253026255=223297607-1472117496-%7C1472117496; _ga=GA1.1.2143793089.1472121850; Hm_lvt_545c20cb01a15219bfeb0d1f103f99c1=1472449749,1472515250,1472602023; l=ArS05vIShIksqFCUU2Ana1yMhHwmTNh3; isg=AuHh3CTHEnTBl74AnlJqtf-N8a2ToVWAs71U8UO2HOhHqgJ8i94wUFeiemfJ; Hm_lpvt_545c20cb01a15219bfeb0d1f103f99c1=1472602023; PHPSESSID=rf05aee671kfk01pmdojfakep5; _csrf=5fbad8df345ccb78d31607f13a658b540f20eda30e4885ab10576334a8aa2baca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22n0RkOqq4Dofn3FjY_Zv_7ZAHukzDveOM%22%3B%7D'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_HOST' => '192.168.1.203'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472630298.6326
+    'REQUEST_TIME' => 1472630298
+]
+2016-08-31 16:05:18 [192.168.1.203][-][rf05aee671kfk01pmdojfakep5][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: brade' in F:\app\fanli\fanli\backend\views\goods\add.html:73
+Stack trace:
+#0 F:\app\fanli\fanli\backend\views\goods\add.html(73): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'F:\\app\\fanli\\fa...', 73, Array)
+#1 F:\app\fanli\fanli\vendor\yiisoft\yii2\base\View.php(325): require('F:\\app\\fanli\\fa...')
+#2 F:\app\fanli\fanli\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('F:\\app\\fanli\\fa...', Array)
+#3 F:\app\fanli\fanli\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('F:\\app\\fanli\\fa...', Array, Object(backend\controllers\GoodsController))
+#4 F:\app\fanli\fanli\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('add.html', Array, Object(backend\controllers\GoodsController))
+#5 F:\app\fanli\fanli\backend\controllers\GoodsController.php(40): yii\base\Controller->render('add.html', Array)
+#6 [internal function]: backend\controllers\GoodsController->actionAdd()
+#7 F:\app\fanli\fanli\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 F:\app\fanli\fanli\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#9 F:\app\fanli\fanli\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('add', Array)
+#10 F:\app\fanli\fanli\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('goods/add', Array)
+#11 F:\app\fanli\fanli\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 F:\app\fanli\fanli\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+2016-08-31 16:05:17 [192.168.1.203][-][rf05aee671kfk01pmdojfakep5][info][application] $_GET = [
+    'r' => 'goods/add'
+]
+
+$_COOKIE = [
+    'CNZZDATA1253026255' => '223297607-1472117496-|1472117496'
+    '_ga' => 'GA1.1.2143793089.1472121850'
+    'Hm_lvt_545c20cb01a15219bfeb0d1f103f99c1' => '1472449749,1472515250,1472602023'
+    'l' => 'ArS05vIShIksqFCUU2Ana1yMhHwmTNh3'
+    'isg' => 'AuHh3CTHEnTBl74AnlJqtf-N8a2ToVWAs71U8UO2HOhHqgJ8i94wUFeiemfJ'
+    'Hm_lpvt_545c20cb01a15219bfeb0d1f103f99c1' => '1472602023'
+    'PHPSESSID' => 'rf05aee671kfk01pmdojfakep5'
+    '_csrf' => '5fbad8df345ccb78d31607f13a658b540f20eda30e4885ab10576334a8aa2baca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"n0RkOqq4Dofn3FjY_Zv_7ZAHukzDveOM\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => '123456'
+        'password' => 'e10adc3949ba59abbe56e057f20f883e'
+        'adm_date' => '2016-08-30'
+        'adm_status' => '1'
+        'token' => '3c8fbb4f0e6324a46390a3113434ba72'
+    ]
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\phpStudy\\php55n;D:\\phpStudy\\Apache\\bin;D:\\software\\python;D:\\mysql-5.6.24\\bin;C:\\Program Files\\TortoiseGit\\bin;F:\\huanjing\\redis'
+    'SYSTEMROOT' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1896'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=goods/add'
+    'QUERY_STRING' => 'r=goods/add'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '63183'
+    'SCRIPT_FILENAME' => 'F:/app/fanli/fanli/backend/web/index.php'
+    'SERVER_ADMIN' => 'x@acme.com'
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/app'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'F:/app'
+    'REMOTE_ADDR' => '192.168.1.203'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.1.203'
+    'SERVER_NAME' => '192.168.1.203'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\windows'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => 'CNZZDATA1253026255=223297607-1472117496-%7C1472117496; _ga=GA1.1.2143793089.1472121850; Hm_lvt_545c20cb01a15219bfeb0d1f103f99c1=1472449749,1472515250,1472602023; l=ArS05vIShIksqFCUU2Ana1yMhHwmTNh3; isg=AuHh3CTHEnTBl74AnlJqtf-N8a2ToVWAs71U8UO2HOhHqgJ8i94wUFeiemfJ; Hm_lpvt_545c20cb01a15219bfeb0d1f103f99c1=1472602023; PHPSESSID=rf05aee671kfk01pmdojfakep5; _csrf=5fbad8df345ccb78d31607f13a658b540f20eda30e4885ab10576334a8aa2baca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22n0RkOqq4Dofn3FjY_Zv_7ZAHukzDveOM%22%3B%7D'
+    'HTTP_REFERER' => 'http://192.168.1.203/fanli/fanli/backend/web/index.php?r=index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_HOST' => '192.168.1.203'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472630717.8016
+    'REQUEST_TIME' => 1472630717
+]
+2016-08-31 16:05:19 [192.168.1.203][-][rf05aee671kfk01pmdojfakep5][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception 'Exception' with message 'Serialization of 'Closure' is not allowed' 
+
+in F:\app\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php:58
+
+Stack trace:
+#0 F:\app\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php(58): serialize(Array)
+#1 F:\app\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#2 F:\app\fanli\fanli\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#3 F:\app\fanli\fanli\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#4 F:\app\fanli\fanli\vendor\yiisoft\yii2\base\ErrorHandler.php(111): yii\log\Logger->flush(true)
+#5 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\ErrorException))
+#6 {main}
+2016-08-31 16:05:17 [192.168.1.203][-][rf05aee671kfk01pmdojfakep5][info][application] $_GET = [
+    'r' => 'goods/add'
+]
+
+$_COOKIE = [
+    'CNZZDATA1253026255' => '223297607-1472117496-|1472117496'
+    '_ga' => 'GA1.1.2143793089.1472121850'
+    'Hm_lvt_545c20cb01a15219bfeb0d1f103f99c1' => '1472449749,1472515250,1472602023'
+    'l' => 'ArS05vIShIksqFCUU2Ana1yMhHwmTNh3'
+    'isg' => 'AuHh3CTHEnTBl74AnlJqtf-N8a2ToVWAs71U8UO2HOhHqgJ8i94wUFeiemfJ'
+    'Hm_lpvt_545c20cb01a15219bfeb0d1f103f99c1' => '1472602023'
+    'PHPSESSID' => 'rf05aee671kfk01pmdojfakep5'
+    '_csrf' => '5fbad8df345ccb78d31607f13a658b540f20eda30e4885ab10576334a8aa2baca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"n0RkOqq4Dofn3FjY_Zv_7ZAHukzDveOM\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => '123456'
+        'password' => 'e10adc3949ba59abbe56e057f20f883e'
+        'adm_date' => '2016-08-30'
+        'adm_status' => '1'
+        'token' => '3c8fbb4f0e6324a46390a3113434ba72'
+    ]
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\phpStudy\\php55n;D:\\phpStudy\\Apache\\bin;D:\\software\\python;D:\\mysql-5.6.24\\bin;C:\\Program Files\\TortoiseGit\\bin;F:\\huanjing\\redis'
+    'SYSTEMROOT' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1896'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=goods/add'
+    'QUERY_STRING' => 'r=goods/add'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '63183'
+    'SCRIPT_FILENAME' => 'F:/app/fanli/fanli/backend/web/index.php'
+    'SERVER_ADMIN' => 'x@acme.com'
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/app'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'F:/app'
+    'REMOTE_ADDR' => '192.168.1.203'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.1.203'
+    'SERVER_NAME' => '192.168.1.203'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\windows'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => 'CNZZDATA1253026255=223297607-1472117496-%7C1472117496; _ga=GA1.1.2143793089.1472121850; Hm_lvt_545c20cb01a15219bfeb0d1f103f99c1=1472449749,1472515250,1472602023; l=ArS05vIShIksqFCUU2Ana1yMhHwmTNh3; isg=AuHh3CTHEnTBl74AnlJqtf-N8a2ToVWAs71U8UO2HOhHqgJ8i94wUFeiemfJ; Hm_lpvt_545c20cb01a15219bfeb0d1f103f99c1=1472602023; PHPSESSID=rf05aee671kfk01pmdojfakep5; _csrf=5fbad8df345ccb78d31607f13a658b540f20eda30e4885ab10576334a8aa2baca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22n0RkOqq4Dofn3FjY_Zv_7ZAHukzDveOM%22%3B%7D'
+    'HTTP_REFERER' => 'http://192.168.1.203/fanli/fanli/backend/web/index.php?r=index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_HOST' => '192.168.1.203'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472630717.8016
+    'REQUEST_TIME' => 1472630717
+]
+2016-08-31 16:25:21 [192.168.1.203][-][rf05aee671kfk01pmdojfakep5][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: goods_url' in F:\app\fanli\fanli\backend\controllers\GoodsController.php:49
+Stack trace:
+#0 F:\app\fanli\fanli\backend\controllers\GoodsController.php(49): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'F:\\app\\fanli\\fa...', 49, Array)
+#1 [internal function]: backend\controllers\GoodsController->actionAddshop()
+#2 F:\app\fanli\fanli\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 F:\app\fanli\fanli\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 F:\app\fanli\fanli\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('addshop', Array)
+#5 F:\app\fanli\fanli\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('goods/addshop', Array)
+#6 F:\app\fanli\fanli\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 F:\app\fanli\fanli\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2016-08-31 16:25:21 [192.168.1.203][-][rf05aee671kfk01pmdojfakep5][info][application] $_GET = [
+    'r' => 'goods/addshop'
+]
+
+$_POST = [
+    'goods_name' => '111111111111111111111111111111111111111111111111111111111111111111
+2222222222222222222222222222222222222222222222222222222222
+3333333333333333333333333333333333333333333333333333333333
+4444444444444444444444444444444444444444444444444444444444
+5555555555555555555555555555555555555555555555555555555555
+666666666666666666666666666666666666666666666666666666666
+777777777777777777777777777777777777777777777777777777777'
+    'goods_price' => '159.00'
+    'goods_stock' => '2'
+    'goods_rebate' => '15.9'
+    'cla_id' => '30115'
+    'bre_id' => '1'
+    'goods_status' => '1'
+]
+
+$_COOKIE = [
+    'CNZZDATA1253026255' => '223297607-1472117496-|1472117496'
+    '_ga' => 'GA1.1.2143793089.1472121850'
+    'Hm_lvt_545c20cb01a15219bfeb0d1f103f99c1' => '1472449749,1472515250,1472602023'
+    'l' => 'ArS05vIShIksqFCUU2Ana1yMhHwmTNh3'
+    'isg' => 'AuHh3CTHEnTBl74AnlJqtf-N8a2ToVWAs71U8UO2HOhHqgJ8i94wUFeiemfJ'
+    'Hm_lpvt_545c20cb01a15219bfeb0d1f103f99c1' => '1472602023'
+    'PHPSESSID' => 'rf05aee671kfk01pmdojfakep5'
+    '_csrf' => '5fbad8df345ccb78d31607f13a658b540f20eda30e4885ab10576334a8aa2baca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"n0RkOqq4Dofn3FjY_Zv_7ZAHukzDveOM\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => '123456'
+        'password' => 'e10adc3949ba59abbe56e057f20f883e'
+        'adm_date' => '2016-08-30'
+        'adm_status' => '1'
+        'token' => '3c8fbb4f0e6324a46390a3113434ba72'
+    ]
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\phpStudy\\php55n;D:\\phpStudy\\Apache\\bin;D:\\software\\python;D:\\mysql-5.6.24\\bin;C:\\Program Files\\TortoiseGit\\bin;F:\\huanjing\\redis'
+    'SYSTEMROOT' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1908'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=goods/addshop'
+    'QUERY_STRING' => 'r=goods/addshop'
+    'REQUEST_METHOD' => 'POST'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '63567'
+    'SCRIPT_FILENAME' => 'F:/app/fanli/fanli/backend/web/index.php'
+    'SERVER_ADMIN' => 'x@acme.com'
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/app'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'F:/app'
+    'REMOTE_ADDR' => '192.168.1.203'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.1.203'
+    'SERVER_NAME' => '192.168.1.203'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\windows'
+    'CONTENT_LENGTH' => '1187'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=---------------------------29657141982835'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => 'CNZZDATA1253026255=223297607-1472117496-%7C1472117496; _ga=GA1.1.2143793089.1472121850; Hm_lvt_545c20cb01a15219bfeb0d1f103f99c1=1472449749,1472515250,1472602023; l=ArS05vIShIksqFCUU2Ana1yMhHwmTNh3; isg=AuHh3CTHEnTBl74AnlJqtf-N8a2ToVWAs71U8UO2HOhHqgJ8i94wUFeiemfJ; Hm_lpvt_545c20cb01a15219bfeb0d1f103f99c1=1472602023; PHPSESSID=rf05aee671kfk01pmdojfakep5; _csrf=5fbad8df345ccb78d31607f13a658b540f20eda30e4885ab10576334a8aa2baca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22n0RkOqq4Dofn3FjY_Zv_7ZAHukzDveOM%22%3B%7D'
+    'HTTP_REFERER' => 'http://192.168.1.203/fanli/fanli/backend/web/index.php?r=goods/add'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_HOST' => '192.168.1.203'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472631921.7424
+    'REQUEST_TIME' => 1472631921
+]
+2016-08-31 16:25:21 [192.168.1.203][-][rf05aee671kfk01pmdojfakep5][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception 'Exception' with message 'Serialization of 'Closure' is not allowed' 
+
+in F:\app\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php:58
+
+Stack trace:
+#0 F:\app\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php(58): serialize(Array)
+#1 F:\app\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#2 F:\app\fanli\fanli\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#3 F:\app\fanli\fanli\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#4 F:\app\fanli\fanli\vendor\yiisoft\yii2\base\ErrorHandler.php(111): yii\log\Logger->flush(true)
+#5 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\ErrorException))
+#6 {main}
+2016-08-31 16:25:21 [192.168.1.203][-][rf05aee671kfk01pmdojfakep5][info][application] $_GET = [
+    'r' => 'goods/addshop'
+]
+
+$_POST = [
+    'goods_name' => '111111111111111111111111111111111111111111111111111111111111111111
+2222222222222222222222222222222222222222222222222222222222
+3333333333333333333333333333333333333333333333333333333333
+4444444444444444444444444444444444444444444444444444444444
+5555555555555555555555555555555555555555555555555555555555
+666666666666666666666666666666666666666666666666666666666
+777777777777777777777777777777777777777777777777777777777'
+    'goods_price' => '159.00'
+    'goods_stock' => '2'
+    'goods_rebate' => '15.9'
+    'cla_id' => '30115'
+    'bre_id' => '1'
+    'goods_status' => '1'
+]
+
+$_COOKIE = [
+    'CNZZDATA1253026255' => '223297607-1472117496-|1472117496'
+    '_ga' => 'GA1.1.2143793089.1472121850'
+    'Hm_lvt_545c20cb01a15219bfeb0d1f103f99c1' => '1472449749,1472515250,1472602023'
+    'l' => 'ArS05vIShIksqFCUU2Ana1yMhHwmTNh3'
+    'isg' => 'AuHh3CTHEnTBl74AnlJqtf-N8a2ToVWAs71U8UO2HOhHqgJ8i94wUFeiemfJ'
+    'Hm_lpvt_545c20cb01a15219bfeb0d1f103f99c1' => '1472602023'
+    'PHPSESSID' => 'rf05aee671kfk01pmdojfakep5'
+    '_csrf' => '5fbad8df345ccb78d31607f13a658b540f20eda30e4885ab10576334a8aa2baca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"n0RkOqq4Dofn3FjY_Zv_7ZAHukzDveOM\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => '123456'
+        'password' => 'e10adc3949ba59abbe56e057f20f883e'
+        'adm_date' => '2016-08-30'
+        'adm_status' => '1'
+        'token' => '3c8fbb4f0e6324a46390a3113434ba72'
+    ]
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\phpStudy\\php55n;D:\\phpStudy\\Apache\\bin;D:\\software\\python;D:\\mysql-5.6.24\\bin;C:\\Program Files\\TortoiseGit\\bin;F:\\huanjing\\redis'
+    'SYSTEMROOT' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1908'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=goods/addshop'
+    'QUERY_STRING' => 'r=goods/addshop'
+    'REQUEST_METHOD' => 'POST'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '63567'
+    'SCRIPT_FILENAME' => 'F:/app/fanli/fanli/backend/web/index.php'
+    'SERVER_ADMIN' => 'x@acme.com'
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/app'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'F:/app'
+    'REMOTE_ADDR' => '192.168.1.203'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.1.203'
+    'SERVER_NAME' => '192.168.1.203'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\windows'
+    'CONTENT_LENGTH' => '1187'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=---------------------------29657141982835'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => 'CNZZDATA1253026255=223297607-1472117496-%7C1472117496; _ga=GA1.1.2143793089.1472121850; Hm_lvt_545c20cb01a15219bfeb0d1f103f99c1=1472449749,1472515250,1472602023; l=ArS05vIShIksqFCUU2Ana1yMhHwmTNh3; isg=AuHh3CTHEnTBl74AnlJqtf-N8a2ToVWAs71U8UO2HOhHqgJ8i94wUFeiemfJ; Hm_lpvt_545c20cb01a15219bfeb0d1f103f99c1=1472602023; PHPSESSID=rf05aee671kfk01pmdojfakep5; _csrf=5fbad8df345ccb78d31607f13a658b540f20eda30e4885ab10576334a8aa2baca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22n0RkOqq4Dofn3FjY_Zv_7ZAHukzDveOM%22%3B%7D'
+    'HTTP_REFERER' => 'http://192.168.1.203/fanli/fanli/backend/web/index.php?r=goods/add'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_HOST' => '192.168.1.203'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472631921.7424
+    'REQUEST_TIME' => 1472631921
+]
+2016-08-31 16:26:25 [192.168.1.203][-][rf05aee671kfk01pmdojfakep5][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: goods_url' in F:\app\fanli\fanli\backend\controllers\GoodsController.php:49
+Stack trace:
+#0 F:\app\fanli\fanli\backend\controllers\GoodsController.php(49): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'F:\\app\\fanli\\fa...', 49, Array)
+#1 [internal function]: backend\controllers\GoodsController->actionAddshop()
+#2 F:\app\fanli\fanli\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 F:\app\fanli\fanli\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 F:\app\fanli\fanli\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('addshop', Array)
+#5 F:\app\fanli\fanli\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('goods/addshop', Array)
+#6 F:\app\fanli\fanli\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 F:\app\fanli\fanli\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2016-08-31 16:26:25 [192.168.1.203][-][rf05aee671kfk01pmdojfakep5][info][application] $_GET = [
+    'r' => 'goods/addshop'
+]
+
+$_POST = [
+    'goods_name' => '5623'
+    'goods_price' => '128.00'
+    'goods_stock' => '2'
+    'goods_rebate' => '12.8'
+    'cla_id' => '30115'
+    'bre_id' => '1'
+    'goods_status' => '1'
+]
+
+$_COOKIE = [
+    'CNZZDATA1253026255' => '223297607-1472117496-|1472117496'
+    '_ga' => 'GA1.1.2143793089.1472121850'
+    'Hm_lvt_545c20cb01a15219bfeb0d1f103f99c1' => '1472449749,1472515250,1472602023'
+    'l' => 'ArS05vIShIksqFCUU2Ana1yMhHwmTNh3'
+    'isg' => 'AuHh3CTHEnTBl74AnlJqtf-N8a2ToVWAs71U8UO2HOhHqgJ8i94wUFeiemfJ'
+    'Hm_lpvt_545c20cb01a15219bfeb0d1f103f99c1' => '1472602023'
+    'PHPSESSID' => 'rf05aee671kfk01pmdojfakep5'
+    '_csrf' => '5fbad8df345ccb78d31607f13a658b540f20eda30e4885ab10576334a8aa2baca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"n0RkOqq4Dofn3FjY_Zv_7ZAHukzDveOM\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => '123456'
+        'password' => 'e10adc3949ba59abbe56e057f20f883e'
+        'adm_date' => '2016-08-30'
+        'adm_status' => '1'
+        'token' => '3c8fbb4f0e6324a46390a3113434ba72'
+    ]
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\phpStudy\\php55n;D:\\phpStudy\\Apache\\bin;D:\\software\\python;D:\\mysql-5.6.24\\bin;C:\\Program Files\\TortoiseGit\\bin;F:\\huanjing\\redis'
+    'SYSTEMROOT' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1972'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=goods/addshop'
+    'QUERY_STRING' => 'r=goods/addshop'
+    'REQUEST_METHOD' => 'POST'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '63585'
+    'SCRIPT_FILENAME' => 'F:/app/fanli/fanli/backend/web/index.php'
+    'SERVER_ADMIN' => 'x@acme.com'
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/app'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'F:/app'
+    'REMOTE_ADDR' => '192.168.1.203'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.1.203'
+    'SERVER_NAME' => '192.168.1.203'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\windows'
+    'CONTENT_LENGTH' => '767'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=---------------------------13118251176396'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => 'CNZZDATA1253026255=223297607-1472117496-%7C1472117496; _ga=GA1.1.2143793089.1472121850; Hm_lvt_545c20cb01a15219bfeb0d1f103f99c1=1472449749,1472515250,1472602023; l=ArS05vIShIksqFCUU2Ana1yMhHwmTNh3; isg=AuHh3CTHEnTBl74AnlJqtf-N8a2ToVWAs71U8UO2HOhHqgJ8i94wUFeiemfJ; Hm_lpvt_545c20cb01a15219bfeb0d1f103f99c1=1472602023; PHPSESSID=rf05aee671kfk01pmdojfakep5; _csrf=5fbad8df345ccb78d31607f13a658b540f20eda30e4885ab10576334a8aa2baca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22n0RkOqq4Dofn3FjY_Zv_7ZAHukzDveOM%22%3B%7D'
+    'HTTP_REFERER' => 'http://192.168.1.203/fanli/fanli/backend/web/index.php?r=goods/add'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_HOST' => '192.168.1.203'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472631985.279
+    'REQUEST_TIME' => 1472631985
+]
+2016-08-31 16:26:25 [192.168.1.203][-][rf05aee671kfk01pmdojfakep5][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception 'Exception' with message 'Serialization of 'Closure' is not allowed' 
+
+in F:\app\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php:58
+
+Stack trace:
+#0 F:\app\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php(58): serialize(Array)
+#1 F:\app\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#2 F:\app\fanli\fanli\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#3 F:\app\fanli\fanli\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#4 F:\app\fanli\fanli\vendor\yiisoft\yii2\base\ErrorHandler.php(111): yii\log\Logger->flush(true)
+#5 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\ErrorException))
+#6 {main}
+2016-08-31 16:26:25 [192.168.1.203][-][rf05aee671kfk01pmdojfakep5][info][application] $_GET = [
+    'r' => 'goods/addshop'
+]
+
+$_POST = [
+    'goods_name' => '5623'
+    'goods_price' => '128.00'
+    'goods_stock' => '2'
+    'goods_rebate' => '12.8'
+    'cla_id' => '30115'
+    'bre_id' => '1'
+    'goods_status' => '1'
+]
+
+$_COOKIE = [
+    'CNZZDATA1253026255' => '223297607-1472117496-|1472117496'
+    '_ga' => 'GA1.1.2143793089.1472121850'
+    'Hm_lvt_545c20cb01a15219bfeb0d1f103f99c1' => '1472449749,1472515250,1472602023'
+    'l' => 'ArS05vIShIksqFCUU2Ana1yMhHwmTNh3'
+    'isg' => 'AuHh3CTHEnTBl74AnlJqtf-N8a2ToVWAs71U8UO2HOhHqgJ8i94wUFeiemfJ'
+    'Hm_lpvt_545c20cb01a15219bfeb0d1f103f99c1' => '1472602023'
+    'PHPSESSID' => 'rf05aee671kfk01pmdojfakep5'
+    '_csrf' => '5fbad8df345ccb78d31607f13a658b540f20eda30e4885ab10576334a8aa2baca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"n0RkOqq4Dofn3FjY_Zv_7ZAHukzDveOM\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => '123456'
+        'password' => 'e10adc3949ba59abbe56e057f20f883e'
+        'adm_date' => '2016-08-30'
+        'adm_status' => '1'
+        'token' => '3c8fbb4f0e6324a46390a3113434ba72'
+    ]
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\phpStudy\\php55n;D:\\phpStudy\\Apache\\bin;D:\\software\\python;D:\\mysql-5.6.24\\bin;C:\\Program Files\\TortoiseGit\\bin;F:\\huanjing\\redis'
+    'SYSTEMROOT' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1972'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=goods/addshop'
+    'QUERY_STRING' => 'r=goods/addshop'
+    'REQUEST_METHOD' => 'POST'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '63585'
+    'SCRIPT_FILENAME' => 'F:/app/fanli/fanli/backend/web/index.php'
+    'SERVER_ADMIN' => 'x@acme.com'
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/app'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'F:/app'
+    'REMOTE_ADDR' => '192.168.1.203'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.1.203'
+    'SERVER_NAME' => '192.168.1.203'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\windows'
+    'CONTENT_LENGTH' => '767'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=---------------------------13118251176396'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => 'CNZZDATA1253026255=223297607-1472117496-%7C1472117496; _ga=GA1.1.2143793089.1472121850; Hm_lvt_545c20cb01a15219bfeb0d1f103f99c1=1472449749,1472515250,1472602023; l=ArS05vIShIksqFCUU2Ana1yMhHwmTNh3; isg=AuHh3CTHEnTBl74AnlJqtf-N8a2ToVWAs71U8UO2HOhHqgJ8i94wUFeiemfJ; Hm_lpvt_545c20cb01a15219bfeb0d1f103f99c1=1472602023; PHPSESSID=rf05aee671kfk01pmdojfakep5; _csrf=5fbad8df345ccb78d31607f13a658b540f20eda30e4885ab10576334a8aa2baca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22n0RkOqq4Dofn3FjY_Zv_7ZAHukzDveOM%22%3B%7D'
+    'HTTP_REFERER' => 'http://192.168.1.203/fanli/fanli/backend/web/index.php?r=goods/add'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_HOST' => '192.168.1.203'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472631985.279
+    'REQUEST_TIME' => 1472631985
+]
+2016-08-31 16:27:37 [192.168.1.203][-][rf05aee671kfk01pmdojfakep5][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: goods_url' in F:\app\fanli\fanli\backend\controllers\GoodsController.php:49
+Stack trace:
+#0 F:\app\fanli\fanli\backend\controllers\GoodsController.php(49): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'F:\\app\\fanli\\fa...', 49, Array)
+#1 [internal function]: backend\controllers\GoodsController->actionAddshop()
+#2 F:\app\fanli\fanli\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 F:\app\fanli\fanli\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 F:\app\fanli\fanli\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('addshop', Array)
+#5 F:\app\fanli\fanli\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('goods/addshop', Array)
+#6 F:\app\fanli\fanli\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 F:\app\fanli\fanli\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2016-08-31 16:27:37 [192.168.1.203][-][rf05aee671kfk01pmdojfakep5][info][application] $_GET = [
+    'r' => 'goods/addshop'
+]
+
+$_POST = [
+    'goods_photo' => 'goods_photo'
+    'goods_name' => '52'
+    'goods_price' => '128.00'
+    'goods_stock' => '2'
+    'goods_rebate' => '15.9'
+    'cla_id' => '30115'
+    'bre_id' => '1'
+    'goods_status' => '1'
+]
+
+$_COOKIE = [
+    'CNZZDATA1253026255' => '223297607-1472117496-|1472117496'
+    '_ga' => 'GA1.1.2143793089.1472121850'
+    'Hm_lvt_545c20cb01a15219bfeb0d1f103f99c1' => '1472449749,1472515250,1472602023'
+    'l' => 'ArS05vIShIksqFCUU2Ana1yMhHwmTNh3'
+    'isg' => 'AuHh3CTHEnTBl74AnlJqtf-N8a2ToVWAs71U8UO2HOhHqgJ8i94wUFeiemfJ'
+    'Hm_lpvt_545c20cb01a15219bfeb0d1f103f99c1' => '1472602023'
+    'PHPSESSID' => 'rf05aee671kfk01pmdojfakep5'
+    '_csrf' => '5fbad8df345ccb78d31607f13a658b540f20eda30e4885ab10576334a8aa2baca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"n0RkOqq4Dofn3FjY_Zv_7ZAHukzDveOM\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => '123456'
+        'password' => 'e10adc3949ba59abbe56e057f20f883e'
+        'adm_date' => '2016-08-30'
+        'adm_status' => '1'
+        'token' => '3c8fbb4f0e6324a46390a3113434ba72'
+    ]
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\phpStudy\\php55n;D:\\phpStudy\\Apache\\bin;D:\\software\\python;D:\\mysql-5.6.24\\bin;C:\\Program Files\\TortoiseGit\\bin;F:\\huanjing\\redis'
+    'SYSTEMROOT' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1972'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=goods/addshop'
+    'QUERY_STRING' => 'r=goods/addshop'
+    'REQUEST_METHOD' => 'POST'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '63614'
+    'SCRIPT_FILENAME' => 'F:/app/fanli/fanli/backend/web/index.php'
+    'SERVER_ADMIN' => 'x@acme.com'
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/app'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'F:/app'
+    'REMOTE_ADDR' => '192.168.1.203'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.1.203'
+    'SERVER_NAME' => '192.168.1.203'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\windows'
+    'CONTENT_LENGTH' => '877'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=---------------------------12481609319032'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => 'CNZZDATA1253026255=223297607-1472117496-%7C1472117496; _ga=GA1.1.2143793089.1472121850; Hm_lvt_545c20cb01a15219bfeb0d1f103f99c1=1472449749,1472515250,1472602023; l=ArS05vIShIksqFCUU2Ana1yMhHwmTNh3; isg=AuHh3CTHEnTBl74AnlJqtf-N8a2ToVWAs71U8UO2HOhHqgJ8i94wUFeiemfJ; Hm_lpvt_545c20cb01a15219bfeb0d1f103f99c1=1472602023; PHPSESSID=rf05aee671kfk01pmdojfakep5; _csrf=5fbad8df345ccb78d31607f13a658b540f20eda30e4885ab10576334a8aa2baca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22n0RkOqq4Dofn3FjY_Zv_7ZAHukzDveOM%22%3B%7D'
+    'HTTP_REFERER' => 'http://192.168.1.203/fanli/fanli/backend/web/index.php?r=goods/add'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_HOST' => '192.168.1.203'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472632057.5752
+    'REQUEST_TIME' => 1472632057
+]
+2016-08-31 16:27:37 [192.168.1.203][-][rf05aee671kfk01pmdojfakep5][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception 'Exception' with message 'Serialization of 'Closure' is not allowed' 
+
+in F:\app\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php:58
+
+Stack trace:
+#0 F:\app\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php(58): serialize(Array)
+#1 F:\app\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#2 F:\app\fanli\fanli\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#3 F:\app\fanli\fanli\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#4 F:\app\fanli\fanli\vendor\yiisoft\yii2\base\ErrorHandler.php(111): yii\log\Logger->flush(true)
+#5 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\ErrorException))
+#6 {main}
+2016-08-31 16:27:37 [192.168.1.203][-][rf05aee671kfk01pmdojfakep5][info][application] $_GET = [
+    'r' => 'goods/addshop'
+]
+
+$_POST = [
+    'goods_photo' => 'goods_photo'
+    'goods_name' => '52'
+    'goods_price' => '128.00'
+    'goods_stock' => '2'
+    'goods_rebate' => '15.9'
+    'cla_id' => '30115'
+    'bre_id' => '1'
+    'goods_status' => '1'
+]
+
+$_COOKIE = [
+    'CNZZDATA1253026255' => '223297607-1472117496-|1472117496'
+    '_ga' => 'GA1.1.2143793089.1472121850'
+    'Hm_lvt_545c20cb01a15219bfeb0d1f103f99c1' => '1472449749,1472515250,1472602023'
+    'l' => 'ArS05vIShIksqFCUU2Ana1yMhHwmTNh3'
+    'isg' => 'AuHh3CTHEnTBl74AnlJqtf-N8a2ToVWAs71U8UO2HOhHqgJ8i94wUFeiemfJ'
+    'Hm_lpvt_545c20cb01a15219bfeb0d1f103f99c1' => '1472602023'
+    'PHPSESSID' => 'rf05aee671kfk01pmdojfakep5'
+    '_csrf' => '5fbad8df345ccb78d31607f13a658b540f20eda30e4885ab10576334a8aa2baca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"n0RkOqq4Dofn3FjY_Zv_7ZAHukzDveOM\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => '123456'
+        'password' => 'e10adc3949ba59abbe56e057f20f883e'
+        'adm_date' => '2016-08-30'
+        'adm_status' => '1'
+        'token' => '3c8fbb4f0e6324a46390a3113434ba72'
+    ]
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\phpStudy\\php55n;D:\\phpStudy\\Apache\\bin;D:\\software\\python;D:\\mysql-5.6.24\\bin;C:\\Program Files\\TortoiseGit\\bin;F:\\huanjing\\redis'
+    'SYSTEMROOT' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1972'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=goods/addshop'
+    'QUERY_STRING' => 'r=goods/addshop'
+    'REQUEST_METHOD' => 'POST'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '63614'
+    'SCRIPT_FILENAME' => 'F:/app/fanli/fanli/backend/web/index.php'
+    'SERVER_ADMIN' => 'x@acme.com'
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/app'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'F:/app'
+    'REMOTE_ADDR' => '192.168.1.203'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.1.203'
+    'SERVER_NAME' => '192.168.1.203'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\windows'
+    'CONTENT_LENGTH' => '877'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=---------------------------12481609319032'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => 'CNZZDATA1253026255=223297607-1472117496-%7C1472117496; _ga=GA1.1.2143793089.1472121850; Hm_lvt_545c20cb01a15219bfeb0d1f103f99c1=1472449749,1472515250,1472602023; l=ArS05vIShIksqFCUU2Ana1yMhHwmTNh3; isg=AuHh3CTHEnTBl74AnlJqtf-N8a2ToVWAs71U8UO2HOhHqgJ8i94wUFeiemfJ; Hm_lpvt_545c20cb01a15219bfeb0d1f103f99c1=1472602023; PHPSESSID=rf05aee671kfk01pmdojfakep5; _csrf=5fbad8df345ccb78d31607f13a658b540f20eda30e4885ab10576334a8aa2baca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22n0RkOqq4Dofn3FjY_Zv_7ZAHukzDveOM%22%3B%7D'
+    'HTTP_REFERER' => 'http://192.168.1.203/fanli/fanli/backend/web/index.php?r=goods/add'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_HOST' => '192.168.1.203'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472632057.5752
+    'REQUEST_TIME' => 1472632057
+]
+2016-09-01 09:31:18 [192.168.1.203][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "".' in F:\app\fanli\fanli\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 F:\app\fanli\fanli\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('', Array)
+#1 F:\app\fanli\fanli\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 F:\app\fanli\fanli\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in F:\app\fanli\fanli\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 F:\app\fanli\fanli\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 F:\app\fanli\fanli\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2016-09-01 09:31:18 [192.168.1.203][-][-][info][application] $_COOKIE = [
+    'CNZZDATA1253026255' => '223297607-1472117496-|1472117496'
+    '_ga' => 'GA1.1.2143793089.1472121850'
+    'Hm_lvt_545c20cb01a15219bfeb0d1f103f99c1' => '1472449749,1472515250,1472602023,1472692588'
+    'l' => 'ArS05vIShIksqFCUU2Ana1yMhHwmTNh3'
+    'isg' => 'AuHh3CTHEnTBl74AnlJqtf-N8a2ToVWAs71U8UO2HOhHqgJ8i94wUFeiemfJ'
+    'Hm_lpvt_545c20cb01a15219bfeb0d1f103f99c1' => '1472692588'
+    'PHPSESSID' => 'pqpvgdridf14tggg1gr4jhcbo6'
+    '_csrf' => '53321134db25acd11dfaa0113cd068e9e597e8cc91d9748ec0987ea985d4904ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"li9lOZcKPpHR2878Ee3NzZzvJ9e5Ulz-\";}'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\phpStudy\\php55n;D:\\phpStudy\\Apache\\bin;D:\\software\\python;D:\\mysql-5.6.24\\bin;C:\\Program Files\\TortoiseGit\\bin;F:\\huanjing\\redis'
+    'SYSTEMROOT' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1940'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '56351'
+    'SCRIPT_FILENAME' => 'F:/app/fanli/fanli/backend/web/index.php'
+    'SERVER_ADMIN' => 'x@acme.com'
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/app'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'F:/app'
+    'REMOTE_ADDR' => '192.168.1.203'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.1.203'
+    'SERVER_NAME' => '192.168.1.203'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\windows'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => 'CNZZDATA1253026255=223297607-1472117496-%7C1472117496; _ga=GA1.1.2143793089.1472121850; Hm_lvt_545c20cb01a15219bfeb0d1f103f99c1=1472449749,1472515250,1472602023,1472692588; l=ArS05vIShIksqFCUU2Ana1yMhHwmTNh3; isg=AuHh3CTHEnTBl74AnlJqtf-N8a2ToVWAs71U8UO2HOhHqgJ8i94wUFeiemfJ; Hm_lpvt_545c20cb01a15219bfeb0d1f103f99c1=1472692588; PHPSESSID=pqpvgdridf14tggg1gr4jhcbo6; _csrf=53321134db25acd11dfaa0113cd068e9e597e8cc91d9748ec0987ea985d4904ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22li9lOZcKPpHR2878Ee3NzZzvJ9e5Ulz-%22%3B%7D'
+    'HTTP_REFERER' => 'http://192.168.1.203/fanli/fanli/backend/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_HOST' => '192.168.1.203'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472693478.0166
+    'REQUEST_TIME' => 1472693478
+]
+2016-08-31 16:50:33 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "".' in F:\Larvel\fanli\fanli\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 F:\Larvel\fanli\fanli\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('', Array)
+#1 F:\Larvel\fanli\fanli\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 F:\Larvel\fanli\fanli\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in F:\Larvel\fanli\fanli\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 F:\Larvel\fanli\fanli\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 F:\Larvel\fanli\fanli\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2016-08-31 16:50:33 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'iweb_safecode' => '9cb1f1302e5aa48022NjAwOTc4MDAxMDI5NGptZmRgOjkxNDRjZjkwODA0NDcxMGA1MDhlNTE2Zm0wO2A+PjZkPWY2NzcwPDU9YzU1ZQ'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.lal.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.lal.com/fanli/fanli/backend/'
+    'HTTP_COOKIE' => 'iweb_safecode=9cb1f1302e5aa48022NjAwOTc4MDAxMDI5NGptZmRgOjkxNDRjZjkwODA0NDcxMGA1MDhlNTE2Zm0wO2A%2BPjZkPWY2NzcwPDU9YzU1ZQ'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;E:\\web\\Mysql\\bin;E:\\server\\mysql\\bin;C:\\Program Files\\TortoiseSVN\\bin;D:\\Program Files\\VisualSVN Server\\bin;D:\\server\\Mysqls\\bin;C:\\Program Files (x86)\\MySQL\\MySQL Server 5.5\\bin;D:\\phpStudy\\php55;E:\\git\\bin;D:\\phpStudy\\php55\\libeay32.dll;E:\\Python;D:\\mysql5-6\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.lal.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/Larvel'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/Larvel'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'F:/Larvel/fanli/fanli/backend/web/index.php'
+    'REMOTE_PORT' => '14237'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/fanli/fanli/backend/web/'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472633433.247
+    'REQUEST_TIME' => 1472633433
+]
+2016-09-01 08:10:36 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "".' in F:\Larvel\fanli\fanli\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 F:\Larvel\fanli\fanli\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('', Array)
+#1 F:\Larvel\fanli\fanli\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 F:\Larvel\fanli\fanli\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in F:\Larvel\fanli\fanli\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 F:\Larvel\fanli\fanli\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 F:\Larvel\fanli\fanli\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2016-09-01 08:10:35 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'HTTP_HOST' => 'www.lal.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://www.lal.com/fanli/fanli/backend/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;E:\\web\\Mysql\\bin;E:\\server\\mysql\\bin;C:\\Program Files\\TortoiseSVN\\bin;D:\\Program Files\\VisualSVN Server\\bin;D:\\server\\Mysqls\\bin;C:\\Program Files (x86)\\MySQL\\MySQL Server 5.5\\bin;D:\\phpStudy\\php55;E:\\git\\bin;D:\\phpStudy\\php55\\libeay32.dll;E:\\Python;D:\\mysql5-6\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.lal.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/Larvel'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/Larvel'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'F:/Larvel/fanli/fanli/backend/web/index.php'
+    'REMOTE_PORT' => '7399'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/fanli/fanli/backend/web/'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472688635.805
+    'REQUEST_TIME' => 1472688635
+]
+2016-09-01 09:03:05 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: index/brand' in F:\Larvel\fanli\fanli\vendor\yiisoft\yii2\base\Controller.php:122
+Stack trace:
+#0 F:\Larvel\fanli\fanli\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('brand', Array)
+#1 F:\Larvel\fanli\fanli\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('index/brand', Array)
+#2 F:\Larvel\fanli\fanli\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 F:\Larvel\fanli\fanli\backend\web\index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in F:\Larvel\fanli\fanli\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 F:\Larvel\fanli\fanli\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 F:\Larvel\fanli\fanli\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2016-09-01 09:03:04 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'index/brand'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'fmb833hd24v5239ssq2vojv5v7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => 'admin'
+        'password' => '96e79218965eb72c92a549dd5a330112'
+        'adm_date' => null
+        'adm_status' => null
+        'token' => '48d3ec1201fb4946d57bfc4b27246a75'
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.lal.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=fmb833hd24v5239ssq2vojv5v7'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;E:\\web\\Mysql\\bin;E:\\server\\mysql\\bin;C:\\Program Files\\TortoiseSVN\\bin;D:\\Program Files\\VisualSVN Server\\bin;D:\\server\\Mysqls\\bin;C:\\Program Files (x86)\\MySQL\\MySQL Server 5.5\\bin;D:\\phpStudy\\php55;E:\\git\\bin;D:\\phpStudy\\php55\\libeay32.dll;E:\\Python;D:\\mysql5-6\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.lal.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/Larvel'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/Larvel'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'F:/Larvel/fanli/fanli/backend/web/index.php'
+    'REMOTE_PORT' => '10279'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=index/brand'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=index/brand'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472691784.271
+    'REQUEST_TIME' => 1472691784
+]
+2016-09-01 09:03:39 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: index/brand' in F:\Larvel\fanli\fanli\vendor\yiisoft\yii2\base\Controller.php:122
+Stack trace:
+#0 F:\Larvel\fanli\fanli\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('brand', Array)
+#1 F:\Larvel\fanli\fanli\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('index/brand', Array)
+#2 F:\Larvel\fanli\fanli\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 F:\Larvel\fanli\fanli\backend\web\index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in F:\Larvel\fanli\fanli\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 F:\Larvel\fanli\fanli\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 F:\Larvel\fanli\fanli\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2016-09-01 09:03:39 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'index/brand'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'fmb833hd24v5239ssq2vojv5v7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => 'admin'
+        'password' => '96e79218965eb72c92a549dd5a330112'
+        'adm_date' => null
+        'adm_status' => null
+        'token' => '48d3ec1201fb4946d57bfc4b27246a75'
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.lal.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=fmb833hd24v5239ssq2vojv5v7'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;E:\\web\\Mysql\\bin;E:\\server\\mysql\\bin;C:\\Program Files\\TortoiseSVN\\bin;D:\\Program Files\\VisualSVN Server\\bin;D:\\server\\Mysqls\\bin;C:\\Program Files (x86)\\MySQL\\MySQL Server 5.5\\bin;D:\\phpStudy\\php55;E:\\git\\bin;D:\\phpStudy\\php55\\libeay32.dll;E:\\Python;D:\\mysql5-6\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.lal.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/Larvel'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/Larvel'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'F:/Larvel/fanli/fanli/backend/web/index.php'
+    'REMOTE_PORT' => '10332'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=index/brand'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=index/brand'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472691819.685
+    'REQUEST_TIME' => 1472691819
+]
+2016-09-01 09:11:21 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: index/brand' in F:\Larvel\fanli\fanli\vendor\yiisoft\yii2\base\Controller.php:122
+Stack trace:
+#0 F:\Larvel\fanli\fanli\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('brand', Array)
+#1 F:\Larvel\fanli\fanli\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('index/brand', Array)
+#2 F:\Larvel\fanli\fanli\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 F:\Larvel\fanli\fanli\backend\web\index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in F:\Larvel\fanli\fanli\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 F:\Larvel\fanli\fanli\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 F:\Larvel\fanli\fanli\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2016-09-01 09:11:21 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'index/brand'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'fmb833hd24v5239ssq2vojv5v7'
+    '_csrf' => '765672c891a4d8080c232565a120a29c0ea34fd01d4785a39426a0a3400320dfa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"t-Nw_ZzCFTtoWN77JBvWg2flVxc0HjPp\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => 'admin'
+        'password' => '96e79218965eb72c92a549dd5a330112'
+        'adm_date' => null
+        'adm_status' => null
+        'token' => '48d3ec1201fb4946d57bfc4b27246a75'
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.lal.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=fmb833hd24v5239ssq2vojv5v7; _csrf=765672c891a4d8080c232565a120a29c0ea34fd01d4785a39426a0a3400320dfa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22t-Nw_ZzCFTtoWN77JBvWg2flVxc0HjPp%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;E:\\web\\Mysql\\bin;E:\\server\\mysql\\bin;C:\\Program Files\\TortoiseSVN\\bin;D:\\Program Files\\VisualSVN Server\\bin;D:\\server\\Mysqls\\bin;C:\\Program Files (x86)\\MySQL\\MySQL Server 5.5\\bin;D:\\phpStudy\\php55;E:\\git\\bin;D:\\phpStudy\\php55\\libeay32.dll;E:\\Python;D:\\mysql5-6\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.lal.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/Larvel'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/Larvel'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'F:/Larvel/fanli/fanli/backend/web/index.php'
+    'REMOTE_PORT' => '10602'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=index/brand'
+    'REQUEST_URI' => '/fanli/fanli/backend/web/index.php?r=index/brand'
+    'SCRIPT_NAME' => '/fanli/fanli/backend/web/index.php'
+    'PHP_SELF' => '/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472692281.17
+    'REQUEST_TIME' => 1472692281
+]

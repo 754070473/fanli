@@ -25,7 +25,7 @@ class IndexController extends CommonController
     public function actionIndex()
     {
         $classify = $this -> actionClassify();
-        print_r($classify);die;
+        // print_r($classify);die;
         return $this -> render('index.html');
     }
 
@@ -89,4 +89,90 @@ class IndexController extends CommonController
         $arr = $this->databasesSelect($table , 0 , 'fanli_acttype.type_id = 2');
         return $arr;
     }
+
+ /**
+     * 根据id查询二级分类
+     * @param string $pid
+     * @return mixed
+     */
+    function actionType( $pid = '' )
+    {
+        if ( !preg_match('/^[0-9]{1,}$/', $pid) ) {
+            $arr = $this->databasesSelect('fanli_classify', '*', "pid=$pid" );
+        } else {
+            $arr =[
+                'status' => 1,
+                'msg'    => 'pid参数错误!',
+                'data'   => array()
+            ];
+       }
+
+        return $arr;
+    }
+     /**
+     * 根据品牌获取所有商品
+     * @param string $bra_id
+     * @return array|mixed
+     */
+    function actionBrashop( $bra_id = '' )
+    {
+        if ( !preg_match('/^[0-9]{1,}$/' , $bra_id ) )
+        {
+            $arr = $this->databasesSelect('fanli_goods', '*', "bra_id=$bra_id" );
+        } else {
+            $arr =[
+                'status' => 1,
+                'msg'    => 'bra_id参数错误!',
+                'data'   => array()
+            ];
+        }
+        return $arr;
+    }
+	    /*
+     *  查询正在进行中的品牌活动
+     */
+    public function actionBrand(){
+        $table = 'fanli_activity';
+        $now_date = date("Y-m-d H:i:s",time());
+        $where = 'type_id=3';
+        $list = $this -> databasesSelect($table ,0,$where );
+        $arr = array();
+        foreach( $list['data'] as $key => $val )
+        {
+            if( $val['start_time'] < $now_date && $val['end_time'] > $now_date )
+            {
+                $arr[] = $val;
+            }
+        }
+        return $arr;
+    }
+    /*
+     *  根据分类ID查询当天的秒杀活动
+     */
+    public function actionKill(){
+        $table = 'fanli_activity';
+        $now_date = date("Y-m-d H:i:s",time());
+        $where = 'type_id=1';
+        $list = $this -> databasesSelect($table ,0,$where );
+        //获取当天的年份
+        $y = date("Y");
+        //获取当天的月份
+        $m = date("m");
+        //获取当天的号数
+        $d = date("d");
+        //将今天开始的年月日时分秒，转换成unix时间戳(开始示例：2015-10-12 00:00:00)
+        $tobegintime = date('Y-m-d H:i:s',mktime(0,0,0,$m,$d,$y));
+        $todayendtime = date('Y-m-d H:i:s',mktime(23,59,59,$m,$d,$y));
+        $arr = array();
+        foreach( $list['data'] as $key => $val )
+        {
+            if( $val['start_time'] > $tobegintime && $val['end_time'] < $todayendtime )
+            {
+                $arr[] = $val;
+            }
+        }
+        return $arr;
+    }
+
 }
+
