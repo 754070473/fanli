@@ -36,7 +36,6 @@ class GoodsController extends CommonController
         $url = $this -> apiUrl('Goods','brand');
         $data = array('type' => 'return');
         $brand = $this -> CurlPost($url , $data);
-     //   return $this->render('index.html',['data' => $data['data'],'page' => $data['page']]);
         return $this->render('add.html',['type'=>$type['data'],'brand'=>$brand['data']]);
     }
     /**
@@ -72,8 +71,6 @@ class GoodsController extends CommonController
         }
 
     }
-
-
 
     /**
      * 处理url
@@ -140,23 +137,13 @@ class GoodsController extends CommonController
      * @param $url
      * @return mixed
      */
-    function  curlGet($url){
-        #初始化curl
-        $ch=curl_init();
-        #请求url地址
-        $params[CURLOPT_URL]=$url;
-        #是否返回响应头信息
-        $params[CURLOPT_HEADER] = true;
-        #是否将结果返回
-        $params[CURLOPT_RETURNTRANSFER] = true;
-        #是否重定向
-        $params[CURLOPT_FOLLOWLOCATION] = false;
-        #伪造浏览器
-        $params[CURLOPT_USERAGENT] = 'Mozilla/5.0 (Windows NT 5.1; rv:9.0.1) Gecko/20100101 Firefox/9.0.1';
-        #开始发送请求，传入curl参数
-        curl_setopt_array($ch, $params);
-        $content=curl_exec($ch);
-        return $content;
+    function  actionAddimg(){
+
+
+        $url = $this -> apiUrl('Goods','add');
+        $data['num'] ='10';
+       $this -> CurlPost($url , $data);;
+
     }
 
     function actionShoplist(){
@@ -170,6 +157,76 @@ class GoodsController extends CommonController
         }else{
             echo json_encode(array());
         }
+    }
+
+
+    /**
+     * 采集路径/数据源
+     * @return bool|string
+     */
+    function  a(){
+        return  file_get_contents('http://m.api.fanli.com/app/v1/sf/productRecommends.htm?src=2&v=5.2.0.34&abtest=17454_a-32579_b-72_c-138_b-118_b-9874_a-2_a-37c7&bid=10865');
+    }
+    /**
+     * 处理
+     */
+    function b(){
+        $arr =json_decode($this->a(),true);
+        $da=[];
+        foreach($arr['data']['products'] as $k=>$v ){
+            $da[$k]['goods_name']             = $v['name'];                 //商品名字
+            $da[$k]['goods_price']            = $v['price'];                //价格
+            $da[$k]['goods_rebate']           = $v['fanli'];                //返利
+            $da[$k]['goods_url']              = $v['action']['link'];       //商品链接
+            $da[$k]['goods_photo']            = $v['mainImgs'][0]['url'];   //预览图片
+            $da[$k]['info'][0]['startTime']   = $v['timeInfo']['startTime'];//开始时间
+            $da[$k]['info'][0]['endTime']     = $v['timeInfo']['endTime'];  //结束时间
+            $da[$k]['info'][1]                = $v['shop']['name'];         //商品品牌
+        }
+       return   $da;
+    }
+    function actionRuku(){
+       $arr = $this->b();
+        $info=[];
+        $connection = new \yii\db\Connection([
+            'dsn' => 'mysql:host=localhost;dbname=fanli',
+            'username' => 'root',
+            'password' => 'root',
+            'charset' => 'utf8',
+        ]);
+        $connection->open();
+        foreach($arr as $k=>$v){
+            $a = $v['info'][1];
+            $res = $connection->createCommand("SELECT bra_id from fanli.fanli_brand WHERE bra_name='$a'")->queryOne();
+            if($res ==""){
+                $connection->createCommand()->insert('fanli_brand', [
+                    'bra_name' => $a,
+                    'bra_date' => date("Y-m-d",time()),
+                    'bra_status' => 0,
+                ])->execute();
+                $arr[$k]['info'][1] =$connection->getLastInsertId();
+            }else{
+                $arr[$k]['info'][1] = $res['bra_id'];
+            }
+            $connection->createCommand()->insert('fanli_goods', [
+                'bra_id' => $arr[$k]['info'][1],
+                'goods_name' => $v['goods_name'],
+                'goods_price' =>$v['goods_price'],
+                'goods_rebate' =>$v['goods_rebate']/$v['goods_price'],
+                'goods_url' =>$v['goods_url'],
+                'goods_photo' =>$v['goods_photo'],
+                'goods_date' =>date("Y-m-d",time()),
+                'goods_stock' =>1000,
+                'goods_status' =>1,
+            ])->execute();
+        }
+//        print_r($arr);
+        $bra_name = array_unique($info);//获取所有商品的品牌
+//        $url = $this -> apiUrl('Goods','sall');
+//        $data['arr'] =$bra_name;
+//        $arrs = $this -> CurlPost($url , $data);;
+//        print_r($bra_name);
+
     }
 
 }

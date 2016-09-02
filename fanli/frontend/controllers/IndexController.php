@@ -106,7 +106,6 @@ class IndexController extends CommonController
                 'data'   => array()
             ];
        }
-
         return $arr;
     }
      /**
