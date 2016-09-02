@@ -178,7 +178,7 @@ class GoodsController extends CommonController
             $da[$k]['goods_price']            = $v['price'];                //价格
             $da[$k]['goods_rebate']           = $v['fanli'];                //返利
             $da[$k]['goods_url']              = $v['action']['link'];       //商品链接
-            $da[$k]['goods_photo']            = $v['mainImgs'][0]['url'];   //预览图片
+            $da[$k]['goods_photo']            = substr( $v['mainImgs'][0]['url'],7);   //预览图片
             $da[$k]['info'][0]['startTime']   = $v['timeInfo']['startTime'];//开始时间
             $da[$k]['info'][0]['endTime']     = $v['timeInfo']['endTime'];  //结束时间
             $da[$k]['info'][1]                = $v['shop']['name'];         //商品品牌

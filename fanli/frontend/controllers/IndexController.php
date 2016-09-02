@@ -49,11 +49,14 @@ class IndexController extends CommonController
         $kill = $this -> actionKill();
         if( !empty( $kill ) )
         {
+            $end_time = $this->timediff( time() , strtotime( $kill[0]['end_time'] ) );
             $data['kill'] = $kill;
+            $data['kill_end_time'] = $end_time;
         }
         else
         {
             $data['kill'] = array();
+            $data['kill_end_time'] = array( 'day'=>0,'hour'=>00,'min'=>00,'sec'=>00 );
         }
 
         //精选活动
@@ -91,14 +94,14 @@ class IndexController extends CommonController
 
         //即将上线
         $online = $this -> actionOnline();
-        if( $online['status'] == 0 )
+        if( !empty( $online ) )
         {
             $date1 = date( 'Y-m-d' , time()+60*60*24 );
             $date2 = date( 'Y-m-d' , time()+60*60*24*2 );
             $weekarray=array("日","一","二","三","四","五","六");
-            $week1 = "星期".$weekarray[date("w","$date1")];
-            $week2 = "星期".$weekarray[date("w","$date2")];
-            foreach( $online['data'] as $key => $val )
+            $week1 = "星期".$weekarray[date("w", time()+60*60*24 )];
+            $week2 = "星期".$weekarray[date("w", time()+60*60*24*2 )];
+            foreach( $online as $key => $val )
             {
                 if( date("Y-m-d",strtotime( $val['start_time'] ) ) == $date1 )
                 {
@@ -178,10 +181,28 @@ class IndexController extends CommonController
     }
     public function actionClass()
     {
-        return $this -> render('classify.html');
+        $cla_id  = Yii::$app->request->get('cla_id');
+        $arr = $this->actionClass_activity($cla_id);
+        if(empty($arr['data'])){
+            echo "<script>alert('客官稍等......');history.go(-1)</script>";
+        }
+//        print_r($arr);die;
+        return $this -> render('classify.html',['arr'=>$arr]);
     }
     public function actionSeckill()
     {
+        $kill = $this -> actionKill();
+        if( !empty( $kill ) )
+        {
+            $end_time = $this->timediff( time() , strtotime( $kill[0]['end_time'] ) );
+            $data['kill'] = $kill;
+            $data['kill_end_time'] = $end_time;
+        }
+        else
+        {
+            $data['kill'] = array();
+            $data['kill_end_time'] = array( 'day'=>0,'hour'=>00,'min'=>00,'sec'=>00 );
+        }
         return $this -> render('seckill.html');
     }
 
@@ -217,7 +238,8 @@ class IndexController extends CommonController
                 if( ( $val['start_time'] < $now_time && $val['end_time'] > $now_time ) )
                 {
                     $val[ 'goods_rebate' ] = $val[ 'goods_price' ] * ( $val[ 'goods_rebate' ] / 100 );
-                    $val['end_time'] = strtotime( $val['end_time'] ) - strtotime( $now_time );
+                    $end_time = $this -> timediff( strtotime( $now_time ) , strtotime( $val['end_time'] ) );
+                    $val['end_time'] = $end_time;
                     $arr[] = $val;
                 }
             }
@@ -345,7 +367,9 @@ class IndexController extends CommonController
                 ( $val['start_time'] < $tobegintime && $val['end_time'] > $todayendtime )
             )
             {
-                $arr[] = $val;
+                if( $val['start_time'] < date( 'Y-m-d H:i:s' , time() ) && $val['end_time'] > date( 'Y-m-d H:i:s' , time() ) ){
+                    $arr[] = $val;
+                }
             }
         }
 
@@ -357,13 +381,18 @@ class IndexController extends CommonController
      */
     public function actionOnline()
     {
-        $field = 'start_time,fanli_brand.bra_id,goods_rebate';
-        $table = [['table1' => 'fanli_activity' , 'table2' => 'fanli_goods' , 'join' =>
-            'act_id'],['table1' => 'fanli_brand' , 'table2' => 'fanli_goods' , 'join' =>
-            'bra_id']];
-        $where = "start_time BETWEEN '".date('Y-m-d H:i:s',time())."' AND '".date('Y-m-d H:i:s',strtotime('+2day'))."' GROUP BY bra_name";
-        $result = $this->databasesSelect( $table , $num = 0 , $where, $field, $order=1);
-        return $result;
+        $table = 'fanli_activity';
+        $where = "type_id=3";
+        $result = $this->databasesSelect( $table , $num = 0 , $where);
+        $arr = array();
+        foreach($result['data'] as $key => $val)
+        {
+            if( $val['start_time'] > date('Y-m-d 00:00:00',strtotime('+1day')) && $val['start_time'] < date('Y-m-d 23:59:59',strtotime('+2day')) )
+            {
+                $arr[] = $val;
+            }
+        }
+        return $arr;
     }
 
     //功能：计算两个时间戳之间相差的日时分秒
