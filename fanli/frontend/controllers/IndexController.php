@@ -24,14 +24,111 @@ class IndexController extends CommonController
     public $enableCsrfValidation = false;
     public function actionIndex()
     {
+        $data = array();
+        //所有一级分类
         $classify = $this -> actionClassify();
-        // print_r($classify);die;
-        return $this -> render('index.html');
+        if( $classify['status'] == 0 )
+        {
+            $data['classify'] = $classify['data'];
+        }
+        else
+        {
+            $data['classify'] = array();
+        }
+
+        //限量秒杀活动
+        $seckill = $this -> actionSeckil();
+        if( $seckill['status'] == 0 )
+        {
+            $data['seckill'] = $seckill['data'];
+        }
+        else
+        {
+            $data['seckill'] = array();
+        }
+        $kill = $this -> actionKill();
+        if( !empty( $kill ) )
+        {
+            $data['kill'] = $kill;
+        }
+        else
+        {
+            $data['kill'] = array();
+        }
+
+        //精选活动
+        $choiceness = $this -> actionChoiceness();
+        if( $choiceness['status'] == 0 )
+        {
+            $data['choiceness'] = $choiceness['data'];
+        }
+        else
+        {
+            $data['choiceness'] = array();
+        }
+
+        //品牌活动
+        $brand = $this -> actionBrand();
+        if( !empty($brand) )
+        {
+            $data['brand'] = $brand;
+        }
+        else
+        {
+            $data['brand'] = array();
+        }
+
+        //即将售罄
+        $sellout = $this -> actionSellout();
+        if( !empty( $sellout ) )
+        {
+            $data['sellout'] = $sellout;
+        }
+        else
+        {
+            $data['sellout'] = array();
+        }
+
+        //即将上线
+        $online = $this -> actionOnline();
+        if( $online['status'] == 0 )
+        {
+            $date1 = date( 'Y-m-d' , time()+60*60*24 );
+            $date2 = date( 'Y-m-d' , time()+60*60*24*2 );
+            $weekarray=array("日","一","二","三","四","五","六");
+            $week1 = "星期".$weekarray[date("w","$date1")];
+            $week2 = "星期".$weekarray[date("w","$date2")];
+            foreach( $online['data'] as $key => $val )
+            {
+                if( date("Y-m-d",strtotime( $val['start_time'] ) ) == $date1 )
+                {
+                    $data['online'][$date1.'/'.$week1][] = $val;
+                }
+                else
+                {
+                    $data['online'][$date2.'/'.$week2][] = $val;
+                }
+            }
+        }
+        else
+        {
+            $data['online'] = array();
+        }
+        
+        return $this -> render('index.html' , $data);
     }
 
     public function actionDetails()
     {
         return $this -> render('details.html');
+    }
+    public function actionClass()
+    {
+        return $this -> render('classify.html');
+    }
+    public function actionSeckill()
+    {
+        return $this -> render('seckill.html');
     }
 
     /**
@@ -52,13 +149,26 @@ class IndexController extends CommonController
      */
     public function actionSellout()
     {
-        $field = 'end_time,goods_stock,surplus_stock,goods_name,goods_url,goods_rebate';
+        $field = '*';
         $table = [['table1' => 'fanli_activity' , 'table2' => 'fanli_goods' , 'join' => 
         'act_id']];
-        $where = "(surplus_stock / goods_stock) < 0.5";
-        $order = '(surplus_stock / goods_stock),goods_id';
-        $result = $this->databasesSelect( $table , $num = 0 , $where, $field, $order);
-        return $result;
+        $now_time = date( 'Y-m-d H:i:s' ,time() );
+        $order = '(surplus_stock / goods_stock)';
+        $result = $this->databasesSelect( $table , $num = 0 , 1, $field, $order);
+        $arr = array();
+        foreach( $result['data'] as $key => $val )
+        {
+            if( ($val['surplus_stock'] / $val['goods_stock'] ) < 0.5 )
+            {
+                if( ( $val['start_time'] < $now_time && $val['end_time'] > $now_time ) )
+                {
+                    $val[ 'goods_rebate' ] = $val[ 'goods_price' ] * ( $val[ 'goods_rebate' ] / 100 );
+                    $val['end_time'] = strtotime( $val['end_time'] ) - strtotime( $now_time );
+                    $arr[] = $val;
+                }
+            }
+        }
+        return $arr;
     }
 
 	  //根据分类id查询该分类下所有正在进行促销活动的品牌
@@ -71,7 +181,7 @@ class IndexController extends CommonController
     }
 
   //限量秒杀
-    public function actionSeckill(){
+    public function actionSeckil(){
         $table1 = "fanli_acttype";
         $table2 = "fanli_activity";
         $join = "type_id";
@@ -106,7 +216,6 @@ class IndexController extends CommonController
                 'data'   => array()
             ];
        }
-
         return $arr;
     }
      /**
@@ -137,20 +246,29 @@ class IndexController extends CommonController
         $where = 'type_id=3';
         $list = $this -> databasesSelect($table ,0,$where );
         $arr = array();
+        $i = 0;
         foreach( $list['data'] as $key => $val )
         {
-            if( $val['start_time'] < $now_date && $val['end_time'] > $now_date )
+            if( $val['start_time'] <= $now_date && $val['end_time'] >= $now_date )
             {
                 $arr[] = $val;
+                if( $i < 9 )
+                {
+                    $i ++;
+                }
+                else
+                {
+                    break;
+                }
             }
         }
         return $arr;
     }
     /*
-     *  根据分类ID查询当天的秒杀活动
+     *  查询当天的秒杀活动
      */
     public function actionKill(){
-        $table = 'fanli_activity';
+        $table = array( [ 'table1' => 'fanli_activity' , 'table2' => 'fanli_goods' , 'join' => 'act_id' ] );
         $now_date = date("Y-m-d H:i:s",time());
         $where = 'type_id=1';
         $list = $this -> databasesSelect($table ,0,$where );
@@ -166,13 +284,59 @@ class IndexController extends CommonController
         $arr = array();
         foreach( $list['data'] as $key => $val )
         {
-            if( $val['start_time'] > $tobegintime && $val['end_time'] < $todayendtime )
+            if(
+                ( $val['start_time'] > $tobegintime && $val['start_time'] < $todayendtime  ) ||
+                ( $val['end_time'] > $tobegintime && $val['end_time'] < $todayendtime ) ||
+                ( $val['start_time'] < $tobegintime && $val['end_time'] > $todayendtime )
+            )
             {
                 $arr[] = $val;
             }
         }
+
         return $arr;
     }
 
+    /**
+     * 即将上线 查询所有未来两天开始的品牌活动（按开始时间查询）
+     */
+    public function actionOnline()
+    {
+        $field = 'start_time,fanli_brand.bra_id,goods_rebate';
+        $table = [['table1' => 'fanli_activity' , 'table2' => 'fanli_goods' , 'join' =>
+            'act_id'],['table1' => 'fanli_brand' , 'table2' => 'fanli_goods' , 'join' =>
+            'bra_id']];
+        $where = "start_time BETWEEN '".date('Y-m-d H:i:s',time())."' AND '".date('Y-m-d H:i:s',strtotime('+2day'))."' GROUP BY bra_name";
+        $result = $this->databasesSelect( $table , $num = 0 , $where, $field, $order=1);
+        return $result;
+    }
+
+    //功能：计算两个时间戳之间相差的日时分秒
+    //$begin_time 开始时间戳
+    //$end_time 结束时间戳
+    function timediff($begin_time,$end_time)
+    {
+        if($begin_time < $end_time){
+            $starttime = $begin_time;
+            $endtime = $end_time;
+        }else{
+            $starttime = $end_time;
+            $endtime = $begin_time;
+        }
+
+        //计算天数
+        $timediff = $endtime-$starttime;
+        $days = intval($timediff/86400);
+        //计算小时数
+        $remain = $timediff%86400;
+        $hours = intval($remain/3600);
+        //计算分钟数
+        $remain = $remain%3600;
+        $mins = intval($remain/60);
+        //计算秒数
+        $secs = $remain%60;
+        $res = array("day" => $days,"hour" => $hours,"min" => $mins,"sec" => $secs);
+        return $res;
+    }
 }
 

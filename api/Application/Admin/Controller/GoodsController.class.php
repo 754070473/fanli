@@ -6,40 +6,23 @@ use Admin\Status\Status;
 use Admin\Status\Success;
 class GoodsController extends CommonController
 {
-//    /**
-//     *  商品分类
-//     */
-//    public function actionAdd(){
-//        $content = file_get_contents('http://m.api.fanli.com/app/v3/sf/cats.htm?src=2&v=5.2.0.34&abtest=17454_a-32579_b-72_c-138_b-112_b-6_b-9874_a-2_a-326b');
-//        $content2= json_decode($content,true);
-//        $arr =  $content2['data']['cats'];
-//        $shop_new=[];
-//        foreach($arr as $k=>$v){
-//            $shop_new[$k]['cla_id'] =$v['id'];
-//            $shop_new[$k]['cla_name'] =$v['name'];
-//            $shop_new[$k]['cla_order'] =$v['sort'];
-//            $shop_new[$k]['pid'] =$v['parentId'];
-//            $shop_new[$k]['cla_date'] =time();
-//            $shop_new[$k]['cla_status'] =1;
-//            if(empty($v['sort'])){
-//                $shop_new[$k]['cla_id'] =$v['id'];
-//                $shop_new[$k]['cla_name'] =$v['name'];
-//                $shop_new[$k]['cla_order'] =1;
-//                $shop_new[$k]['pid'] =0;
-//                $shop_new[$k]['cla_date'] =time();
-//                $shop_new[$k]['cla_status'] =1;
-//            }else{
-//                $shop_new[$k]['cla_id'] =$v['id'];
-//                $shop_new[$k]['cla_name'] =$v['name'];
-//                $shop_new[$k]['cla_order'] =$v['sort'];
-//                $shop_new[$k]['pid'] =$v['parentId'];
-//                $shop_new[$k]['cla_date'] =time();
-//                $shop_new[$k]['cla_status'] =1;
-//            }
-//        }
-//        $goods = M('fanli_classify');
-//        $goods->add($shop_new);
-//    }
+    /**
+     *  商品品牌
+     */
+    public function sall(){
+        $goods = M('brand');
+        $arr = $goods->select();
+  //    print_r($arr );//  return $arr ;
+        $this ->success( $success_status = 0  , $success_msg = 'success' , $arr ,  $other_data = array());
+    }
+    public function Add(){
+        $array = $this->actionSall();
+
+        $goods_photo   = IsNan( $this -> _data , 'arr');
+        $goods = M('brand');
+        $arr = $goods->add($goods_photo['arr']);
+        $this ->success( $success_status = 0  , $success_msg = 'success' , $arr ,  $other_data = array());
+    }
     /**
      * 商品添加
      */
@@ -52,7 +35,7 @@ class GoodsController extends CommonController
         $cla_id        = IsNan( $this -> _data , 'cla_id');
         $goods_date    = IsNan( $this -> _data , 'goods_date');
         $goods_url     = IsNan( $this -> _data , 'goods_url');
-        $bra_id     = IsNan( $this -> _data , 'bra_id');
+        $bra_id        = IsNan( $this -> _data , 'bra_id');
         $data['bra_id']   =   $bra_id   ;
         $data['goods_photo']   =   $goods_photo   ;
         $data['goods_name']    =   $goods_name   ;
