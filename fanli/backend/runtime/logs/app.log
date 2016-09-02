@@ -2137,7 +2137,7 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1472729218.9816
     'REQUEST_TIME' => 1472729218
 ]
-2016-09-01 19:27:42 [192.168.1.203][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected 'ï¼Œ' (T_STRING), expecting ']'' in F:\app\fanli\fanli\backend\controllers\GoodsController.php:199
+2016-09-01 19:27:42 [192.168.1.203][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected 'ï¼? (T_STRING), expecting ']'' in F:\app\fanli\fanli\backend\controllers\GoodsController.php:199
 Stack trace:
 #0 [internal function]: yii\base\ErrorHandler->handleFatalError()
 #1 {main}
@@ -2198,7 +2198,7 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1472729262.2061
     'REQUEST_TIME' => 1472729262
 ]
-2016-09-01 19:27:43 [192.168.1.203][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected 'ï¼Œ' (T_STRING), expecting ']'' in F:\app\fanli\fanli\backend\controllers\GoodsController.php:199
+2016-09-01 19:27:43 [192.168.1.203][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected 'ï¼? (T_STRING), expecting ']'' in F:\app\fanli\fanli\backend\controllers\GoodsController.php:199
 Stack trace:
 #0 [internal function]: yii\base\ErrorHandler->handleFatalError()
 #1 {main}

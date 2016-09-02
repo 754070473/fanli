@@ -75,7 +75,6 @@ class CommonController extends Controller
 
         // 生成url的形式
         $params = http_build_query($data);
-
         // 拼接密钥 且 md5
         $signAll = md5($params);
 
@@ -114,6 +113,7 @@ class CommonController extends Controller
         }
         $url = $this -> apiUrl( 'Public' , 'index' );
         $data = array( 'sql' => $sql , 'field' => $field , 'where' => $where , 'num' => $num , 'order' => $order , 'p' => $p );
+//        print_r($data);die;
         $api_data = $this -> CurlPost( $url , $data );
         if( !is_array( $api_data ) )
         {
@@ -151,7 +151,8 @@ class CommonController extends Controller
         }
     }
 
-    private function ajaxPage( $count , $url , $page , $p){
+    private function ajaxPage( $count , $url , $page , $p)
+    {
         if($count == 0){
             //搜索样式
             $sel='<div class="cfD" style="float: right;margin-top: 42px;">

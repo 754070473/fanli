@@ -29,19 +29,6 @@ class CommonController extends Controller
         
         //当前请求的方法
         //$Action = ucwords( str_replace( __CONTROLLER__ . '/' , '' , __ACTION__ ) );
-        
-        if( !empty( $_data ) )
-        {
-            $sign = $_data['sign'];
-            unset($_data['sign']);
-            //判断sign值是否正确
-            $_sign = $this -> setSign( $_data );
-            if( $sign != $_sign )
-            {
-                $this -> errorMessage( 1 , '非法请求' );
-                exit;
-            }
-        }
     }
     
     
