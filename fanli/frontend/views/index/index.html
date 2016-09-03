@@ -40,7 +40,9 @@
                         <?php foreach( $classify as $key => $val ){?>
                         <dl>
                             <dt>
-                                <a href="index.php?r=index/class&cla_id=<?php echo $val['cla_id']?>"><img src="public/img/images/7A87EDAF7A960CD732ED93A92639CEE9_19.gif"/></a>
+                                <a href="index.php?r=index/class&cla_id=<?php echo $val['cla_id']?>">
+                                    <img src="<?= $val['cla_photo']?>" width="100%" height="100%"/>
+                                </a>
                             </dt>
                             <dd><?php echo $val['cla_name']?></dd>
                         </dl>
