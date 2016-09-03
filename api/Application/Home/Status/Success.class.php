@@ -13,5 +13,9 @@ class Success {
     //查询成功
     const SELECT_SUCCESS = 0;
     const SELECT_SUCCESS_MSG = '查询成功!';
-
+    
+    
+    //减库存成功成功
+    const GOODS_SUCCESS = 0;
+    const GOODS_SUCCESS_MSG = '减库存成功!';
 }

@@ -38,8 +38,8 @@
                 <?php foreach( $arr['data'] as $key => $val ){?>
                 <div class="sqGoods" onclick="location.href='<?= $val['goods_url']?>'">
                     <dl>
-                        <dt><img src="<?= $val['goods_photo']?>" style="width: 160px;height: 160px;;"/></dt>
-                        <dd>
+                        <dt style="height: 100%;width: 40%"><img src="<?= $val['goods_photo']?>" style="width: 100%;height: 100%;;"/></dt>
+                        <dd style="width: 60%;height: 100%">
                             <h1><?= $val['goods_name']?></h1>
                             <p><span  class="sqPrice">￥<?= $val['goods_price']?></span></p>
                             <p class="sqFan"><i>返</i><span class="fanPrice"><?= $val['goods_rebate']?></span></p>

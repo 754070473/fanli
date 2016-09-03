@@ -12,7 +12,7 @@
 		 <div class="wrap">
 		 	<header>
 		 		<div class="head-left">
-		 			<img src="public/img/images/7A87EDAF7A960CD732ED93A92639CEE9_03.gif"/>
+                    <a href="index.php?r=index/index"><img src="public/img/images/7A87EDAF7A960CD732ED93A92639CEE9_03.gif"/></a>
 		 		</div>
 		 		<div class="head-center">
 		 			<img src="public/img/images/7A87EDAF7A960CD732ED93A92639CEE9_05.gif"/>
@@ -24,101 +24,149 @@
 		 	</header>
 		 	<section>
 		 		<div class="box" id="box">
-		 			<div class="miaosha">
-		 				<div class="msNav">
-		 					<dl>
-		 						<dt><span>10:00</span>抢购中</dt>
-		 					</dl>
-		 					<dl>
-		 						<dt><span>20:00</span>即将开抢</dt>
-		 					</dl>
-		 					<dl>
-		 						<dt>下期预告</dt>
-		 					</dl>
-		 				</div>
-		 				<div class="msTime">
-		 					<p>距离本场结束<b>01</b>:<b>01</b>:<b>01</b></p>
-		 					<span>筛选∨</span>
-		 					<img src="public/img/images/397E10609624C690284047B2C4F44144_03.gif"/>
-		 				</div>
-
-                        <div class="msGoods">
+                    <div class="miaosha">
+                        <div class="msNav">
                             <dl>
-                                <dt><a href="index.php?r=index/details"><img src="public/img/images/397E10609624C690284047B2C4F44144_07.gif"/></a></dt>
-                                <dd>
-                                    <h1>【ACA北美电器】不锈钢面包机AB-2SN08</h1>
-                                    <p><span  class="newPrice">￥399</span><span class="oldPrice">￥1799</span></p>
-                                    <p class="msFan"><i>返</i><span class="fanPrice">144.22</span></p>
-                                </dd>
-                                <span class="msTm">天猫</span>
-                                <span class="msQiang"><a href="index.php?r=index/details">马上抢</a></span>
+                                <dt><span>10:00</span>抢购中</dt>
+                            </dl>
+                            <dl>
+                                <dt><span>20:00</span>即将开抢</dt>
+                            </dl>
+                            <dl>
+                                <dt>下期预告</dt>
                             </dl>
                         </div>
+                        <div class="msTime">
+                            <p>距离本场结束
+                                <b class="hour">
+                                    <?php
+                                    if( $kill_end_time['day']*24+$kill_end_time['hour'] < 10 )
+                                    {
+                                        echo '0'.$kill_end_time['day']*24+$kill_end_time['hour'];
+                                    }
+                                    else
+                                    {
+                                        echo $kill_end_time['day']*24+$kill_end_time['hour'];
+                                    }
+                                ?>
+                                </b>:
+                                <b class="min">
+                                    <?php
+                                    if( $kill_end_time['min'] < 10 )
+                                    {
+                                        echo '0'.$kill_end_time['min'];
+                                    }
+                                    else
+                                    {
+                                        echo $kill_end_time['min'];
+                                    }
+                                ?>
+                                </b>:
+                                <b class="sec">
+                                    <?php
+                                    if( $kill_end_time['sec'] < 10 )
+                                    {
+                                        echo '0'.$kill_end_time['sec'];
+                                    }
+                                    else
+                                    {
+                                        echo $kill_end_time['sec'];
+                                    }
+                                ?>
+                                </b>
+                            </p>
+                            <span>筛选∨</span>
+                            <img src="public/img/images/397E10609624C690284047B2C4F44144_03.gif"/>
+                        </div>
+                        <?php foreach( $kill as $key => $val ){?>
                         <div class="msGoods">
                             <dl>
-                                <dt><a href="index.php?r=index/details"><img src="public/img/images/397E10609624C690284047B2C4F44144_07.gif"/></a></dt>
+                                <dt>
+                                    <a href="index.php?r=index/details&goods_id=<?php echo $val['goods_id']?>">
+                                        <img src="public/img/images/397E10609624C690284047B2C4F44144_07.gif"/>
+                                    </a>
+                                </dt>
                                 <dd>
-                                    <h1>【ACA北美电器】不锈钢面包机AB-2SN08</h1>
-                                    <p><span  class="newPrice">￥399</span><span class="oldPrice">￥1799</span></p>
-                                    <p class="msFan"><i>返</i><span class="fanPrice">144.22</span></p>
+                                    <h1><?php echo $val['goods_name']?></h1>
+                                    <p>
+                                        <span  class="newPrice">￥<?php echo $val['goods_price']?></span>
+                                        <span class="oldPrice">￥<?php echo $val['goods_price']+300?></span>
+                                    </p>
+                                    <p class="msFan"><i>返</i><span class="fanPrice"><?php echo $val['goods_rebate']?></span></p>
                                 </dd>
-                                <span class="msTm">天猫</span>
-                                <span class="msQiang"><a href="index.php?r=index/details">马上抢</a></span>
+                                <span class="msTm">淘宝</span>
+                                <span class="msQiang">
+                                    <a href="index.php?r=index/details&goods_id=<?php echo $val['goods_id']?>">马上抢</a>
+                                </span>
                             </dl>
                         </div>
-                        <div class="msGoods">
-                            <dl>
-                                <dt><a href="index.php?r=index/details"><img src="public/img/images/397E10609624C690284047B2C4F44144_07.gif"/></a></dt>
-                                <dd>
-                                    <h1>【ACA北美电器】不锈钢面包机AB-2SN08</h1>
-                                    <p><span  class="newPrice">￥399</span><span class="oldPrice">￥1799</span></p>
-                                    <p class="msFan"><i>返</i><span class="fanPrice">144.22</span></p>
-                                </dd>
-                                <span class="msTm">天猫</span>
-                                <span class="msQiang"><a href="index.php?r=index/details">马上抢</a></span>
-                            </dl>
-                        </div>
-                        <div class="msGoods">
-                            <dl>
-                                <dt><a href="index.php?r=index/details"><img src="public/img/images/397E10609624C690284047B2C4F44144_07.gif"/></a></dt>
-                                <dd>
-                                    <h1>【ACA北美电器】不锈钢面包机AB-2SN08</h1>
-                                    <p><span  class="newPrice">￥399</span><span class="oldPrice">￥1799</span></p>
-                                    <p class="msFan"><i>返</i><span class="fanPrice">144.22</span></p>
-                                </dd>
-                                <span class="msTm">天猫</span>
-                                <span class="msQiang"><a href="index.php?r=index/details">马上抢</a></span>
-                            </dl>
-                        </div>
-                        <div class="msGoods">
-                            <dl>
-                                <dt><a href="index.php?r=index/details"><img src="public/img/images/397E10609624C690284047B2C4F44144_07.gif"/></a></dt>
-                                <dd>
-                                    <h1>【ACA北美电器】不锈钢面包机AB-2SN08</h1>
-                                    <p><span  class="newPrice">￥399</span><span class="oldPrice">￥1799</span></p>
-                                    <p class="msFan"><i>返</i><span class="fanPrice">144.22</span></p>
-                                </dd>
-                                <span class="msTm">天猫</span>
-                                <span class="msQiang"><a href="index.php?r=index/details">马上抢</a></span>
-                            </dl>
-                        </div>
-                        <div class="msGoods">
-                            <dl>
-                                <dt><a href="index.php?r=index/details"><img src="public/img/images/397E10609624C690284047B2C4F44144_07.gif"/></a></dt>
-                                <dd>
-                                    <h1>【ACA北美电器】不锈钢面包机AB-2SN08</h1>
-                                    <p><span  class="newPrice">￥399</span><span class="oldPrice">￥1799</span></p>
-                                    <p class="msFan"><i>返</i><span class="fanPrice">144.22</span></p>
-                                </dd>
-                                <span class="msTm">天猫</span>
-                                <span class="msQiang"><a href="index.php?r=index/details">马上抢</a></span>
-                            </dl>
-                        </div>
-		 			</div>
+                        <?php }?>
+                    </div>
 		 		</div>
 		 	</section>
 		 </div>
 	</body>
 	<script src="public/js/zepto.min.js"></script>
 	<script src="public/js/jquery-1.8.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            setInterval(function(){
+                var sec = $('.sec');
+                var len = sec.length;
+                for( var i = 0 ; i < len ; i++ )
+                {
+                    if( sec.eq(i).html() == 0 )
+                    {
+                        var hour = $('.hour').eq(i);
+                        var min = $('.min').eq(i);
+                        sec.eq(i).html(59);
+                        if( min.html() == 0 )
+                        {
+                            min.html(59);
+                            if( hour == 0 )
+                            {
+                                hour.html('00');
+                            }
+                            else
+                            {
+                                var hourr = hour.html()-1;
+                                if( hourr < 10 )
+                                {
+                                    hour.html( '0'+hourr )
+                                }
+                                else
+                                {
+                                    hour.html(hourr);
+                                }
+                            }
+                        }
+                        else
+                        {
+                            var minn = min.html()-1;
+                            if( minn < 10 )
+                            {
+                                min.html('0'+minn);
+                            }
+                            else
+                            {
+                                min.html(minn);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        var secc = sec.eq(i).html()-1;
+                        if( secc < 10 )
+                        {
+                            sec.eq(i).html('0'+secc);
+                        }
+                        else
+                        {
+                            sec.eq(i).html(secc);
+                        }
+                    }
+                }
+            },1000);
+        })
+    </script>
 </html>

@@ -4898,3 +4898,305 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1472778942.198
     'REQUEST_TIME' => 1472778942
 ]
+2016-09-02 10:13:57 [::1][-][5g9jhn504f2pj6d4h073th3t51][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: page' in D:\wwww\dashixun\fanli\fanli\backend\controllers\BrandController.php:138
+Stack trace:
+#0 D:\wwww\dashixun\fanli\fanli\backend\controllers\BrandController.php(138): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'D:\\wwww\\dashixu...', 138, Array)
+#1 [internal function]: backend\controllers\BrandController->actionBrand_sel()
+#2 D:\wwww\dashixun\fanli\fanli\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 D:\wwww\dashixun\fanli\fanli\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 D:\wwww\dashixun\fanli\fanli\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('brand_sel', Array)
+#5 D:\wwww\dashixun\fanli\fanli\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('brand/brand_sel', Array)
+#6 D:\wwww\dashixun\fanli\fanli\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\wwww\dashixun\fanli\fanli\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2016-09-02 10:13:57 [::1][-][5g9jhn504f2pj6d4h073th3t51][info][application] $_GET = [
+    'r' => 'brand/brand_sel'
+]
+
+$_POST = [
+    'menuname' => 'a'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '5g9jhn504f2pj6d4h073th3t51'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => 'fzq'
+        'password' => '202cb962ac59075b964b07152d234b70'
+        'adm_date' => null
+        'adm_status' => '0'
+        'token' => 'f75c6d6585ba3b102343d3b0b3910464'
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://localhost/dashixun/fanli/fanli/backend/web/index.php?r=brand/index'
+    'CONTENT_LENGTH' => '10'
+    'HTTP_COOKIE' => 'PHPSESSID=5g9jhn504f2pj6d4h073th3t51'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\Lenovo\\FusionEngine;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Common Files\\lenovo\\easyplussdk\\bin;C:\\Program Files (x86)\\iFLYTEK\\VoiceAssistant\\SpeechPlusRuntime;C:\\Program Files (x86)\\Lenovo\\Voice SDK;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\;D:\\server\\mysql\\bin;C:\\Program Files\\TortoiseSVN\\bin\\php5.5;D:\\tortoiseGet\\bin;D:\\Python25;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\fzqdzh\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wwww'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wwww'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/wwww/dashixun/fanli/fanli/backend/web/index.php'
+    'REMOTE_PORT' => '62116'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=brand/brand_sel'
+    'REQUEST_URI' => '/dashixun/fanli/fanli/backend/web/index.php?r=brand/brand_sel'
+    'SCRIPT_NAME' => '/dashixun/fanli/fanli/backend/web/index.php'
+    'PHP_SELF' => '/dashixun/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472782437.013
+    'REQUEST_TIME' => 1472782437
+]
+2016-09-02 10:13:57 [::1][-][5g9jhn504f2pj6d4h073th3t51][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception 'Exception' with message 'Serialization of 'Closure' is not allowed' 
+
+in D:\wwww\dashixun\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php:58
+
+Stack trace:
+#0 D:\wwww\dashixun\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php(58): serialize(Array)
+#1 D:\wwww\dashixun\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#2 D:\wwww\dashixun\fanli\fanli\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#3 D:\wwww\dashixun\fanli\fanli\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#4 D:\wwww\dashixun\fanli\fanli\vendor\yiisoft\yii2\base\ErrorHandler.php(111): yii\log\Logger->flush(true)
+#5 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\ErrorException))
+#6 {main}
+2016-09-02 10:13:57 [::1][-][5g9jhn504f2pj6d4h073th3t51][info][application] $_GET = [
+    'r' => 'brand/brand_sel'
+]
+
+$_POST = [
+    'menuname' => 'a'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '5g9jhn504f2pj6d4h073th3t51'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => 'fzq'
+        'password' => '202cb962ac59075b964b07152d234b70'
+        'adm_date' => null
+        'adm_status' => '0'
+        'token' => 'f75c6d6585ba3b102343d3b0b3910464'
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://localhost/dashixun/fanli/fanli/backend/web/index.php?r=brand/index'
+    'CONTENT_LENGTH' => '10'
+    'HTTP_COOKIE' => 'PHPSESSID=5g9jhn504f2pj6d4h073th3t51'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\Lenovo\\FusionEngine;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Common Files\\lenovo\\easyplussdk\\bin;C:\\Program Files (x86)\\iFLYTEK\\VoiceAssistant\\SpeechPlusRuntime;C:\\Program Files (x86)\\Lenovo\\Voice SDK;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\;D:\\server\\mysql\\bin;C:\\Program Files\\TortoiseSVN\\bin\\php5.5;D:\\tortoiseGet\\bin;D:\\Python25;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\fzqdzh\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wwww'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wwww'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/wwww/dashixun/fanli/fanli/backend/web/index.php'
+    'REMOTE_PORT' => '62116'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=brand/brand_sel'
+    'REQUEST_URI' => '/dashixun/fanli/fanli/backend/web/index.php?r=brand/brand_sel'
+    'SCRIPT_NAME' => '/dashixun/fanli/fanli/backend/web/index.php'
+    'PHP_SELF' => '/dashixun/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472782437.013
+    'REQUEST_TIME' => 1472782437
+]
+2016-09-02 10:13:59 [::1][-][5g9jhn504f2pj6d4h073th3t51][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: page' in D:\wwww\dashixun\fanli\fanli\backend\controllers\BrandController.php:138
+Stack trace:
+#0 D:\wwww\dashixun\fanli\fanli\backend\controllers\BrandController.php(138): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'D:\\wwww\\dashixu...', 138, Array)
+#1 [internal function]: backend\controllers\BrandController->actionBrand_sel()
+#2 D:\wwww\dashixun\fanli\fanli\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 D:\wwww\dashixun\fanli\fanli\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 D:\wwww\dashixun\fanli\fanli\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('brand_sel', Array)
+#5 D:\wwww\dashixun\fanli\fanli\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('brand/brand_sel', Array)
+#6 D:\wwww\dashixun\fanli\fanli\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\wwww\dashixun\fanli\fanli\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2016-09-02 10:13:59 [::1][-][5g9jhn504f2pj6d4h073th3t51][info][application] $_GET = [
+    'r' => 'brand/brand_sel'
+]
+
+$_POST = [
+    'menuname' => 'a'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '5g9jhn504f2pj6d4h073th3t51'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => 'fzq'
+        'password' => '202cb962ac59075b964b07152d234b70'
+        'adm_date' => null
+        'adm_status' => '0'
+        'token' => 'f75c6d6585ba3b102343d3b0b3910464'
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://localhost/dashixun/fanli/fanli/backend/web/index.php?r=brand/index'
+    'CONTENT_LENGTH' => '10'
+    'HTTP_COOKIE' => 'PHPSESSID=5g9jhn504f2pj6d4h073th3t51'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\Lenovo\\FusionEngine;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Common Files\\lenovo\\easyplussdk\\bin;C:\\Program Files (x86)\\iFLYTEK\\VoiceAssistant\\SpeechPlusRuntime;C:\\Program Files (x86)\\Lenovo\\Voice SDK;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\;D:\\server\\mysql\\bin;C:\\Program Files\\TortoiseSVN\\bin\\php5.5;D:\\tortoiseGet\\bin;D:\\Python25;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\fzqdzh\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wwww'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wwww'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/wwww/dashixun/fanli/fanli/backend/web/index.php'
+    'REMOTE_PORT' => '62119'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=brand/brand_sel'
+    'REQUEST_URI' => '/dashixun/fanli/fanli/backend/web/index.php?r=brand/brand_sel'
+    'SCRIPT_NAME' => '/dashixun/fanli/fanli/backend/web/index.php'
+    'PHP_SELF' => '/dashixun/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472782439.444
+    'REQUEST_TIME' => 1472782439
+]
+2016-09-02 10:13:59 [::1][-][5g9jhn504f2pj6d4h073th3t51][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception 'Exception' with message 'Serialization of 'Closure' is not allowed' 
+
+in D:\wwww\dashixun\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php:58
+
+Stack trace:
+#0 D:\wwww\dashixun\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php(58): serialize(Array)
+#1 D:\wwww\dashixun\fanli\fanli\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#2 D:\wwww\dashixun\fanli\fanli\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#3 D:\wwww\dashixun\fanli\fanli\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#4 D:\wwww\dashixun\fanli\fanli\vendor\yiisoft\yii2\base\ErrorHandler.php(111): yii\log\Logger->flush(true)
+#5 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\ErrorException))
+#6 {main}
+2016-09-02 10:13:59 [::1][-][5g9jhn504f2pj6d4h073th3t51][info][application] $_GET = [
+    'r' => 'brand/brand_sel'
+]
+
+$_POST = [
+    'menuname' => 'a'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '5g9jhn504f2pj6d4h073th3t51'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adm_id' => '1'
+        'account' => 'fzq'
+        'password' => '202cb962ac59075b964b07152d234b70'
+        'adm_date' => null
+        'adm_status' => '0'
+        'token' => 'f75c6d6585ba3b102343d3b0b3910464'
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://localhost/dashixun/fanli/fanli/backend/web/index.php?r=brand/index'
+    'CONTENT_LENGTH' => '10'
+    'HTTP_COOKIE' => 'PHPSESSID=5g9jhn504f2pj6d4h073th3t51'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\Lenovo\\FusionEngine;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Common Files\\lenovo\\easyplussdk\\bin;C:\\Program Files (x86)\\iFLYTEK\\VoiceAssistant\\SpeechPlusRuntime;C:\\Program Files (x86)\\Lenovo\\Voice SDK;C:\\Program Files (x86)\\Lenovo\\Lenovo Home\\;D:\\server\\mysql\\bin;C:\\Program Files\\TortoiseSVN\\bin\\php5.5;D:\\tortoiseGet\\bin;D:\\Python25;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\fzqdzh\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wwww'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wwww'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/wwww/dashixun/fanli/fanli/backend/web/index.php'
+    'REMOTE_PORT' => '62119'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=brand/brand_sel'
+    'REQUEST_URI' => '/dashixun/fanli/fanli/backend/web/index.php?r=brand/brand_sel'
+    'SCRIPT_NAME' => '/dashixun/fanli/fanli/backend/web/index.php'
+    'PHP_SELF' => '/dashixun/fanli/fanli/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1472782439.444
+    'REQUEST_TIME' => 1472782439
+]

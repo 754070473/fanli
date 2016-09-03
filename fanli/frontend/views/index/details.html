@@ -34,7 +34,7 @@
                             <p><span  class="sqPrice">￥<?= $val['goods_price']?></span></p>
                             <p class="sqFan"><i>返</i><span class="fanPrice"><?= $val['goods_rebate']?></span></p>
                         </dd>
-                        <span class="sqQiang">立即抢</span>
+                        <a href="<?= $val['goods_url']?>"><span class="sqQiang">立即抢</span></a>
                     </dl>
                 </div>
                 <?php }?>
@@ -45,4 +45,25 @@
 </body>
 <script src="public/js/zepto.min.js"></script>
 <script src="public/js/jquery-1.8.0.min.js"></script>
+<script>
+    function reduce( goods_id )
+    {
+        $.ajax({
+            type : 'GET',
+            url  : 'index.php?r=index/reduce',
+            data : 'goods_id='+goods_id ,
+            success : function( msg )
+            {
+                if( msg )
+                {
+                    location.href = msg;
+                }
+                else
+                {
+                    alert('该商品已售完');
+                }
+            }
+        })
+    }
+</script>
 </html>
