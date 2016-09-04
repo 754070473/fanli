@@ -340,7 +340,7 @@ class IndexController extends CommonController
     {
         
         if ( preg_match('/^[0-9]{1,}$/', $pid) ) {
-            $arr = $this->databasesSelect('fanli_classify', '5', "pid=$pid" );
+            $arr = $this->databasesSelect('fanli_classify', 0, "pid=$pid" );
         } else {
             $arr =[
                 'status' => 1,

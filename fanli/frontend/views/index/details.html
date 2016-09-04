@@ -25,19 +25,26 @@
     <section>
         <div class="box" id="box">
             <div class="shouqing">
-                <?php foreach( $arr['data'] as $key => $val ){?>
-                <div class="sqGoods" onclick="location.href='<?= $val['goods_url']?>'">
-                    <dl>
-                        <dt><a href="javascript:void(0)" onclick="reduce(<?= $val['goods_id']?>)"><img width="161" height="138" src="<?= $val['goods_photo']?>"/></a></dt>
-                        <dd>
-                            <h1><?= $val['goods_name']?></h1>
-                            <p><span  class="sqPrice">￥<?= $val['goods_price']?></span></p>
-                            <p class="sqFan"><i>返</i><span class="fanPrice"><?= $val['goods_rebate']?></span></p>
-                            <p>剩余<?= $val['surplus_stock'] ?></p>
-                        </dd>
-                        <a href="javascript:void(0)" onclick="reduce(<?= $val['goods_id']?>)"><span class="sqQiang">立即抢</span></a>
-                    </dl>
-                </div>
+                <?php foreach( $result as $key => $val ){?>
+                    <div class="sqGoods">
+                        <dl>
+                            <dt><a href="javascript:void(0)" onclick="reduce(<?= $val['goods_id']?>)">
+                                    <img width="161" height="138" src="<?= $val['goods_photo']?>"/>
+                                </a>
+                            </dt>
+                            <dd>
+                                <h1><?= $val['goods_name']?></h1>
+                                <p><span  class="sqPrice">￥<?= $val['goods_price']?></span></p>
+                                <p class="sqFan"><i>返</i>
+                                    <span class="fanPrice">
+                                        <?= round($val['goods_price']*($val['goods_rebate']/100) , 2)?>
+                                    </span>
+                                </p>
+                                <p>剩余<?= $val['surplus_stock'] ?></p>
+                            </dd>
+                            <a href="javascript:void(0)" onclick="reduce(<?= $val['goods_id']?>)"><span class="sqQiang">立即抢</span></a>
+                        </dl>
+                    </div>
                 <?php }?>
             </div>
         </div>
