@@ -80,4 +80,49 @@ class PublicController extends CommonController
 			exit;
 		}
 	}
+
+	public function reduce()
+	{
+		//商品id
+		$goods_id = IsNaN( $this -> _data , 'goods_id' );
+		if( empty( $goods_id ) )
+		{
+			$this -> errorMessage( Param::REDUCE_GOODS_ID_IS_NULL , Param::REDUCE_GOODS_ID_IS_NULL_MSG );
+			exit;
+		}
+		$redis = new \Redis();
+		$redis -> connect( '127.0.0.1' , 6379 );
+		$redis -> rpush( 'reduce' , $goods_id );
+		$goods = $redis -> lpop( 'reduce' );
+		$User = M( 'goods' );
+		$arr = $User -> where( 'goods_id = '.$goods ) -> find() ;
+		if( empty( $arr ) )
+		{
+			$this -> errorMessage( Status::SELECT_DATA_ERROR , Status::SELECT_GOODS_ERROR_MSG );
+			exit;
+		}
+		else
+		{
+			if( $arr['surplus_stock'] <= 0 )
+			{
+				$this -> errorMessage( Status::SELECT_GOODS_SELL_OUT , Status::SELECT_GOODS_SELL_OUT_MSG );
+				exit;
+			}
+			else
+			{
+				$data = array( 'surplus_stock' => $arr['surplus_stock']-1 );
+				$re = $User->where('goods_id='.$goods)->save($data); // 根据条件更新记录
+				if( $re )
+				{
+					$this -> success(Success::GOODS_SUCCESS , Success::GOODS_SUCCESS_MSG , $arr['goods_url']);
+					exit;
+				}
+				else
+				{
+					$this -> errorMessage( Status::SELECT_GOODS_SELL_OUT , Status::SELECT_GOODS_SELL_OUT_MSG );
+					exit;
+				}
+			}
+		}
+	}
 }

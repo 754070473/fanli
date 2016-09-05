@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="public/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="public/css/swiper-3.3.1.min.css"/>
+</head>
+<body>
+<div class="wrap">
+    <header>
+        <div class="head-left">
+            <a href="index.php?r=index/index"><img src="public/img/images/7A87EDAF7A960CD732ED93A92639CEE9_03.gif"/></a>
+        </div>
+        <div class="head-center">
+            <img src="public/img/images/7A87EDAF7A960CD732ED93A92639CEE9_05.gif"/>
+        </div>
+        <div class="head-right">
+            <img src="public/img/images/7A87EDAF7A960CD732ED93A92639CEE9_07.gif"/>
+            <img src="public/img/images/7A87EDAF7A960CD732ED93A92639CEE9_09.gif"/>
+        </div>
+    </header>
+    <section>
+        <div class="box" id="box">
+            <div class="shouqing">
+                <div class="shouye" style="background-color: white;">
+                    <div class="syDl" style="width:100%;height:100%;">
+                        <?php foreach( $arr['type'] as $key => $val ){?>
+                        <dl style="height: 100%;width: 100%;">
+                            <dt>
+                                <a href="?r=index/class&cla_id=<?php echo $val['cla_id']?>">
+                                    <img src="<?= $val['cla_photo']?>" width="100%" height="100%"/>
+                                </a>
+                            </dt>
+                            <dd><?= $val['cla_name']?></dd>
+                        </dl>
+                        <?php }?>
+                    </div>
+                </div>
+                <?php foreach( $arr['data'] as $key => $val ){?>
+                <div class="sqGoods" onclick="reduce(<?= $val['goods_id']?>)">
+                    <dl>
+                        <dt style="height: 100%;width: 40%"><img src="<?= $val['goods_photo']?>" style="width: 100%;height: 100%;;"/></dt>
+                        <dd style="width: 60%;height: 100%">
+                            <h1><?= $val['goods_name']?></h1>
+                            <p><span  class="sqPrice">￥<?= $val['goods_price']?></span></p>
+                            <p class="sqFan"><i>返</i>
+                                <span class="fanPrice">
+                                    <?= round($val['goods_price']*($val['goods_rebate']/100) , 2)?>
+                                </span>
+                            </p>
+                            <p>剩余<?= $val['surplus_stock'] ?></p>
+                        </dd>
+                        <span class="sqQiang">立即抢</span>
+                    </dl>
+                </div>
+                <?php }?>
+            </div>
+        </div>
+    </section>
+</div>
+</body>
+<script src="public/js/zepto.min.js"></script>
+<script src="public/js/jquery-1.8.0.min.js"></script>
+<script>
+    function reduce( goods_id )
+    {
+        $.ajax({
+            type : 'GET',
+            url  : 'index.php?r=index/reduce',
+            data : 'goods_id='+goods_id ,
+            success : function( msg ){
+                if( msg )
+                {
+                    location.href = msg;
+                }
+                else
+                {
+                    alert('该商品已售完');
+                }
+            }
+        })
+    }
+</script>
+</html>

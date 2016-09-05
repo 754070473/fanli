@@ -24,14 +24,241 @@ class IndexController extends CommonController
     public $enableCsrfValidation = false;
     public function actionIndex()
     {
+        $data = array();
+        //所有一级分类
         $classify = $this -> actionClassify();
-        // print_r($classify);die;
-        return $this -> render('index.html');
+        if( $classify['status'] == 0 )
+        {
+            $data['classify'] = $classify['data'];
+        }
+        else
+        {
+            $data['classify'] = array();
+        }
+
+        //限量秒杀活动
+        $seckill = $this -> actionSeckil();
+        if( $seckill['status'] == 0 )
+        {
+            $data['seckill'] = $seckill['data'];
+        }
+        else
+        {
+            $data['seckill'] = array();
+        }
+        $kill = $this -> actionKill();
+        if( !empty( $kill ) )
+        {
+            $end_time = $this->timediff( time() , strtotime( $kill[0]['end_time'] ) );
+            $data['kill'] = $kill;
+            $data['kill_end_time'] = $end_time;
+        }
+        else
+        {
+            $data['kill'] = array();
+            $data['kill_end_time'] = array( 'day'=>0,'hour'=>00,'min'=>00,'sec'=>00 );
+        }
+
+        //精选活动
+        $choiceness = $this -> actionChoiceness();
+        if( $choiceness['status'] == 0 )
+        {
+            $data['choiceness'] = $choiceness['data'];
+        }
+        else
+        {
+            $data['choiceness'] = array();
+        }
+
+        //品牌活动
+        $brand = $this -> actionBrand();
+        if( !empty($brand) )
+        {
+            $data['brand'] = $brand;
+        }
+        else
+        {
+            $data['brand'] = array();
+        }
+
+        //即将售罄
+        $sellout = $this -> actionSellout();
+        if( !empty( $sellout ) )
+        {
+            $data['sellout'] = $sellout;
+        }
+        else
+        {
+            $data['sellout'] = array();
+        }
+
+        //即将上线
+        $online = $this -> actionOnline();
+        if( !empty( $online ) )
+        {
+            $date1 = date( 'Y-m-d' , time()+60*60*24 );
+            $date2 = date( 'Y-m-d' , time()+60*60*24*2 );
+            $weekarray=array("日","一","二","三","四","五","六");
+            $week1 = "星期".$weekarray[date("w", time()+60*60*24 )];
+            $week2 = "星期".$weekarray[date("w", time()+60*60*24*2 )];
+            foreach( $online as $key => $val )
+            {
+                if( date("Y-m-d",strtotime( $val['start_time'] ) ) == $date1 )
+                {
+                    $data['online'][$date1.'/'.$week1][] = $val;
+                }
+                else
+                {
+                    $data['online'][$date2.'/'.$week2][] = $val;
+                }
+            }
+        }
+        else
+        {
+            $data['online'] = array();
+        }
+        // print_r($data);die;
+        return $this -> render('index.html' , $data);
     }
 
     public function actionDetails()
     {
-        return $this -> render('details.html');
+        $common = yii::$app->request;
+        $data['act_id'] = $common->get('act_id')?:"";
+        $data['bra_id'] = $common->get('bra_id')?:"";
+        $data['goods_id'] = $common->get('goods_id')?:"";
+        // echo $data['bra_id'];die;
+        if($data['act_id'] != ""){
+            $result = $this->actionActget($data['act_id']);
+        }else if($data['bra_id']  != ""){
+            $result = $this->actionBrashop($data['bra_id']);
+        }else if($data['goods_id'] != ""){
+            $result = $this->actionGoodsget($data['goods_id']);
+        }
+        if($result['status'] == 0){
+            return $this -> render('details.html',['result'=>$result['data']]);
+        }else{
+            echo "<script>alert('请刷新页面');window.history.go(-1)</script>";
+        }
+    }
+    /**
+     * 根据act_id活动id返回商品
+     * @param  string $act_id [活动id]
+     * @return array $arr [返回数据]
+     */
+    public function actionActget($act_id = '')
+    {
+        if ( preg_match('/^[0-9]{1,}$/', $act_id) ) {
+            $arr = $this->databasesSelect('fanli_goods', '*', "act_id=$act_id" );
+        } else {
+            $arr =[
+                'status' => 1,
+                'msg'    => 'act_id参数错误!',
+                'data'   => array()
+            ];
+       }
+        return $arr;
+    }
+    /**
+     * 根据商品id获取该品牌下的商品
+     * @param  string $goods_id [description]
+     * @return array $arr           [description]
+     */
+    public function actionGoodsget($goods_id='')
+    {
+        if ( preg_match('/^[0-9]{1,}$/', $goods_id) ) {
+            $goods_info = $this->databasesSelect('fanli_goods', 0,"goods_id=$goods_id" , 'bra_id');
+            $bra_id = $goods_info['data'][0]['bra_id'];
+            $arr = $this->databasesSelect('fanli_goods', 0,"bra_id=$bra_id");
+        } else {
+            $arr =[
+                'status' => 1,
+                'msg'    => 'goods_id参数错误!',
+                'data'   => array()
+            ];
+       }
+        return $arr;
+    }
+
+    /**
+     * 判断查询是否是二级分类
+     */
+    function infoType($cla_id){
+        $a =$this->actionShoptype($cla_id);
+        if( $a['data']['pid']==0){
+            $typeID=$this->actionType($cla_id);
+            if(!empty($typeID['data'])){
+                $str =null;
+                foreach($typeID['data'] as $k=>$v){
+                    $str .=$v['cla_id'].',';
+                }
+                $newstr = substr($str,0,-1);
+                $result = $this->databasesSelect( 'fanli_goods' , '*',"cla_id in ($newstr)" );
+                $result['type']=$typeID['data'];
+            }else{
+                echo "<script>alert('客官稍等......');history.go(-1)</script>";
+            }
+        }else{
+            $result = $this->databasesSelect( 'fanli_goods' , '*',"cla_id =".$a['data']['cla_id']."" );
+        }
+        return $result;
+//        print_r($result);die;
+    }
+    /**
+     * 二级分类下所有商品
+     * @return string
+     */
+    public function actionClass()
+    {
+        $cla_id  = Yii::$app->request->get('cla_id');
+        if(!empty($cla_id)){
+            $a =$this->actionShoptype($cla_id);
+            if( $a['data']['pid']==0){
+                $typeID=$this->actionType($cla_id);
+                if(!empty($typeID['data'])){
+                    $str =null;
+                    foreach($typeID['data'] as $k=>$v){
+                        $str .=$v['cla_id'].',';
+                    }
+                    $newstr = substr($str,0,-1);
+                    $result = $this->databasesSelect( 'fanli_goods' , '*',"cla_id in ($newstr)" );
+                    $result['type']=$typeID['data'];
+                    if(!empty($result['data'])){
+                        return $this -> render('classify.html',['arr'=>$result]);
+                    }else{
+                        echo "<script>alert('商品飞到火星了......');history.go(-1)</script>";
+                    }
+                }else{
+                    echo "<script>alert('商品飞到火星了......');history.go(-1)</script>";
+                }
+            }else{
+                $result = $this->databasesSelect( 'fanli_goods' , '*',"cla_id =".$a['data']['cla_id']."" );
+                if(!empty($result['data'])){
+                    return $this -> render('details.html',['arr'=>$result]);
+                }else{
+                    echo "<script>alert('商品飞到火星了......');history.go(-1)</script>";
+                }
+            }
+        }else{
+            echo "<script>history.go(-1)</script>";
+        }
+    }
+    
+    public function actionSeckill()
+    {
+        $kill = $this -> actionKill();
+        if( !empty( $kill ) )
+        {
+            $end_time = $this->timediff( time() , strtotime( $kill[0]['end_time'] ) );
+            $data['kill'] = $kill;
+            $data['kill_end_time'] = $end_time;
+        }
+        else
+        {
+            $data['kill'] = array();
+            $data['kill_end_time'] = array( 'day'=>0,'hour'=>00,'min'=>00,'sec'=>00 );
+        }
+        return $this -> render('seckill.html' , $data);
     }
 
     /**
@@ -52,13 +279,27 @@ class IndexController extends CommonController
      */
     public function actionSellout()
     {
-        $field = 'end_time,goods_stock,surplus_stock,goods_name,goods_url,goods_rebate';
+        $field = '*';
         $table = [['table1' => 'fanli_activity' , 'table2' => 'fanli_goods' , 'join' => 
         'act_id']];
-        $where = "(surplus_stock / goods_stock) < 0.5";
-        $order = '(surplus_stock / goods_stock),goods_id';
-        $result = $this->databasesSelect( $table , $num = 0 , $where, $field, $order);
-        return $result;
+        $now_time = date( 'Y-m-d H:i:s' ,time() );
+        $order = '(surplus_stock / goods_stock)';
+        $result = $this->databasesSelect( $table , $num = 0 , 1, $field, $order);
+        $arr = array();
+        foreach( $result['data'] as $key => $val )
+        {
+            if( ($val['surplus_stock'] / $val['goods_stock'] ) < 0.5 )
+            {
+                if( ( $val['start_time'] < $now_time && $val['end_time'] > $now_time ) )
+                {
+                    $val[ 'goods_rebate' ] = $val[ 'goods_price' ] * ( $val[ 'goods_rebate' ] / 100 );
+                    $end_time = $this -> timediff( strtotime( $now_time ) , strtotime( $val['end_time'] ) );
+                    $val['end_time'] = $end_time;
+                    $arr[] = $val;
+                }
+            }
+        }
+        return $arr;
     }
 
 	  //根据分类id查询该分类下所有正在进行促销活动的品牌
@@ -71,7 +312,7 @@ class IndexController extends CommonController
     }
 
   //限量秒杀
-    public function actionSeckill(){
+    public function actionSeckil(){
         $table1 = "fanli_acttype";
         $table2 = "fanli_activity";
         $join = "type_id";
@@ -95,10 +336,11 @@ class IndexController extends CommonController
      * @param string $pid
      * @return mixed
      */
-    function actionType( $pid = '' )
+    function actionType( $pid  )
     {
-        if ( !preg_match('/^[0-9]{1,}$/', $pid) ) {
-            $arr = $this->databasesSelect('fanli_classify', '*', "pid=$pid" );
+        
+        if ( preg_match('/^[0-9]{1,}$/', $pid) ) {
+            $arr = $this->databasesSelect('fanli_classify', 0, "pid=$pid" );
         } else {
             $arr =[
                 'status' => 1,
@@ -106,7 +348,17 @@ class IndexController extends CommonController
                 'data'   => array()
             ];
        }
+        return $arr;
+    }
 
+    /**
+     * 根据id查询本条分类信息
+     * @param string $pid
+     * @return mixed
+     */
+    private function actionShoptype($bra_id)
+    {
+        $arr = $this->databasesSelect('fanli_classify', '1', "cla_id=".$bra_id );
         return $arr;
     }
      /**
@@ -116,7 +368,8 @@ class IndexController extends CommonController
      */
     function actionBrashop( $bra_id = '' )
     {
-        if ( !preg_match('/^[0-9]{1,}$/' , $bra_id ) )
+        // echo $bra_id;
+        if ( preg_match('/^[0-9]{1,}$/' , $bra_id ) )
         {
             $arr = $this->databasesSelect('fanli_goods', '*', "bra_id=$bra_id" );
         } else {
@@ -137,20 +390,29 @@ class IndexController extends CommonController
         $where = 'type_id=3';
         $list = $this -> databasesSelect($table ,0,$where );
         $arr = array();
+        $i = 0;
         foreach( $list['data'] as $key => $val )
         {
-            if( $val['start_time'] < $now_date && $val['end_time'] > $now_date )
+            if( $val['start_time'] <= $now_date && $val['end_time'] >= $now_date )
             {
                 $arr[] = $val;
+                if( $i < 9 )
+                {
+                    $i ++;
+                }
+                else
+                {
+                    break;
+                }
             }
         }
         return $arr;
     }
     /*
-     *  根据分类ID查询当天的秒杀活动
+     *  查询当天的秒杀活动
      */
     public function actionKill(){
-        $table = 'fanli_activity';
+        $table = array( [ 'table1' => 'fanli_activity' , 'table2' => 'fanli_goods' , 'join' => 'act_id' ] );
         $now_date = date("Y-m-d H:i:s",time());
         $where = 'type_id=1';
         $list = $this -> databasesSelect($table ,0,$where );
@@ -166,13 +428,92 @@ class IndexController extends CommonController
         $arr = array();
         foreach( $list['data'] as $key => $val )
         {
-            if( $val['start_time'] > $tobegintime && $val['end_time'] < $todayendtime )
+            if(
+                ( $val['start_time'] > $tobegintime && $val['start_time'] < $todayendtime  ) ||
+                ( $val['end_time'] > $tobegintime && $val['end_time'] < $todayendtime ) ||
+                ( $val['start_time'] < $tobegintime && $val['end_time'] > $todayendtime )
+            )
+            {
+                if( $val['start_time'] < date( 'Y-m-d H:i:s' , time() ) && $val['end_time'] > date( 'Y-m-d H:i:s' , time() ) ){
+                    $val[ 'goods_rebate' ] = $val[ 'goods_price' ] * ( $val[ 'goods_rebate' ] / 100 );
+                    $arr[] = $val;
+                }
+            }
+        }
+
+        return $arr;
+    }
+
+    /**
+     * 即将上线 查询所有未来两天开始的品牌活动（按开始时间查询）
+     */
+    public function actionOnline()
+    {
+        $table = 'fanli_activity';
+        $where = "type_id=3";
+        $result = $this->databasesSelect( $table , $num = 0 , $where);
+        $arr = array();
+        foreach($result['data'] as $key => $val)
+        {
+            if( $val['start_time'] > date('Y-m-d 00:00:00',strtotime('+1day')) && $val['start_time'] < date('Y-m-d 23:59:59',strtotime('+2day')) )
             {
                 $arr[] = $val;
             }
         }
         return $arr;
     }
+
+    public function actionReduce()
+    {
+        $goods_id  = Yii::$app->request->get('goods_id');
+        $url = $this -> apiUrl( 'Public' ,'reduce' );
+        $data = array( 'goods_id' => $goods_id );
+        $arr = $this -> CurlPost( $url , $data );
+        if( is_array( $arr ) )
+        {
+            if( $arr['status'] == 0 )
+            {
+                echo $arr['data'];
+            }
+            else
+            {
+                echo 0;
+            }
+        }
+        else
+        {
+            echo 0;
+        }
+    }
+
+    //功能：计算两个时间戳之间相差的日时分秒
+    //$begin_time 开始时间戳
+    //$end_time 结束时间戳
+    function timediff($begin_time,$end_time)
+    {
+        if($begin_time < $end_time){
+            $starttime = $begin_time;
+            $endtime = $end_time;
+        }else{
+            $starttime = $end_time;
+            $endtime = $begin_time;
+        }
+
+        //计算天数
+        $timediff = $endtime-$starttime;
+        $days = intval($timediff/86400);
+        //计算小时数
+        $remain = $timediff%86400;
+        $hours = intval($remain/3600);
+        //计算分钟数
+        $remain = $remain%3600;
+        $mins = intval($remain/60);
+        //计算秒数
+        $secs = $remain%60;
+        $res = array("day" => $days,"hour" => $hours,"min" => $mins,"sec" => $secs);
+        return $res;
+    }
+
 
 }
 

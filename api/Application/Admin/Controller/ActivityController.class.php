@@ -19,7 +19,9 @@ class ActivityController extends CommonController{
         $act_date = IsNaN( $this -> _data , 'act_date');
         $act_desc = IsNaN( $this -> _data , 'act_desc');
         $act_order = IsNaN( $this -> _data , 'act_order');
+         $act_img = IsNaN( $this -> _data , 'act_img');
         $data = [ 
+         'act_img' => $act_img,
             'act_name' => $act_name,
             'type_id' => $type_id,
             'start_time' => $start_time,
@@ -37,5 +39,20 @@ class ActivityController extends CommonController{
         }else{
             $this -> errorMessage( Status::ADMIN_NAME_ERROR , Status::ADMIN_NAME_ERROR_MSG );
         }
+    }
+    function del(){
+         $act_id = IsNaN( $this -> _data , 'act_id');
+         if(!empty($act_id)){
+            $Activity = M('activity');
+            $act_info = $Activity
+                        ->where('act_id='.$act_id)
+                        ->delete();
+            $this -> success( 0 , '成功' );
+         }
+         else
+         {
+            $this -> errorMessage( '1' , '失败');
+         }
+        
     }
 }

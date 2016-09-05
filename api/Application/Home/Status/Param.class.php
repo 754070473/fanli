@@ -24,4 +24,8 @@ class Param {
     //查询字段不能为空
     const SELECT_FIELD_NAME_IS_NULL = 1;
     const SELECT_FIELD_NAME_IS_NULL_MSG = '查询字段不能为空';
+    
+    //商品id不能为空
+    const REDUCE_GOODS_ID_IS_NULL = 1;
+    const REDUCE_GOODS_ID_IS_NULL_MSG = '商品id不能为空';
 }

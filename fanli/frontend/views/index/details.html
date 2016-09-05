@@ -25,50 +25,27 @@
     <section>
         <div class="box" id="box">
             <div class="shouqing">
-                <div class="sqGoods">
-                    <dl>
-                        <dt><img src="public/img/images/C611F840080DFDDF69F6E742723F4B56_05.gif"/></dt>
-                        <dd>
-                            <h1>儿童防滑软底学步鞋</h1>
-                            <p><span  class="sqPrice">￥39.9</span></p>
-                            <p class="sqFan"><i>返</i><span class="fanPrice">144.22</span></p>
-                        </dd>
-                        <span class="sqQiang">立即抢</span>
-                    </dl>
-                </div>
-                <div class="sqGoods">
-                    <dl>
-                        <dt><img src="public/img/images/C611F840080DFDDF69F6E742723F4B56_05.gif"/></dt>
-                        <dd>
-                            <h1>儿童防滑软底学步鞋</h1>
-                            <p><span  class="sqPrice">￥39.9</span></p>
-                            <p class="sqFan"><i>返</i><span class="fanPrice">144.22</span></p>
-                        </dd>
-                        <span class="sqQiang">立即抢</span>
-                    </dl>
-                </div>
-                <div class="sqGoods">
-                    <dl>
-                        <dt><img src="public/img/images/C611F840080DFDDF69F6E742723F4B56_05.gif"/></dt>
-                        <dd>
-                            <h1>儿童防滑软底学步鞋</h1>
-                            <p><span  class="sqPrice">￥39.9</span></p>
-                            <p class="sqFan"><i>返</i><span class="fanPrice">144.22</span></p>
-                        </dd>
-                        <span class="sqQiang">立即抢</span>
-                    </dl>
-                </div>
-                <div class="sqGoods">
-                    <dl>
-                        <dt><img src="public/img/images/C611F840080DFDDF69F6E742723F4B56_05.gif"/></dt>
-                        <dd>
-                            <h1>儿童防滑软底学步鞋</h1>
-                            <p><span  class="sqPrice">￥39.9</span></p>
-                            <p class="sqFan"><i>返</i><span class="fanPrice">144.22</span></p>
-                        </dd>
-                        <span class="sqQiang">立即抢</span>
-                    </dl>
-                </div>
+                <?php foreach( $result as $key => $val ){?>
+                    <div class="sqGoods">
+                        <dl>
+                            <dt><a href="javascript:void(0)" onclick="reduce(<?= $val['goods_id']?>)">
+                                    <img width="161" height="138" src="<?= $val['goods_photo']?>"/>
+                                </a>
+                            </dt>
+                            <dd>
+                                <h1><?= $val['goods_name']?></h1>
+                                <p><span  class="sqPrice">￥<?= $val['goods_price']?></span></p>
+                                <p class="sqFan"><i>返</i>
+                                    <span class="fanPrice">
+                                        <?= round($val['goods_price']*($val['goods_rebate']/100) , 2)?>
+                                    </span>
+                                </p>
+                                <p>剩余<?= $val['surplus_stock'] ?></p>
+                            </dd>
+                            <a href="javascript:void(0)" onclick="reduce(<?= $val['goods_id']?>)"><span class="sqQiang">立即抢</span></a>
+                        </dl>
+                    </div>
+                <?php }?>
             </div>
         </div>
     </section>
@@ -76,4 +53,25 @@
 </body>
 <script src="public/js/zepto.min.js"></script>
 <script src="public/js/jquery-1.8.0.min.js"></script>
+<script>
+    function reduce( goods_id )
+    {
+        $.ajax({
+            type : 'GET',
+            url  : 'index.php?r=index/reduce',
+            data : 'goods_id='+goods_id ,
+            success : function( msg )
+            {
+                if( msg )
+                {
+                    location.href = msg;
+                }
+                else
+                {
+                    alert('该商品已售完');
+                }
+            }
+        })
+    }
+</script>
 </html>

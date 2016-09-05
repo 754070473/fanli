@@ -21,5 +21,13 @@ class Status {
     //未查询到数据
     const SELECT_DATA_ERROR = 1;
     const SELECT_DATA_ERROR_MSG = '未查询到数据!';
+    
+    //没有此商品
+    const SELECT_GOODS_ERROR = 1;
+    const SELECT_GOODS_ERROR_MSG = '没有此商品!';
+
+    //没有此商品
+    const SELECT_GOODS_SELL_OUT = 1;
+    const SELECT_GOODS_SELL_OUT_MSG = '商品已售完!';
 
 }
